@@ -1,0 +1,62 @@
+---
+const services = [
+  {
+    icon: '⚡',
+    title: 'Automatisation intelligente',
+    description:
+      'Éliminez les tâches répétitives grâce à des agents IA qui travaillent 24h/24. Gagnez du temps et réduisez les erreurs humaines.',
+  },
+  {
+    icon: '🧠',
+    title: 'Conseil en stratégie IA',
+    description:
+      'Nous identifions les opportunités IA dans votre entreprise et élaborons une feuille de route pragmatique alignée sur vos objectifs.',
+  },
+  {
+    icon: '🔗',
+    title: 'Intégration sur mesure',
+    description:
+      'Connexion d\'outils IA (LLM, vision, NLP) à vos systèmes existants — CRM, ERP, APIs tierces — sans disruption.',
+  },
+  {
+    icon: '📊',
+    title: 'Analyse et données',
+    description:
+      'Transformez vos données brutes en décisions actionnables grâce à des pipelines d\'analyse augmentés par l\'IA.',
+  },
+  {
+    icon: '🤖',
+    title: 'Agents conversationnels',
+    description:
+      'Chatbots et assistants virtuels intelligents, ancrés dans votre contexte métier, pour le support client et interne.',
+  },
+  {
+    icon: '🔒',
+    title: 'IA responsable',
+    description:
+      'Déploiement éthique et sécurisé : confidentialité des données, explicabilité des modèles, conformité réglementaire.',
+  },
+];
+---
+<section id="services" class="py-24 bg-slate-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Nos services</h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">
+        Des solutions concrètes, pas des promesses. Nous livrons des résultats mesurables.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map(service => (
+        <div class="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-brand-600/50 hover:bg-slate-800 transition-all group">
+          <div class="text-3xl mb-4" role="img" aria-label={service.title}>{service.icon}</div>
+          <h3 class="text-white font-semibold text-lg mb-2 group-hover:text-brand-300 transition-colors">
+            {service.title}
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

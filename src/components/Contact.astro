@@ -1,0 +1,86 @@
+---
+---
+<section id="contact" class="py-24 bg-slate-900">
+  <div class="max-w-2xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Parlons de votre projet</h2>
+    <p class="text-slate-400 text-lg mb-12">
+      Première consultation gratuite. Pas de jargon, pas d'engagement — juste une conversation franche.
+    </p>
+
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="space-y-4 text-left"
+    >
+      <!-- Honeypot -->
+      <p class="hidden" aria-hidden="true">
+        <label>Ne remplissez pas ce champ : <input name="bot-field" /></label>
+      </p>
+      <input type="hidden" name="form-name" value="contact" />
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-slate-300 mb-1.5">Nom</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            required
+            placeholder="Votre nom"
+            class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-slate-300 mb-1.5">Courriel</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            placeholder="vous@exemple.com"
+            class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="company" class="block text-sm font-medium text-slate-300 mb-1.5">Entreprise</label>
+        <input
+          id="company"
+          type="text"
+          name="company"
+          placeholder="Nom de votre organisation"
+          class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-slate-300 mb-1.5">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows={5}
+          placeholder="Décrivez votre projet ou votre défi..."
+          class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors resize-none"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm shadow-lg shadow-brand-900/40"
+      >
+        Envoyer le message
+      </button>
+    </form>
+
+    <p class="text-slate-500 text-xs mt-6">
+      Vous préférez l'email ?
+      <a href="mailto:info@dramisinfo.com" class="text-brand-400 hover:text-brand-300 transition-colors">
+        info@dramisinfo.com
+      </a>
+    </p>
+  </div>
+</section>
