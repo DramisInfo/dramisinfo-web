@@ -6,6 +6,7 @@ lang: en
 permalink: en-finir-double-saisie-crm
 icon: crm
 tags: ["CRM", "Integration"]
+coverImage: /images/blog/crm-sales.jpg
 ---
 
 A CRM should save you time. All too often, it's the opposite: it becomes one more chore, fed by hand, squeezed between real tasks. And the data backs this up.

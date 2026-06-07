@@ -6,6 +6,7 @@ lang: fr
 permalink: cout-cache-taches-administratives
 icon: automate
 tags: ["Productivité", "Automatisation"]
+coverImage: /images/blog/admin-tasks.jpg
 ---
 
 Dans la plupart des PME, une partie du travail le plus précieux — celui qui sert vraiment les clients — est freinée par une autre catégorie de travail : les tâches administratives répétitives. Saisir des données, classer des courriels, produire les mêmes rapports… Ces gestes paraissent anodins, mais leur addition coûte cher.

@@ -6,6 +6,7 @@ lang: fr
 permalink: en-finir-double-saisie-crm
 icon: crm
 tags: ["CRM", "Intégration"]
+coverImage: /images/blog/crm-sales.jpg
 ---
 
 Un CRM devrait faire gagner du temps. Trop souvent, c'est l'inverse : il devient une corvée de plus, alimentée à la main, entre deux vraies tâches. Et les données le confirment.

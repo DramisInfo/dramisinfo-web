@@ -6,6 +6,7 @@ lang: en
 permalink: ia-pme-gagner-du-temps
 icon: idea
 tags: ["Artificial intelligence", "SMB"]
+coverImage: /images/blog/ai-smb.jpg
 ---
 
 Artificial intelligence is generating a lot of noise. Between the revolutionary promise and the fear of an overpriced gadget, small businesses struggle to know whether — and where — it can really help them. The answer, backed by data: yes, as long as you use it for the right reasons.

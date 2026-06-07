@@ -6,6 +6,7 @@ lang: fr
 permalink: ia-pme-gagner-du-temps
 icon: idea
 tags: ["Intelligence artificielle", "PME"]
+coverImage: /images/blog/ai-smb.jpg
 ---
 
 L'intelligence artificielle fait beaucoup parler. Entre la promesse révolutionnaire et la crainte du gadget hors de prix, les PME ont du mal à savoir si — et où — elle peut vraiment les aider. La réponse, appuyée sur les données : oui, à condition de l'utiliser pour de bonnes raisons.

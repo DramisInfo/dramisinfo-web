@@ -13,8 +13,11 @@ export async function getStaticPaths() {
 
 const lang = 'fr' as const;
 const { post } = Astro.props;
+const ogImage = post.data.coverImage
+  ? new URL(post.data.coverImage, Astro.site).toString()
+  : undefined;
 ---
-<BaseLayout lang={lang} title={`${post.data.title} — DramisInfo`} description={post.data.description}>
+<BaseLayout lang={lang} title={`${post.data.title} — DramisInfo`} description={post.data.description} ogImage={ogImage}>
   <Header lang={lang} />
   <BlogArticle post={post} lang={lang} />
   <Footer lang={lang} />

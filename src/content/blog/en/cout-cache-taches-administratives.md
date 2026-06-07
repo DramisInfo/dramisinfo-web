@@ -6,6 +6,7 @@ lang: en
 permalink: cout-cache-taches-administratives
 icon: automate
 tags: ["Productivity", "Automation"]
+coverImage: /images/blog/admin-tasks.jpg
 ---
 
 In most small and mid-sized businesses, some of the most valuable work — the work that truly serves clients — is held back by another kind of work: repetitive administrative tasks. Entering data, sorting emails, producing the same reports… These actions seem harmless, but together they add up to a real cost.

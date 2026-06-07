@@ -12,6 +12,7 @@ const blog = defineCollection({
     icon: z.string().default('automate'),
     tags: z.array(z.string()).default([]),
     author: z.string().default('DramisInfo'),
+    coverImage: z.string().optional(),
   }),
 });
 

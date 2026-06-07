@@ -18,24 +18,39 @@ const fmtDate = post.data.pubDate.toLocaleDateString(locale, {
   month: 'long',
   day: 'numeric',
 });
+
+const hasImage = !!post.data.coverImage;
 ---
 <main class="pt-16">
   <article>
-    <header class="bg-gradient-to-b from-brand-50 via-warm-50 to-white pt-14 pb-12">
-      <div class="max-w-3xl mx-auto px-6">
-        <a href={`${home}blog/`} class="inline-flex items-center gap-1.5 text-sm text-brand-600 hover:text-brand-700 font-medium mb-8 transition-colors">
+    <header class={`relative flex items-end ${hasImage ? 'min-h-[360px] pb-12 pt-14' : 'bg-gradient-to-b from-brand-50 via-warm-50 to-white pt-14 pb-12'}`}>
+      {hasImage && (
+        <>
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            style={`background-image: url('${post.data.coverImage}')`}
+            aria-hidden="true"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-warm-900/88 via-warm-900/55 to-warm-900/25" aria-hidden="true" />
+        </>
+      )}
+      <div class="relative max-w-3xl mx-auto px-6 w-full">
+        <a
+          href={`${home}blog/`}
+          class={`inline-flex items-center gap-1.5 text-sm font-medium mb-8 transition-colors ${hasImage ? 'text-white/75 hover:text-white' : 'text-brand-600 hover:text-brand-700'}`}
+        >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
           {t.back}
         </a>
         <div class="flex flex-wrap gap-2 mb-5">
           {post.data.tags.map((tag) => (
-            <span class="text-xs font-medium text-brand-700 bg-white border border-brand-100 px-2.5 py-1 rounded-full">{tag}</span>
+            <span class={`text-xs font-medium px-2.5 py-1 rounded-full ${hasImage ? 'text-white border border-white/30 bg-white/10 backdrop-blur-sm' : 'text-brand-700 bg-white border border-brand-100'}`}>{tag}</span>
           ))}
         </div>
-        <h1 class="text-3xl md:text-4xl font-bold text-warm-900 tracking-tight leading-tight mb-5">
+        <h1 class={`text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-5 ${hasImage ? 'text-white' : 'text-warm-900'}`}>
           {post.data.title}
         </h1>
-        <div class="flex items-center gap-2 text-sm text-warm-500">
+        <div class={`flex items-center gap-2 text-sm ${hasImage ? 'text-white/65' : 'text-warm-500'}`}>
           <span>{t.published} {fmtDate}</span>
           <span aria-hidden="true">•</span>
           <span>{readMin} {t.readTime}</span>
