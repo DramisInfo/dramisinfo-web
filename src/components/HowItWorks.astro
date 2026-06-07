@@ -9,16 +9,16 @@ const t = ui[lang].how;
 ---
 <section id="demarche" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16">
+    <div data-reveal class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
       <p class="text-warm-600 text-lg max-w-xl mx-auto">
         {t.subheading}
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div data-reveal-group class="grid md:grid-cols-3 gap-8">
       {t.steps.map((step, i) => (
-        <div class="text-center">
+        <div data-reveal class="text-center">
           <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-brand-100 text-brand-700 text-xl font-bold">
             {i + 1}
           </div>

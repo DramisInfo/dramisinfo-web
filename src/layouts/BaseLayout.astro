@@ -1,5 +1,6 @@
 ---
 import type { Lang } from '@/i18n/ui';
+import '@/styles/global.css';
 
 interface Props {
   lang: Lang;
@@ -41,8 +42,64 @@ const enUrl = new URL(stripped === '/' ? '/en/' : `/en${stripped}`, site);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
+    <script is:inline>
+      // Active les animations seulement si le mouvement est permis.
+      // Failsafe : si le JS principal ne s'exécute pas, on réaffiche tout.
+      (function () {
+        var d = document.documentElement;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        d.classList.add('reveal-on');
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            if (!d.classList.contains('reveal-ready')) d.classList.remove('reveal-on');
+          }, 1500);
+        });
+      })();
+    </script>
   </head>
   <body class="bg-white text-warm-700 font-sans antialiased">
     <slot />
+
+    <script>
+      function initReveal() {
+        const root = document.documentElement;
+        if (!root.classList.contains('reveal-on')) return;
+        root.classList.add('reveal-ready');
+
+        // Décalage en cascade pour les enfants d'une grille.
+        document.querySelectorAll<HTMLElement>('[data-reveal-group]').forEach((group) => {
+          group.querySelectorAll<HTMLElement>('[data-reveal]').forEach((el, i) => {
+            el.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+          });
+        });
+
+        const els = document.querySelectorAll('[data-reveal]');
+        if (!('IntersectionObserver' in window)) {
+          els.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                const el = e.target as HTMLElement;
+                el.classList.add('is-visible');
+                obs.unobserve(el);
+                // Une fois apparu, on retire le délai pour que les survols
+                // (élévation des cartes) restent réactifs.
+                const delay = parseFloat(el.style.transitionDelay) || 0;
+                window.setTimeout(() => {
+                  el.style.transitionDelay = '0ms';
+                }, 800 + delay);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+        );
+        els.forEach((el) => io.observe(el));
+      }
+      initReveal();
+      document.addEventListener('astro:page-load', initReveal);
+    </script>
   </body>
 </html>

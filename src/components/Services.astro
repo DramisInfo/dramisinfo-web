@@ -13,16 +13,16 @@ const icons = ['automate', 'simplify', 'tools', 'idea', 'support', 'clarity'] as
 ---
 <section id="services" class="py-24 bg-warm-50">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16">
+    <div data-reveal class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
       <p class="text-warm-600 text-lg max-w-xl mx-auto">
         {t.subheading}
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div data-reveal-group class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {t.items.map((service, i) => (
-        <div class="bg-white border border-warm-200 rounded-2xl p-6 hover:border-brand-300 hover:shadow-md transition-all">
+        <div data-reveal class="bg-white border border-warm-200 rounded-2xl p-6 hover:border-brand-300 hover:shadow-md hover:-translate-y-1 transition-all">
           <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-brand-50">
             <Icon name={icons[i]} class="w-7 h-7" />
           </div>
