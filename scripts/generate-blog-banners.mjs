@@ -131,3 +131,60 @@ await generate('ai-smb', `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" h
   <!-- Barre d'accent -->
   <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
 </svg>`);
+
+// ──────────────────────────────────────────────────────
+// Banner 4 : Ingénierie des flux de travail (déterministe + IA)
+// Palette : ardoise nuit → sarcelle
+// Motif   : à gauche un pipeline structuré (rails déterministes),
+//           à droite un réseau organique (IA) ; flux qui converge
+// ──────────────────────────────────────────────────────
+await generate('workflow-engineering', `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0f172a"/>
+      <stop offset="55%"  stop-color="#0f3b3a"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+
+  <!-- CÔTÉ GAUCHE : pipeline déterministe (rails + étapes carrées) -->
+  <g opacity="0.9">
+    <line x1="120" y1="315" x2="560" y2="315" stroke="#99f6e4" stroke-width="2" opacity="0.30"/>
+    <rect x="120" y="287" width="56" height="56" rx="8" fill="none" stroke="#99f6e4" stroke-width="2.5" opacity="0.45"/>
+    <rect x="268" y="287" width="56" height="56" rx="8" fill="none" stroke="#99f6e4" stroke-width="2.5" opacity="0.45"/>
+    <rect x="416" y="287" width="56" height="56" rx="8" fill="none" stroke="#99f6e4" stroke-width="2.5" opacity="0.45"/>
+    <polyline points="135,315 146,327 163,303" fill="none" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <polyline points="283,315 294,327 311,303" fill="none" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <polyline points="431,315 442,327 459,303" fill="none" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  </g>
+
+  <!-- POINT DE JONCTION (l'orchestration) -->
+  <circle cx="600" cy="315" r="22" fill="#14b8a6" opacity="0.9"/>
+  <circle cx="600" cy="315" r="40" fill="#14b8a6" opacity="0.14"/>
+  <line x1="472" y1="315" x2="578" y2="315" stroke="#99f6e4" stroke-width="2" opacity="0.30"/>
+
+  <!-- CÔTÉ DROIT : réseau organique (IA) -->
+  <g opacity="0.95">
+    <line x1="622" y1="315" x2="760" y2="200" stroke="#5eead4" stroke-width="1.5" opacity="0.30"/>
+    <line x1="622" y1="315" x2="800" y2="380" stroke="#5eead4" stroke-width="1.5" opacity="0.30"/>
+    <line x1="760" y1="200" x2="930" y2="150" stroke="#5eead4" stroke-width="1.5" opacity="0.26"/>
+    <line x1="760" y1="200" x2="940" y2="300" stroke="#5eead4" stroke-width="1.5" opacity="0.22"/>
+    <line x1="800" y1="380" x2="940" y2="300" stroke="#5eead4" stroke-width="1.5" opacity="0.26"/>
+    <line x1="800" y1="380" x2="900" y2="490" stroke="#5eead4" stroke-width="1.5" opacity="0.22"/>
+    <line x1="940" y1="300" x2="1080" y2="240" stroke="#5eead4" stroke-width="1.5" opacity="0.22"/>
+    <line x1="940" y1="300" x2="1090" y2="400" stroke="#5eead4" stroke-width="1.5" opacity="0.20"/>
+    <circle cx="760"  cy="200" r="11" fill="#ffffff" opacity="0.85"/>
+    <circle cx="800"  cy="380" r="9"  fill="#ffffff" opacity="0.80"/>
+    <circle cx="930"  cy="150" r="8"  fill="#5eead4" opacity="0.85"/>
+    <circle cx="940"  cy="300" r="13" fill="#ffffff" opacity="0.85"/>
+    <circle cx="900"  cy="490" r="8"  fill="#5eead4" opacity="0.75"/>
+    <circle cx="1080" cy="240" r="9"  fill="#5eead4" opacity="0.80"/>
+    <circle cx="1090" cy="400" r="7"  fill="#5eead4" opacity="0.70"/>
+    <circle cx="940" cy="300" r="30" fill="#ffffff" opacity="0.08"/>
+    <circle cx="760" cy="200" r="26" fill="#ffffff" opacity="0.08"/>
+  </g>
+
+  <!-- Barre d'accent -->
+  <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
+</svg>`);
