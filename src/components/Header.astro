@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import Logo from './Logo.astro';
 import { ui, type Lang } from '@/i18n/ui';
 
 interface Props {
@@ -18,8 +19,8 @@ const navLinks = [
 ---
 <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-warm-200">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href={home} class="flex items-center gap-2 text-warm-900 font-semibold text-lg tracking-tight">
-      <span class="text-brand-600">Dramis</span>Info
+    <a href={home} class="flex items-center" aria-label="DramisInfo">
+      <Logo class="h-8 w-auto" />
     </a>
     <nav class="hidden lg:flex items-center gap-7">
       {navLinks.map(link => (

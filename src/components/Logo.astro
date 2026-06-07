@@ -1,0 +1,12 @@
+---
+/**
+ * Logo de DramisInfo affiché dans l'en-tête.
+ * Pour le remplacer : déposez votre logo SVG dans public/logo.svg
+ * (lockup horizontal, fond transparent, lisible sur fond clair).
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = 'h-8 w-auto' } = Astro.props;
+---
+<img src="/logo.svg" alt="DramisInfo" class={className} width="196" height="40" />

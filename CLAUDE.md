@@ -58,6 +58,26 @@ npm run lint
 
 ---
 
+## Logo et favicon
+
+**Logo de l'en-tête** : remplacer `public/logo.svg` par le logo définitif.
+- Format SVG, lockup horizontal, fond transparent, lisible sur fond clair
+- Affiché à 32 px de haut (le composant `src/components/Logo.astro` gère l'affichage)
+- Aucun autre changement requis : le fichier est chargé tel quel
+
+**Favicon** : remplacer `public/favicon.svg` (source) puis régénérer les PNG :
+
+```bash
+npm run favicons
+```
+
+Cela régénère depuis `favicon.svg` : `favicon-16/32.png`, `apple-touch-icon.png`
+(iOS, 180×180), `icon-192.png` et `icon-512.png` (écran d'accueil Android / PWA).
+Les balises et le manifeste (`public/site.webmanifest`) sont déjà en place dans
+`BaseLayout.astro`. Pensez à ajuster `theme_color` si la couleur de marque change.
+
+---
+
 ## Netlify
 
 Le fichier `netlify.toml` à la racine configure le build :

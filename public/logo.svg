@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 40" fill="none" role="img" aria-label="DramisInfo">
+  <rect y="2" width="36" height="36" rx="9" fill="#0d9488"/>
+  <text x="18" y="27" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">D</text>
+  <text x="46" y="27" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700">
+    <tspan fill="#0d9488">Dramis</tspan><tspan fill="#1c1917">Info</tspan>
+  </text>
+</svg>
