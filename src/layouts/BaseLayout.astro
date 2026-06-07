@@ -1,14 +1,25 @@
 ---
+import type { Lang } from '@/i18n/ui';
+import '@/styles/global.css';
+
 interface Props {
+  lang: Lang;
   title: string;
   description: string;
+  ogImage?: string;
 }
 
-const { title, description } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://dramisinfo.com');
+const { lang, title, description, ogImage } = Astro.props;
+const site = Astro.site ?? new URL('https://dramisinfo.com');
+const canonical = new URL(Astro.url.pathname, site);
+
+// Liens alternés FR/EN pour le SEO (FR = défaut sans préfixe).
+const stripped = Astro.url.pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+const frUrl = new URL(stripped, site);
+const enUrl = new URL(stripped === '/' ? '/en/' : `/en${stripped}`, site);
 ---
 <!doctype html>
-<html lang="fr">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,14 +28,83 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://dramisinfo.
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {ogImage && <meta property="og:image:width" content="1200" />}
+    {ogImage && <meta property="og:image:height" content="630" />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="fr" href={frUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={frUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0d9488" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
+    <script is:inline>
+      // Active les animations seulement si le mouvement est permis.
+      // Failsafe : si le JS principal ne s'exécute pas, on réaffiche tout.
+      (function () {
+        var d = document.documentElement;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        d.classList.add('reveal-on');
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            if (!d.classList.contains('reveal-ready')) d.classList.remove('reveal-on');
+          }, 1500);
+        });
+      })();
+    </script>
   </head>
-  <body class="bg-slate-950 text-slate-100 font-sans antialiased">
+  <body class="bg-white text-warm-700 font-sans antialiased">
     <slot />
+
+    <script>
+      function initReveal() {
+        const root = document.documentElement;
+        if (!root.classList.contains('reveal-on')) return;
+        root.classList.add('reveal-ready');
+
+        // Décalage en cascade pour les enfants d'une grille.
+        document.querySelectorAll<HTMLElement>('[data-reveal-group]').forEach((group) => {
+          group.querySelectorAll<HTMLElement>('[data-reveal]').forEach((el, i) => {
+            el.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+          });
+        });
+
+        const els = document.querySelectorAll('[data-reveal]');
+        if (!('IntersectionObserver' in window)) {
+          els.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                const el = e.target as HTMLElement;
+                el.classList.add('is-visible');
+                obs.unobserve(el);
+                // Une fois apparu, on retire le délai pour que les survols
+                // (élévation des cartes) restent réactifs.
+                const delay = parseFloat(el.style.transitionDelay) || 0;
+                window.setTimeout(() => {
+                  el.style.transitionDelay = '0ms';
+                }, 800 + delay);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+        );
+        els.forEach((el) => io.observe(el));
+      }
+      initReveal();
+      document.addEventListener('astro:page-load', initReveal);
+    </script>
   </body>
 </html>

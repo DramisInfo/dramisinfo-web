@@ -1,0 +1,191 @@
+---
+import Icon from './Icon.astro';
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang].framework;
+---
+<section id="parcours" class="py-24 bg-gradient-to-b from-white to-brand-50/40">
+  <div class="max-w-5xl mx-auto px-6">
+    <div data-reveal class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
+      <p class="text-warm-600 text-lg max-w-2xl mx-auto">
+        {t.subheading}
+      </p>
+    </div>
+
+    <div data-reveal class="relative" data-carousel>
+      <!-- Piste défilante (une étape par vue, swipe natif sur mobile) -->
+      <div
+        data-carousel-track
+        class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-2 [scrollbar-width:none]"
+      >
+        {t.stages.map((stage, i) => (
+          <article
+            data-carousel-slide
+            class="snap-center shrink-0 w-full"
+            aria-roledescription="slide"
+            aria-label={`${t.levelLabel} ${i + 1}`}
+          >
+            <div class="bg-white border border-warm-200 rounded-2xl p-8 sm:p-12 shadow-sm text-center max-w-2xl mx-auto">
+              <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-brand-50">
+                <Icon name={stage.icon} class="w-8 h-8" />
+              </div>
+              <span class="inline-block text-xs font-semibold uppercase tracking-wide text-brand-700 bg-brand-50 px-3 py-1 rounded-full mb-4">
+                {t.levelLabel} {i + 1}
+              </span>
+              <h3 class="text-2xl font-bold text-warm-900 mb-3">{stage.title}</h3>
+              <p class="text-warm-600 leading-relaxed max-w-md mx-auto">{stage.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Flèches (cachées sur mobile : on swipe) -->
+      <button
+        type="button"
+        data-carousel-prev
+        aria-label={t.prevLabel}
+        class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white border border-warm-200 text-warm-700 shadow-sm hover:text-brand-600 hover:border-brand-300 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M15 6l-6 6 6 6" /></svg>
+      </button>
+      <button
+        type="button"
+        data-carousel-next
+        aria-label={t.nextLabel}
+        class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center rounded-full bg-white border border-warm-200 text-warm-700 shadow-sm hover:text-brand-600 hover:border-brand-300 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M9 6l6 6-6 6" /></svg>
+      </button>
+    </div>
+
+    <!-- Points indicateurs -->
+    <div class="flex justify-center items-center gap-2.5 mt-8" data-carousel-dots>
+      {t.stages.map((_, i) => (
+        <button
+          type="button"
+          data-carousel-dot
+          aria-label={`${t.levelLabel} ${i + 1}`}
+          aria-current={i === 0 ? 'true' : 'false'}
+        ></button>
+      ))}
+    </div>
+
+    <p class="text-center text-warm-600 text-sm mt-10 flex items-center justify-center gap-2">
+      <Icon name="check" class="w-5 h-5" />
+      {t.note}
+    </p>
+  </div>
+</section>
+
+<style>
+  [data-carousel-track]::-webkit-scrollbar {
+    display: none;
+  }
+  [data-carousel-dot] {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 9999px;
+    background: #e7e5e4; /* warm-200 */
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  [data-carousel-dot]:hover {
+    background: #99f6e4; /* brand-200 */
+  }
+  [data-carousel-dot][aria-current='true'] {
+    width: 1.6rem;
+    background: #0d9488; /* brand-600 */
+  }
+</style>
+
+<script>
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((root) => {
+      const track = root.querySelector<HTMLElement>('[data-carousel-track]');
+      const slides = Array.from(root.querySelectorAll<HTMLElement>('[data-carousel-slide]'));
+      const prev = root.querySelector<HTMLButtonElement>('[data-carousel-prev]');
+      const next = root.querySelector<HTMLButtonElement>('[data-carousel-next]');
+      const dots = Array.from(
+        (root.parentElement?.querySelectorAll<HTMLButtonElement>('[data-carousel-dot]')) ?? []
+      );
+      if (!track || slides.length === 0) return;
+
+      let current = 0;
+
+      const update = () => {
+        dots.forEach((d, i) => d.setAttribute('aria-current', i === current ? 'true' : 'false'));
+        if (prev) prev.disabled = current === 0;
+        if (next) next.disabled = current === slides.length - 1;
+      };
+
+      const goTo = (i: number, wrap = false) => {
+        const last = slides.length - 1;
+        current = wrap ? (i + slides.length) % slides.length : Math.max(0, Math.min(last, i));
+        const slide = slides[current];
+        const left = slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
+        track.scrollTo({ left, behavior: 'smooth' });
+        update();
+      };
+
+      // Lecture automatique (en pause au survol, au focus, au swipe et hors écran)
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const INTERVAL = 5000;
+      let timer: number | undefined;
+      const stop = () => {
+        if (timer !== undefined) {
+          clearInterval(timer);
+          timer = undefined;
+        }
+      };
+      const start = () => {
+        stop();
+        if (reduceMotion || slides.length <= 1) return;
+        timer = window.setInterval(() => goTo(current + 1, true), INTERVAL);
+      };
+      // Relance le minuteur après une action manuelle (sans saut immédiat)
+      const nav = (i: number) => {
+        goTo(i);
+        start();
+      };
+
+      prev?.addEventListener('click', () => nav(current - 1));
+      next?.addEventListener('click', () => nav(current + 1));
+      dots.forEach((d, i) => d.addEventListener('click', () => nav(i)));
+
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      root.addEventListener('focusout', start);
+      track.addEventListener('touchstart', stop, { passive: true });
+      track.addEventListener('touchend', start, { passive: true });
+      document.addEventListener('visibilitychange', () =>
+        document.hidden ? stop() : start()
+      );
+
+      // Synchronise l'état avec le défilement manuel / swipe
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && e.intersectionRatio >= 0.6) {
+              current = slides.indexOf(e.target as HTMLElement);
+              update();
+            }
+          });
+        },
+        { root: track, threshold: 0.6 }
+      );
+      slides.forEach((s) => io.observe(s));
+
+      update();
+      start();
+    });
+  }
+
+  initCarousels();
+  document.addEventListener('astro:page-load', initCarousels);
+</script>

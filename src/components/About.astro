@@ -1,55 +1,41 @@
 ---
-const stats = [
-  { value: '50+', label: 'Projets livrés' },
-  { value: '98%', label: 'Clients satisfaits' },
-  { value: '3×', label: 'ROI moyen constaté' },
-];
+import Icon from './Icon.astro';
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang].about;
 ---
-<section id="apropos" class="py-24 bg-slate-950">
+<section id="apropos" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <!-- Text -->
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-          Pourquoi DramisInfo ?
+      <div data-reveal>
+        <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-6">
+          {t.heading}
         </h2>
-        <div class="space-y-4 text-slate-400 leading-relaxed">
-          <p>
-            Nous ne sommes pas un cabinet de conseil qui parle d'IA — nous sommes des
-            praticiens qui la construisent. Chaque projet commence par une immersion dans
-            votre réalité opérationnelle avant de toucher à la moindre ligne de code.
-          </p>
-          <p>
-            Notre approche combine expertise technique en IA (LLM, RAG, agents autonomes)
-            et sens des affaires pour créer des solutions qui s'intègrent naturellement
-            dans vos équipes et vos processus.
-          </p>
-          <p>
-            Basés au Québec, nous accompagnons des entreprises de toutes tailles, des PME
-            aux grandes organisations, en français et en anglais.
-          </p>
+        <div class="space-y-4 text-warm-600 leading-relaxed">
+          <p>{t.p1}</p>
+          <p>{t.p2}</p>
+          <p>{t.p3}</p>
         </div>
       </div>
 
-      <!-- Stats -->
-      <div class="grid grid-cols-3 gap-6">
-        {stats.map(stat => (
-          <div class="bg-slate-800/60 border border-slate-700/50 rounded-2xl p-6 text-center">
-            <div class="text-3xl font-bold text-brand-400 mb-1">{stat.value}</div>
-            <div class="text-slate-400 text-sm">{stat.label}</div>
+      <!-- Values -->
+      <div data-reveal-group class="space-y-5">
+        {t.values.map(value => (
+          <div data-reveal class="bg-warm-50 border border-warm-200 rounded-2xl p-6 hover:border-brand-300 hover:shadow-sm transition-all">
+            <div class="flex items-start gap-3">
+              <Icon name="check" class="w-6 h-6 mt-0.5 shrink-0" />
+              <div>
+                <h3 class="text-warm-900 font-semibold mb-1">{value.title}</h3>
+                <p class="text-warm-600 text-sm leading-relaxed">{value.description}</p>
+              </div>
+            </div>
           </div>
         ))}
-
-        <!-- CTA card spanning full width -->
-        <div class="col-span-3 bg-gradient-to-r from-brand-900/50 to-violet-900/30 border border-brand-700/40 rounded-2xl p-6 text-center">
-          <p class="text-slate-300 text-sm mb-3">Prêt à explorer ce que l'IA peut faire pour vous ?</p>
-          <a
-            href="#contact"
-            class="inline-block bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors"
-          >
-            Consultation gratuite →
-          </a>
-        </div>
       </div>
     </div>
   </div>

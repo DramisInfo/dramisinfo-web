@@ -1,10 +1,17 @@
 ---
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang].contact;
 ---
-<section id="contact" class="py-24 bg-slate-900">
-  <div class="max-w-2xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Parlons de votre projet</h2>
-    <p class="text-slate-400 text-lg mb-12">
-      Première consultation gratuite. Pas de jargon, pas d'engagement — juste une conversation franche.
+<section id="contact" class="py-24 bg-warm-50">
+  <div data-reveal class="max-w-2xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
+    <p class="text-warm-600 text-lg mb-12">
+      {t.subtitle}
     </p>
 
     <form
@@ -12,75 +19,91 @@
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       class="space-y-4 text-left"
     >
-      <!-- Honeypot -->
+      <!-- Honeypot anti-robots (laissé vide par les humains) -->
       <p class="hidden" aria-hidden="true">
-        <label>Ne remplissez pas ce champ : <input name="bot-field" /></label>
+        <label>Ne remplissez pas ce champ : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
       </p>
       <input type="hidden" name="form-name" value="contact" />
 
       <div class="grid sm:grid-cols-2 gap-4">
         <div>
-          <label for="name" class="block text-sm font-medium text-slate-300 mb-1.5">Nom</label>
+          <label for="name" class="block text-sm font-medium text-warm-700 mb-1.5">{t.name}</label>
           <input
             id="name"
             type="text"
             name="name"
             required
-            placeholder="Votre nom"
-            class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors"
+            placeholder={t.namePh}
+            class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
           />
         </div>
         <div>
-          <label for="email" class="block text-sm font-medium text-slate-300 mb-1.5">Courriel</label>
+          <label for="email" class="block text-sm font-medium text-warm-700 mb-1.5">{t.email}</label>
           <input
             id="email"
             type="email"
             name="email"
             required
-            placeholder="vous@exemple.com"
-            class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors"
+            placeholder={t.emailPh}
+            class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
           />
         </div>
       </div>
 
       <div>
-        <label for="company" class="block text-sm font-medium text-slate-300 mb-1.5">Entreprise</label>
+        <label for="company" class="block text-sm font-medium text-warm-700 mb-1.5">{t.company}</label>
         <input
           id="company"
           type="text"
           name="company"
-          placeholder="Nom de votre organisation"
-          class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors"
+          placeholder={t.companyPh}
+          class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
         />
       </div>
 
       <div>
-        <label for="message" class="block text-sm font-medium text-slate-300 mb-1.5">Message</label>
+        <label for="message" class="block text-sm font-medium text-warm-700 mb-1.5">{t.message}</label>
         <textarea
           id="message"
           name="message"
           required
           rows={5}
-          placeholder="Décrivez votre projet ou votre défi..."
-          class="w-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 transition-colors resize-none"
+          placeholder={t.messagePh}
+          class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors resize-none"
         ></textarea>
       </div>
 
+      <!-- reCAPTCHA injecté par Netlify au déploiement -->
+      <div data-netlify-recaptcha class="flex justify-center"></div>
+
       <button
         type="submit"
-        class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm shadow-lg shadow-brand-900/40"
+        class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-md text-sm shadow-sm"
       >
-        Envoyer le message
+        {t.submit}
       </button>
     </form>
 
-    <p class="text-slate-500 text-xs mt-6">
-      Vous préférez l'email ?
-      <a href="mailto:info@dramisinfo.com" class="text-brand-400 hover:text-brand-300 transition-colors">
-        info@dramisinfo.com
-      </a>
+    <p class="text-warm-600 text-xs mt-6">
+      {t.prefer}
+      <!-- Courriel reconstruit côté client pour ne jamais apparaître en clair -->
+      <a data-eu="info" data-ed="dramisinfo.com" class="text-brand-600 hover:text-brand-700 font-medium transition-colors"></a>
     </p>
   </div>
 </section>
+
+<script>
+  // Reconstitue les liens courriel à partir d'attributs séparés (anti-récolte).
+  function initEmailLinks() {
+    document.querySelectorAll<HTMLAnchorElement>('a[data-eu][data-ed]').forEach((a) => {
+      const addr = `${a.dataset.eu}@${a.dataset.ed}`;
+      a.href = `mailto:${addr}`;
+      if (!a.textContent?.trim()) a.textContent = addr;
+    });
+  }
+  initEmailLinks();
+  document.addEventListener('astro:page-load', initEmailLinks);
+</script>

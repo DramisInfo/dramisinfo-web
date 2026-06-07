@@ -1,0 +1,60 @@
+---
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang].value;
+---
+<section id="valeur" class="py-24 bg-warm-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div data-reveal class="text-center mb-14 max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-5">{t.heading}</h2>
+      <p class="text-warm-600 text-lg leading-relaxed">{t.intro}</p>
+    </div>
+
+    <div data-reveal-group class="grid md:grid-cols-2 gap-6 items-stretch">
+      <!-- Sans automatisation -->
+      <div data-reveal class="bg-white border border-warm-200 rounded-2xl p-8 flex flex-col">
+        <h3 class="text-warm-500 font-semibold text-sm uppercase tracking-wide mb-6">
+          {t.before.label}
+        </h3>
+        <ul class="space-y-4 flex-1">
+          {t.before.items.map(item => (
+            <li class="flex items-start gap-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-warm-400 shrink-0 mt-0.5" aria-hidden="true">
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M12 7.5V12l3 2" />
+              </svg>
+              <span class="text-warm-600 text-sm leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-warm-500 text-sm italic mt-6 pt-6 border-t border-warm-200">
+          {t.before.note}
+        </p>
+      </div>
+
+      <!-- Avec DramisInfo -->
+      <div data-reveal class="bg-brand-600 rounded-2xl p-8 flex flex-col shadow-lg shadow-brand-900/10">
+        <h3 class="text-brand-100 font-semibold text-sm uppercase tracking-wide mb-6">
+          {t.after.label}
+        </h3>
+        <ul class="space-y-4 flex-1">
+          {t.after.items.map(item => (
+            <li class="flex items-start gap-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white shrink-0 mt-0.5" aria-hidden="true">
+                <path d="M5 12.5l4 4 10-10.5" />
+              </svg>
+              <span class="text-white text-sm leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-white font-medium text-sm mt-6 pt-6 border-t border-white/20">
+          {t.after.note}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

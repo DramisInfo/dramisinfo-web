@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import BlogArticle from '@/components/BlogArticle.astro';
+import { getCollection } from 'astro:content';
+import { ui } from '@/i18n/ui';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', (p) => p.data.lang === 'en');
+  return posts.map((post) => ({ params: { slug: post.data.permalink }, props: { post } }));
+}
+
+const lang = 'en' as const;
+const { post } = Astro.props;
+const ogImage = post.data.coverImage
+  ? new URL(post.data.coverImage, Astro.site).toString()
+  : undefined;
+---
+<BaseLayout lang={lang} title={`${post.data.title} — DramisInfo`} description={post.data.description} ogImage={ogImage}>
+  <Header lang={lang} />
+  <BlogArticle post={post} lang={lang} />
+  <Footer lang={lang} />
+</BaseLayout>

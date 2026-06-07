@@ -58,6 +58,74 @@ npm run lint
 
 ---
 
+## Logo et favicon
+
+**Logo de l'en-tête** : remplacer `public/logo.svg` par le logo définitif.
+- Format SVG, lockup horizontal, fond transparent, lisible sur fond clair
+- Affiché à 32 px de haut (le composant `src/components/Logo.astro` gère l'affichage)
+- Aucun autre changement requis : le fichier est chargé tel quel
+
+**Favicon** : remplacer `public/favicon.svg` (source) puis régénérer les PNG :
+
+```bash
+npm run favicons
+```
+
+Cela régénère depuis `favicon.svg` : `favicon-16/32.png`, `apple-touch-icon.png`
+(iOS, 180×180), `icon-192.png` et `icon-512.png` (écran d'accueil Android / PWA).
+Les balises et le manifeste (`public/site.webmanifest`) sont déjà en place dans
+`BaseLayout.astro`. Pensez à ajuster `theme_color` si la couleur de marque change.
+
+---
+
+## Blog
+
+Les articles vivent dans `src/content/blog/{fr,en}/*.md` (Astro Content Collections,
+schéma dans `src/content.config.ts`). FR et EN partagent le même `permalink` mais
+ont des chemins de fichiers distincts. Champs notables : `coverImage` (bannière) et
+`icon` (jeu d'icônes maison).
+
+**Bannières** : images 1200×630 px dans `public/images/blog/`, servant à la fois de
+fond d'en-tête d'article et de `og:image` (aperçu LinkedIn). Générées par script :
+
+```bash
+npm run banners
+```
+
+**Visuels dans le contenu** : le Markdown accepte du HTML brut, stylé par
+`src/styles/global.css` (section « Composants visuels d'article »). Deux composants
+prêts à l'emploi, à coller tels quels dans un `.md` :
+
+- Cartes de stats — `<div class="stats" data-reveal-group>` contenant des
+  `<div class="stat" data-reveal>` avec `<span class="stat-num">` / `stat-label`
+- Graphique en barres — `<figure class="chart" data-reveal>` avec des
+  `<div class="bar-row">` (`bar-label` / `bar-track` > `bar-fill` style `--w:NN%` /
+  `bar-val`). Variante grisée : `bar-fill--muted` + `bar-val--muted`. Les barres
+  s'animent à l'apparition (et respectent `prefers-reduced-motion`).
+
+> Contrainte : un bloc HTML en Markdown ne doit contenir **aucune ligne vide**,
+> sinon il est scindé. Échapper `<` en `&lt;` (ex. `&lt;30%`).
+
+---
+
+## Sécurité du formulaire & courriel
+
+Le formulaire de contact (`src/components/Contact.astro`) est protégé en couches :
+- **Honeypot** (`bot-field`) — champ caché que seuls les robots remplissent
+- **Akismet** — filtrage anti-spam automatique de Netlify (aucune config)
+- **reCAPTCHA** — `data-netlify-recaptcha` + le `<div data-netlify-recaptcha>` ;
+  Netlify injecte le widget au déploiement (clés gérées par Netlify)
+
+Le **courriel** n'apparaît jamais en clair dans le HTML : il est stocké en deux
+attributs (`data-eu`, `data-ed`) et reconstruit côté navigateur par un petit
+script. Pour le changer, modifier ces attributs dans `Contact.astro`.
+
+> Note : le reCAPTCHA ne s'affiche qu'une fois déployé sur Netlify (pas en
+> `npm run dev`). Pour le retirer, supprimer `data-netlify-recaptcha="true"`
+> et le `<div data-netlify-recaptcha>`.
+
+---
+
 ## Netlify
 
 Le fichier `netlify.toml` à la racine configure le build :
