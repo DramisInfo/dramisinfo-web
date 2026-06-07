@@ -1,0 +1,44 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'On vous écoute',
+    description:
+      'On prend le temps de comprendre votre quotidien, vos tâches qui prennent trop de temps et ce qui vous freine. Aucune question technique.',
+  },
+  {
+    number: '2',
+    title: 'On vous propose',
+    description:
+      'On revient avec une solution simple et concrète, expliquée clairement, sans jargon. Vous savez exactement ce que ça change pour vous.',
+  },
+  {
+    number: '3',
+    title: 'On vous accompagne',
+    description:
+      'On met la solution en place, on forme votre équipe et on reste disponible. Vous n\'êtes jamais laissé seul avec la technologie.',
+  },
+];
+---
+<section id="demarche" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">Notre démarche, en toute simplicité</h2>
+      <p class="text-warm-600 text-lg max-w-xl mx-auto">
+        Pas besoin de s'y connaître en technologie. On s'occupe du « comment », vous profitez du résultat.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {steps.map(step => (
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-brand-100 text-brand-700 text-xl font-bold">
+            {step.number}
+          </div>
+          <h3 class="text-warm-900 font-semibold text-lg mb-3">{step.title}</h3>
+          <p class="text-warm-600 text-sm leading-relaxed max-w-xs mx-auto">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

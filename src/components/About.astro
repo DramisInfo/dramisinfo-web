@@ -1,55 +1,58 @@
 ---
-const stats = [
-  { value: '50+', label: 'Projets livrés' },
-  { value: '98%', label: 'Clients satisfaits' },
-  { value: '3×', label: 'ROI moyen constaté' },
+const values = [
+  {
+    title: 'On parle votre langage',
+    description: 'Pas de jargon technique. On explique tout simplement, dans des mots que tout le monde comprend.',
+  },
+  {
+    title: 'Des solutions à votre rythme',
+    description: 'On avance étape par étape, sans tout bouleverser. Vous adoptez les changements en confiance.',
+  },
+  {
+    title: 'Un partenaire de proximité',
+    description: 'Basés au Québec, on reste disponibles et à votre écoute, bien après la mise en place.',
+  },
 ];
 ---
-<section id="apropos" class="py-24 bg-slate-950">
+<section id="apropos" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <!-- Text -->
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-          Pourquoi DramisInfo ?
+        <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-6">
+          La technologie, sans la complexité
         </h2>
-        <div class="space-y-4 text-slate-400 leading-relaxed">
+        <div class="space-y-4 text-warm-600 leading-relaxed">
           <p>
-            Nous ne sommes pas un cabinet de conseil qui parle d'IA — nous sommes des
-            praticiens qui la construisent. Chaque projet commence par une immersion dans
-            votre réalité opérationnelle avant de toucher à la moindre ligne de code.
+            Beaucoup d'entreprises savent qu'elles pourraient gagner du temps et travailler
+            plus efficacement, mais ne savent pas par où commencer. C'est exactement là qu'on
+            intervient.
           </p>
           <p>
-            Notre approche combine expertise technique en IA (LLM, RAG, agents autonomes)
-            et sens des affaires pour créer des solutions qui s'intègrent naturellement
-            dans vos équipes et vos processus.
+            Chez DramisInfo, on ne cherche pas à vous vendre la dernière technologie à la mode.
+            On cherche à régler vos vrais problèmes du quotidien, avec des solutions simples
+            qui font une réelle différence.
           </p>
           <p>
-            Basés au Québec, nous accompagnons des entreprises de toutes tailles, des PME
-            aux grandes organisations, en français et en anglais.
+            Notre rôle, c'est de rendre la technologie accessible et utile pour votre
+            entreprise — pas l'inverse.
           </p>
         </div>
       </div>
 
-      <!-- Stats -->
-      <div class="grid grid-cols-3 gap-6">
-        {stats.map(stat => (
-          <div class="bg-slate-800/60 border border-slate-700/50 rounded-2xl p-6 text-center">
-            <div class="text-3xl font-bold text-brand-400 mb-1">{stat.value}</div>
-            <div class="text-slate-400 text-sm">{stat.label}</div>
+      <!-- Values -->
+      <div class="space-y-5">
+        {values.map(value => (
+          <div class="bg-warm-50 border border-warm-200 rounded-2xl p-6">
+            <div class="flex items-start gap-3">
+              <span class="text-brand-600 text-xl mt-0.5" aria-hidden="true">✓</span>
+              <div>
+                <h3 class="text-warm-900 font-semibold mb-1">{value.title}</h3>
+                <p class="text-warm-600 text-sm leading-relaxed">{value.description}</p>
+              </div>
+            </div>
           </div>
         ))}
-
-        <!-- CTA card spanning full width -->
-        <div class="col-span-3 bg-gradient-to-r from-brand-900/50 to-violet-900/30 border border-brand-700/40 rounded-2xl p-6 text-center">
-          <p class="text-slate-300 text-sm mb-3">Prêt à explorer ce que l'IA peut faire pour vous ?</p>
-          <a
-            href="#contact"
-            class="inline-block bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors"
-          >
-            Consultation gratuite →
-          </a>
-        </div>
       </div>
     </div>
   </div>
