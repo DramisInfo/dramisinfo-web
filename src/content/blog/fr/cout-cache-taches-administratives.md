@@ -17,6 +17,13 @@ D'après une enquête de Smartsheet sur le travail manuel, **plus de 40 % des em
 
 Autrement dit, sur une semaine de cinq jours, c'est l'équivalent de **plus d'une journée entière** consacrée à des tâches qui n'apportent aucune valeur directe à vos clients.
 
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">40<span class="stat-unit">%+</span></span><span class="stat-label">des employés y consacrent au moins le quart de leur semaine</span></div>
+<div class="stat" data-reveal><span class="stat-num">1<span class="stat-unit"> jr+</span></span><span class="stat-label">l'équivalent perdu chaque semaine, par personne</span></div>
+<div class="stat" data-reveal><span class="stat-num">~50<span class="stat-unit">%</span></span><span class="stat-label">des activités sont techniquement automatisables</span></div>
+<div class="stat" data-reveal><span class="stat-num">30<span class="stat-unit">%</span></span><span class="stat-label">des heures travaillées libérables d'ici 2030</span></div>
+</div>
+
 ## Un potentiel d'automatisation largement sous-exploité
 
 Ce temps n'est pas une fatalité. Les recherches de McKinsey estiment que **près de la moitié des activités de travail actuelles sont techniquement automatisables** avec les technologies existantes. Et dans **environ 6 métiers sur 10, au moins le tiers des tâches** pourraient l'être.
@@ -24,6 +31,13 @@ Ce temps n'est pas une fatalité. Les recherches de McKinsey estiment que **prè
 > La plupart des emplois ne disparaissent pas avec l'automatisation : ce sont certaines tâches, à l'intérieur de ces emplois, qui peuvent l'être.
 
 McKinsey va plus loin : avec l'essor de l'IA, l'automatisation pourrait libérer l'équivalent de **jusqu'à 30 % des heures travaillées d'ici 2030**.
+
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">Le potentiel d'automatisation, selon McKinsey</figcaption>
+<div class="bar-row"><span class="bar-label">Activités automatisables</span><span class="bar-track"><span class="bar-fill" style="--w:50%"></span></span><span class="bar-val">~50%</span></div>
+<div class="bar-row"><span class="bar-label">Métiers où ⅓+ des tâches le sont</span><span class="bar-track"><span class="bar-fill" style="--w:60%"></span></span><span class="bar-val">6/10</span></div>
+<div class="bar-row"><span class="bar-label">Heures libérables d'ici 2030</span><span class="bar-track"><span class="bar-fill" style="--w:30%"></span></span><span class="bar-val">30%</span></div>
+</figure>
 
 ## À quoi ressemble ce gaspillage dans une PME
 

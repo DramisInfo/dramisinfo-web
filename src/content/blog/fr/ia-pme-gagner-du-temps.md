@@ -15,7 +15,20 @@ L'intelligence artificielle fait beaucoup parler. Entre la promesse révolutionn
 
 L'IA n'est plus l'apanage des grandes entreprises. Selon une note de la **Réserve fédérale américaine**, l'écart d'adoption entre grandes et petites entreprises se resserre rapidement : en février 2024, les grandes entreprises l'utilisaient près de deux fois plus que les petites (11,1 % contre 6,3 %) ; en août 2025, l'écart s'était nettement réduit (10,5 % contre 8,8 %).
 
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">L'écart d'adoption entre grandes et petites entreprises</figcaption>
+<div class="bar-row"><span class="bar-label">Février 2024</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:85%"></span></span><span class="bar-val bar-val--muted">4,8 pts</span></div>
+<div class="bar-row"><span class="bar-label">Août 2025</span><span class="bar-track"><span class="bar-fill" style="--w:30%"></span></span><span class="bar-val">1,7 pts</span></div>
+<p class="chart-note">En 18 mois, l'écart d'adoption a fondu de près des deux tiers.</p>
+</figure>
+
 Surtout, les bénéfices sont au rendez-vous : **plus de 80 % des petites entreprises** qui utilisent l'IA rapportent des gains de productivité, d'après les enquêtes récentes sur le sujet.
+
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">80<span class="stat-unit">%+</span></span><span class="stat-label">des petites entreprises utilisatrices rapportent des gains de productivité</span></div>
+<div class="stat" data-reveal><span class="stat-num">8,8<span class="stat-unit">%</span></span><span class="stat-label">des petites entreprises utilisent l'IA (août 2025), contre 6,3 % un an plus tôt</span></div>
+<div class="stat" data-reveal><span class="stat-num">−65<span class="stat-unit">%</span></span><span class="stat-label">de réduction de l'écart d'adoption en 18 mois</span></div>
+</div>
 
 ## L'IA utile, ce n'est pas l'IA partout
 

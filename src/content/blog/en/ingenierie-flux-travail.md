@@ -32,7 +32,20 @@ Anthropic's recommendation points the same way: find **the simplest possible sol
 
 The numbers from **McKinsey's State of AI 2025** survey are striking: **88% of organizations use AI**, but only **6% see significant impact** at the enterprise level. The gap isn't about the technology — it's about how it's integrated.
 
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">88<span class="stat-unit">%</span></span><span class="stat-label">of organizations use AI</span></div>
+<div class="stat" data-reveal><span class="stat-num">6<span class="stat-unit">%</span></span><span class="stat-label">only see significant enterprise-level impact</span></div>
+<div class="stat" data-reveal><span class="stat-num">2.8<span class="stat-unit">×</span></span><span class="stat-label">more workflow redesign among top performers</span></div>
+</div>
+
 The single biggest differentiator? **Thoughtful workflow redesign**. The highest performers are **2.8x more likely** to have fundamentally rethought their processes (55% vs. 20% for others). Bolting an AI model onto a broken process just gives you a faster broken process.
+
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">Have fundamentally redesigned their workflows</figcaption>
+<div class="bar-row"><span class="bar-label">Top performers</span><span class="bar-track"><span class="bar-fill" style="--w:55%"></span></span><span class="bar-val">55%</span></div>
+<div class="bar-row"><span class="bar-label">Everyone else</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:20%"></span></span><span class="bar-val bar-val--muted">20%</span></div>
+<p class="chart-note">Workflow redesign is the factor most strongly tied to real AI impact.</p>
+</figure>
 
 Adoption, in fact, remains cautious: only 23% of organizations are scaling AI agents in at least one function, versus 39% still experimenting. The smartest ones aren't rushing.
 

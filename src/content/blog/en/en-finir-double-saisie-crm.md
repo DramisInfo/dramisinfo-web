@@ -17,6 +17,20 @@ According to Salesforce's *State of Sales*, **sales reps spend less than 30% of 
 
 A Forrester activity study of more than 3,000 reps, cited by Salesforce, puts the time spent on CRM data entry alone at **about 17% of the week**. That's nearly a full day per week, per person, just to feed the tool.
 
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">&lt;30<span class="stat-unit">%</span></span><span class="stat-label">of time actually spent selling</span></div>
+<div class="stat" data-reveal><span class="stat-num">17<span class="stat-unit">%</span></span><span class="stat-label">of the week spent on CRM data entry</span></div>
+<div class="stat" data-reveal><span class="stat-num">~1<span class="stat-unit"> day</span></span><span class="stat-label">per week, per person, just to feed the tool</span></div>
+</div>
+
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">How a sales rep's week breaks down</figcaption>
+<div class="bar-row"><span class="bar-label">Actual selling</span><span class="bar-track"><span class="bar-fill" style="--w:30%"></span></span><span class="bar-val">&lt;30%</span></div>
+<div class="bar-row"><span class="bar-label">CRM data entry</span><span class="bar-track"><span class="bar-fill" style="--w:17%"></span></span><span class="bar-val">17%</span></div>
+<div class="bar-row"><span class="bar-label">Other activities</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:53%"></span></span><span class="bar-val bar-val--muted">53%</span></div>
+<p class="chart-note">Meetings, hunting for information, data entry… less than a third of the time is truly spent selling.</p>
+</figure>
+
 ## The problem isn't the CRM — it's double entry
 
 In most companies, the information already exists somewhere: in the inbox, in the website form, in the billing software. The problem is that someone has to **manually re-type it** from one system to another. That's what we call double data entry.

@@ -17,6 +17,13 @@ According to a Smartsheet survey on manual work, **more than 40% of employees sp
 
 In other words, over a five-day week, that's the equivalent of **more than a full day** spent on tasks that bring no direct value to your clients.
 
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">40<span class="stat-unit">%+</span></span><span class="stat-label">of employees spend at least a quarter of their week on it</span></div>
+<div class="stat" data-reveal><span class="stat-num">1<span class="stat-unit"> day+</span></span><span class="stat-label">the equivalent lost every week, per person</span></div>
+<div class="stat" data-reveal><span class="stat-num">~50<span class="stat-unit">%</span></span><span class="stat-label">of work activities are technically automatable</span></div>
+<div class="stat" data-reveal><span class="stat-num">30<span class="stat-unit">%</span></span><span class="stat-label">of hours worked could be freed up by 2030</span></div>
+</div>
+
 ## A largely untapped automation potential
 
 This lost time isn't inevitable. McKinsey research estimates that **nearly half of today's work activities are technically automatable** with existing technology. And in **roughly 6 out of 10 occupations, at least a third of the tasks** could be automated.
@@ -24,6 +31,13 @@ This lost time isn't inevitable. McKinsey research estimates that **nearly half 
 > Most jobs don't disappear with automation: it's certain tasks, within those jobs, that can be automated.
 
 McKinsey goes further: with the rise of AI, automation could free up the equivalent of **up to 30% of hours worked by 2030**.
+
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">Automation potential, according to McKinsey</figcaption>
+<div class="bar-row"><span class="bar-label">Automatable activities</span><span class="bar-track"><span class="bar-fill" style="--w:50%"></span></span><span class="bar-val">~50%</span></div>
+<div class="bar-row"><span class="bar-label">Occupations with ⅓+ automatable tasks</span><span class="bar-track"><span class="bar-fill" style="--w:60%"></span></span><span class="bar-val">6/10</span></div>
+<div class="bar-row"><span class="bar-label">Hours freed up by 2030</span><span class="bar-track"><span class="bar-fill" style="--w:30%"></span></span><span class="bar-val">30%</span></div>
+</figure>
 
 ## What this waste looks like in an SMB
 

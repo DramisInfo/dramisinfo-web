@@ -17,6 +17,20 @@ Selon le *State of Sales* de Salesforce, **les commerciaux passent moins de 30 %
 
 Une étude d'activité menée par Forrester auprès de plus de 3 000 commerciaux, reprise par Salesforce, chiffre à **environ 17 % de la semaine** le temps consacré à la seule saisie dans le CRM. Près d'une journée par semaine, par personne, juste pour nourrir l'outil.
 
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">&lt;30<span class="stat-unit">%</span></span><span class="stat-label">du temps réellement consacré à vendre</span></div>
+<div class="stat" data-reveal><span class="stat-num">17<span class="stat-unit">%</span></span><span class="stat-label">de la semaine passée à saisir dans le CRM</span></div>
+<div class="stat" data-reveal><span class="stat-num">~1<span class="stat-unit"> jr</span></span><span class="stat-label">par semaine, par personne, juste pour nourrir l'outil</span></div>
+</div>
+
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">Comment se répartit la semaine d'un commercial</figcaption>
+<div class="bar-row"><span class="bar-label">Vente réelle</span><span class="bar-track"><span class="bar-fill" style="--w:30%"></span></span><span class="bar-val">&lt;30%</span></div>
+<div class="bar-row"><span class="bar-label">Saisie CRM</span><span class="bar-track"><span class="bar-fill" style="--w:17%"></span></span><span class="bar-val">17%</span></div>
+<div class="bar-row"><span class="bar-label">Autres activités</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:53%"></span></span><span class="bar-val bar-val--muted">53%</span></div>
+<p class="chart-note">Réunions, recherche d'information, saisie… : moins d'un tiers du temps sert vraiment à vendre.</p>
+</figure>
+
 ## Le problème n'est pas le CRM, c'est la double saisie
 
 Dans la plupart des entreprises, l'information existe déjà quelque part : dans la boîte courriel, dans le formulaire du site web, dans le logiciel de facturation. Le problème, c'est qu'il faut la **recopier manuellement** d'un système à l'autre. C'est ce qu'on appelle la double saisie.

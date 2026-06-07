@@ -78,6 +78,36 @@ Les balises et le manifeste (`public/site.webmanifest`) sont déjà en place dan
 
 ---
 
+## Blog
+
+Les articles vivent dans `src/content/blog/{fr,en}/*.md` (Astro Content Collections,
+schéma dans `src/content.config.ts`). FR et EN partagent le même `permalink` mais
+ont des chemins de fichiers distincts. Champs notables : `coverImage` (bannière) et
+`icon` (jeu d'icônes maison).
+
+**Bannières** : images 1200×630 px dans `public/images/blog/`, servant à la fois de
+fond d'en-tête d'article et de `og:image` (aperçu LinkedIn). Générées par script :
+
+```bash
+npm run banners
+```
+
+**Visuels dans le contenu** : le Markdown accepte du HTML brut, stylé par
+`src/styles/global.css` (section « Composants visuels d'article »). Deux composants
+prêts à l'emploi, à coller tels quels dans un `.md` :
+
+- Cartes de stats — `<div class="stats" data-reveal-group>` contenant des
+  `<div class="stat" data-reveal>` avec `<span class="stat-num">` / `stat-label`
+- Graphique en barres — `<figure class="chart" data-reveal>` avec des
+  `<div class="bar-row">` (`bar-label` / `bar-track` > `bar-fill` style `--w:NN%` /
+  `bar-val`). Variante grisée : `bar-fill--muted` + `bar-val--muted`. Les barres
+  s'animent à l'apparition (et respectent `prefers-reduced-motion`).
+
+> Contrainte : un bloc HTML en Markdown ne doit contenir **aucune ligne vide**,
+> sinon il est scindé. Échapper `<` en `&lt;` (ex. `&lt;30%`).
+
+---
+
 ## Sécurité du formulaire & courriel
 
 Le formulaire de contact (`src/components/Contact.astro`) est protégé en couches :

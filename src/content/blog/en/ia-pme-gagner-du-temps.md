@@ -15,7 +15,20 @@ Artificial intelligence is generating a lot of noise. Between the revolutionary 
 
 AI is no longer the preserve of large companies. According to a note from the **U.S. Federal Reserve**, the adoption gap between large and small businesses is narrowing fast: in February 2024, large companies used it nearly twice as much as small ones (11.1% vs. 6.3%); by August 2025, the gap had shrunk considerably (10.5% vs. 8.8%).
 
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">The adoption gap between large and small businesses</figcaption>
+<div class="bar-row"><span class="bar-label">February 2024</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:85%"></span></span><span class="bar-val bar-val--muted">4.8 pts</span></div>
+<div class="bar-row"><span class="bar-label">August 2025</span><span class="bar-track"><span class="bar-fill" style="--w:30%"></span></span><span class="bar-val">1.7 pts</span></div>
+<p class="chart-note">In 18 months, the adoption gap shrank by nearly two thirds.</p>
+</figure>
+
 And the benefits are real: **more than 80% of small businesses** that use AI report productivity gains, according to recent surveys on the topic.
+
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">80<span class="stat-unit">%+</span></span><span class="stat-label">of small-business users report productivity gains</span></div>
+<div class="stat" data-reveal><span class="stat-num">8.8<span class="stat-unit">%</span></span><span class="stat-label">of small businesses use AI (Aug. 2025), up from 6.3% a year earlier</span></div>
+<div class="stat" data-reveal><span class="stat-num">−65<span class="stat-unit">%</span></span><span class="stat-label">reduction in the adoption gap in 18 months</span></div>
+</div>
 
 ## Useful AI is not AI everywhere
 

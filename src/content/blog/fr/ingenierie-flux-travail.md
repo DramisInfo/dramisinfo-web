@@ -32,7 +32,20 @@ La recommandation d'Anthropic va dans le même sens : chercher **la solution la 
 
 Les chiffres de l'enquête **State of AI 2025 de McKinsey** sont éloquents : **88 % des organisations utilisent l'IA**, mais seulement **6 % en tirent un impact significatif** à l'échelle de l'entreprise. L'écart ne vient pas de la technologie — il vient de la façon dont on l'intègre.
 
+<div class="stats" data-reveal-group>
+<div class="stat" data-reveal><span class="stat-num">88<span class="stat-unit">%</span></span><span class="stat-label">des organisations utilisent l'IA</span></div>
+<div class="stat" data-reveal><span class="stat-num">6<span class="stat-unit">%</span></span><span class="stat-label">seulement en tirent un impact significatif</span></div>
+<div class="stat" data-reveal><span class="stat-num">2,8<span class="stat-unit">×</span></span><span class="stat-label">plus de refonte des flux chez les plus performantes</span></div>
+</div>
+
 Le facteur le plus déterminant ? La **refonte réfléchie des flux de travail**. Les entreprises les plus performantes sont **2,8 fois plus susceptibles** d'avoir repensé leurs processus en profondeur (55 % contre 20 % pour les autres). Brancher un modèle d'IA sur un processus cassé ne donne qu'un processus cassé plus rapide.
+
+<figure class="chart" data-reveal>
+<figcaption class="chart-title">Ont repensé leurs flux de travail en profondeur</figcaption>
+<div class="bar-row"><span class="bar-label">Les plus performantes</span><span class="bar-track"><span class="bar-fill" style="--w:55%"></span></span><span class="bar-val">55%</span></div>
+<div class="bar-row"><span class="bar-label">Les autres</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:20%"></span></span><span class="bar-val bar-val--muted">20%</span></div>
+<p class="chart-note">La refonte des flux est le facteur le plus fortement corrélé à un réel impact de l'IA.</p>
+</figure>
 
 D'ailleurs, l'adoption reste prudente : seules 23 % des organisations déploient des agents IA à grande échelle dans au moins une fonction, contre 39 % qui en sont encore à l'expérimentation. Les plus avisées ne précipitent pas.
 
