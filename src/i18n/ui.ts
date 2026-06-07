@@ -11,6 +11,7 @@ export const ui = {
     nav: {
       approach: 'Notre démarche',
       services: 'Services',
+      useCases: 'Cas d\'usage',
       about: 'À propos',
       cta: 'Discutons-en',
     },
@@ -118,6 +119,49 @@ export const ui = {
       ],
       note: "Vous pouvez commencer à n'importe quel niveau — on s'adapte à votre situation.",
     },
+    useCases: {
+      heading: 'Des exemples concrets',
+      subheading:
+        "Voici quelques façons dont on peut vous faire gagner du temps dès aujourd'hui.",
+      items: [
+        {
+          icon: 'mail',
+          title: 'Catégorisation automatisée des courriels',
+          description:
+            'Vos courriels entrants sont triés, étiquetés et dirigés vers la bonne personne automatiquement. Fini le tri manuel de la boîte de réception.',
+        },
+        {
+          icon: 'crm',
+          title: 'Intégration avec votre CRM',
+          description:
+            'Vos contacts, clients et suivis se synchronisent automatiquement entre vos outils. Plus de double saisie, des informations toujours à jour.',
+        },
+        {
+          icon: 'invoice',
+          title: 'Intégration avec votre facturation',
+          description:
+            "Vos factures sont générées, envoyées et suivies automatiquement. Vous êtes payé plus vite, avec moins d'oublis.",
+        },
+        {
+          icon: 'calendar',
+          title: 'Planification et rendez-vous',
+          description:
+            'La prise de rendez-vous, les confirmations et les rappels se font tout seuls. Moins de va-et-vient, moins de rendez-vous manqués.',
+        },
+        {
+          icon: 'bell',
+          title: 'Relances et rappels automatiques',
+          description:
+            'Paiements en retard, suivis de vente, échéances… les bonnes relances partent au bon moment, sans que vous y pensiez.',
+        },
+        {
+          icon: 'scan',
+          title: 'Extraction de données',
+          description:
+            'Les informations de vos factures, formulaires et documents PDF sont extraites et enregistrées automatiquement dans vos systèmes.',
+        },
+      ],
+    },
     about: {
       heading: 'La technologie, sans la complexité',
       p1: "Beaucoup d'entreprises savent qu'elles pourraient gagner du temps et travailler plus efficacement, mais ne savent pas par où commencer. C'est exactement là qu'on intervient.",
@@ -171,6 +215,7 @@ export const ui = {
     nav: {
       approach: 'How we work',
       services: 'Services',
+      useCases: 'Use cases',
       about: 'About',
       cta: "Let's talk",
     },
@@ -277,6 +322,48 @@ export const ui = {
         },
       ],
       note: 'You can start at any stage — we adapt to your situation.',
+    },
+    useCases: {
+      heading: 'Concrete examples',
+      subheading: 'Here are a few ways we can start saving you time today.',
+      items: [
+        {
+          icon: 'mail',
+          title: 'Automated email categorization',
+          description:
+            'Incoming emails are sorted, labelled and routed to the right person automatically. No more manual inbox triage.',
+        },
+        {
+          icon: 'crm',
+          title: 'CRM integration',
+          description:
+            'Your contacts, customers and follow-ups sync automatically across your tools. No more double entry, always up-to-date information.',
+        },
+        {
+          icon: 'invoice',
+          title: 'Billing integration',
+          description:
+            'Your invoices are generated, sent and tracked automatically. You get paid faster, with fewer oversights.',
+        },
+        {
+          icon: 'calendar',
+          title: 'Scheduling and appointments',
+          description:
+            'Booking, confirmations and reminders happen on their own. Less back-and-forth, fewer missed appointments.',
+        },
+        {
+          icon: 'bell',
+          title: 'Automatic follow-ups and reminders',
+          description:
+            'Overdue payments, sales follow-ups, deadlines… the right reminders go out at the right time, without you thinking about it.',
+        },
+        {
+          icon: 'scan',
+          title: 'Data extraction',
+          description:
+            'Information from your invoices, forms and PDF documents is extracted and saved automatically into your systems.',
+        },
+      ],
     },
     about: {
       heading: 'Technology, without the complexity',

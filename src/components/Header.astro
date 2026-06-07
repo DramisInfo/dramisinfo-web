@@ -12,6 +12,7 @@ const home = lang === 'fr' ? '/' : '/en/';
 const navLinks = [
   { label: t.nav.approach, href: '#demarche' },
   { label: t.nav.services, href: '#services' },
+  { label: t.nav.useCases, href: '#cas' },
   { label: t.nav.about, href: '#apropos' },
 ];
 ---
@@ -20,7 +21,7 @@ const navLinks = [
     <a href={home} class="flex items-center gap-2 text-warm-900 font-semibold text-lg tracking-tight">
       <span class="text-brand-600">Dramis</span>Info
     </a>
-    <nav class="hidden md:flex items-center gap-8">
+    <nav class="hidden lg:flex items-center gap-7">
       {navLinks.map(link => (
         <a
           href={link.href}
