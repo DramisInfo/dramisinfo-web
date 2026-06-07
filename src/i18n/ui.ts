@@ -88,6 +88,8 @@ export const ui = {
       subheading:
         "On vous fait progresser à votre rythme, une étape à la fois. Pas besoin de tout transformer d'un coup — chaque niveau apporte des gains concrets.",
       levelLabel: 'Niveau',
+      prevLabel: 'Niveau précédent',
+      nextLabel: 'Niveau suivant',
       stages: [
         {
           icon: 'compass',
@@ -246,6 +248,8 @@ export const ui = {
       subheading:
         "We help you progress at your own pace, one step at a time. No need to transform everything at once — each stage brings concrete gains.",
       levelLabel: 'Stage',
+      prevLabel: 'Previous stage',
+      nextLabel: 'Next stage',
       stages: [
         {
           icon: 'compass',
