@@ -78,6 +78,24 @@ Les balises et le manifeste (`public/site.webmanifest`) sont déjà en place dan
 
 ---
 
+## Sécurité du formulaire & courriel
+
+Le formulaire de contact (`src/components/Contact.astro`) est protégé en couches :
+- **Honeypot** (`bot-field`) — champ caché que seuls les robots remplissent
+- **Akismet** — filtrage anti-spam automatique de Netlify (aucune config)
+- **reCAPTCHA** — `data-netlify-recaptcha` + le `<div data-netlify-recaptcha>` ;
+  Netlify injecte le widget au déploiement (clés gérées par Netlify)
+
+Le **courriel** n'apparaît jamais en clair dans le HTML : il est stocké en deux
+attributs (`data-eu`, `data-ed`) et reconstruit côté navigateur par un petit
+script. Pour le changer, modifier ces attributs dans `Contact.astro`.
+
+> Note : le reCAPTCHA ne s'affiche qu'une fois déployé sur Netlify (pas en
+> `npm run dev`). Pour le retirer, supprimer `data-netlify-recaptcha="true"`
+> et le `<div data-netlify-recaptcha>`.
+
+---
+
 ## Netlify
 
 Le fichier `netlify.toml` à la racine configure le build :

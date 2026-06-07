@@ -19,11 +19,12 @@ const t = ui[lang].contact;
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       class="space-y-4 text-left"
     >
-      <!-- Honeypot -->
+      <!-- Honeypot anti-robots (laissé vide par les humains) -->
       <p class="hidden" aria-hidden="true">
-        <label>Ne remplissez pas ce champ : <input name="bot-field" /></label>
+        <label>Ne remplissez pas ce champ : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
       </p>
       <input type="hidden" name="form-name" value="contact" />
 
@@ -75,6 +76,9 @@ const t = ui[lang].contact;
         ></textarea>
       </div>
 
+      <!-- reCAPTCHA injecté par Netlify au déploiement -->
+      <div data-netlify-recaptcha class="flex justify-center"></div>
+
       <button
         type="submit"
         class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-md text-sm shadow-sm"
@@ -85,9 +89,21 @@ const t = ui[lang].contact;
 
     <p class="text-warm-600 text-xs mt-6">
       {t.prefer}
-      <a href="mailto:info@dramisinfo.com" class="text-brand-600 hover:text-brand-700 font-medium transition-colors">
-        info@dramisinfo.com
-      </a>
+      <!-- Courriel reconstruit côté client pour ne jamais apparaître en clair -->
+      <a data-eu="info" data-ed="dramisinfo.com" class="text-brand-600 hover:text-brand-700 font-medium transition-colors"></a>
     </p>
   </div>
 </section>
+
+<script>
+  // Reconstitue les liens courriel à partir d'attributs séparés (anti-récolte).
+  function initEmailLinks() {
+    document.querySelectorAll<HTMLAnchorElement>('a[data-eu][data-ed]').forEach((a) => {
+      const addr = `${a.dataset.eu}@${a.dataset.ed}`;
+      a.href = `mailto:${addr}`;
+      if (!a.textContent?.trim()) a.textContent = addr;
+    });
+  }
+  initEmailLinks();
+  document.addEventListener('astro:page-load', initEmailLinks);
+</script>
