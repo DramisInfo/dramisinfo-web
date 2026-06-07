@@ -12,6 +12,9 @@ interface Props {
     | 'idea'
     | 'support'
     | 'clarity'
+    | 'compass'
+    | 'bolt'
+    | 'layers'
     | 'check'
     | 'globe';
   class?: string;
@@ -86,6 +89,28 @@ const { name, class: className = 'w-7 h-7' } = Astro.props;
       <path d="M12 6.5v1.3" />
       <path d="M12 18l3.6-3.6" />
       <circle cx="12" cy="18" r="1.6" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'compass' && (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M14.8 9.2 12.8 12.8 9.2 14.8 11.2 11.2z" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'bolt' && (
+    <>
+      <path d="M13 2.5 6 13h4.5l-1 8.5L18 11h-4.5z" />
+      <circle cx="14.5" cy="6.5" r="1.4" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'layers' && (
+    <>
+      <path d="M12 3.5 4 8l8 4.5L20 8z" />
+      <path d="M4 12 12 16.5 20 12" class="text-brand-400" />
+      <path d="M4 16 12 20.5 20 16" />
     </>
   )}
 

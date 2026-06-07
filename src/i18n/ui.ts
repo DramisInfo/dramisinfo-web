@@ -83,6 +83,39 @@ export const ui = {
         },
       ],
     },
+    framework: {
+      heading: "Votre parcours d'adoption",
+      subheading:
+        "On vous fait progresser à votre rythme, une étape à la fois. Pas besoin de tout transformer d'un coup — chaque niveau apporte des gains concrets.",
+      levelLabel: 'Niveau',
+      stages: [
+        {
+          icon: 'compass',
+          title: 'Diagnostic',
+          description:
+            'On cartographie vos tâches et vos processus pour repérer où vous perdez du temps et où se cachent les meilleures opportunités.',
+        },
+        {
+          icon: 'bolt',
+          title: 'Gains rapides',
+          description:
+            'On automatise quelques tâches simples à fort impact. Vous constatez des résultats concrets en quelques semaines, sans bouleversement.',
+        },
+        {
+          icon: 'layers',
+          title: 'Processus optimisés',
+          description:
+            'On connecte et on automatise des processus complets entre vos outils. Votre équipe travaille plus efficacement, avec moins d\'erreurs.',
+        },
+        {
+          icon: 'idea',
+          title: 'Amélioration continue',
+          description:
+            "On affine, on mesure et on ajoute l'intelligence artificielle là où elle apporte une vraie valeur. Votre entreprise s'améliore en continu.",
+        },
+      ],
+      note: "Vous pouvez commencer à n'importe quel niveau — on s'adapte à votre situation.",
+    },
     about: {
       heading: 'La technologie, sans la complexité',
       p1: "Beaucoup d'entreprises savent qu'elles pourraient gagner du temps et travailler plus efficacement, mais ne savent pas par où commencer. C'est exactement là qu'on intervient.",
@@ -207,6 +240,39 @@ export const ui = {
             'Simple dashboards that bring your important information together in one place, so you can make better decisions.',
         },
       ],
+    },
+    framework: {
+      heading: 'Your adoption journey',
+      subheading:
+        "We help you progress at your own pace, one step at a time. No need to transform everything at once — each stage brings concrete gains.",
+      levelLabel: 'Stage',
+      stages: [
+        {
+          icon: 'compass',
+          title: 'Assessment',
+          description:
+            'We map your tasks and processes to pinpoint where you lose time and where the best opportunities are hiding.',
+        },
+        {
+          icon: 'bolt',
+          title: 'Quick wins',
+          description:
+            'We automate a few simple, high-impact tasks. You see concrete results within weeks, with no upheaval.',
+        },
+        {
+          icon: 'layers',
+          title: 'Optimized processes',
+          description:
+            'We connect and automate complete processes across your tools. Your team works more efficiently, with fewer errors.',
+        },
+        {
+          icon: 'idea',
+          title: 'Continuous improvement',
+          description:
+            'We refine, measure and add artificial intelligence where it brings real value. Your business keeps getting better.',
+        },
+      ],
+      note: 'You can start at any stage — we adapt to your situation.',
     },
     about: {
       heading: 'Technology, without the complexity',
