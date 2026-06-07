@@ -5,6 +5,14 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Détection de langue : renvoie les anglophones vers /en/ à la racine.
+# Netlify lit l'en-tête Accept-Language côté CDN — aucun JS requis.
+[[redirects]]
+  from   = "/"
+  to     = "/en/"
+  status = 302
+  conditions = {Language = ["en"]}
+
 [[redirects]]
   from   = "/*"
   to     = "/index.html"
