@@ -16,14 +16,39 @@ export const ui = {
       cta: 'Discutons-en',
     },
     hero: {
-      badge: 'Automatisation & productivité pour les entreprises',
-      titleLine1: 'Gagnez du temps sur',
-      titleHighlight: 'ce qui vous ralentit',
+      badge: "L'automatisation au service de votre temps",
+      titleLine1: 'Votre temps fait',
+      titleHighlight: 'toute la différence',
       subtitle:
-        'DramisInfo aide les entreprises à simplifier et automatiser leurs tâches du quotidien. Avec ou sans intelligence artificielle — toujours avec des solutions simples, concrètes et adaptées à votre réalité.',
+        'Chaque heure passée sur des tâches administratives répétitives est une heure de moins pour vos clients, vos projets et ce qui vous distingue. DramisInfo automatise ces tâches pour vous redonner ce temps — et toute sa valeur.',
       ctaPrimary: 'Discutons de vos besoins',
       ctaSecondary: 'Comment ça fonctionne',
       reassurance: "Pas de jargon. Pas d'engagement. Première rencontre gratuite.",
+    },
+    value: {
+      heading: 'Récupérez la valeur de votre temps',
+      intro:
+        "Votre temps est votre ressource la plus précieuse — c'est lui qui vous distingue sur le marché. Pourtant, une grande partie est engloutie par des tâches administratives répétitives. Notre rôle : vous le redonner, pour que vous puissiez le consacrer à ce que vous faites de mieux.",
+      before: {
+        label: 'Sans automatisation',
+        items: [
+          'Saisie de données et copier-coller entre vos outils',
+          'Relances et suivis qui passent entre les mailles',
+          'Recherche d\'informations éparpillées',
+          'Des tâches administratives qui s\'accumulent',
+        ],
+        note: 'Des heures perdues chaque semaine, qui ne reviennent pas.',
+      },
+      after: {
+        label: 'Avec DramisInfo',
+        items: [
+          'Du temps pour vos clients et vos projets à forte valeur',
+          'De l\'énergie pour innover et vous démarquer',
+          'Des équipes concentrées sur ce qu\'elles font de mieux',
+          'Moins d\'erreurs, plus de sérénité',
+        ],
+        note: 'Le temps récupéré, réinvesti dans ce qui fait votre différence.',
+      },
     },
     how: {
       heading: 'Notre démarche, en toute simplicité',
@@ -220,14 +245,39 @@ export const ui = {
       cta: "Let's talk",
     },
     hero: {
-      badge: 'Automation & productivity for businesses',
-      titleLine1: 'Save time on',
-      titleHighlight: 'what slows you down',
+      badge: 'Automation that gives you time back',
+      titleLine1: 'Your time is',
+      titleHighlight: 'your advantage',
       subtitle:
-        'DramisInfo helps businesses simplify and automate their everyday tasks. With or without artificial intelligence — always with simple, concrete solutions tailored to your reality.',
+        'Every hour spent on repetitive administrative tasks is an hour less for your clients, your projects and what sets you apart. DramisInfo automates those tasks to give that time back — and all its value.',
       ctaPrimary: 'Tell us what you need',
       ctaSecondary: 'How it works',
       reassurance: 'No jargon. No commitment. First meeting is free.',
+    },
+    value: {
+      heading: 'Reclaim the value of your time',
+      intro:
+        "Your time is your most valuable resource — it's what sets you apart in the market. Yet much of it is swallowed up by repetitive administrative tasks. Our job: give it back, so you can spend it on what you do best.",
+      before: {
+        label: 'Without automation',
+        items: [
+          'Data entry and copy-pasting between your tools',
+          'Follow-ups that slip through the cracks',
+          'Hunting for scattered information',
+          'Administrative tasks that pile up',
+        ],
+        note: "Hours lost every week — and they don't come back.",
+      },
+      after: {
+        label: 'With DramisInfo',
+        items: [
+          'Time for your clients and your high-value projects',
+          'Energy to innovate and stand out',
+          'Teams focused on what they do best',
+          'Fewer errors, more peace of mind',
+        ],
+        note: 'Time reclaimed, reinvested in what makes you different.',
+      },
     },
     how: {
       heading: 'How we work, made simple',
