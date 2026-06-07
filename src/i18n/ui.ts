@@ -13,6 +13,7 @@ export const ui = {
       services: 'Services',
       useCases: 'Cas d\'usage',
       about: 'À propos',
+      blog: 'Blog',
       cta: 'Discutons-en',
     },
     hero: {
@@ -235,6 +236,22 @@ export const ui = {
       description:
         "DramisInfo aide les entreprises à gagner du temps en simplifiant et automatisant leurs tâches du quotidien. Des solutions simples et concrètes, avec ou sans intelligence artificielle.",
     },
+    blog: {
+      metaTitle: 'Blog — DramisInfo',
+      metaDescription:
+        "Analyses concrètes et chiffrées sur l'automatisation, la productivité et l'intelligence artificielle pour les PME.",
+      heading: 'Le blog',
+      subheading:
+        "Des analyses concrètes, appuyées sur des données réelles, pour vous aider à récupérer du temps et à tirer parti de l'automatisation.",
+      readTime: 'min de lecture',
+      published: 'Publié le',
+      back: 'Tous les articles',
+      cta: {
+        heading: "Envie d'appliquer ça à votre entreprise ?",
+        text: "Discutons de vos tâches les plus chronophages — première rencontre gratuite et sans engagement.",
+        button: 'Discutons-en',
+      },
+    },
   },
   en: {
     nav: {
@@ -242,6 +259,7 @@ export const ui = {
       services: 'Services',
       useCases: 'Use cases',
       about: 'About',
+      blog: 'Blog',
       cta: "Let's talk",
     },
     hero: {
@@ -461,6 +479,22 @@ export const ui = {
       title: 'DramisInfo — Automation and productivity for businesses',
       description:
         'DramisInfo helps businesses save time by simplifying and automating their everyday tasks. Simple, concrete solutions, with or without artificial intelligence.',
+    },
+    blog: {
+      metaTitle: 'Blog — DramisInfo',
+      metaDescription:
+        'Practical, data-backed insights on automation, productivity and artificial intelligence for small and mid-sized businesses.',
+      heading: 'The blog',
+      subheading:
+        'Practical, data-backed insights to help you reclaim time and make the most of automation.',
+      readTime: 'min read',
+      published: 'Published on',
+      back: 'All articles',
+      cta: {
+        heading: 'Want to apply this to your business?',
+        text: "Let's talk about your most time-consuming tasks — first meeting free, no commitment.",
+        button: "Let's talk",
+      },
     },
   },
 } as const;

@@ -11,10 +11,11 @@ const t = ui[lang];
 const home = lang === 'fr' ? '/' : '/en/';
 
 const navLinks = [
-  { label: t.nav.approach, href: '#demarche' },
-  { label: t.nav.services, href: '#services' },
-  { label: t.nav.useCases, href: '#cas' },
-  { label: t.nav.about, href: '#apropos' },
+  { label: t.nav.approach, href: `${home}#demarche` },
+  { label: t.nav.services, href: `${home}#services` },
+  { label: t.nav.useCases, href: `${home}#cas` },
+  { label: t.nav.about, href: `${home}#apropos` },
+  { label: t.nav.blog, href: `${home}blog/` },
 ];
 ---
 <header data-header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-warm-200 transition-shadow duration-300">
@@ -22,7 +23,7 @@ const navLinks = [
     <a href={home} class="flex items-center transition-transform hover:scale-[1.03]" aria-label="DramisInfo">
       <Logo class="h-8 w-auto" />
     </a>
-    <nav class="hidden lg:flex items-center gap-7">
+    <nav class="hidden lg:flex items-center gap-6">
       {navLinks.map(link => (
         <a
           href={link.href}
