@@ -123,17 +123,49 @@ const t = ui[lang].framework;
         if (next) next.disabled = current === slides.length - 1;
       };
 
-      const goTo = (i: number) => {
-        current = Math.max(0, Math.min(slides.length - 1, i));
+      const goTo = (i: number, wrap = false) => {
+        const last = slides.length - 1;
+        current = wrap ? (i + slides.length) % slides.length : Math.max(0, Math.min(last, i));
         const slide = slides[current];
         const left = slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
         track.scrollTo({ left, behavior: 'smooth' });
         update();
       };
 
-      prev?.addEventListener('click', () => goTo(current - 1));
-      next?.addEventListener('click', () => goTo(current + 1));
-      dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+      // Lecture automatique (en pause au survol, au focus, au swipe et hors écran)
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const INTERVAL = 5000;
+      let timer: number | undefined;
+      const stop = () => {
+        if (timer !== undefined) {
+          clearInterval(timer);
+          timer = undefined;
+        }
+      };
+      const start = () => {
+        stop();
+        if (reduceMotion || slides.length <= 1) return;
+        timer = window.setInterval(() => goTo(current + 1, true), INTERVAL);
+      };
+      // Relance le minuteur après une action manuelle (sans saut immédiat)
+      const nav = (i: number) => {
+        goTo(i);
+        start();
+      };
+
+      prev?.addEventListener('click', () => nav(current - 1));
+      next?.addEventListener('click', () => nav(current + 1));
+      dots.forEach((d, i) => d.addEventListener('click', () => nav(i)));
+
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      root.addEventListener('focusout', start);
+      track.addEventListener('touchstart', stop, { passive: true });
+      track.addEventListener('touchend', start, { passive: true });
+      document.addEventListener('visibilitychange', () =>
+        document.hidden ? stop() : start()
+      );
 
       // Synchronise l'état avec le défilement manuel / swipe
       const io = new IntersectionObserver(
@@ -150,6 +182,7 @@ const t = ui[lang].framework;
       slides.forEach((s) => io.observe(s));
 
       update();
+      start();
     });
   }
 
