@@ -1,0 +1,106 @@
+---
+/**
+ * Jeu d'icônes maison de DramisInfo.
+ * Style commun : trait 1.5, coins arrondis, et un accent teal signature
+ * (élément en text-brand-400 rempli) qui rend chaque icône unique à la marque.
+ */
+interface Props {
+  name:
+    | 'automate'
+    | 'simplify'
+    | 'tools'
+    | 'idea'
+    | 'support'
+    | 'clarity'
+    | 'check'
+    | 'globe';
+  class?: string;
+}
+
+const { name, class: className = 'w-7 h-7' } = Astro.props;
+---
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={`text-brand-600 ${className}`}
+  aria-hidden="true"
+>
+  {name === 'automate' && (
+    <>
+      <path d="M20.5 12a8.5 8.5 0 1 1-2.49-6.01" />
+      <path d="M20.5 4.5v4h-4" />
+      <circle cx="12" cy="12" r="2.4" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'simplify' && (
+    <>
+      <circle cx="5" cy="5" r="1.8" />
+      <circle cx="5" cy="12" r="1.8" />
+      <circle cx="5" cy="19" r="1.8" />
+      <path d="M6.9 5.6 16.4 11.2" />
+      <path d="M7 12h9.2" />
+      <path d="M6.9 18.4 16.4 12.8" />
+      <circle cx="19" cy="12" r="2.6" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'tools' && (
+    <>
+      <path d="M4 7h8" />
+      <path d="M18 7h2" />
+      <path d="M4 17h2" />
+      <path d="M11 17h9" />
+      <circle cx="15" cy="7" r="2.2" />
+      <circle cx="8.5" cy="17" r="2.2" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'idea' && (
+    <>
+      <path d="M9.2 17.5c-.1-.7-.5-1.3-1-1.8a5.5 5.5 0 1 1 7.6 0c-.5.5-.9 1.1-1 1.8" />
+      <path d="M9.5 17.5h5" />
+      <path d="M10.5 20.5h3" />
+      <path d="M19 3.2l.5 1.3 1.3.5-1.3.5-.5 1.3-.5-1.3L17 5l1.3-.5z" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'support' && (
+    <>
+      <circle cx="8" cy="8" r="2.6" />
+      <path d="M3.2 19a4.8 4.8 0 0 1 9.6 0" />
+      <path d="M14.5 19a4.4 4.4 0 0 1 6.3-3.8" />
+      <circle cx="16.6" cy="9.6" r="2.2" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'clarity' && (
+    <>
+      <path d="M3.5 18a8.5 8.5 0 0 1 17 0" />
+      <path d="M3.5 18h1.2" />
+      <path d="M19.3 18h1.2" />
+      <path d="M12 6.5v1.3" />
+      <path d="M12 18l3.6-3.6" />
+      <circle cx="12" cy="18" r="1.6" class="text-brand-400" fill="currentColor" stroke="none" />
+    </>
+  )}
+
+  {name === 'check' && (
+    <>
+      <circle cx="12" cy="12" r="9" class="text-brand-400" fill="currentColor" stroke="none" />
+      <path d="M8.2 12.3l2.5 2.5 5-5.3" stroke="white" />
+    </>
+  )}
+
+  {name === 'globe' && (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M3.5 12h17" />
+      <path d="M12 3.5c2.3 2.3 3.5 5.3 3.5 8.5s-1.2 6.2-3.5 8.5c-2.3-2.3-3.5-5.3-3.5-8.5S9.7 5.8 12 3.5z" />
+    </>
+  )}
+</svg>

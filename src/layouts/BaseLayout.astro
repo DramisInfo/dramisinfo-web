@@ -1,14 +1,23 @@
 ---
+import type { Lang } from '@/i18n/ui';
+
 interface Props {
+  lang: Lang;
   title: string;
   description: string;
 }
 
-const { title, description } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://dramisinfo.com');
+const { lang, title, description } = Astro.props;
+const site = Astro.site ?? new URL('https://dramisinfo.com');
+const canonical = new URL(Astro.url.pathname, site);
+
+// Liens alternés FR/EN pour le SEO (FR = défaut sans préfixe).
+const stripped = Astro.url.pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+const frUrl = new URL(stripped, site);
+const enUrl = new URL(stripped === '/' ? '/en/' : `/en${stripped}`, site);
 ---
 <!doctype html>
-<html lang="fr">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +26,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://dramisinfo.
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="fr" href={frUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={frUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

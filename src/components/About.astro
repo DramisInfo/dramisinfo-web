@@ -1,18 +1,12 @@
 ---
-const values = [
-  {
-    title: 'On parle votre langage',
-    description: 'Pas de jargon technique. On explique tout simplement, dans des mots que tout le monde comprend.',
-  },
-  {
-    title: 'Des solutions à votre rythme',
-    description: 'On avance étape par étape, sans tout bouleverser. Vous adoptez les changements en confiance.',
-  },
-  {
-    title: 'Un partenaire de proximité',
-    description: 'Basés au Québec, on reste disponibles et à votre écoute, bien après la mise en place.',
-  },
-];
+import Icon from './Icon.astro';
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang].about;
 ---
 <section id="apropos" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6">
@@ -20,32 +14,21 @@ const values = [
       <!-- Text -->
       <div>
         <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-6">
-          La technologie, sans la complexité
+          {t.heading}
         </h2>
         <div class="space-y-4 text-warm-600 leading-relaxed">
-          <p>
-            Beaucoup d'entreprises savent qu'elles pourraient gagner du temps et travailler
-            plus efficacement, mais ne savent pas par où commencer. C'est exactement là qu'on
-            intervient.
-          </p>
-          <p>
-            Chez DramisInfo, on ne cherche pas à vous vendre la dernière technologie à la mode.
-            On cherche à régler vos vrais problèmes du quotidien, avec des solutions simples
-            qui font une réelle différence.
-          </p>
-          <p>
-            Notre rôle, c'est de rendre la technologie accessible et utile pour votre
-            entreprise — pas l'inverse.
-          </p>
+          <p>{t.p1}</p>
+          <p>{t.p2}</p>
+          <p>{t.p3}</p>
         </div>
       </div>
 
       <!-- Values -->
       <div class="space-y-5">
-        {values.map(value => (
+        {t.values.map(value => (
           <div class="bg-warm-50 border border-warm-200 rounded-2xl p-6">
             <div class="flex items-start gap-3">
-              <span class="text-brand-600 text-xl mt-0.5" aria-hidden="true">✓</span>
+              <Icon name="check" class="w-6 h-6 mt-0.5 shrink-0" />
               <div>
                 <h3 class="text-warm-900 font-semibold mb-1">{value.title}</h3>
                 <p class="text-warm-600 text-sm leading-relaxed">{value.description}</p>

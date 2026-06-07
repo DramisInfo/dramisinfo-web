@@ -1,0 +1,24 @@
+---
+import Icon from './Icon.astro';
+import type { Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+// Calcule le chemin équivalent dans l'autre langue (FR = défaut sans préfixe).
+const path = Astro.url.pathname;
+const stripped = path.replace(/^\/en(?=\/|$)/, '') || '/';
+const frHref = stripped;
+const enHref = stripped === '/' ? '/en/' : `/en${stripped}`;
+
+const active = 'text-brand-600 font-semibold';
+const inactive = 'text-warm-600 hover:text-warm-900';
+---
+<div class="flex items-center gap-1.5 text-sm">
+  <Icon name="globe" class="w-4 h-4 text-warm-600" />
+  <a href={frHref} class={`transition-colors ${lang === 'fr' ? active : inactive}`} aria-current={lang === 'fr' ? 'true' : undefined}>FR</a>
+  <span class="text-warm-200" aria-hidden="true">|</span>
+  <a href={enHref} class={`transition-colors ${lang === 'en' ? active : inactive}`} aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
+</div>

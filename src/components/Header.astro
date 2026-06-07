@@ -1,13 +1,23 @@
 ---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const home = lang === 'fr' ? '/' : '/en/';
+
 const navLinks = [
-  { label: 'Notre démarche', href: '#demarche' },
-  { label: 'Services', href: '#services' },
-  { label: 'À propos', href: '#apropos' },
+  { label: t.nav.approach, href: '#demarche' },
+  { label: t.nav.services, href: '#services' },
+  { label: t.nav.about, href: '#apropos' },
 ];
 ---
 <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-warm-200">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2 text-warm-900 font-semibold text-lg tracking-tight">
+    <a href={home} class="flex items-center gap-2 text-warm-900 font-semibold text-lg tracking-tight">
       <span class="text-brand-600">Dramis</span>Info
     </a>
     <nav class="hidden md:flex items-center gap-8">
@@ -20,11 +30,14 @@ const navLinks = [
         </a>
       ))}
     </nav>
-    <a
-      href="#contact"
-      class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-    >
-      Discutons-en
-    </a>
+    <div class="flex items-center gap-5">
+      <LanguageSwitcher lang={lang} />
+      <a
+        href="#contact"
+        class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+      >
+        {t.nav.cta}
+      </a>
+    </div>
   </div>
 </header>

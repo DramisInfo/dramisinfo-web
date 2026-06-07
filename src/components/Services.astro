@@ -1,56 +1,31 @@
 ---
-const services = [
-  {
-    icon: '⏱️',
-    title: 'Automatiser les tâches répétitives',
-    description:
-      'Saisie de données, courriels, rapports, suivis… On automatise les tâches manuelles qui grugent votre temps pour que vous puissiez vous concentrer sur l\'essentiel.',
-  },
-  {
-    icon: '🔧',
-    title: 'Simplifier vos processus',
-    description:
-      'On revoit vos façons de faire avec vous pour éliminer les étapes inutiles, les pertes de temps et les erreurs. Des processus plus clairs, plus fluides.',
-  },
-  {
-    icon: '📋',
-    title: 'Des outils sur mesure',
-    description:
-      'Des applications et des outils pensés pour votre entreprise, faciles à utiliser au quotidien par toute votre équipe.',
-  },
-  {
-    icon: '💡',
-    title: 'L\'IA, quand c\'est utile',
-    description:
-      'Pas de technologie pour la technologie. On utilise l\'intelligence artificielle seulement lorsqu\'elle apporte une vraie valeur à votre entreprise.',
-  },
-  {
-    icon: '🤝',
-    title: 'Accompagnement et formation',
-    description:
-      'On vous explique tout simplement et on forme vos équipes. Vous gardez le contrôle et la confiance face aux nouveaux outils.',
-  },
-  {
-    icon: '📊',
-    title: 'Y voir plus clair',
-    description:
-      'Des tableaux de bord simples qui rassemblent vos informations importantes au même endroit, pour prendre de meilleures décisions.',
-  },
-];
+import Icon from './Icon.astro';
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang].services;
+
+// Icônes maison associées à chaque service (ordre identique au dictionnaire).
+const icons = ['automate', 'simplify', 'tools', 'idea', 'support', 'clarity'] as const;
 ---
 <section id="services" class="py-24 bg-warm-50">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">Comment on peut vous aider</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
       <p class="text-warm-600 text-lg max-w-xl mx-auto">
-        Des solutions concrètes pour vous faire gagner du temps et simplifier votre quotidien.
+        {t.subheading}
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.map(service => (
+      {t.items.map((service, i) => (
         <div class="bg-white border border-warm-200 rounded-2xl p-6 hover:border-brand-300 hover:shadow-md transition-all">
-          <div class="text-3xl mb-4" role="img" aria-label={service.title}>{service.icon}</div>
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-brand-50">
+            <Icon name={icons[i]} class="w-7 h-7" />
+          </div>
           <h3 class="text-warm-900 font-semibold text-lg mb-2">
             {service.title}
           </h3>
