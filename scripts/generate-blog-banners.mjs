@@ -188,3 +188,70 @@ await generate('workflow-engineering', `<svg xmlns="http://www.w3.org/2000/svg" 
   <!-- Barre d'accent -->
   <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
 </svg>`);
+
+// ──────────────────────────────────────────────────────
+// Banner 5 : Traitement des factures fournisseurs
+// Palette : bleu nuit foncé → sarcelle profond
+// Motif   : documents empilés (gauche) + faisceau de scan + données structurées extraites (droite)
+// ──────────────────────────────────────────────────────
+await generate('invoice-automation', `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0c2340"/>
+      <stop offset="60%"  stop-color="#0f2d3d"/>
+      <stop offset="100%" stop-color="#0f3b3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <!-- Documents empilés côté gauche -->
+  <rect x="75"  y="185" width="290" height="370" rx="10" fill="none" stroke="#99f6e4" stroke-width="1"   opacity="0.12"/>
+  <rect x="95"  y="165" width="290" height="370" rx="10" fill="none" stroke="#99f6e4" stroke-width="1.5" opacity="0.20"/>
+  <rect x="115" y="145" width="290" height="370" rx="10" fill="#0d9488" fill-opacity="0.05" stroke="#99f6e4" stroke-width="2" opacity="0.45"/>
+  <!-- Contenu simulé du document avant (facture) -->
+  <rect x="150" y="195" width="180" height="10" rx="3" fill="#99f6e4" opacity="0.30"/>
+  <rect x="150" y="220" width="100" height="7"  rx="2" fill="#99f6e4" opacity="0.18"/>
+  <rect x="140" y="248" width="230" height="1.5"      fill="#99f6e4" opacity="0.15"/>
+  <rect x="150" y="265" width="200" height="6"  rx="2" fill="#99f6e4" opacity="0.16"/>
+  <rect x="150" y="283" width="150" height="6"  rx="2" fill="#99f6e4" opacity="0.14"/>
+  <rect x="150" y="301" width="220" height="6"  rx="2" fill="#99f6e4" opacity="0.14"/>
+  <rect x="150" y="319" width="130" height="6"  rx="2" fill="#99f6e4" opacity="0.12"/>
+  <rect x="150" y="360" width="170" height="6"  rx="2" fill="#99f6e4" opacity="0.15"/>
+  <rect x="150" y="378" width="120" height="6"  rx="2" fill="#99f6e4" opacity="0.14"/>
+  <rect x="240" y="408" width="120" height="16" rx="4" fill="#0d9488" opacity="0.35"/>
+  <!-- Faisceau de scan (ligne lumineuse + halo) -->
+  <rect x="110" y="337" width="300" height="2.5" rx="1.5" fill="#14b8a6" opacity="0.75"/>
+  <rect x="110" y="330" width="300" height="17"  rx="5"   fill="#14b8a6" opacity="0.07"/>
+  <!-- Flèche de flux vers la droite -->
+  <line x1="410" y1="338" x2="590" y2="338" stroke="#99f6e4" stroke-width="2" opacity="0.28"/>
+  <polygon points="590,330 608,338 590,346" fill="#99f6e4" opacity="0.32"/>
+  <!-- Données structurées extraites côté droit -->
+  <rect x="635" y="175" width="90"  height="7" rx="2" fill="#5eead4" opacity="0.25"/>
+  <rect x="740" y="175" width="140" height="7" rx="2" fill="#99f6e4" opacity="0.35"/>
+  <rect x="635" y="205" width="90"  height="7" rx="2" fill="#5eead4" opacity="0.22"/>
+  <rect x="740" y="205" width="100" height="7" rx="2" fill="#99f6e4" opacity="0.30"/>
+  <rect x="635" y="235" width="90"  height="7" rx="2" fill="#5eead4" opacity="0.22"/>
+  <rect x="740" y="235" width="160" height="7" rx="2" fill="#99f6e4" opacity="0.28"/>
+  <rect x="625" y="260" width="490" height="1"       fill="#99f6e4" opacity="0.12"/>
+  <rect x="635" y="280" width="90"  height="7" rx="2" fill="#5eead4" opacity="0.20"/>
+  <rect x="740" y="280" width="120" height="7" rx="2" fill="#99f6e4" opacity="0.28"/>
+  <rect x="635" y="308" width="90"  height="7" rx="2" fill="#5eead4" opacity="0.20"/>
+  <rect x="740" y="308" width="80"  height="7" rx="2" fill="#99f6e4" opacity="0.28"/>
+  <rect x="635" y="336" width="90"  height="7" rx="2" fill="#5eead4" opacity="0.20"/>
+  <rect x="740" y="336" width="140" height="7" rx="2" fill="#14b8a6" opacity="0.40"/>
+  <rect x="635" y="366" width="90"  height="7" rx="2" fill="#5eead4" opacity="0.18"/>
+  <rect x="740" y="366" width="100" height="7" rx="2" fill="#99f6e4" opacity="0.25"/>
+  <rect x="625" y="400" width="490" height="1"       fill="#99f6e4" opacity="0.12"/>
+  <rect x="635" y="418" width="90"  height="9"  rx="2" fill="#0d9488" opacity="0.50"/>
+  <rect x="740" y="416" width="120" height="13" rx="3" fill="#0d9488" opacity="0.60"/>
+  <!-- Icônes de validation (checkmarks) -->
+  <circle cx="1010" cy="179" r="8" fill="#0d9488" opacity="0.55"/>
+  <polyline points="1006,179 1009,183 1015,175" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.90"/>
+  <circle cx="1010" cy="209" r="8" fill="#0d9488" opacity="0.50"/>
+  <polyline points="1006,209 1009,213 1015,205" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.90"/>
+  <circle cx="1010" cy="239" r="8" fill="#0d9488" opacity="0.50"/>
+  <polyline points="1006,239 1009,243 1015,235" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.90"/>
+  <!-- Cercle décoratif coin bas gauche -->
+  <circle cx="60" cy="590" r="200" fill="none" stroke="#99f6e4" stroke-width="1" opacity="0.05"/>
+  <!-- Barre d'accent sarcelle -->
+  <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
+</svg>`);
