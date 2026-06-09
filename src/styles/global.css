@@ -67,7 +67,7 @@ html.reveal-on [data-animate] {
   margin-top: 1.25rem;
 }
 .article-content h2 {
-  color: #1c1917; /* warm-900 */
+  color: #0d1b3e; /* navy-900 */
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.25;
@@ -76,7 +76,7 @@ html.reveal-on [data-animate] {
   letter-spacing: -0.01em;
 }
 .article-content h3 {
-  color: #1c1917;
+  color: #122050; /* navy-800 */
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 1.75rem;
@@ -137,8 +137,8 @@ html.reveal-on [data-animate] {
   margin: 2.25rem 0;
 }
 .article-content .stat {
-  background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%); /* brand-50 → blanc */
-  border: 1px solid #ccfbf1; /* brand-100 */
+  background: linear-gradient(180deg, #f0f5ff 0%, #ffffff 100%); /* navy-50 → blanc */
+  border: 1px solid #dce9fa; /* navy-100 */
   border-radius: 1rem;
   padding: 1.35rem 1.1rem 1.2rem;
   text-align: center;
