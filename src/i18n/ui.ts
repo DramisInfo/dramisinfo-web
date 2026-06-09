@@ -22,7 +22,7 @@ export const ui = {
       titleHighlight: 'toute la différence',
       subtitle:
         'Chaque heure passée sur des tâches administratives répétitives est une heure de moins pour vos clients, vos projets et ce qui vous distingue. DramisInfo automatise ces tâches pour vous redonner ce temps — et toute sa valeur.',
-      ctaPrimary: 'Discutons de vos besoins',
+      ctaPrimary: 'Évaluer mon potentiel',
       ctaSecondary: 'Comment ça fonctionne',
       reassurance: "Pas de jargon. Pas d'engagement. Première rencontre gratuite.",
     },
@@ -313,7 +313,7 @@ export const ui = {
       titleHighlight: 'your advantage',
       subtitle:
         'Every hour spent on repetitive administrative tasks is an hour less for your clients, your projects and what sets you apart. DramisInfo automates those tasks to give that time back — and all its value.',
-      ctaPrimary: 'Tell us what you need',
+      ctaPrimary: 'Assess my potential',
       ctaSecondary: 'How it works',
       reassurance: 'No jargon. No commitment. First meeting is free.',
     },
