@@ -14,7 +14,7 @@ export const ui = {
       useCases: 'Cas d\'usage',
       about: 'À propos',
       blog: 'Blog',
-      cta: 'Discutons-en',
+      cta: 'Évaluer mon potentiel',
     },
     hero: {
       badge: "L'automatisation au service de votre temps",
@@ -305,7 +305,7 @@ export const ui = {
       useCases: 'Use cases',
       about: 'About',
       blog: 'Blog',
-      cta: "Let's talk",
+      cta: 'Assess my potential',
     },
     hero: {
       badge: 'Automation that gives you time back',
