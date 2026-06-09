@@ -77,4 +77,3 @@ C'est exactement la philosophie DramisInfo : ne pas commencer grand. Commencer j
 - [Ardent Partners — Accounts Payable Metrics that Matter 2024](https://www.medius.com/resources/guides-reports/ardent-partners-accounts-payable-metrics-that-matter/)
 - [DocuClipper — 59 Accounts Payable Statistics for 2025](https://www.docuclipper.com/blog/accounts-payable-statistics/)
 - [Parseur — AI Invoice Processing Benchmarks 2026](https://parseur.com/blog/ai-invoice-processing-benchmarks)
-- [Ascend Software — AP Benchmarks Every Modern Team Should Know in 2025](https://www.ascendsoftware.com/blog/what-good-looks-like-ap-benchmarks-every-modern-team-should-know-in-2025)
