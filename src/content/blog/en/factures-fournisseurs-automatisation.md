@@ -70,7 +70,7 @@ That's the DramisInfo approach: don't start big. Start right, measure, then scal
 
 ---
 
-*DramisInfo helps SMBs automate their administrative processes — invoicing, data capture, tool integrations. If your team is still spending hours each week on supplier invoices, let's talk.*
+*DramisInfo helps SMBs automate their administrative processes — invoicing, data capture, tool integrations. If your team is still spending hours each week on supplier invoices, fill out our short survey — we'll come back with concrete ideas.*
 
 ## Sources
 
