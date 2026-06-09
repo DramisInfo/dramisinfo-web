@@ -37,9 +37,10 @@ const navLinks = [
       <LanguageSwitcher lang={lang} />
       <a
         href="#contact"
-        class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-md"
+        class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-md whitespace-nowrap"
       >
-        {t.nav.cta}
+        <span class="sm:hidden">{t.nav.ctaShort}</span>
+        <span class="hidden sm:inline">{t.nav.cta}</span>
       </a>
     </div>
   </div>

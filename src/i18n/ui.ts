@@ -15,6 +15,7 @@ export const ui = {
       about: 'À propos',
       blog: 'Blog',
       cta: 'Évaluer mon potentiel',
+      ctaShort: 'Sondage',
     },
     hero: {
       badge: "L'automatisation au service de votre temps",
@@ -306,6 +307,7 @@ export const ui = {
       about: 'About',
       blog: 'Blog',
       cta: 'Assess my potential',
+      ctaShort: 'Survey',
     },
     hero: {
       badge: 'Automation that gives you time back',
