@@ -8,7 +8,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = ui[lang].about;
 ---
-<section id="apropos" class="py-24 bg-white">
+<section id="apropos" class="py-24 bg-navy-50">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <!-- Text -->
@@ -26,7 +26,7 @@ const t = ui[lang].about;
       <!-- Values -->
       <div data-reveal-group class="space-y-5">
         {t.values.map(value => (
-          <div data-reveal class="bg-warm-50 border border-warm-200 rounded-2xl p-6 hover:border-brand-300 hover:shadow-sm transition-all">
+          <div data-reveal class="bg-white border border-warm-200 rounded-2xl p-6 hover:border-brand-300 hover:shadow-sm transition-all">
             <div class="flex items-start gap-3">
               <Icon name="check" class="w-6 h-6 mt-0.5 shrink-0" />
               <div>
