@@ -1,6 +1,6 @@
 ---
 title: "Traitement des factures fournisseurs : récupérer des heures sans changer vos outils"
-description: "86 % des PME saisissent encore leurs factures à la main. Découvrez comment l'automatisation réduit ce délai de 14 jours à 3 — et libère votre équipe."
+description: "86 % des PME saisissent encore leurs factures à la main. Découvrez comment l'automatisation réduit ce délai de 14 jours à quelques jours — et libère votre équipe."
 pubDate: 2026-06-08
 lang: fr
 permalink: factures-fournisseurs-automatisation
