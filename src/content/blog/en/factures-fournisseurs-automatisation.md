@@ -1,6 +1,6 @@
 ---
 title: "Automating Supplier Invoices: Getting Hours Back Without Changing Your Tools"
-description: "86% of SMBs still key in invoices by hand. Here's how automation cuts that 14-day processing cycle down to 3 — without replacing your accounting software."
+description: "86% of SMBs still key in invoices by hand. Here's how automation can cut a 14-day processing cycle down to just a few days — without replacing your accounting software."
 pubDate: 2026-06-08
 lang: en
 permalink: factures-fournisseurs-automatisation
