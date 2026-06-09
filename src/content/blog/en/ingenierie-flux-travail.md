@@ -69,7 +69,7 @@ The right question is never "how do I put AI into this process?", but "what is t
 
 ---
 
-*Wondering where AI truly earns its place in your processes — and where simple automation is enough? Let's talk — first meeting free.*
+*Wondering where AI truly earns its place in your processes — and where simple automation is enough? Fill out our short survey — takes 2 minutes, and we'll come back with concrete ideas.*
 
 ## Sources
 

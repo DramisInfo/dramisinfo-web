@@ -60,7 +60,7 @@ At DramisInfo, we don't deploy AI for the sake of technology. We use it **only w
 
 ---
 
-*Wondering whether AI could save you time, without any nasty surprises? Let's talk — first meeting free.*
+*Wondering whether AI could save you time, without any nasty surprises? Fill out our short survey — we'll get back to you with concrete ideas tailored to your situation.*
 
 ## Sources
 

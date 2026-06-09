@@ -60,7 +60,7 @@ Chez DramisInfo, on ne déploie pas de l'IA pour la technologie. On l'utilise **
 
 ---
 
-*Vous vous demandez si l'IA pourrait vous faire gagner du temps, sans mauvaise surprise ? Parlons-en — première rencontre gratuite.*
+*Vous vous demandez si l'IA pourrait vous faire gagner du temps, sans mauvaise surprise ? Remplissez notre sondage — on vous revient avec des pistes concrètes adaptées à votre réalité.*
 
 ## Sources
 

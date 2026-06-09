@@ -69,7 +69,7 @@ La bonne question n'est jamais « comment mettre de l'IA dans ce processus ? »,
 
 ---
 
-*Vous vous demandez où l'IA mérite vraiment sa place dans vos processus — et où une automatisation simple suffit ? Parlons-en — première rencontre gratuite.*
+*Vous vous demandez où l'IA mérite vraiment sa place dans vos processus — et où une automatisation simple suffit ? Remplissez notre sondage — ça prend 2 minutes, et on vous revient avec des pistes concrètes.*
 
 ## Sources
 

@@ -70,7 +70,7 @@ C'est exactement la philosophie DramisInfo : ne pas commencer grand. Commencer j
 
 ---
 
-*DramisInfo accompagne les PME québécoises dans l'automatisation de leurs processus administratifs — facturation, saisie de données, intégrations entre outils. Si vos équipes passent encore des heures chaque semaine sur des factures fournisseurs, parlons-en.*
+*DramisInfo accompagne les PME québécoises dans l'automatisation de leurs processus administratifs — facturation, saisie de données, intégrations entre outils. Si vos équipes passent encore des heures chaque semaine sur des factures fournisseurs, remplissez notre sondage — on vous revient avec des pistes concrètes.*
 
 ## Sources
 
