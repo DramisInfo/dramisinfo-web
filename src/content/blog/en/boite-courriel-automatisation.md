@@ -47,7 +47,7 @@ That study focused specifically on sales inquiries, but the principle it illustr
 
 ## Why email resists automation where CRM and invoices give way
 
-In earlier posts, we looked at how automation solves double data entry in a CRM and manual processing of supplier invoices. Both cases share a common trait: the data is **structured**. An amount is an amount. An invoice number is an invoice number. A machine can extract, validate, and file it reliably.
+In earlier posts, we looked at how automation solves [double data entry in a CRM](/en/blog/en-finir-double-saisie-crm/) and [manual processing of supplier invoices](/en/blog/factures-fournisseurs-automatisation/). Both cases share a common trait: the data is **structured**. An amount is an amount. An invoice number is an invoice number. A machine can extract, validate, and file it reliably.
 
 Email is fundamentally different: it's free-form language, written by humans, for humans. "Could I move my Tuesday appointment, ideally to later in the day if possible?" has no obvious structure — you have to infer the intent (a rescheduling request), extract the useful detail (Tuesday, a preference for later in the day), and decide on the right action. That ambiguity is exactly why email has long been harder to automate with simple rules than CRM records or invoice data — and why so many small businesses automated their CRM and their invoicing well before ever touching their inbox.
 
@@ -67,7 +67,7 @@ The most common mistake small businesses make when they first consider automatin
 
 **1. Classify by intent before responding.** The vast majority of inbound emails at a small business fall into a small number of recurring categories: availability requests, order status checks, re-sends of a document already produced, pricing or service questions. An automation system starts by recognizing which category a message belongs to — not necessarily by answering it itself.
 
-**2. Automate the repetitive with template replies.** For well-identified, low-risk categories — confirming an appointment, re-sending an invoice already issued, sharing business hours — a personalized automatic reply, populated with the right details, can go out in seconds instead of waiting for the team's next free moment. That's exactly the principle described in our post on workflow engineering: deterministic, predictable automation, reserved for cases where the right answer is clear.
+**2. Automate the repetitive with template replies.** For well-identified, low-risk categories — confirming an appointment, re-sending an invoice already issued, sharing business hours — a personalized automatic reply, populated with the right details, can go out in seconds instead of waiting for the team's next free moment. That's exactly the principle described in our post on [workflow engineering](/en/blog/ingenierie-flux-travail/): deterministic, predictable automation, reserved for cases where the right answer is clear.
 
 **3. Escalate everything else to a human, with the right context attached.** Anything that falls outside the repetitive bucket — a complaint, a negotiation, an ambiguous situation — should land directly in front of a person, ideally with the history and context already summarized, rather than buried among twenty-three other messages. This is where the time freed up by automating the rest becomes useful: the team can finally give these cases the attention they deserve, instead of processing them at the same rushed pace as everything else.
 

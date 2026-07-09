@@ -49,17 +49,20 @@ coverImage: /images/blog/<nom-banniere>.jpg
 ---
 ```
 
-### Structure du corps (600–900 mots)
+### Structure du corps (1200–1800 mots — articles approfondis, pas de survol)
 
 1. **Accroche** : une douleur réelle que le lecteur reconnaît immédiatement
 2. **Les données** : 1–2 statistiques clés avec source inline en gras
 3. **Grille de stats** (obligatoire — voir gabarit ci-dessous)
 4. **Graphique en barres** (obligatoire — voir gabarit ci-dessous)
-5. **L'analyse** : pourquoi ça arrive, la vraie cause
-6. **La solution** : approche concrète, étapes ou exemple métier
-7. **Conclusion** : ramène à la philosophie DramisInfo (récupérer du temps, progressivité)
-8. Séparateur `---` puis mention italique de DramisInfo
-9. **Section Sources** avec liens cliquables
+5. **L'analyse** : pourquoi ça arrive, la vraie cause — développer avec nuance, pas juste l'affirmer
+6. **La solution** : approche concrète, étapes ou exemple métier, développée en détail
+7. **Honnêteté sur les limites** : ce que l'automatisation/l'IA ne doit pas faire dans ce contexte
+8. **Conclusion** : ramène à la philosophie DramisInfo (récupérer du temps, progressivité)
+9. Séparateur `---` puis mention italique de DramisInfo
+10. **Section Sources** avec liens cliquables
+
+**Liens internes obligatoires** : chaque fois que le texte fait référence à un autre article déjà publié du blog (« comme on l'a vu dans notre article sur… »), ce doit être un **lien cliquable** vers cet article — jamais juste une mention en texte. FR → `/blog/<permalink>/`, EN → `/en/blog/<permalink>/`. Repère les articles existants dans `src/content/blog/fr/` pour trouver des occasions pertinentes de faire ce lien (pas besoin d'en forcer si aucun n'est pertinent).
 
 ### Gabarit grille de stats
 
@@ -132,6 +135,7 @@ Vérifie chaque point avant de déclarer l'article prêt :
 - [ ] Même `permalink` en FR et EN
 - [ ] Au moins une grille de stats ET un graphique en barres dans chaque version
 - [ ] Toutes les statistiques ont une source citée dans le texte
+- [ ] Toute référence à un autre article du blog est un lien cliquable vers cet article
 - [ ] Section Sources en fin d'article avec liens cliquables
 - [ ] Mention DramisInfo en italique avant les Sources
 - [ ] Bannière générée et référencée dans `coverImage`
@@ -146,4 +150,4 @@ Vérifie chaque point avant de déclarer l'article prêt :
 - **Concret avant abstrait** : illustrer avec un exemple métier réel avant d'expliquer la théorie
 - **Honnêteté sur les limites** : ne pas survendre, mentionner quand l'IA n'est pas nécessaire
 - Ramener à l'un des messages clés DramisInfo : récupérer du temps, fiabiliser les processus, adopter progressivement
-- Longueur cible : **600–900 mots** (hors frontmatter et sources)
+- Longueur cible : **1200–1800 mots** (hors frontmatter et sources)
