@@ -203,8 +203,15 @@ Ces éléments s'animent à l'apparition et respectent `prefers-reduced-motion`.
 
 ### Longueur cible
 
-- **600–900 mots** (hors frontmatter et sources) : assez pour être substantiel, assez court pour être lu en entier sur LinkedIn
-- Temps de lecture affiché automatiquement (200 mots/min) → viser 3–5 min
+- **1200–1800 mots** (hors frontmatter et sources) : les articles doivent être approfondis — nuance, exemples concrets multiples, développement réel de l'analyse — plutôt que rester en survol
+- Temps de lecture affiché automatiquement (200 mots/min)
+
+### Liens internes vers les autres articles
+
+Chaque fois qu'un article fait référence à un autre article du blog (« comme on l'a vu dans notre article sur… »), la référence **doit être un lien cliquable** vers cet article, directement dans le texte — jamais une simple mention sans lien.
+- FR : lien vers `/blog/<permalink>/`
+- EN : lien vers `/en/blog/<permalink>/`
+- Vérifier après `npm run build` que le lien apparaît bien dans le HTML généré (`<a href="/blog/...">`)
 
 ### Bilinguisme obligatoire
 
@@ -222,6 +229,7 @@ La version anglaise n'est pas une traduction mot-à-mot : adapter les tournures,
 [ ] Même permalink en FR et EN
 [ ] Au moins une grille de stats ET un graphique en barres
 [ ] Toutes les statistiques ont une source citée
+[ ] Toute référence à un autre article du blog est un lien cliquable vers cet article
 [ ] Section Sources en fin d'article avec liens cliquables
 [ ] Mention DramisInfo en italique avant les Sources
 [ ] Bannière générée (npm run banners) et référencée dans coverImage

@@ -255,3 +255,53 @@ await generate('invoice-automation', `<svg xmlns="http://www.w3.org/2000/svg" wi
   <!-- Barre d'accent sarcelle -->
   <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
 </svg>`);
+
+// ──────────────────────────────────────────────────────
+// Banner 6 : Boîte courriel / Email triage
+// Palette : bleu nuit → sarcelle profond (diagonale)
+// Motif   : enveloppes entrantes qui se séparent en deux flux —
+//           un flux rapide automatisé (droite haute) et un flux
+//           humain plus lent (droite basse)
+// ──────────────────────────────────────────────────────
+await generate('email-triage', `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0c2340"/>
+      <stop offset="55%"  stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <!-- Enveloppes entrantes empilées (gauche) -->
+  <g opacity="0.9">
+    <rect x="70"  y="230" width="150" height="104" rx="8" fill="none" stroke="#99f6e4" stroke-width="1.5" opacity="0.20"/>
+    <polyline points="70,238 145,290 220,238" fill="none" stroke="#99f6e4" stroke-width="1.5" opacity="0.20"/>
+    <rect x="100" y="270" width="150" height="104" rx="8" fill="none" stroke="#99f6e4" stroke-width="1.5" opacity="0.30"/>
+    <polyline points="100,278 175,330 250,278" fill="none" stroke="#99f6e4" stroke-width="1.5" opacity="0.30"/>
+    <rect x="130" y="310" width="150" height="104" rx="8" fill="#0d9488" fill-opacity="0.06" stroke="#99f6e4" stroke-width="2" opacity="0.55"/>
+    <polyline points="130,318 205,370 280,318" fill="none" stroke="#99f6e4" stroke-width="2" opacity="0.55"/>
+  </g>
+  <!-- Point de tri central -->
+  <circle cx="430" cy="365" r="20" fill="#14b8a6" opacity="0.85"/>
+  <circle cx="430" cy="365" r="36" fill="#14b8a6" opacity="0.12"/>
+  <line x1="280" y1="362" x2="410" y2="365" stroke="#99f6e4" stroke-width="2" opacity="0.35"/>
+  <!-- Flux rapide automatisé (vers le haut-droit) -->
+  <line x1="448" y1="352" x2="640" y2="200" stroke="#5eead4" stroke-width="2" opacity="0.45"/>
+  <line x1="640" y1="200" x2="900" y2="150" stroke="#5eead4" stroke-width="2" opacity="0.40"/>
+  <polygon points="900,142 922,150 900,160" fill="#5eead4" opacity="0.55"/>
+  <circle cx="640" cy="200" r="8" fill="#5eead4" opacity="0.75"/>
+  <rect x="960" y="120" width="150" height="8" rx="4" fill="#5eead4" opacity="0.30"/>
+  <rect x="960" y="142" width="110" height="8" rx="4" fill="#5eead4" opacity="0.20"/>
+  <!-- Flux humain, plus lent (vers le bas-droit) -->
+  <line x1="448" y1="378" x2="640" y2="480" stroke="#ffffff" stroke-width="1.5" opacity="0.30"/>
+  <line x1="640" y1="480" x2="900" y2="520" stroke="#ffffff" stroke-width="1.5" opacity="0.26"/>
+  <circle cx="640" cy="480" r="9" fill="#ffffff" opacity="0.55"/>
+  <circle cx="900" cy="520" r="12" fill="#ffffff" opacity="0.65"/>
+  <circle cx="900" cy="520" r="24" fill="#ffffff" opacity="0.08"/>
+  <!-- Petits marqueurs décoratifs -->
+  <circle cx="1090" cy="420" r="3" fill="#99f6e4" opacity="0.22"/>
+  <circle cx="1130" cy="460" r="3" fill="#99f6e4" opacity="0.18"/>
+  <circle cx="1060" cy="470" r="3" fill="#99f6e4" opacity="0.16"/>
+  <!-- Barre d'accent sarcelle -->
+  <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
+</svg>`);
