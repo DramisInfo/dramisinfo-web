@@ -42,6 +42,20 @@ Effectue des recherches web approfondies sur le sujet pour trouver :
 
 **Règle absolue :** aucune statistique inventée ou approximative. Si tu ne trouves pas de chiffre vérifiable pour un point, ne l'inclus pas.
 
+### Règle sur les devises — tout montant doit être en dollars canadiens (CAD)
+
+Beaucoup de sources crédibles (études américaines, européennes, rapports internationaux) expriment leurs montants en dollars US, en euros (€) ou en livres (£). **Aucun montant en devise étrangère ne doit apparaître tel quel dans l'article publié** — le lectorat est une clientèle québécoise/canadienne.
+
+Pour chaque statistique monétaire trouvée en recherche :
+
+1. Repère la devise d'origine de la source (souvent implicite pour les études américaines — vérifie si besoin).
+2. Convertis le montant en dollars canadiens en cherchant le taux de change courant (ex. recherche web « USD to CAD exchange rate » ou « EUR to CAD exchange rate »).
+3. Arrondis à une précision raisonnable (cents pour un petit montant, dizaines/centaines pour un gros montant) et présente le résultat avec le symbole `$` seul (convention du site, équivaut à CAD) — ajoute `CA` ou `CAD` en clair si une ambiguïté est possible dans la phrase.
+4. Signale la conversion dans le texte au moins une fois par statistique, en une formule courte (« montant converti depuis l'étude originale, exprimée en euros/dollars US ») — pas besoin de répéter la mention à chaque occurrence du même chiffre.
+5. Si un ratio ou pourcentage est dérivé de deux montants dans la même devise d'origine, le ratio reste valide après conversion (il n'a pas besoin d'être recalculé séparément) — mais vérifie que les deux valeurs converties et arrondies restent cohérentes avec ce ratio.
+
+Cette règle s'applique aussi aux gabarits de grille de stats et de graphique en barres : les valeurs `stat-num`/`bar-val` en dollars doivent déjà être en CAD, jamais en devise source.
+
 ---
 
 ## Étape 2 — Planification de l'article
@@ -161,6 +175,7 @@ Vérifie chaque point avant de déclarer l'article prêt :
 - [ ] Même `permalink` en FR et EN
 - [ ] Au moins une grille de stats ET un graphique en barres dans chaque version
 - [ ] Toutes les statistiques ont une source citée dans le texte
+- [ ] Tous les montants monétaires sont exprimés en dollars canadiens (aucun €, US$, £ ou autre devise non convertie dans le texte publié)
 - [ ] Toute référence à un autre article du blog est un lien cliquable vers cet article
 - [ ] Section Sources en fin d'article avec liens cliquables
 - [ ] Mention DramisInfo en italique avant les Sources

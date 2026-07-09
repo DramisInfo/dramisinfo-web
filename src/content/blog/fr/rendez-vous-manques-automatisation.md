@@ -26,7 +26,7 @@ Ce qui change d'une entreprise à l'autre, en revanche, c'est ce qu'on fait de c
 
 ## Ce que montrent les études, chiffres à l'appui
 
-Deux types de rappels ont été comparés dans ces 29 études : les appels téléphoniques faits par une personne, et les rappels automatisés — SMS ou message vocal préenregistré. Les appels personnels réduisent l'absentéisme de 39 % par rapport au taux de base. Les rappels automatisés font presque aussi bien, avec une réduction de 29 %, pour une fraction du coût : en moyenne 0,14 € par SMS, contre 0,90 € par appel téléphonique.
+Deux types de rappels ont été comparés dans ces 29 études : les appels téléphoniques faits par une personne, et les rappels automatisés — SMS ou message vocal préenregistré. Les appels personnels réduisent l'absentéisme de 39 % par rapport au taux de base. Les rappels automatisés font presque aussi bien, avec une réduction de 29 %, pour une fraction du coût : en moyenne 0,23 $ CA par SMS, contre 1,46 $ CA par appel téléphonique (montants convertis depuis l'étude originale, exprimée en euros).
 
 <figure class="chart" data-reveal>
 <figcaption class="chart-title">Taux de rendez-vous manqués selon le type de rappel (Journal of Telemedicine and Telecare, revue de 29 études)</figcaption>

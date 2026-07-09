@@ -15,23 +15,23 @@ Cette scène se répète chaque semaine dans des milliers de PME. Ce n'est pas u
 
 ## Ce que les données révèlent
 
-Selon le rapport **Ardent Partners — Accounts Payable Metrics 2024**, le coût moyen de traitement d'une facture fournisseur en saisie manuelle est de **12,88 $**. Pour une PME qui traite 80 factures par mois, cela représente plus de 1 000 $ par mois en coût administratif pur — avant même de compter les erreurs de saisie et les retards de paiement.
+Selon le rapport **Ardent Partners — Accounts Payable Metrics 2024**, le coût moyen de traitement d'une facture fournisseur en saisie manuelle est de **18,30 $** (montant converti en dollars canadiens depuis l'étude américaine originale, en dollars US). Pour une PME qui traite 80 factures par mois, cela représente plus de 1 400 $ par mois en coût administratif pur — avant même de compter les erreurs de saisie et les retards de paiement.
 
 Le délai est tout aussi éloquent : **14,6 jours en moyenne** pour traiter une facture manuellement. Ce n'est la faute de personne ; c'est la somme de toutes les interruptions, approbations et reclassifications qui s'accumulent au fil de la semaine.
 
 <div class="stats" data-reveal-group>
 <div class="stat" data-reveal><span class="stat-num">86<span class="stat-unit">%</span></span><span class="stat-label">des PME saisissent leurs factures manuellement</span></div>
 <div class="stat" data-reveal><span class="stat-num">14,6<span class="stat-unit">j</span></span><span class="stat-label">Délai moyen de traitement sans automatisation</span></div>
-<div class="stat" data-reveal><span class="stat-num">12,88<span class="stat-unit">$</span></span><span class="stat-label">Coût moyen par facture traitée à la main</span></div>
-<div class="stat" data-reveal><span class="stat-num">2,78<span class="stat-unit">$</span></span><span class="stat-label">Coût par facture pour les équipes best-in-class</span></div>
+<div class="stat" data-reveal><span class="stat-num">18,30<span class="stat-unit">$</span></span><span class="stat-label">Coût moyen par facture traitée à la main</span></div>
+<div class="stat" data-reveal><span class="stat-num">3,95<span class="stat-unit">$</span></span><span class="stat-label">Coût par facture pour les équipes best-in-class</span></div>
 </div>
 
 <figure class="chart" data-reveal>
-<figcaption class="chart-title">Coût de traitement par facture selon le niveau d'automatisation (Ardent Partners 2024)</figcaption>
-<div class="bar-row"><span class="bar-label">Traitement manuel</span><span class="bar-track"><span class="bar-fill" style="--w:100%"></span></span><span class="bar-val">12,88 $</span></div>
-<div class="bar-row"><span class="bar-label">Processus partiel</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:54%"></span></span><span class="bar-val">~7 $</span></div>
-<div class="bar-row"><span class="bar-label">Best-in-class automatisé</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:22%"></span></span><span class="bar-val">2,78 $</span></div>
-<p class="chart-note">Les équipes les plus avancées traitent leurs factures à moins de 3 $ l'unité grâce à la lecture intelligente (OCR + IA).</p>
+<figcaption class="chart-title">Coût de traitement par facture selon le niveau d'automatisation (Ardent Partners 2024, montants convertis en $ CA)</figcaption>
+<div class="bar-row"><span class="bar-label">Traitement manuel</span><span class="bar-track"><span class="bar-fill" style="--w:100%"></span></span><span class="bar-val">18,30 $</span></div>
+<div class="bar-row"><span class="bar-label">Processus partiel</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:54%"></span></span><span class="bar-val">~10 $</span></div>
+<div class="bar-row"><span class="bar-label">Best-in-class automatisé</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:22%"></span></span><span class="bar-val">3,95 $</span></div>
+<p class="chart-note">Les équipes les plus avancées traitent leurs factures à moins de 4 $ CA l'unité grâce à la lecture intelligente (OCR + IA).</p>
 </figure>
 
 ## Pourquoi la saisie manuelle persiste
@@ -54,7 +54,7 @@ Le flux ressemble à ceci :
 4. **Intégration** : les données validées sont poussées dans votre logiciel (QuickBooks, Sage, Xero, ou autre)
 5. **Archivage** : le document original est classé automatiquement
 
-Les équipes les plus avancées traitent leurs factures à **2,78 $ l'unité** — soit plus de quatre fois moins cher que la moyenne manuelle.
+Les équipes les plus avancées traitent leurs factures à **3,95 $ CA l'unité** — soit plus de quatre fois moins cher que la moyenne manuelle.
 
 ## Ce que ça change concrètement
 

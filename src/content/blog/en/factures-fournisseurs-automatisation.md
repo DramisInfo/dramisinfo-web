@@ -15,23 +15,23 @@ This plays out every week in thousands of small businesses. It's not a disciplin
 
 ## What the data shows
 
-According to the **Ardent Partners Accounts Payable Metrics 2024** report, the average cost to process a single supplier invoice manually is **$12.88** — and can reach $19 in less structured organizations. For an SMB processing 80 invoices per month, that's over $1,000 in pure administrative cost every month, before accounting for data entry errors and late payments.
+According to the **Ardent Partners Accounts Payable Metrics 2024** report, the average cost to process a single supplier invoice manually is **$18.30 CAD** (converted from the original U.S.-dollar figures) — and can reach $27 in less structured organizations. For an SMB processing 80 invoices per month, that's over $1,400 in pure administrative cost every month, before accounting for data entry errors and late payments.
 
 The timeline is just as striking: **14.6 days on average** to process a single invoice manually. That's not anyone's fault; it's the accumulation of interruptions, approvals, and reclassifications that pile up through the week.
 
 <div class="stats" data-reveal-group>
 <div class="stat" data-reveal><span class="stat-num">86<span class="stat-unit">%</span></span><span class="stat-label">of SMBs still enter invoice data by hand</span></div>
 <div class="stat" data-reveal><span class="stat-num">14.6<span class="stat-unit">d</span></span><span class="stat-label">Average processing time without automation</span></div>
-<div class="stat" data-reveal><span class="stat-num">12.88<span class="stat-unit">$</span></span><span class="stat-label">Average cost per invoice processed manually</span></div>
-<div class="stat" data-reveal><span class="stat-num">2.78<span class="stat-unit">$</span></span><span class="stat-label">Cost per invoice for best-in-class AP teams</span></div>
+<div class="stat" data-reveal><span class="stat-num">18.30<span class="stat-unit">$</span></span><span class="stat-label">Average cost per invoice processed manually</span></div>
+<div class="stat" data-reveal><span class="stat-num">3.95<span class="stat-unit">$</span></span><span class="stat-label">Cost per invoice for best-in-class AP teams</span></div>
 </div>
 
 <figure class="chart" data-reveal>
-<figcaption class="chart-title">Cost per invoice by automation level (Ardent Partners 2024)</figcaption>
-<div class="bar-row"><span class="bar-label">Manual processing</span><span class="bar-track"><span class="bar-fill" style="--w:100%"></span></span><span class="bar-val">$12.88</span></div>
-<div class="bar-row"><span class="bar-label">Partial automation</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:54%"></span></span><span class="bar-val">~$7</span></div>
-<div class="bar-row"><span class="bar-label">Best-in-class automated</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:22%"></span></span><span class="bar-val">$2.78</span></div>
-<p class="chart-note">The most advanced AP teams process invoices for under $3 each using intelligent document reading (OCR + AI).</p>
+<figcaption class="chart-title">Cost per invoice by automation level (Ardent Partners 2024, converted to CAD)</figcaption>
+<div class="bar-row"><span class="bar-label">Manual processing</span><span class="bar-track"><span class="bar-fill" style="--w:100%"></span></span><span class="bar-val">$18.30</span></div>
+<div class="bar-row"><span class="bar-label">Partial automation</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:54%"></span></span><span class="bar-val">~$10</span></div>
+<div class="bar-row"><span class="bar-label">Best-in-class automated</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:22%"></span></span><span class="bar-val">$3.95</span></div>
+<p class="chart-note">The most advanced AP teams process invoices for under $4 CAD each using intelligent document reading (OCR + AI).</p>
 </figure>
 
 ## Why manual entry persists
@@ -54,7 +54,7 @@ The flow looks like this:
 4. **Integration**: validated data is pushed to your accounting software (QuickBooks, Sage, Xero, or others)
 5. **Archiving**: the original document is automatically filed
 
-The most advanced teams process invoices for just **$2.78 each** — more than four times cheaper than the manual average.
+The most advanced teams process invoices for just **$3.95 CAD each** — more than four times cheaper than the manual average.
 
 ## What this actually changes
 

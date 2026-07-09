@@ -17,11 +17,11 @@ Rien de dramatique, individuellement. Mais ces deux scènes se répètent, presq
 
 Selon l'enquête *2025 Priorities for Business Leaders* de **Paychex**, menée en juillet 2024 auprès de dirigeants de PME américaines, **34 % des dirigeants consacrent plus de 10 heures par semaine à l'administration RH** — paye, gestion du personnel et suivi du temps travaillé et des absences. Même dans les plus petites entreprises de l'échantillon (5 à 19 employés), près d'un dirigeant sur trois y consacre encore 11 heures ou plus chaque semaine.
 
-Ramené en dollars, le coût moyen de ce temps s'élève à **3 308 $ par semaine**, soit près de 172 000 $ par année — une facture invisible, puisqu'elle n'apparaît sur aucune ligne comptable, mais qui correspond au salaire d'une personne à temps plein passée à remplir des formulaires plutôt qu'à faire avancer l'entreprise.
+Ramené en dollars, le coût moyen de ce temps s'élève à **4 700 $ CA par semaine** (montant converti depuis l'étude américaine originale, en dollars US), soit près de 244 000 $ par année — une facture invisible, puisqu'elle n'apparaît sur aucune ligne comptable, mais qui correspond au salaire d'une personne à temps plein passée à remplir des formulaires plutôt qu'à faire avancer l'entreprise.
 
 <div class="stats" data-reveal-group>
 <div class="stat" data-reveal><span class="stat-num">34<span class="stat-unit">%</span></span><span class="stat-label">des dirigeants passent plus de 10 h/semaine en administration RH</span></div>
-<div class="stat" data-reveal><span class="stat-num">3 308<span class="stat-unit">$</span></span><span class="stat-label">coût hebdomadaire moyen de ce temps, selon Paychex</span></div>
+<div class="stat" data-reveal><span class="stat-num">4 700<span class="stat-unit">$</span></span><span class="stat-label">coût hebdomadaire moyen de ce temps, selon Paychex</span></div>
 <div class="stat" data-reveal><span class="stat-num">52<span class="stat-unit">%</span></span><span class="stat-label">des nouveaux employés disent que l'administratif a éclipsé leur préparation réelle</span></div>
 </div>
 

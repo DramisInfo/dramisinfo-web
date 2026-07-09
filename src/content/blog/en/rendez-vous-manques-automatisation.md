@@ -26,7 +26,7 @@ What does vary from one business to the next is what gets done about it. The sam
 
 ## What the numbers actually show
 
-Those 29 studies compared two kinds of reminders: personal phone calls and automated ones — text messages or pre-recorded voice calls. Personal calls cut no-shows by 39% relative to the baseline rate. Automated reminders come close, cutting no-shows by 29%, for a fraction of the cost: an average of €0.14 per text message, versus €0.90 per phone call.
+Those 29 studies compared two kinds of reminders: personal phone calls and automated ones — text messages or pre-recorded voice calls. Personal calls cut no-shows by 39% relative to the baseline rate. Automated reminders come close, cutting no-shows by 29%, for a fraction of the cost: an average of $0.23 CAD per text message, versus $1.46 CAD per phone call (converted from the original euro figures reported in the study).
 
 <figure class="chart" data-reveal>
 <figcaption class="chart-title">No-show rate by reminder type (Journal of Telemedicine and Telecare, review of 29 studies)</figcaption>

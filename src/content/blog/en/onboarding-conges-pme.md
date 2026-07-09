@@ -17,11 +17,11 @@ Nothing dramatic, taken one at a time. But these two scenes repeat themselves, a
 
 According to Paychex's *2025 Priorities for Business Leaders* survey, conducted in July 2024 among U.S. small-business leaders, **34% of leaders spend more than 10 hours a week on HR administration** — payroll, people management, and tracking hours worked and time off. Even among the smallest companies in the sample (5 to 19 employees), nearly one leader in three still spends 11 hours or more on it every week.
 
-Converted into dollars, the average cost of that time comes to **$3,308 per week**, or close to $172,000 a year — an invisible line item, since it never shows up on a single accounting entry, but one that amounts to a full-time salary spent filling out forms instead of moving the business forward.
+Converted into Canadian dollars (from the original U.S.-dollar figures), the average cost of that time comes to **$4,700 CAD per week**, or close to $244,000 a year — an invisible line item, since it never shows up on a single accounting entry, but one that amounts to a full-time salary spent filling out forms instead of moving the business forward.
 
 <div class="stats" data-reveal-group>
 <div class="stat" data-reveal><span class="stat-num">34<span class="stat-unit">%</span></span><span class="stat-label">of leaders spend 10+ hours a week on HR administration</span></div>
-<div class="stat" data-reveal><span class="stat-num">3,308<span class="stat-unit">$</span></span><span class="stat-label">average weekly cost of that time, per Paychex</span></div>
+<div class="stat" data-reveal><span class="stat-num">4,700<span class="stat-unit">$</span></span><span class="stat-label">average weekly cost of that time, per Paychex</span></div>
 <div class="stat" data-reveal><span class="stat-num">52<span class="stat-unit">%</span></span><span class="stat-label">of new hires say admin work overshadowed real job readiness</span></div>
 </div>
 
