@@ -6,6 +6,18 @@ Crée un nouvel article de blog complet (FR + EN) à partir d'un sujet, en effec
 
 ---
 
+## Étape 0 — Vérification de non-redondance
+
+Avant toute recherche, dresse l'inventaire des articles déjà publiés : lis le `title`, la `description` et les `tags` de chaque fichier dans `src/content/blog/fr/`.
+
+Compare le sujet reçu à l'**angle réel** de chaque article existant — pas seulement au mot-clé de surface. Deux sujets peuvent sembler différents en apparence tout en couvrant le même terrain (ex. « répondre plus vite aux formulaires de soumission » recoupe l'angle déjà traité par l'article sur la boîte courriel, même sans le mot « courriel »).
+
+- **Si le sujet chevauche fortement un article existant** : ne pas foncer dans la recherche ni l'écriture. Le signaler clairement à l'utilisateur en nommant le ou les articles concernés, expliquer en une phrase pourquoi l'angle se recoupe, puis proposer 1 à 3 angles alternatifs clairement distincts (avec une piste de recherche pour chacun). Attendre la confirmation de l'utilisateur avant de poursuivre.
+- **Si un sujet précis a été explicitement donné par l'utilisateur** (et non proposé par toi) et qu'il chevauche un article existant, signale le chevauchement mais demande confirmation avant d'abandonner — l'utilisateur peut vouloir un angle complémentaire assumé.
+- **Si le sujet est clairement distinct**, poursuivre normalement à l'étape 1.
+
+---
+
 ## Étape 1 — Recherche web
 
 Effectue des recherches web approfondies sur le sujet pour trouver :
