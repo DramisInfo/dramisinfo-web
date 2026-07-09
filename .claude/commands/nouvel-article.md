@@ -6,11 +6,25 @@ Crée un nouvel article de blog complet (FR + EN) à partir d'un sujet, en effec
 
 ---
 
+## Étape -1 — Sujet non précisé : recherche de tendances avant de proposer
+
+Si `$ARGUMENTS` est vide ou trop vague pour identifier un angle précis, **ne propose pas d'options à partir de ta seule mémoire**. Fais d'abord de vraies recherches web sur les tendances récentes (derniers mois) en automatisation, IA appliquée aux PME et gestion de processus — secteurs pertinents pour la clientèle de DramisInfo (cabinets, commerçants, PME manufacturières légères, firmes de services professionnels au Québec/Amérique du Nord).
+
+1. Dresse d'abord l'inventaire des articles déjà publiés (voir Étape 0 ci-dessous) pour connaître le terrain déjà couvert.
+2. Cherche sur le web des tendances, études ou sujets d'actualité qui pourraient nourrir un article — pas seulement des mots-clés, mais de vraies pistes avec un début de donnée chiffrée derrière.
+3. Élimine toute piste qui chevauche l'angle réel d'un article existant (même logique que l'Étape 0).
+4. Présente à l'utilisateur **2 à 4 options concrètes et distinctes**, chacune avec : un titre de travail, une phrase expliquant l'angle, et la piste de recherche/donnée déjà repérée qui la rend crédible (pas une simple étiquette de sujet).
+5. Attends la confirmation de l'utilisateur avant de poursuivre à l'Étape 1.
+
+Si `$ARGUMENTS` contient déjà un sujet précis, passe directement à l'Étape 0.
+
+---
+
 ## Étape 0 — Vérification de non-redondance
 
-Avant toute recherche, dresse l'inventaire des articles déjà publiés : lis le `title`, la `description` et les `tags` de chaque fichier dans `src/content/blog/fr/`.
+Avant toute recherche, dresse l'inventaire des articles déjà publiés : lis le `title`, la `description` et le **corps complet** de chaque fichier dans `src/content/blog/fr/` — pas seulement le frontmatter. Un chevauchement peut se cacher dans une section interne d'un article dont le sujet principal semble différent (ex. un article sur le courriel peut déjà couvrir en profondeur, dans une sous-section, les statistiques de délai de réponse aux formulaires web).
 
-Compare le sujet reçu à l'**angle réel** de chaque article existant — pas seulement au mot-clé de surface. Deux sujets peuvent sembler différents en apparence tout en couvrant le même terrain (ex. « répondre plus vite aux formulaires de soumission » recoupe l'angle déjà traité par l'article sur la boîte courriel, même sans le mot « courriel »).
+Compare le sujet reçu à l'**angle réel** de chaque article existant — pas seulement au mot-clé de surface ni au titre. Deux sujets peuvent sembler différents en apparence tout en couvrant le même terrain (ex. « répondre plus vite aux formulaires de soumission » recoupe l'angle déjà traité par l'article sur la boîte courriel, même sans le mot « courriel »).
 
 - **Si le sujet chevauche fortement un article existant** : ne pas foncer dans la recherche ni l'écriture. Le signaler clairement à l'utilisateur en nommant le ou les articles concernés, expliquer en une phrase pourquoi l'angle se recoupe, puis proposer 1 à 3 angles alternatifs clairement distincts (avec une piste de recherche pour chacun). Attendre la confirmation de l'utilisateur avant de poursuivre.
 - **Si un sujet précis a été explicitement donné par l'utilisateur** (et non proposé par toi) et qu'il chevauche un article existant, signale le chevauchement mais demande confirmation avant d'abandonner — l'utilisateur peut vouloir un angle complémentaire assumé.

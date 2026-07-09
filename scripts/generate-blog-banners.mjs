@@ -305,3 +305,64 @@ await generate('email-triage', `<svg xmlns="http://www.w3.org/2000/svg" width="$
   <!-- Barre d'accent sarcelle -->
   <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
 </svg>`);
+
+// ──────────────────────────────────────────────────────
+// Banner 7 : RH / Accueil des nouveaux employés + congés
+// Palette : ardoise nuit → bleu profond → sarcelle
+// Motif   : liste de vérification (accueil) à gauche, se prolongeant
+//           en grille de calendrier (congés) à droite, reliées par
+//           une coche de validation centrale
+// ──────────────────────────────────────────────────────
+await generate('hr-onboarding', `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0f172a"/>
+      <stop offset="55%"  stop-color="#0c2340"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <!-- Liste de vérification (accueil) côté gauche -->
+  <g opacity="0.9">
+    <rect x="90"  y="150" width="300" height="330" rx="12" fill="none" stroke="#99f6e4" stroke-width="1.5" opacity="0.22"/>
+    <rect x="120" y="190" width="20" height="20" rx="5" fill="none" stroke="#5eead4" stroke-width="2" opacity="0.55"/>
+    <polyline points="124,200 132,208 144,188" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+    <rect x="155" y="196" width="190" height="8" rx="3" fill="#99f6e4" opacity="0.25"/>
+    <rect x="120" y="240" width="20" height="20" rx="5" fill="none" stroke="#5eead4" stroke-width="2" opacity="0.55"/>
+    <polyline points="124,250 132,258 144,238" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+    <rect x="155" y="246" width="160" height="8" rx="3" fill="#99f6e4" opacity="0.20"/>
+    <rect x="120" y="290" width="20" height="20" rx="5" fill="none" stroke="#99f6e4" stroke-width="2" opacity="0.35"/>
+    <rect x="155" y="296" width="200" height="8" rx="3" fill="#99f6e4" opacity="0.16"/>
+    <rect x="120" y="340" width="20" height="20" rx="5" fill="none" stroke="#99f6e4" stroke-width="2" opacity="0.30"/>
+    <rect x="155" y="346" width="140" height="8" rx="3" fill="#99f6e4" opacity="0.14"/>
+    <rect x="120" y="390" width="20" height="20" rx="5" fill="none" stroke="#99f6e4" stroke-width="2" opacity="0.25"/>
+    <rect x="155" y="396" width="175" height="8" rx="3" fill="#99f6e4" opacity="0.12"/>
+  </g>
+  <!-- Point de jonction central -->
+  <circle cx="600" cy="315" r="24" fill="#14b8a6" opacity="0.9"/>
+  <circle cx="600" cy="315" r="44" fill="#14b8a6" opacity="0.14"/>
+  <polyline points="590,315 598,323 613,305" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <line x1="390" y1="315" x2="576" y2="315" stroke="#99f6e4" stroke-width="2" opacity="0.28"/>
+  <line x1="624" y1="315" x2="770" y2="315" stroke="#99f6e4" stroke-width="2" opacity="0.28"/>
+  <!-- Grille de calendrier (congés) côté droit -->
+  <g opacity="0.92">
+    <rect x="770" y="165" width="340" height="300" rx="12" fill="none" stroke="#99f6e4" stroke-width="1.5" opacity="0.24"/>
+    <line x1="770" y1="225" x2="1110" y2="225" stroke="#99f6e4" stroke-width="1.5" opacity="0.22"/>
+    <line x1="855" y1="165" x2="855" y2="465" stroke="#99f6e4" stroke-width="1"   opacity="0.14"/>
+    <line x1="940" y1="165" x2="940" y2="465" stroke="#99f6e4" stroke-width="1"   opacity="0.14"/>
+    <line x1="1025" y1="165" x2="1025" y2="465" stroke="#99f6e4" stroke-width="1" opacity="0.14"/>
+    <line x1="770" y1="285" x2="1110" y2="285" stroke="#99f6e4" stroke-width="1" opacity="0.12"/>
+    <line x1="770" y1="345" x2="1110" y2="345" stroke="#99f6e4" stroke-width="1" opacity="0.12"/>
+    <line x1="770" y1="405" x2="1110" y2="405" stroke="#99f6e4" stroke-width="1" opacity="0.12"/>
+    <!-- Journées de congé marquées -->
+    <rect x="862" y="292" width="70" height="45" rx="6" fill="#0d9488" opacity="0.45"/>
+    <rect x="947" y="352" width="70" height="45" rx="6" fill="#0d9488" opacity="0.32"/>
+    <circle cx="1060" cy="245" r="7" fill="#5eead4" opacity="0.55"/>
+  </g>
+  <!-- Marqueurs décoratifs -->
+  <circle cx="1150" cy="540" r="3" fill="#99f6e4" opacity="0.22"/>
+  <circle cx="1110" cy="565" r="3" fill="#99f6e4" opacity="0.18"/>
+  <circle cx="1170" cy="580" r="3" fill="#99f6e4" opacity="0.15"/>
+  <!-- Barre d'accent sarcelle -->
+  <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
+</svg>`);
