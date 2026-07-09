@@ -366,3 +366,71 @@ await generate('hr-onboarding', `<svg xmlns="http://www.w3.org/2000/svg" width="
   <!-- Barre d'accent sarcelle -->
   <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
 </svg>`);
+
+// ──────────────────────────────────────────────────────
+// Banner 8 : Rendez-vous manqués / Rappels automatisés
+// Palette : ardoise nuit → sarcelle profond (diagonale)
+// Motif   : un cadran d'horloge (gauche) émet des ondes de rappel
+//           qui traversent l'espace jusqu'à un billet de rendez-vous
+//           confirmé (droite), coche à l'appui
+// ──────────────────────────────────────────────────────
+await generate('appointment-reminders', `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0f3b3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <!-- Grand cercle décoratif de fond -->
+  <circle cx="120" cy="560" r="240" fill="none" stroke="#99f6e4" stroke-width="1" opacity="0.05"/>
+
+  <!-- Cadran d'horloge (côté gauche) -->
+  <g opacity="0.92">
+    <circle cx="230" cy="330" r="130" fill="#0d9488" fill-opacity="0.04" stroke="#99f6e4" stroke-width="2.5" opacity="0.9"/>
+    <rect x="224" y="188" width="12" height="22" rx="3" fill="#99f6e4" opacity="0.45"/>
+    <rect x="349" y="324" width="22" height="12" rx="3" fill="#99f6e4" opacity="0.45"/>
+    <rect x="224" y="450" width="12" height="22" rx="3" fill="#99f6e4" opacity="0.45"/>
+    <rect x="89"  y="324" width="22" height="12" rx="3" fill="#99f6e4" opacity="0.45"/>
+    <line x1="230" y1="330" x2="230" y2="240" stroke="#5eead4" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+    <line x1="230" y1="330" x2="308" y2="288" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="230" cy="330" r="9" fill="#14b8a6" opacity="0.9"/>
+  </g>
+
+  <!-- Point d'émission du rappel -->
+  <line x1="360" y1="330" x2="558" y2="330" stroke="#99f6e4" stroke-width="2" opacity="0.28"/>
+  <circle cx="580" cy="330" r="18" fill="#14b8a6" opacity="0.85"/>
+  <circle cx="580" cy="330" r="32" fill="#14b8a6" opacity="0.12"/>
+
+  <!-- Ondes de rappel émanant vers la droite -->
+  <g fill="none" stroke="#5eead4" stroke-linecap="round">
+    <path d="M 614 295 A 40 40 0 0 1 614 365" stroke-width="3"   opacity="0.55"/>
+    <path d="M 636 268 A 65 65 0 0 1 636 392" stroke-width="2.5" opacity="0.38"/>
+    <path d="M 658 240 A 90 90 0 0 1 658 420" stroke-width="2"   opacity="0.24"/>
+  </g>
+  <line x1="700" y1="330" x2="800" y2="330" stroke="#99f6e4" stroke-width="2" opacity="0.28"/>
+  <polygon points="800,322 818,330 800,338" fill="#99f6e4" opacity="0.32"/>
+
+  <!-- Billet de rendez-vous confirmé (côté droit) -->
+  <g opacity="0.95">
+    <rect x="850" y="165" width="270" height="330" rx="16" fill="#0d9488" fill-opacity="0.05" stroke="#99f6e4" stroke-width="2" opacity="0.5"/>
+    <rect x="850" y="165" width="270" height="86" fill="#0d9488" opacity="0.14"/>
+    <rect x="880" y="198" width="140" height="10" rx="3" fill="#99f6e4" opacity="0.35"/>
+    <rect x="880" y="222" width="90"  height="7"  rx="2" fill="#99f6e4" opacity="0.22"/>
+    <circle cx="850" cy="290" r="13" fill="#0f172a"/>
+    <circle cx="1120" cy="290" r="13" fill="#0f3b3a"/>
+    <line x1="878" y1="290" x2="1092" y2="290" stroke="#99f6e4" stroke-width="2" stroke-dasharray="7 7" opacity="0.25"/>
+    <rect x="880" y="322" width="180" height="7" rx="2" fill="#99f6e4" opacity="0.16"/>
+    <rect x="880" y="346" width="140" height="7" rx="2" fill="#99f6e4" opacity="0.14"/>
+    <circle cx="985" cy="428" r="24" fill="#0d9488" opacity="0.55"/>
+    <polyline points="974,428 982,436 998,416" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  </g>
+
+  <!-- Marqueurs décoratifs -->
+  <circle cx="1150" cy="90" r="3" fill="#99f6e4" opacity="0.22"/>
+  <circle cx="1110" cy="60" r="3" fill="#99f6e4" opacity="0.18"/>
+  <circle cx="1170" cy="120" r="3" fill="#99f6e4" opacity="0.15"/>
+
+  <!-- Barre d'accent sarcelle -->
+  <rect x="0" y="${H - 6}" width="${W}" height="6" fill="#0d9488"/>
+</svg>`);
