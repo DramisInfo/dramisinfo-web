@@ -14,7 +14,7 @@ export const ui = {
   fr: {
     nav: {
       about: 'Profil',
-      expertise: 'Expertise',
+      services: 'Services',
       parcours: 'Parcours',
       realisations: 'Réalisations',
       certifications: 'Certifications',
@@ -27,6 +27,7 @@ export const ui = {
       titleHighlight: 'entreprise autonome',
       subtitle:
         "Plus de 20 ans d'expérience comme stratège et praticien — de la vision architecturale à la livraison concrète. J'aide les entreprises à moderniser leur infrastructure infonuagique, à bâtir des plateformes internes fiables et à réduire les tâches opérationnelles pénibles grâce à l'automatisation et à l'IA.",
+      imageAlt: 'Salle de serveurs — infrastructure infonuagique',
       ctaPrimary: 'Me contacter',
       ctaSecondary: 'Voir mon parcours',
       reassurance:
@@ -34,6 +35,7 @@ export const ui = {
     },
     about: {
       heading: 'Stratège et praticien',
+      imageAlt: 'Rack de serveurs dans un centre de données',
       p1: "J'aide les entreprises à définir et à livrer leurs feuilles de route d'infrastructure infonuagique — de la vision architecturale jusqu'à l'exécution sur le terrain. Je ne me contente pas de dessiner l'architecture cible : je l'ai personnellement construite, à plusieurs reprises, à grande échelle.",
       p2: "J'ai architecturé des plateformes, des zones d'atterrissage et des cadres d'automatisation qui ont propulsé certaines des plus grandes transformations infonuagiques en Amérique du Nord — dont une reconnaissance parmi les 10 plus grandes migrations AWS sur le continent.",
       p3: "Habitué à présenter des plans d'investissement techniques et des décisions d'architecture aux VP et aux comités d'architecture, je m'intéresse aujourd'hui particulièrement à l'entreprise autonome, à l'AIOps agentique et à l'élimination des tâches opérationnelles pénibles par l'automatisation intelligente.",
@@ -56,44 +58,75 @@ export const ui = {
       ],
     },
     services: {
-      heading: 'Expertise',
+      heading: 'Services',
       subheading:
-        "Sept domaines où j'apporte une valeur concrète aux mandats d'architecture infonuagique et de transformation.",
+        "Six offres de mandat pour faire avancer vos projets d'architecture infonuagique et de transformation.",
       items: [
         {
-          title: 'Stratégie multi-nuage',
+          title: 'Stratégie & feuille de route infonuagique',
           description:
-            'Feuilles de route pluriannuelles sur AWS et Azure, rationalisation des charges de travail (héberger, replatformer, réusiner, SaaS).',
+            "Évaluation de l'existant, définition d'une feuille de route pluriannuelle et rationalisation des charges de travail (héberger, replatformer, réusiner, SaaS).",
+          image: '/images/service-strategy.jpg',
+          deliverables: [
+            'Feuille de route pluriannuelle',
+            "Rapport d'évaluation de l'existant",
+            "Présentation aux VP et comités d'architecture",
+          ],
+        },
+        {
+          title: 'Architecture & migration infonuagique',
+          description:
+            "Conception et livraison de zones d'atterrissage multi-région et de migrations à grande échelle, incluant les sorties complètes de centres de données.",
+          image: '/images/service-architecture.jpg',
+          deliverables: [
+            "Architecture cible et zone d'atterrissage",
+            'Plan de migration détaillé',
+            "Exécution et suivi jusqu'à la mise en service",
+          ],
+        },
+        {
+          title: 'Plateforme interne développeurs & DevSecOps',
+          description:
+            'Conception de plateformes en libre-service avec chemins dorés, alignées sur les principes DevSecOps et GitOps.',
+          image: '/images/service-platform.jpg',
+          deliverables: [
+            'Plateforme IDP en libre-service',
+            'Pipelines CI/CD et GitOps',
+            'Standards de sécurité et de conformité intégrés',
+          ],
+        },
+        {
+          title: 'Sécurité zéro confiance & gouvernance',
+          description:
+            "Mise en place de contrôles de sécurité intégrés dès la conception et de la gouvernance de la chaîne d'approvisionnement logicielle.",
+          image: '/images/service-security.jpg',
+          deliverables: [
+            "Cadre de gouvernance et standards d'architecture",
+            'Contrôles de sécurité zéro confiance',
+            'Gouvernance du cycle de vie des artefacts',
+          ],
         },
         {
           title: 'Entreprise autonome & AIOps',
           description:
-            "Flux d'IA agentique pour automatiser la remédiation, les opérations et la documentation d'architecture.",
+            'Automatisation intelligente des opérations pour éliminer les tâches pénibles et permettre la remédiation prédictive des incidents.',
+          image: '/images/service-aiops.jpg',
+          deliverables: [
+            "Flux d'IA agentique pour l'automatisation des opérations",
+            'Observabilité intégrée dès la conception',
+            'Remédiation automatisée des incidents',
+          ],
         },
         {
-          title: 'DevSecOps & GitOps',
+          title: 'Mentorat & transfert de connaissances',
           description:
-            'Architecture de plateformes de conteneurs alignées sur les principes DevSecOps, avec Kubernetes, GitOps et maillage de services.',
-        },
-        {
-          title: 'Plateforme interne développeurs (IDP)',
-          description:
-            "Chemins dorés en libre-service qui imposent les standards de sécurité et de conformité, tout en réduisant les frictions à l'intégration.",
-        },
-        {
-          title: 'Sécurité zéro confiance',
-          description:
-            "Gouvernance de la chaîne d'approvisionnement logicielle et du cycle de vie des artefacts, contrôles de sécurité intégrés dès la conception.",
-        },
-        {
-          title: 'Modernisation infonuagique',
-          description:
-            "Modernisation du calcul, du stockage et du réseau, avec un focus sur la résilience, l'automatisation et la réduction des coûts.",
-        },
-        {
-          title: 'Gouvernance & standards',
-          description:
-            "Standards d'architecture, garde-fous et modèles de gouvernance à l'échelle de l'entreprise, présentés aux comités d'architecture (ARB) et aux VP.",
+            'Encadrement des architectes séniors et transfert de connaissances aux équipes de plateforme, de sécurité et opérations en place.',
+          image: '/images/service-mentoring.jpg',
+          deliverables: [
+            "Encadrement d'architectes séniors",
+            'Transfert de connaissances structuré',
+            'Alignement des équipes sur des pratiques cohérentes',
+          ],
         },
       ],
     },
@@ -265,7 +298,7 @@ export const ui = {
   en: {
     nav: {
       about: 'Profile',
-      expertise: 'Expertise',
+      services: 'Services',
       parcours: 'Career',
       realisations: 'Achievements',
       certifications: 'Certifications',
@@ -278,6 +311,7 @@ export const ui = {
       titleHighlight: 'autonomous enterprise',
       subtitle:
         "20+ years of experience as both strategist and practitioner — from architectural vision to hands-on delivery. I help organizations modernize their cloud infrastructure, build reliable internal platforms, and eliminate operational toil through automation and AI.",
+      imageAlt: 'Server room — cloud infrastructure',
       ctaPrimary: 'Get in touch',
       ctaSecondary: 'See my career',
       reassurance:
@@ -285,6 +319,7 @@ export const ui = {
     },
     about: {
       heading: 'Strategist and practitioner',
+      imageAlt: 'Server rack in a data center',
       p1: "I help organizations define and deliver their infrastructure roadmaps — from architectural vision through to hands-on execution. I don't just draw the target architecture: I've personally built it, repeatedly, at scale.",
       p2: "I've architected platforms, landing zones and automation frameworks that powered some of the largest cloud transformations in North America — including recognition among the 10 largest AWS migrations on the continent.",
       p3: "Comfortable presenting technical investment plans and architecture decisions to VPs and architecture review boards, I'm now especially focused on the autonomous enterprise, agentic AIOps, and eliminating operational toil through intelligent automation.",
@@ -307,44 +342,75 @@ export const ui = {
       ],
     },
     services: {
-      heading: 'Expertise',
+      heading: 'Services',
       subheading:
-        'Seven areas where I bring concrete value to cloud architecture and transformation engagements.',
+        'Six engagement offerings to move your cloud architecture and transformation projects forward.',
       items: [
         {
-          title: 'Multi-cloud strategy',
+          title: 'Cloud strategy & roadmap',
           description:
-            'Multi-year roadmaps across AWS and Azure, workload rationalization (rehost, replatform, refactor, SaaS).',
+            'Assessment of the current state, definition of a multi-year roadmap, and workload rationalization (rehost, replatform, refactor, SaaS).',
+          image: '/images/service-strategy.jpg',
+          deliverables: [
+            'Multi-year infrastructure roadmap',
+            'Current-state assessment report',
+            'Presentation to VPs and architecture review boards',
+          ],
+        },
+        {
+          title: 'Cloud architecture & migration',
+          description:
+            'Design and delivery of multi-region landing zones and large-scale migrations, including full data-center exits.',
+          image: '/images/service-architecture.jpg',
+          deliverables: [
+            'Target architecture and landing zone',
+            'Detailed migration plan',
+            'Execution and tracking through to go-live',
+          ],
+        },
+        {
+          title: 'Internal Developer Platform & DevSecOps',
+          description:
+            'Design of self-service platforms with golden paths, aligned with DevSecOps and GitOps principles.',
+          image: '/images/service-platform.jpg',
+          deliverables: [
+            'Self-service IDP platform',
+            'CI/CD and GitOps pipelines',
+            'Built-in security and compliance standards',
+          ],
+        },
+        {
+          title: 'Zero-trust security & governance',
+          description:
+            'Security controls built in by design, and governance of the software supply chain.',
+          image: '/images/service-security.jpg',
+          deliverables: [
+            'Governance framework and architecture standards',
+            'Zero-trust security controls',
+            'Artifact lifecycle governance',
+          ],
         },
         {
           title: 'Autonomous enterprise & AIOps',
           description:
-            'Agentic AI workflows to automate remediation, operations and architecture documentation.',
+            'Intelligent automation of operations to eliminate toil and enable predictive incident remediation.',
+          image: '/images/service-aiops.jpg',
+          deliverables: [
+            'Agentic AI workflows for operations automation',
+            'Observability built in by design',
+            'Automated incident remediation',
+          ],
         },
         {
-          title: 'DevSecOps & GitOps',
+          title: 'Mentoring & knowledge transfer',
           description:
-            'Container platform architecture aligned with DevSecOps principles, using Kubernetes, GitOps and service mesh.',
-        },
-        {
-          title: 'Internal Developer Platform (IDP)',
-          description:
-            'Self-service golden paths that enforce security and compliance standards while reducing friction for product teams.',
-        },
-        {
-          title: 'Zero-trust security',
-          description:
-            'Software supply-chain and artifact lifecycle governance, with security controls built in from the start.',
-        },
-        {
-          title: 'Cloud modernization',
-          description:
-            'Modernizing compute, storage and network with a focus on resilience, automation and cost reduction.',
-        },
-        {
-          title: 'Governance & standards',
-          description:
-            'Enterprise-wide architecture standards, guardrails and governance models, presented to architecture review boards (ARB) and VPs.',
+            'Mentoring senior architects and transferring knowledge to existing platform, security and operations teams.',
+          image: '/images/service-mentoring.jpg',
+          deliverables: [
+            'Senior architect mentoring',
+            'Structured knowledge transfer',
+            'Alignment of teams on consistent practices',
+          ],
         },
       ],
     },

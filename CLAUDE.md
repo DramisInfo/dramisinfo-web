@@ -108,11 +108,19 @@ Génère : `favicon-16/32.png`, `apple-touch-icon.png` (180×180), `icon-192/512
 
 ## Sections de la page d'accueil
 
-Ordre actuel : Hero → Profil (About) → Expertise (Services) → Comment je m'intègre à un mandat (HowItWorks) → Parcours professionnel (AdoptionFramework, carrousel) → Réalisations clés (UseCases) → Certifications & reconnaissances → Contact.
+Ordre actuel : Hero (avec photo) → Profil (About, avec bandeau photo) → Services (Services.astro, 6 offres de mandat avec photo + livrables) → Comment je m'intègre à un mandat (HowItWorks, fond photo assombri) → Parcours professionnel (AdoptionFramework, carrousel) → Réalisations clés (UseCases) → Certifications & reconnaissances → Contact.
 
-Tout le contenu passe par `src/i18n/ui.ts` (voir section i18n ci-dessous). Les noms de fichiers de composants reflètent encore leur rôle d'origine (ex. `UseCases.astro` affiche maintenant les réalisations, `AdoptionFramework.astro` affiche le parcours professionnel) — le contenu et les identifiants d'ancrage (`#apropos`, `#expertise`, `#demarche`, `#parcours`, `#realisations`, `#certifications`, `#contact`) sont à jour.
+Tout le contenu passe par `src/i18n/ui.ts` (voir section i18n ci-dessous). Les noms de fichiers de composants reflètent encore leur rôle d'origine (ex. `UseCases.astro` affiche les réalisations, `AdoptionFramework.astro` affiche le parcours professionnel) — le contenu et les identifiants d'ancrage (`#apropos`, `#services`, `#demarche`, `#parcours`, `#realisations`, `#certifications`, `#contact`) sont à jour.
 
 Toute donnée factuelle (dates, titres de poste, employeurs, certifications, réalisations chiffrées) doit rester fidèle au CV de Frédéric — ne pas inventer ou arrondir des chiffres.
+
+### Section Services (offre de mandat)
+
+`ui.services.items` structure chaque service en `{ title, description, image, deliverables[] }` — un service = un mandat concret avec livrables, pas une simple compétence. En ajouter/modifier un : garder les 3 livrables courts et vérifiables, choisir une image cohérente avec le sujet (voir ci-dessous).
+
+### Photographie
+
+Le site utilise des photos libres de droit (licence Unsplash — usage commercial libre, aucune attribution requise) dans `public/images/` : `hero-datacenter.jpg`, `about-datacenter.jpg`, `section-network.jpg` (fond de la section « Comment je m'intègre »), et une par offre de service (`service-*.jpg`). Aucune photo personnelle de Frédéric n'est utilisée. Pour changer une image : trouver un remplacement libre de droit de thème et de teinte cohérents (dominante sarcelle/navy de préférence), télécharger dans `public/images/` et mettre à jour la référence dans `ui.ts` ou le composant. Garder le reste du site (Parcours, Réalisations, Certifications, Contact) sans photo supplémentaire pour éviter la surcharge visuelle.
 
 ---
 
