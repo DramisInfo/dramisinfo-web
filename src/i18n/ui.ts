@@ -34,6 +34,7 @@ export const ui = {
         "Bilingue (français/anglais) · Basé à L'Assomption, Québec · Ouvert aux mandats à distance ou hybrides.",
     },
     about: {
+      eyebrow: 'Profil',
       heading: 'Stratège et praticien',
       imageAlt: 'Rack de serveurs dans un centre de données',
       p1: "J'aide les entreprises à définir et à livrer leurs feuilles de route d'infrastructure infonuagique — de la vision architecturale jusqu'à l'exécution sur le terrain. Je ne me contente pas de dessiner l'architecture cible : je l'ai personnellement construite, à plusieurs reprises, à grande échelle.",
@@ -58,11 +59,13 @@ export const ui = {
       ],
     },
     services: {
-      heading: 'Services',
+      eyebrow: 'Services',
+      heading: 'Ce que je livre',
       subheading:
         "Six offres de mandat pour faire avancer vos projets d'architecture infonuagique et de transformation.",
       items: [
         {
+          icon: 'globe',
           title: 'Stratégie & feuille de route infonuagique',
           description:
             "Évaluation de l'existant, définition d'une feuille de route pluriannuelle et rationalisation des charges de travail (héberger, replatformer, réusiner, SaaS).",
@@ -74,6 +77,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'compass',
           title: 'Architecture & migration infonuagique',
           description:
             "Conception et livraison de zones d'atterrissage multi-région et de migrations à grande échelle, incluant les sorties complètes de centres de données.",
@@ -85,6 +89,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'layers',
           title: 'Plateforme interne développeurs & DevSecOps',
           description:
             'Conception de plateformes en libre-service avec chemins dorés, alignées sur les principes DevSecOps et GitOps.',
@@ -96,6 +101,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'shield',
           title: 'Sécurité zéro confiance & gouvernance',
           description:
             "Mise en place de contrôles de sécurité intégrés dès la conception et de la gouvernance de la chaîne d'approvisionnement logicielle.",
@@ -107,6 +113,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'bolt',
           title: 'Entreprise autonome & AIOps',
           description:
             'Automatisation intelligente des opérations pour éliminer les tâches pénibles et permettre la remédiation prédictive des incidents.',
@@ -118,6 +125,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'idea',
           title: 'Mentorat & transfert de connaissances',
           description:
             'Encadrement des architectes séniors et transfert de connaissances aux équipes de plateforme, de sécurité et opérations en place.',
@@ -131,6 +139,7 @@ export const ui = {
       ],
     },
     how: {
+      eyebrow: 'Déroulement',
       heading: "Comment je m'intègre à un mandat",
       subheading:
         "Que ce soit via une agence de placement ou directement avec votre entreprise, voici comment un mandat démarre.",
@@ -153,6 +162,7 @@ export const ui = {
       ],
     },
     framework: {
+      eyebrow: 'Expérience',
       heading: 'Parcours professionnel',
       subheading:
         "Plus de 20 ans d'expérience en infrastructure T.I., de développeur à architecte principal.",
@@ -200,6 +210,7 @@ export const ui = {
       note: "20+ ans d'expérience continue en infrastructure T.I. — de développeur à architecte principal.",
     },
     useCases: {
+      eyebrow: 'Impact',
       heading: 'Réalisations clés',
       subheading: "Quelques exemples concrets de ce que j'ai livré au cours des dernières années.",
       items: [
@@ -242,8 +253,10 @@ export const ui = {
       ],
     },
     certifications: {
+      eyebrow: 'Crédibilité',
       heading: 'Certifications & reconnaissances',
       subheading: 'Formation continue et reconnaissance par les pairs.',
+      awardsLabel: 'Reconnaissances',
       items: [
         { icon: 'check', title: 'AWS Solution Architect Associate', subtitle: '2024' },
         { icon: 'check', title: 'Azure Administrator Associate', subtitle: '2022' },
@@ -253,16 +266,30 @@ export const ui = {
           title: 'Baccalauréat en Informatique de génie',
           subtitle: 'Université Laval, 1997–1999',
         },
+      ],
+      awards: [
         {
-          icon: 'bolt',
           title: 'CAE – Exceptional Architect Lead',
-          subtitle: '2023 — plus grand projet de fusion-acquisition de CAE',
+          subtitle: '2023',
+          description:
+            "Décerné pour avoir dirigé l'architecture du plus grand projet de fusion-acquisition de CAE, incluant l'une des 10 plus grandes migrations AWS en Amérique du Nord.",
         },
-        { icon: 'bolt', title: 'MorneauShepell – Innovation', subtitle: '2017' },
-        { icon: 'bolt', title: 'EDS Awards – Innovation (finaliste)', subtitle: '2006' },
+        {
+          title: 'MorneauShepell – Innovation',
+          subtitle: '2017',
+          description:
+            "Lauréat de la catégorie « Innovation » pour sa recherche de meilleures pratiques et sa contribution à l'amélioration de l'efficacité.",
+        },
+        {
+          title: 'EDS Awards – Innovation (finaliste)',
+          subtitle: '2006',
+          description:
+            "Parmi les cinq finalistes en innovation technologique pour la conception d'un système d'administration de régimes de retraite.",
+        },
       ],
     },
     contact: {
+      eyebrow: 'Contact',
       heading: 'Discutons de votre mandat',
       subtitle:
         'Agence de placement ou entreprise cliente ? Écrivez-moi et je vous réponds rapidement.',
@@ -318,6 +345,7 @@ export const ui = {
         "Bilingual (French/English) · Based in L'Assomption, Québec · Open to remote or hybrid engagements.",
     },
     about: {
+      eyebrow: 'Profile',
       heading: 'Strategist and practitioner',
       imageAlt: 'Server rack in a data center',
       p1: "I help organizations define and deliver their infrastructure roadmaps — from architectural vision through to hands-on execution. I don't just draw the target architecture: I've personally built it, repeatedly, at scale.",
@@ -342,11 +370,13 @@ export const ui = {
       ],
     },
     services: {
-      heading: 'Services',
+      eyebrow: 'Services',
+      heading: 'What I deliver',
       subheading:
         'Six engagement offerings to move your cloud architecture and transformation projects forward.',
       items: [
         {
+          icon: 'globe',
           title: 'Cloud strategy & roadmap',
           description:
             'Assessment of the current state, definition of a multi-year roadmap, and workload rationalization (rehost, replatform, refactor, SaaS).',
@@ -358,6 +388,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'compass',
           title: 'Cloud architecture & migration',
           description:
             'Design and delivery of multi-region landing zones and large-scale migrations, including full data-center exits.',
@@ -369,6 +400,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'layers',
           title: 'Internal Developer Platform & DevSecOps',
           description:
             'Design of self-service platforms with golden paths, aligned with DevSecOps and GitOps principles.',
@@ -380,6 +412,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'shield',
           title: 'Zero-trust security & governance',
           description:
             'Security controls built in by design, and governance of the software supply chain.',
@@ -391,6 +424,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'bolt',
           title: 'Autonomous enterprise & AIOps',
           description:
             'Intelligent automation of operations to eliminate toil and enable predictive incident remediation.',
@@ -402,6 +436,7 @@ export const ui = {
           ],
         },
         {
+          icon: 'idea',
           title: 'Mentoring & knowledge transfer',
           description:
             'Mentoring senior architects and transferring knowledge to existing platform, security and operations teams.',
@@ -415,6 +450,7 @@ export const ui = {
       ],
     },
     how: {
+      eyebrow: 'Process',
       heading: 'How I fit into an engagement',
       subheading:
         "Whether through a staffing agency or directly with your organization, here's how an engagement typically starts.",
@@ -437,6 +473,7 @@ export const ui = {
       ],
     },
     framework: {
+      eyebrow: 'Experience',
       heading: 'Career',
       subheading: '20+ years of IT infrastructure experience, from developer to principal architect.',
       levelLabel: 'Role',
@@ -483,6 +520,7 @@ export const ui = {
       note: '20+ years of continuous IT infrastructure experience — from developer to principal architect.',
     },
     useCases: {
+      eyebrow: 'Impact',
       heading: 'Key achievements',
       subheading: "A few concrete examples of what I've delivered in recent years.",
       items: [
@@ -525,8 +563,10 @@ export const ui = {
       ],
     },
     certifications: {
+      eyebrow: 'Credentials',
       heading: 'Certifications & recognition',
       subheading: 'Continuous learning and peer recognition.',
+      awardsLabel: 'Recognition',
       items: [
         { icon: 'check', title: 'AWS Solution Architect Associate', subtitle: '2024' },
         { icon: 'check', title: 'Azure Administrator Associate', subtitle: '2022' },
@@ -536,16 +576,30 @@ export const ui = {
           title: 'Bachelor of Engineering, Computer Engineering',
           subtitle: 'Université Laval, 1997–1999',
         },
+      ],
+      awards: [
         {
-          icon: 'bolt',
           title: 'CAE – Exceptional Architect Lead',
-          subtitle: "2023 — CAE's largest merger-and-acquisition project",
+          subtitle: '2023',
+          description:
+            "Awarded for leading the architecture of CAE's largest merger-and-acquisition project, including one of the 10 largest AWS migrations in North America.",
         },
-        { icon: 'bolt', title: 'MorneauShepell – Innovation', subtitle: '2017' },
-        { icon: 'bolt', title: 'EDS Awards – Innovation (finalist)', subtitle: '2006' },
+        {
+          title: 'MorneauShepell – Innovation',
+          subtitle: '2017',
+          description:
+            'Winner of the "Innovation" category for research into best practices and contributions to improving efficiency.',
+        },
+        {
+          title: 'EDS Awards – Innovation (finalist)',
+          subtitle: '2006',
+          description:
+            'Among the five finalists for technology innovation for the design of a pension plan administration system.',
+        },
       ],
     },
     contact: {
+      eyebrow: 'Contact',
       heading: "Let's talk about your engagement",
       subtitle: "Staffing agency or client organization? Reach out and I'll get back to you quickly.",
       name: 'Full name',

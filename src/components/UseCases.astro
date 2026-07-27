@@ -7,18 +7,30 @@ interface Props {
 }
 const { lang } = Astro.props;
 const t = ui[lang].useCases;
+const [featured, ...rest] = t.items;
 ---
 <section id="realisations" class="py-24 bg-warm-50">
   <div class="max-w-6xl mx-auto px-6">
     <div data-reveal class="text-center mb-16">
+      <span class="block text-xs font-semibold uppercase tracking-[0.2em] text-brand-600 mb-3">{t.eyebrow}</span>
       <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
       <p class="text-warm-600 text-lg max-w-xl mx-auto">
         {t.subheading}
       </p>
     </div>
 
-    <div data-reveal-group class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {t.items.map(item => (
+    <div data-reveal-group class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Réalisation phare, tuile large -->
+      <div data-reveal class="md:col-span-2 md:row-span-2 bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-white/10">
+          <Icon name={featured.icon} class="w-8 h-8 text-brand-400" />
+        </div>
+        <h3 class="text-white font-bold text-2xl md:text-3xl mb-4 leading-snug">{featured.title}</h3>
+        <p class="text-navy-200 leading-relaxed max-w-md">{featured.description}</p>
+      </div>
+
+      <!-- Réalisations complémentaires, tuiles compactes -->
+      {rest.map(item => (
         <div data-reveal class="flex items-start gap-4 bg-white border border-warm-200 rounded-2xl p-6 hover:border-brand-300 hover:shadow-md hover:-translate-y-1 transition-all">
           <div class="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-brand-50">
             <Icon name={item.icon} class="w-6 h-6" />

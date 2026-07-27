@@ -18,9 +18,14 @@ const t = ui[lang].hero;
         {t.badge}
       </span>
 
-      <h1 data-animate style="--delay:90ms" class="text-4xl md:text-5xl font-bold text-warm-900 leading-tight tracking-tight mb-6">
+      <h1 data-animate style="--delay:90ms" class="text-5xl md:text-6xl font-bold text-warm-900 leading-[1.05] tracking-tighter mb-6">
         {t.titleLine1}<br />
-        <span class="text-brand-600">{t.titleHighlight}</span>
+        <span class="relative inline-block text-brand-600">
+          {t.titleHighlight}
+          <svg viewBox="0 0 300 16" preserveAspectRatio="none" aria-hidden="true" class="absolute left-0 -bottom-2 w-full h-3 text-brand-300">
+            <path d="M2 10.5C60 2 140 2 150 8C160 14 240 3 298 7" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+        </span>
       </h1>
 
       <p data-animate style="--delay:180ms" class="text-lg text-warm-600 max-w-xl mx-auto md:mx-0 mb-10 leading-relaxed">
@@ -47,14 +52,15 @@ const t = ui[lang].hero;
       </p>
     </div>
 
-    <div data-animate style="--delay:180ms" class="relative">
+    <div data-animate style="--delay:180ms" class="relative rounded-3xl overflow-hidden shadow-xl shadow-navy-900/10 border border-white">
       <img
         src="/images/hero-datacenter.jpg"
         alt={t.imageAlt}
         width="1000"
         height="1000"
-        class="w-full aspect-square object-cover rounded-3xl shadow-xl shadow-navy-900/10 border border-white"
+        class="w-full aspect-square object-cover"
       />
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-900/40 via-navy-900/10 to-transparent mix-blend-multiply" aria-hidden="true"></div>
     </div>
   </div>
 </section>

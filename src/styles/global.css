@@ -57,3 +57,9 @@ html.reveal-on [data-animate] {
     scroll-behavior: auto;
   }
 }
+
+/* Motif de points discret pour texturer un fond uni sans surcharger */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, #78716c 1px, transparent 1px);
+  background-size: 22px 22px;
+}
