@@ -22,7 +22,8 @@ interface Props {
     | 'bell'
     | 'scan'
     | 'check'
-    | 'globe';
+    | 'globe'
+    | 'shield';
   class?: string;
 }
 
@@ -188,6 +189,13 @@ const { name, class: className = 'w-7 h-7' } = Astro.props;
       <circle cx="12" cy="12" r="8.5" />
       <path d="M3.5 12h17" />
       <path d="M12 3.5c2.3 2.3 3.5 5.3 3.5 8.5s-1.2 6.2-3.5 8.5c-2.3-2.3-3.5-5.3-3.5-8.5S9.7 5.8 12 3.5z" />
+    </>
+  )}
+
+  {name === 'shield' && (
+    <>
+      <path d="M12 3.5 19 6.3v5.4c0 4.4-2.9 7.9-7 8.8-4.1-.9-7-4.4-7-8.8V6.3z" />
+      <path d="M9 12l2.1 2.1L15.5 9.5" class="text-brand-400" />
     </>
   )}
 </svg>

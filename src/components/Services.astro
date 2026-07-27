@@ -8,10 +8,10 @@ interface Props {
 const { lang } = Astro.props;
 const t = ui[lang].services;
 
-// Icônes maison associées à chaque service (ordre identique au dictionnaire).
-const icons = ['automate', 'simplify', 'tools', 'idea', 'support', 'clarity'] as const;
+// Icônes maison associées à chaque compétence (ordre identique au dictionnaire).
+const icons = ['globe', 'automate', 'tools', 'layers', 'shield', 'bolt', 'clarity'] as const;
 ---
-<section id="services" class="py-24 bg-warm-50">
+<section id="expertise" class="py-24 bg-warm-50">
   <div class="max-w-6xl mx-auto px-6">
     <div data-reveal class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
