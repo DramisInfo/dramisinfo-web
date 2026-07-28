@@ -1,5 +1,5 @@
 ---
-import type { Lang } from '@/i18n/ui';
+import { social, type Lang } from '@/i18n/ui';
 import '@/styles/global.css';
 
 interface Props {
@@ -17,6 +17,25 @@ const canonical = new URL(Astro.url.pathname, site);
 const stripped = Astro.url.pathname.replace(/^\/en(?=\/|$)/, '') || '/';
 const frUrl = new URL(stripped, site);
 const enUrl = new URL(stripped === '/' ? '/en/' : `/en${stripped}`, site);
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Frédéric Morais-Simard',
+  jobTitle:
+    lang === 'fr'
+      ? 'Architecte principal — infrastructure infonuagique et entreprise autonome'
+      : 'Principal Architect — Cloud Infrastructure & Autonomous Enterprise',
+  url: site.toString(),
+  sameAs: [social.linkedin],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: "L'Assomption",
+    addressRegion: 'Québec',
+    addressCountry: 'CA',
+  },
+  knowsLanguage: ['fr', 'en'],
+};
 ---
 <!doctype html>
 <html lang={lang}>
@@ -42,11 +61,12 @@ const enUrl = new URL(stripped === '/' ? '/en/' : `/en${stripped}`, site);
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#0d9488" />
+    <meta name="theme-color" content="#8a6a14" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     <script is:inline>
       // Active les animations seulement si le mouvement est permis.
       // Failsafe : si le JS principal ne s'exécute pas, on réaffiche tout.

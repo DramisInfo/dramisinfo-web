@@ -6,271 +6,295 @@ export const languages = {
 export type Lang = keyof typeof languages;
 export const defaultLang: Lang = 'fr';
 
+export const social = {
+  linkedin: 'https://www.linkedin.com/in/frederic-morais-simard-a334796/',
+} as const;
+
 export const ui = {
   fr: {
     nav: {
-      approach: 'Notre démarche',
+      about: 'Profil',
       services: 'Services',
-      useCases: 'Cas d\'usage',
-      about: 'À propos',
-      blog: 'Blog',
-      cta: 'Évaluer mon potentiel',
-      ctaShort: 'Sondage',
+      parcours: 'Expérience',
+      realisations: 'Réalisations',
+      certifications: 'Certifications',
+      cta: 'Me contacter',
+      ctaShort: 'Contact',
     },
     hero: {
-      badge: "L'automatisation au service de votre temps",
-      titleLine1: 'Votre temps fait',
-      titleHighlight: 'toute la différence',
+      badge: 'Disponible pour mandats contractuels',
+      titleLine1: 'Architecture infonuagique,',
+      titleHighlight: 'entreprise autonome',
       subtitle:
-        'Chaque heure passée sur des tâches administratives répétitives est une heure de moins pour vos clients, vos projets et ce qui vous distingue. DramisInfo automatise ces tâches pour vous redonner ce temps — et toute sa valeur.',
-      ctaPrimary: 'Évaluer mon potentiel',
-      ctaSecondary: 'Comment ça fonctionne',
-      reassurance: "Pas de jargon. Pas d'engagement. Première rencontre gratuite.",
+        "Plus de 20 ans d'expertise en stratégie et exécution — de la vision architecturale à la livraison concrète. Modernisation de l'infrastructure infonuagique, plateformes internes fiables et réduction des tâches opérationnelles pénibles grâce à l'automatisation et à l'IA.",
+      imageAlt: 'Salle de serveurs — infrastructure infonuagique',
+      ctaPrimary: 'Me contacter',
+      ctaSecondary: "Voir l'expérience",
+      reassurance:
+        "Bilingue (français/anglais) · Basé à L'Assomption, Québec · Ouvert aux mandats à distance ou hybrides.",
     },
-    value: {
-      heading: 'Récupérez la valeur de votre temps',
-      intro:
-        "Votre temps est votre ressource la plus précieuse — c'est lui qui vous distingue sur le marché. Pourtant, une grande partie est engloutie par des tâches administratives répétitives. Notre rôle : vous le redonner, pour que vous puissiez le consacrer à ce que vous faites de mieux.",
-      before: {
-        label: 'Sans automatisation',
-        items: [
-          'Saisie de données et copier-coller entre vos outils',
-          'Relances et suivis qui passent entre les mailles',
-          'Recherche d\'informations éparpillées',
-          'Des tâches administratives qui s\'accumulent',
-        ],
-        note: 'Des heures perdues chaque semaine, qui ne reviennent pas.',
-      },
-      after: {
-        label: 'Avec DramisInfo',
-        items: [
-          'Du temps pour vos clients et vos projets à forte valeur',
-          'De l\'énergie pour innover et vous démarquer',
-          'Des équipes concentrées sur ce qu\'elles font de mieux',
-          'Moins d\'erreurs, plus de sérénité',
-        ],
-        note: 'Le temps récupéré, réinvesti dans ce qui fait votre différence.',
-      },
-    },
-    how: {
-      heading: 'Notre démarche, en toute simplicité',
-      subheading:
-        "Pas besoin de s'y connaître en technologie. On s'occupe du « comment », vous profitez du résultat.",
-      steps: [
+    about: {
+      eyebrow: 'Profil',
+      heading: 'Stratège et praticien',
+      imageAlt: 'Rack de serveurs dans un centre de données',
+      p1: "Définition et livraison de feuilles de route d'infrastructure infonuagique — de la vision architecturale jusqu'à l'exécution sur le terrain. L'architecture cible n'est pas seulement dessinée : elle est construite, à plusieurs reprises, à grande échelle.",
+      p2: "Plateformes, zones d'atterrissage et cadres d'automatisation ayant propulsé certaines des plus grandes transformations infonuagiques en Amérique du Nord — dont une reconnaissance parmi les 10 plus grandes migrations AWS sur le continent.",
+      p3: "Présentations régulières de plans d'investissement techniques et de décisions d'architecture aux VP et comités d'architecture. Un intérêt marqué pour l'entreprise autonome, l'AIOps agentique et l'élimination des tâches opérationnelles pénibles par l'automatisation intelligente.",
+      values: [
         {
-          title: 'On vous écoute',
+          title: 'Échelle prouvée',
           description:
-            'On prend le temps de comprendre votre quotidien, vos tâches qui prennent trop de temps et ce qui vous freine. Aucune question technique.',
+            "Une zone d'atterrissage AWS multi-région parmi les 10 plus grandes migrations en Amérique du Nord — plus de 4 000 serveurs migrés dans les délais.",
         },
         {
-          title: 'On vous propose',
+          title: 'Vision et exécution',
           description:
-            'On revient avec une solution simple et concrète, expliquée clairement, sans jargon. Vous savez exactement ce que ça change pour vous.',
+            "De la feuille de route pluriannuelle à la mise en œuvre concrète — livraison de ce qui est architecturé, pas seulement des diagrammes.",
         },
         {
-          title: 'On vous accompagne',
+          title: 'Bilingue, habitué aux VP et ARB',
           description:
-            "On met la solution en place, on forme votre équipe et on reste disponible. Vous n'êtes jamais laissé seul avec la technologie.",
+            "20+ ans d'expérience à présenter des décisions techniques aux comités d'architecture et à la haute direction, en français comme en anglais.",
         },
       ],
     },
     services: {
-      heading: 'Comment on peut vous aider',
+      eyebrow: 'Services',
+      heading: 'Ce qui est livré',
       subheading:
-        'Des solutions concrètes pour vous faire gagner du temps et simplifier votre quotidien.',
+        "Six offres de mandat pour faire avancer vos projets d'architecture infonuagique et de transformation.",
       items: [
         {
-          title: 'Automatiser les tâches répétitives',
+          icon: 'globe',
+          title: 'Stratégie & feuille de route infonuagique',
           description:
-            "Saisie de données, courriels, rapports, suivis… On automatise les tâches manuelles qui grugent votre temps pour que vous puissiez vous concentrer sur l'essentiel.",
+            "Évaluation de l'existant, définition d'une feuille de route pluriannuelle et rationalisation des charges de travail (héberger, replatformer, réusiner, SaaS).",
+          image: '/images/service-strategy.jpg',
+          deliverables: [
+            'Feuille de route pluriannuelle',
+            "Rapport d'évaluation de l'existant",
+            "Présentation aux VP et comités d'architecture",
+          ],
         },
         {
-          title: 'Simplifier vos processus',
+          icon: 'compass',
+          title: 'Architecture & migration infonuagique',
           description:
-            'On revoit vos façons de faire avec vous pour éliminer les étapes inutiles, les pertes de temps et les erreurs. Des processus plus clairs, plus fluides.',
+            "Conception et livraison de zones d'atterrissage multi-région et de migrations à grande échelle, incluant les sorties complètes de centres de données.",
+          image: '/images/service-architecture.jpg',
+          deliverables: [
+            "Architecture cible et zone d'atterrissage",
+            'Plan de migration détaillé',
+            "Exécution et suivi jusqu'à la mise en service",
+          ],
         },
         {
-          title: 'Des outils sur mesure',
+          icon: 'layers',
+          title: 'Plateforme interne développeurs & DevSecOps',
           description:
-            'Des applications et des outils pensés pour votre entreprise, faciles à utiliser au quotidien par toute votre équipe.',
+            'Conception de plateformes en libre-service avec chemins dorés, alignées sur les principes DevSecOps et GitOps.',
+          image: '/images/service-platform.jpg',
+          deliverables: [
+            'Plateforme IDP en libre-service',
+            'Pipelines CI/CD et GitOps',
+            'Standards de sécurité et de conformité intégrés',
+          ],
         },
         {
-          title: "L'IA, quand c'est utile",
+          icon: 'shield',
+          title: 'Sécurité zéro confiance & gouvernance',
           description:
-            "Pas de technologie pour la technologie. On utilise l'intelligence artificielle seulement lorsqu'elle apporte une vraie valeur à votre entreprise.",
+            "Mise en place de contrôles de sécurité intégrés dès la conception et de la gouvernance de la chaîne d'approvisionnement logicielle.",
+          image: '/images/service-security.jpg',
+          deliverables: [
+            "Cadre de gouvernance et standards d'architecture",
+            'Contrôles de sécurité zéro confiance',
+            'Gouvernance du cycle de vie des artefacts',
+          ],
         },
         {
-          title: 'Accompagnement et formation',
+          icon: 'bolt',
+          title: 'Entreprise autonome & AIOps',
           description:
-            'On vous explique tout simplement et on forme vos équipes. Vous gardez le contrôle et la confiance face aux nouveaux outils.',
+            'Automatisation intelligente des opérations pour éliminer les tâches pénibles et permettre la remédiation prédictive des incidents.',
+          image: '/images/service-aiops.jpg',
+          deliverables: [
+            "Flux d'IA agentique pour l'automatisation des opérations",
+            'Observabilité intégrée dès la conception',
+            'Remédiation automatisée des incidents',
+          ],
         },
         {
-          title: 'Y voir plus clair',
+          icon: 'idea',
+          title: 'Mentorat & transfert de connaissances',
           description:
-            'Des tableaux de bord simples qui rassemblent vos informations importantes au même endroit, pour prendre de meilleures décisions.',
+            'Encadrement des architectes séniors et transfert de connaissances aux équipes de plateforme, de sécurité et opérations en place.',
+          image: '/images/service-mentoring.jpg',
+          deliverables: [
+            "Encadrement d'architectes séniors",
+            'Transfert de connaissances structuré',
+            'Alignement des équipes sur des pratiques cohérentes',
+          ],
+        },
+      ],
+    },
+    how: {
+      eyebrow: 'Déroulement',
+      heading: "Intégration à un mandat",
+      subheading:
+        "Que ce soit via une agence de placement ou directement avec votre entreprise, voici comment un mandat démarre.",
+      steps: [
+        {
+          title: 'Prise de contact',
+          description:
+            'Une agence de placement ou une entreprise cliente présente un mandat — contexte, enjeux techniques et échéancier.',
+        },
+        {
+          title: 'Cadrage',
+          description:
+            'Validation de la portée du mandat, des compétences requises, de la disponibilité et des modalités contractuelles.',
+        },
+        {
+          title: 'Livraison et mentorat',
+          description:
+            "Feuille de route claire, livraison de l'architecture et transfert des connaissances aux équipes en place.",
         },
       ],
     },
     framework: {
-      heading: "Votre parcours d'adoption",
+      eyebrow: 'Expérience',
+      heading: "Domaines d'expérience",
       subheading:
-        "On vous fait progresser à votre rythme, une étape à la fois. Pas besoin de tout transformer d'un coup — chaque niveau apporte des gains concrets.",
-      levelLabel: 'Niveau',
-      prevLabel: 'Niveau précédent',
-      nextLabel: 'Niveau suivant',
-      stages: [
-        {
-          icon: 'compass',
-          title: 'Diagnostic',
-          description:
-            'On cartographie vos tâches et vos processus pour repérer où vous perdez du temps et où se cachent les meilleures opportunités.',
-        },
-        {
-          icon: 'bolt',
-          title: 'Gains rapides',
-          description:
-            'On automatise quelques tâches simples à fort impact. Vous constatez des résultats concrets en quelques semaines, sans bouleversement.',
-        },
+        "Plus de 20 ans d'expertise en infrastructure T.I., du développement à l'architecture principale.",
+      domains: [
         {
           icon: 'layers',
-          title: 'Processus optimisés',
+          title: "Architecture d'entreprise à grande échelle",
           description:
-            'On connecte et on automatise des processus complets entre vos outils. Votre équipe travaille plus efficacement, avec moins d\'erreurs.',
+            "Stratégie d'infrastructure de bout en bout, zones d'atterrissage multi-région et migrations de plusieurs milliers de serveurs, avec gouvernance et présentations aux VP et comités d'architecture (ARB).",
         },
         {
-          icon: 'idea',
-          title: 'Amélioration continue',
+          icon: 'tools',
+          title: "Livraison de solutions d'entreprise & DevOps",
           description:
-            "On affine, on mesure et on ajoute l'intelligence artificielle là où elle apporte une vraie valeur. Votre entreprise s'améliore en continu.",
-        },
-      ],
-      note: "Vous pouvez commencer à n'importe quel niveau — on s'adapte à votre situation.",
-    },
-    useCases: {
-      heading: 'Des exemples concrets',
-      subheading:
-        "Voici quelques façons dont on peut vous faire gagner du temps dès aujourd'hui.",
-      items: [
-        {
-          icon: 'mail',
-          title: 'Catégorisation automatisée des courriels',
-          description:
-            'Vos courriels entrants sont triés, étiquetés et dirigés vers la bonne personne automatiquement. Fini le tri manuel de la boîte de réception.',
-        },
-        {
-          icon: 'crm',
-          title: 'Intégration avec votre CRM',
-          description:
-            'Vos contacts, clients et suivis se synchronisent automatiquement entre vos outils. Plus de double saisie, des informations toujours à jour.',
-        },
-        {
-          icon: 'invoice',
-          title: 'Intégration avec votre facturation',
-          description:
-            "Vos factures sont générées, envoyées et suivies automatiquement. Vous êtes payé plus vite, avec moins d'oublis.",
-        },
-        {
-          icon: 'calendar',
-          title: 'Planification et rendez-vous',
-          description:
-            'La prise de rendez-vous, les confirmations et les rappels se font tout seuls. Moins de va-et-vient, moins de rendez-vous manqués.',
-        },
-        {
-          icon: 'bell',
-          title: 'Relances et rappels automatiques',
-          description:
-            'Paiements en retard, suivis de vente, échéances… les bonnes relances partent au bon moment, sans que vous y pensiez.',
+            "Direction d'équipes de déploiement, automatisation des livraisons (CI/CD), conception d'architectures SSO et amélioration continue des processus de livraison.",
         },
         {
           icon: 'scan',
-          title: 'Extraction de données',
+          title: 'Conversion & qualité des données',
           description:
-            'Les informations de vos factures, formulaires et documents PDF sont extraites et enregistrées automatiquement dans vos systèmes.',
+            "Conception de solutions automatisées de conversion de données et de systèmes de diagnostic de qualité pour des plateformes d'envergure.",
+        },
+        {
+          icon: 'idea',
+          title: 'Systèmes critiques à prestations déterminées',
+          description:
+            "Conception de systèmes de calcul et d'administration pour des régimes de retraite complexes, à haute fiabilité.",
+        },
+      ],
+      note: "20+ ans d'expérience continue en infrastructure T.I., sur des environnements de tailles et de secteurs variés.",
+    },
+    useCases: {
+      eyebrow: 'Impact',
+      heading: 'Réalisations clés',
+      subheading: 'Quelques exemples concrets livrés au cours des dernières années.',
+      items: [
+        {
+          icon: 'compass',
+          title: 'Zone d\'atterrissage AWS multi-région',
+          description:
+            'Une des 10 plus grandes migrations AWS en Amérique du Nord — plus de 4 000 serveurs migrés, sortie complète de centre de données livrée dans les délais.',
+        },
+        {
+          icon: 'layers',
+          title: 'Plateforme interne développeurs (IDP)',
+          description:
+            "Chemins dorés en libre-service imposant les standards de sécurité et de conformité, réduisant les frictions à l'intégration des équipes produit.",
+        },
+        {
+          icon: 'shield',
+          title: 'Plateforme de conteneurs zero-trust',
+          description:
+            'Architecture alignée sur les principes DevSecOps — Kubernetes, GitOps et maillage de services.',
+        },
+        {
+          icon: 'bolt',
+          title: 'Observabilité & AIOps',
+          description:
+            'Observabilité intégrée dès la conception, permettant la capacité prédictive et la remédiation automatisée des incidents.',
+        },
+        {
+          icon: 'check',
+          title: "Gouvernance de la chaîne d'approvisionnement logicielle",
+          description:
+            'Architecture de gouvernance du cycle de vie des artefacts, imposant les contrôles de sécurité et de conformité.',
+        },
+        {
+          icon: 'tools',
+          title: "Modernisation de l'infrastructure",
+          description:
+            'Modernisation du calcul, du stockage et du réseau axée sur la résilience, l\'automatisation et la sécurité zéro confiance.',
         },
       ],
     },
-    about: {
-      heading: 'La technologie, sans la complexité',
-      p1: "Beaucoup d'entreprises savent qu'elles pourraient gagner du temps et travailler plus efficacement, mais ne savent pas par où commencer. C'est exactement là qu'on intervient.",
-      p2: "Chez DramisInfo, on ne cherche pas à vous vendre la dernière technologie à la mode. On cherche à régler vos vrais problèmes du quotidien, avec des solutions simples qui font une réelle différence.",
-      p3: "Notre rôle, c'est de rendre la technologie accessible et utile pour votre entreprise — pas l'inverse.",
-      values: [
+    certifications: {
+      eyebrow: 'Crédibilité',
+      heading: 'Certifications & reconnaissances',
+      subheading: 'Formation continue et reconnaissance par les pairs.',
+      awardsLabel: 'Reconnaissances',
+      items: [
+        { icon: 'check', title: 'AWS Solution Architect Associate', subtitle: '2024' },
+        { icon: 'check', title: 'Azure Administrator Associate', subtitle: '2022' },
+        { icon: 'check', title: 'Azure Fundamentals', subtitle: '2021' },
         {
-          title: 'On parle votre langage',
+          icon: 'idea',
+          title: 'Baccalauréat en Informatique de génie',
+          subtitle: 'Université Laval, 1997–1999',
+        },
+      ],
+      awards: [
+        {
+          title: 'CAE – Exceptional Architect Lead',
+          subtitle: '2023',
           description:
-            'Pas de jargon technique. On explique tout simplement, dans des mots que tout le monde comprend.',
+            "Décerné pour avoir dirigé l'architecture du plus grand projet de fusion-acquisition de CAE, incluant l'une des 10 plus grandes migrations AWS en Amérique du Nord.",
         },
         {
-          title: 'Des solutions à votre rythme',
+          title: 'MorneauShepell – Innovation',
+          subtitle: '2017',
           description:
-            'On avance étape par étape, sans tout bouleverser. Vous adoptez les changements en confiance.',
+            "Lauréat de la catégorie « Innovation » pour sa recherche de meilleures pratiques et sa contribution à l'amélioration de l'efficacité.",
         },
         {
-          title: 'Un partenaire de proximité',
+          title: 'EDS Awards – Innovation (finaliste)',
+          subtitle: '2006',
           description:
-            'Basés au Québec, on reste disponibles et à votre écoute, bien après la mise en place.',
+            "Parmi les cinq finalistes en innovation technologique pour la conception d'un système d'administration de régimes de retraite.",
         },
       ],
     },
     contact: {
-      heading: 'Évaluez votre potentiel d\'automatisation',
+      eyebrow: 'Contact',
+      heading: 'Discutons de votre mandat',
       subtitle:
-        'Répondez à quelques questions — on vous revient avec des pistes concrètes adaptées à votre réalité.',
-      sec1: 'Votre entreprise',
-      sec2: 'Votre quotidien',
-      sec3: 'Votre situation',
+        'Agence de placement ou entreprise cliente ? Décrivez le mandat ci-dessous pour une réponse rapide.',
       name: 'Nom complet',
       namePh: 'Votre nom',
       email: 'Courriel',
       emailPh: 'vous@exemple.com',
-      company: 'Nom de l\'entreprise',
-      companyPh: 'Ex. : Entreprise ABC',
-      region: 'Région ou ville',
-      regionPh: 'Ex. : Montréal, Québec, Laval…',
-      industry: 'Secteur d\'activité',
-      industryPh: 'Choisir un secteur',
-      industryOpts: [
-        'Commerce / Détail',
-        'Services professionnels (comptable, avocat, consultant…)',
-        'Santé et services médicaux',
-        'Construction / Immobilier',
-        'Fabrication et production',
+      company: 'Agence ou entreprise',
+      companyPh: 'Ex. : Agence XYZ',
+      mandateType: 'Type de mandat',
+      mandateTypePh: 'Choisir un type',
+      mandateOpts: [
+        'Mandat contractuel (via une agence)',
+        'Mandat contractuel direct',
+        'Conseil ponctuel / mandat court terme',
         'Autre',
       ],
-      size: 'Taille de l\'équipe',
-      sizePh: 'Choisir une taille',
-      sizeOpts: [
-        '1 à 5 personnes',
-        '6 à 20 personnes',
-        '21 à 50 personnes',
-        'Plus de 50 personnes',
-      ],
-      timeSpent: 'Heures par semaine sur des tâches répétitives',
-      timeSpentPh: 'Choisir une réponse',
-      timeOpts: [
-        'Moins de 2 heures',
-        '2 à 5 heures',
-        '5 à 10 heures',
-        'Plus de 10 heures',
-        'Je ne sais pas',
-      ],
-      maturity: 'Niveau de maturité numérique actuel',
-      maturityOpts: [
-        'Principalement sur papier ou fichiers non connectés',
-        'Quelques outils numériques (courriel, Excel, logiciel comptable)',
-        'Outils bien implantés, mais peu ou pas automatisés',
-        'Déjà automatisé en partie — je veux aller plus loin',
-      ],
-      readiness: 'Où en êtes-vous dans votre démarche ?',
-      readinessOpts: [
-        'Je veux m\'informer',
-        'J\'explore des options pour les prochains mois',
-        'J\'ai un projet concret en tête',
-        'Je cherche à démarrer rapidement',
-      ],
-      comments: 'Autre chose à nous dire ? (optionnel)',
-      commentsPh: 'Un contexte particulier, une contrainte, ou simplement bonjour…',
-      submit: 'Envoyer le sondage',
+      message: 'Message',
+      messagePh: 'Décrivez le mandat, le contexte ou vos questions…',
+      submit: 'Envoyer',
       prefer: 'Vous préférez écrire directement ?',
     },
     footer: {
@@ -278,290 +302,294 @@ export const ui = {
       made: 'Conçu et développé au Québec',
     },
     meta: {
-      title: 'DramisInfo — Automatisation et productivité pour les entreprises',
+      title: 'DramisInfo — Frédéric Morais-Simard, architecte infonuagique',
       description:
-        "DramisInfo aide les entreprises à gagner du temps en simplifiant et automatisant leurs tâches du quotidien. Des solutions simples et concrètes, avec ou sans intelligence artificielle.",
-    },
-    blog: {
-      metaTitle: 'Blog — DramisInfo',
-      metaDescription:
-        "Analyses concrètes et chiffrées sur l'automatisation, la productivité et l'intelligence artificielle pour les PME.",
-      heading: 'Le blog',
-      subheading:
-        "Des analyses concrètes, appuyées sur des données réelles, pour vous aider à récupérer du temps et à tirer parti de l'automatisation.",
-      readTime: 'min de lecture',
-      published: 'Publié le',
-      back: 'Tous les articles',
-      cta: {
-        heading: 'Envie de savoir ce qu\'on pourrait automatiser chez vous ?',
-        text: 'Remplissez notre sondage en 2 minutes — on vous revient avec des pistes concrètes adaptées à votre réalité.',
-        button: 'Remplir le sondage',
-      },
+        "Architecte principal en infrastructure infonuagique et entreprise autonome — plus de 20 ans d'expérience en stratégie multi-nuage, DevSecOps et modernisation infonuagique. Disponible pour mandats contractuels.",
     },
   },
   en: {
     nav: {
-      approach: 'How we work',
+      about: 'Profile',
       services: 'Services',
-      useCases: 'Use cases',
-      about: 'About',
-      blog: 'Blog',
-      cta: 'Assess my potential',
-      ctaShort: 'Survey',
+      parcours: 'Experience',
+      realisations: 'Achievements',
+      certifications: 'Certifications',
+      cta: 'Get in touch',
+      ctaShort: 'Contact',
     },
     hero: {
-      badge: 'Automation that gives you time back',
-      titleLine1: 'Your time is',
-      titleHighlight: 'your advantage',
+      badge: 'Available for contract engagements',
+      titleLine1: 'Cloud architecture,',
+      titleHighlight: 'autonomous enterprise',
       subtitle:
-        'Every hour spent on repetitive administrative tasks is an hour less for your clients, your projects and what sets you apart. DramisInfo automates those tasks to give that time back — and all its value.',
-      ctaPrimary: 'Assess my potential',
-      ctaSecondary: 'How it works',
-      reassurance: 'No jargon. No commitment. First meeting is free.',
+        "20+ years of expertise in strategy and execution — from architectural vision to hands-on delivery. Cloud infrastructure modernization, reliable internal platforms, and reduced operational toil through automation and AI.",
+      imageAlt: 'Server room — cloud infrastructure',
+      ctaPrimary: 'Get in touch',
+      ctaSecondary: 'See the experience',
+      reassurance:
+        "Bilingual (French/English) · Based in L'Assomption, Québec · Open to remote or hybrid engagements.",
     },
-    value: {
-      heading: 'Reclaim the value of your time',
-      intro:
-        "Your time is your most valuable resource — it's what sets you apart in the market. Yet much of it is swallowed up by repetitive administrative tasks. Our job: give it back, so you can spend it on what you do best.",
-      before: {
-        label: 'Without automation',
-        items: [
-          'Data entry and copy-pasting between your tools',
-          'Follow-ups that slip through the cracks',
-          'Hunting for scattered information',
-          'Administrative tasks that pile up',
-        ],
-        note: "Hours lost every week — and they don't come back.",
-      },
-      after: {
-        label: 'With DramisInfo',
-        items: [
-          'Time for your clients and your high-value projects',
-          'Energy to innovate and stand out',
-          'Teams focused on what they do best',
-          'Fewer errors, more peace of mind',
-        ],
-        note: 'Time reclaimed, reinvested in what makes you different.',
-      },
-    },
-    how: {
-      heading: 'How we work, made simple',
-      subheading:
-        "You don't need to know anything about technology. We handle the “how”, you enjoy the results.",
-      steps: [
+    about: {
+      eyebrow: 'Profile',
+      heading: 'Strategist and practitioner',
+      imageAlt: 'Server rack in a data center',
+      p1: "Definition and delivery of infrastructure roadmaps — from architectural vision through to hands-on execution. The target architecture isn't just drawn: it's built, repeatedly, at scale.",
+      p2: "Platforms, landing zones and automation frameworks that have powered some of the largest cloud transformations in North America — including recognition among the 10 largest AWS migrations on the continent.",
+      p3: "Regular presentations of technical investment plans and architecture decisions to VPs and architecture review boards. A strong focus on the autonomous enterprise, agentic AIOps, and eliminating operational toil through intelligent automation.",
+      values: [
         {
-          title: 'We listen',
+          title: 'Proven scale',
           description:
-            'We take the time to understand your day-to-day, the tasks that take too long and what holds you back. No technical questions.',
+            'A multi-region AWS landing zone recognized among the 10 largest migrations in North America — 4,000+ servers migrated on time.',
         },
         {
-          title: 'We propose',
+          title: 'Vision and execution',
           description:
-            'We come back with a simple, concrete solution, explained clearly and without jargon. You know exactly what it changes for you.',
+            "From multi-year roadmap to hands-on delivery — what's architected gets delivered, not just diagrammed.",
         },
         {
-          title: 'We support you',
+          title: 'Bilingual, VP and ARB-ready',
           description:
-            'We put the solution in place, train your team and stay available. You are never left alone with the technology.',
+            '20+ years presenting technical decisions to architecture review boards and senior leadership, in both French and English.',
         },
       ],
     },
     services: {
-      heading: 'How we can help',
+      eyebrow: 'Services',
+      heading: 'What gets delivered',
       subheading:
-        'Concrete solutions to save you time and simplify your everyday work.',
+        'Six engagement offerings to move your cloud architecture and transformation projects forward.',
       items: [
         {
-          title: 'Automate repetitive tasks',
+          icon: 'globe',
+          title: 'Cloud strategy & roadmap',
           description:
-            'Data entry, emails, reports, follow-ups… We automate the manual tasks that eat up your time so you can focus on what matters.',
+            'Assessment of the current state, definition of a multi-year roadmap, and workload rationalization (rehost, replatform, refactor, SaaS).',
+          image: '/images/service-strategy.jpg',
+          deliverables: [
+            'Multi-year infrastructure roadmap',
+            'Current-state assessment report',
+            'Presentation to VPs and architecture review boards',
+          ],
         },
         {
-          title: 'Simplify your processes',
+          icon: 'compass',
+          title: 'Cloud architecture & migration',
           description:
-            'We review the way you work with you to eliminate unnecessary steps, wasted time and errors. Clearer, smoother processes.',
+            'Design and delivery of multi-region landing zones and large-scale migrations, including full data-center exits.',
+          image: '/images/service-architecture.jpg',
+          deliverables: [
+            'Target architecture and landing zone',
+            'Detailed migration plan',
+            'Execution and tracking through to go-live',
+          ],
         },
         {
-          title: 'Custom-built tools',
+          icon: 'layers',
+          title: 'Internal Developer Platform & DevSecOps',
           description:
-            'Applications and tools designed for your business, easy for your whole team to use every day.',
+            'Design of self-service platforms with golden paths, aligned with DevSecOps and GitOps principles.',
+          image: '/images/service-platform.jpg',
+          deliverables: [
+            'Self-service IDP platform',
+            'CI/CD and GitOps pipelines',
+            'Built-in security and compliance standards',
+          ],
         },
         {
-          title: 'AI, when it adds value',
+          icon: 'shield',
+          title: 'Zero-trust security & governance',
           description:
-            'No technology for the sake of it. We use artificial intelligence only when it brings real value to your business.',
+            'Security controls built in by design, and governance of the software supply chain.',
+          image: '/images/service-security.jpg',
+          deliverables: [
+            'Governance framework and architecture standards',
+            'Zero-trust security controls',
+            'Artifact lifecycle governance',
+          ],
         },
         {
-          title: 'Guidance and training',
+          icon: 'bolt',
+          title: 'Autonomous enterprise & AIOps',
           description:
-            'We explain everything simply and train your teams. You stay in control and confident with the new tools.',
+            'Intelligent automation of operations to eliminate toil and enable predictive incident remediation.',
+          image: '/images/service-aiops.jpg',
+          deliverables: [
+            'Agentic AI workflows for operations automation',
+            'Observability built in by design',
+            'Automated incident remediation',
+          ],
         },
         {
-          title: 'See things clearly',
+          icon: 'idea',
+          title: 'Mentoring & knowledge transfer',
           description:
-            'Simple dashboards that bring your important information together in one place, so you can make better decisions.',
+            'Mentoring senior architects and transferring knowledge to existing platform, security and operations teams.',
+          image: '/images/service-mentoring.jpg',
+          deliverables: [
+            'Senior architect mentoring',
+            'Structured knowledge transfer',
+            'Alignment of teams on consistent practices',
+          ],
+        },
+      ],
+    },
+    how: {
+      eyebrow: 'Process',
+      heading: 'Fitting into an engagement',
+      subheading:
+        "Whether through a staffing agency or directly with your organization, here's how an engagement typically starts.",
+      steps: [
+        {
+          title: 'Initial contact',
+          description:
+            'A staffing agency or a client organization presents an engagement — context, technical challenges and timeline.',
+        },
+        {
+          title: 'Scoping',
+          description:
+            'Alignment on the scope of the engagement, the skills required, availability and contractual terms.',
+        },
+        {
+          title: 'Delivery and mentoring',
+          description:
+            'A clear roadmap, delivery of the architecture, and knowledge transfer to existing teams.',
         },
       ],
     },
     framework: {
-      heading: 'Your adoption journey',
+      eyebrow: 'Experience',
+      heading: 'Domains of experience',
       subheading:
-        "We help you progress at your own pace, one step at a time. No need to transform everything at once — each stage brings concrete gains.",
-      levelLabel: 'Stage',
-      prevLabel: 'Previous stage',
-      nextLabel: 'Next stage',
-      stages: [
-        {
-          icon: 'compass',
-          title: 'Assessment',
-          description:
-            'We map your tasks and processes to pinpoint where you lose time and where the best opportunities are hiding.',
-        },
-        {
-          icon: 'bolt',
-          title: 'Quick wins',
-          description:
-            'We automate a few simple, high-impact tasks. You see concrete results within weeks, with no upheaval.',
-        },
+        '20+ years of IT infrastructure expertise, from hands-on development to principal architecture.',
+      domains: [
         {
           icon: 'layers',
-          title: 'Optimized processes',
+          title: 'Enterprise architecture at scale',
           description:
-            'We connect and automate complete processes across your tools. Your team works more efficiently, with fewer errors.',
+            'End-to-end infrastructure strategy, multi-region landing zones and migrations spanning thousands of servers, with governance and presentations to VPs and architecture review boards (ARB).',
         },
         {
-          icon: 'idea',
-          title: 'Continuous improvement',
+          icon: 'tools',
+          title: 'Enterprise solution delivery & DevOps',
           description:
-            'We refine, measure and add artificial intelligence where it brings real value. Your business keeps getting better.',
-        },
-      ],
-      note: 'You can start at any stage — we adapt to your situation.',
-    },
-    useCases: {
-      heading: 'Concrete examples',
-      subheading: 'Here are a few ways we can start saving you time today.',
-      items: [
-        {
-          icon: 'mail',
-          title: 'Automated email categorization',
-          description:
-            'Incoming emails are sorted, labelled and routed to the right person automatically. No more manual inbox triage.',
-        },
-        {
-          icon: 'crm',
-          title: 'CRM integration',
-          description:
-            'Your contacts, customers and follow-ups sync automatically across your tools. No more double entry, always up-to-date information.',
-        },
-        {
-          icon: 'invoice',
-          title: 'Billing integration',
-          description:
-            'Your invoices are generated, sent and tracked automatically. You get paid faster, with fewer oversights.',
-        },
-        {
-          icon: 'calendar',
-          title: 'Scheduling and appointments',
-          description:
-            'Booking, confirmations and reminders happen on their own. Less back-and-forth, fewer missed appointments.',
-        },
-        {
-          icon: 'bell',
-          title: 'Automatic follow-ups and reminders',
-          description:
-            'Overdue payments, sales follow-ups, deadlines… the right reminders go out at the right time, without you thinking about it.',
+            'Leading deployment teams, delivery automation (CI/CD), SSO architecture design, and continuous improvement of delivery processes.',
         },
         {
           icon: 'scan',
-          title: 'Data extraction',
+          title: 'Data conversion & quality',
           description:
-            'Information from your invoices, forms and PDF documents is extracted and saved automatically into your systems.',
+            'Design of automated data conversion solutions and data quality diagnostic systems for large-scale platforms.',
+        },
+        {
+          icon: 'idea',
+          title: 'Critical defined-benefit systems',
+          description:
+            'Design of calculation and administration systems for complex, high-reliability pension plans.',
+        },
+      ],
+      note: '20+ years of continuous IT infrastructure experience, across environments of varying scale and industry.',
+    },
+    useCases: {
+      eyebrow: 'Impact',
+      heading: 'Key achievements',
+      subheading: 'A few concrete examples delivered in recent years.',
+      items: [
+        {
+          icon: 'compass',
+          title: 'Multi-region AWS landing zone',
+          description:
+            'One of the 10 largest AWS migrations in North America — 4,000+ servers migrated, a full data-center exit delivered on time.',
+        },
+        {
+          icon: 'layers',
+          title: 'Internal Developer Platform (IDP)',
+          description:
+            'Self-service golden paths enforcing security and compliance standards, reducing friction for product teams onboarding.',
+        },
+        {
+          icon: 'shield',
+          title: 'Zero-trust container platform',
+          description:
+            'Architecture aligned with DevSecOps principles — Kubernetes, GitOps and service mesh.',
+        },
+        {
+          icon: 'bolt',
+          title: 'Observability & AIOps',
+          description:
+            'Observability built in by design, enabling predictive capacity planning and automated incident remediation.',
+        },
+        {
+          icon: 'check',
+          title: 'Software supply-chain governance',
+          description:
+            'Governance architecture for artifact lifecycle, enforcing security and compliance controls.',
+        },
+        {
+          icon: 'tools',
+          title: 'Infrastructure modernization',
+          description:
+            'Modernized compute, storage and network focused on resilience, automation and zero-trust security.',
         },
       ],
     },
-    about: {
-      heading: 'Technology, without the complexity',
-      p1: "Many businesses know they could save time and work more efficiently, but don't know where to start. That's exactly where we come in.",
-      p2: "At DramisInfo, we're not here to sell you the latest trendy technology. We're here to solve your real, everyday problems with simple solutions that make a genuine difference.",
-      p3: 'Our role is to make technology accessible and useful for your business — not the other way around.',
-      values: [
+    certifications: {
+      eyebrow: 'Credentials',
+      heading: 'Certifications & recognition',
+      subheading: 'Continuous learning and peer recognition.',
+      awardsLabel: 'Recognition',
+      items: [
+        { icon: 'check', title: 'AWS Solution Architect Associate', subtitle: '2024' },
+        { icon: 'check', title: 'Azure Administrator Associate', subtitle: '2022' },
+        { icon: 'check', title: 'Azure Fundamentals', subtitle: '2021' },
         {
-          title: 'We speak your language',
+          icon: 'idea',
+          title: 'Bachelor of Engineering, Computer Engineering',
+          subtitle: 'Université Laval, 1997–1999',
+        },
+      ],
+      awards: [
+        {
+          title: 'CAE – Exceptional Architect Lead',
+          subtitle: '2023',
           description:
-            'No technical jargon. We explain everything simply, in words everyone understands.',
+            "Awarded for leading the architecture of CAE's largest merger-and-acquisition project, including one of the 10 largest AWS migrations in North America.",
         },
         {
-          title: 'Solutions at your pace',
+          title: 'MorneauShepell – Innovation',
+          subtitle: '2017',
           description:
-            'We move forward step by step, without turning everything upside down. You adopt changes with confidence.',
+            'Winner of the "Innovation" category for research into best practices and contributions to improving efficiency.',
         },
         {
-          title: 'A partner close to you',
+          title: 'EDS Awards – Innovation (finalist)',
+          subtitle: '2006',
           description:
-            'Based in Québec, we stay available and attentive, well after the solution is in place.',
+            'Among the five finalists for technology innovation for the design of a pension plan administration system.',
         },
       ],
     },
     contact: {
-      heading: 'Assess your automation potential',
-      subtitle:
-        'Answer a few questions — we\'ll get back to you with concrete ideas tailored to your reality.',
-      sec1: 'Your company',
-      sec2: 'Your day-to-day',
-      sec3: 'Your situation',
+      eyebrow: 'Contact',
+      heading: "Let's talk about your engagement",
+      subtitle: 'Staffing agency or client organization? Describe the engagement below for a quick response.',
       name: 'Full name',
       namePh: 'Your name',
       email: 'Email',
       emailPh: 'you@example.com',
-      company: 'Company name',
-      companyPh: 'e.g. ABC Company',
-      region: 'Region or city',
-      regionPh: 'e.g. Montreal, Quebec City, Laval…',
-      industry: 'Industry',
-      industryPh: 'Choose an industry',
-      industryOpts: [
-        'Retail / Commerce',
-        'Professional services (accountant, lawyer, consultant…)',
-        'Health & medical services',
-        'Construction / Real estate',
-        'Manufacturing & production',
+      company: 'Agency or company',
+      companyPh: 'e.g. XYZ Agency',
+      mandateType: 'Engagement type',
+      mandateTypePh: 'Choose a type',
+      mandateOpts: [
+        'Contract engagement (through an agency)',
+        'Direct contract engagement',
+        'One-off / short-term advisory',
         'Other',
       ],
-      size: 'Team size',
-      sizePh: 'Choose a size',
-      sizeOpts: [
-        '1 to 5 people',
-        '6 to 20 people',
-        '21 to 50 people',
-        'More than 50 people',
-      ],
-      timeSpent: 'Hours per week spent on repetitive tasks',
-      timeSpentPh: 'Choose an answer',
-      timeOpts: [
-        'Less than 2 hours',
-        '2 to 5 hours',
-        '5 to 10 hours',
-        'More than 10 hours',
-        'I\'m not sure',
-      ],
-      maturity: 'Current digital maturity level',
-      maturityOpts: [
-        'Mostly on paper or disconnected files',
-        'Some digital tools (email, Excel, accounting software)',
-        'Tools in place, but little to no automation',
-        'Already partially automated — looking to go further',
-      ],
-      readiness: 'Where are you in your thinking?',
-      readinessOpts: [
-        'I just want to learn more',
-        'I\'m exploring options for the next few months',
-        'I have a specific project in mind',
-        'I\'m looking to get started quickly',
-      ],
-      comments: 'Anything else to tell us? (optional)',
-      commentsPh: 'A particular context, a constraint, or just saying hello…',
-      submit: 'Send survey',
+      message: 'Message',
+      messagePh: 'Describe the engagement, the context, or your questions…',
+      submit: 'Send',
       prefer: 'Prefer to write directly?',
     },
     footer: {
@@ -569,25 +597,9 @@ export const ui = {
       made: 'Designed and built in Québec',
     },
     meta: {
-      title: 'DramisInfo — Automation and productivity for businesses',
+      title: 'DramisInfo — Frédéric Morais-Simard, Cloud Architect',
       description:
-        'DramisInfo helps businesses save time by simplifying and automating their everyday tasks. Simple, concrete solutions, with or without artificial intelligence.',
-    },
-    blog: {
-      metaTitle: 'Blog — DramisInfo',
-      metaDescription:
-        'Practical, data-backed insights on automation, productivity and artificial intelligence for small and mid-sized businesses.',
-      heading: 'The blog',
-      subheading:
-        'Practical, data-backed insights to help you reclaim time and make the most of automation.',
-      readTime: 'min read',
-      published: 'Published on',
-      back: 'All articles',
-      cta: {
-        heading: 'Curious what we could automate for you?',
-        text: 'Fill out our short survey — takes 2 minutes. We\'ll come back with concrete ideas tailored to your situation.',
-        button: 'Take the survey',
-      },
+        '20+ years of experience in multi-cloud strategy, DevSecOps and cloud modernization. Available for contract engagements.',
     },
   },
 } as const;

@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-label="DramisInfo">
   <g transform="translate(10,12) scale(0.96)">
-    <rect width="100" height="100" rx="24" fill="#0d9488"/>
+    <rect width="100" height="100" rx="24" fill="#8a6a14"/>
     <rect x="26" y="30" width="11" height="40" rx="4" fill="#ffffff"/>
     <path d="M45 33 L62 50 L45 67" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M64 38 L76 50 L64 62" fill="none" stroke="#99f6e4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64 38 L76 50 L64 62" fill="none" stroke="#ebcb7c" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
   <text x="130" y="76" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="700" letter-spacing="-1">
-    <tspan fill="#0d9488">Dramis</tspan><tspan fill="#1c1917">Info</tspan>
+    <tspan fill="#8a6a14">Dramis</tspan><tspan fill="#241f16">Info</tspan>
   </text>
 </svg>

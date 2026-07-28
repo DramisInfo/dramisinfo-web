@@ -7,7 +7,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "favicons": "node scripts/generate-favicons.mjs",
-    "banners": "node scripts/generate-blog-banners.mjs",
     "lint": "tsc --noEmit"
   },
   "dependencies": {

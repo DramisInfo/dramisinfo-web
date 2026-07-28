@@ -2,12 +2,12 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Hero from '@/components/Hero.astro';
-import ValueProposition from '@/components/ValueProposition.astro';
-import HowItWorks from '@/components/HowItWorks.astro';
+import About from '@/components/About.astro';
 import Services from '@/components/Services.astro';
+import HowItWorks from '@/components/HowItWorks.astro';
 import AdoptionFramework from '@/components/AdoptionFramework.astro';
 import UseCases from '@/components/UseCases.astro';
-import About from '@/components/About.astro';
+import Certifications from '@/components/Certifications.astro';
 import Contact from '@/components/Contact.astro';
 import Footer from '@/components/Footer.astro';
 import { ui } from '@/i18n/ui';
@@ -19,12 +19,12 @@ const t = ui[lang];
   <Header lang={lang} />
   <main>
     <Hero lang={lang} />
-    <ValueProposition lang={lang} />
-    <HowItWorks lang={lang} />
+    <About lang={lang} />
     <Services lang={lang} />
+    <HowItWorks lang={lang} />
     <AdoptionFramework lang={lang} />
     <UseCases lang={lang} />
-    <About lang={lang} />
+    <Certifications lang={lang} />
     <Contact lang={lang} />
   </main>
   <Footer lang={lang} />

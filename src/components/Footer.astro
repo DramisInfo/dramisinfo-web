@@ -1,5 +1,5 @@
 ---
-import { ui, type Lang } from '@/i18n/ui';
+import { ui, social, type Lang } from '@/i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -10,11 +10,11 @@ const home = lang === 'fr' ? '/' : '/en/';
 const year = new Date().getFullYear();
 
 const links = [
-  { label: t.nav.approach, href: `${home}#demarche` },
-  { label: t.nav.services, href: `${home}#services` },
-  { label: t.nav.useCases, href: `${home}#cas` },
-  { label: t.nav.blog, href: `${home}blog/` },
   { label: t.nav.about, href: `${home}#apropos` },
+  { label: t.nav.services, href: `${home}#services` },
+  { label: t.nav.parcours, href: `${home}#parcours` },
+  { label: t.nav.realisations, href: `${home}#realisations` },
+  { label: t.nav.certifications, href: `${home}#certifications` },
 ];
 ---
 <footer class="bg-navy-900 border-t border-navy-800 py-10">
@@ -25,6 +25,17 @@ const links = [
           {link.label}
         </a>
       ))}
+      <a
+        href={social.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        class="text-navy-200 hover:text-brand-400 transition-colors"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+          <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8.3 18.5H5.7V9.8h2.6zM7 8.6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11.5 9.9h-2.6v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4v4.7h-2.6V9.8h2.5v1.2h.1a2.7 2.7 0 0 1 2.5-1.4c2.7 0 3.2 1.8 3.2 4.1z" />
+        </svg>
+      </a>
     </nav>
     <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-navy-200/60 border-t border-navy-800 pt-6">
       <span>© {year} DramisInfo. {t.footer.rights}</span>

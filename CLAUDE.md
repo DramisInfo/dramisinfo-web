@@ -1,43 +1,46 @@
-# DramisInfo Web — Site vitrine
+# DramisInfo Web — Site vitrine personnel
 
-Site vitrine de l'agence **DramisInfo**, spécialisée en automatisation et intégration IA pour les PME.  
+Site vitrine professionnel de **Frédéric Morais-Simard**, architecte principal en infrastructure infonuagique et entreprise autonome, opérant sous la marque **DramisInfo** comme travailleur autonome.
 Hébergé sur **Netlify**, déploiement automatique depuis GitHub sur push vers `main`.
 
 ---
 
-## Contexte de l'agence
+## Contexte professionnel
 
 ### Mission
 
-DramisInfo aide les petites et moyennes entreprises à **récupérer la valeur de leur temps** en automatisant les tâches administratives répétitives — avec ou sans intelligence artificielle. L'objectif n'est pas la technologie pour la technologie, mais des processus plus simples, plus fiables, et du temps libéré pour ce qui compte vraiment.
+Frédéric offre son expertise en architecture infonuagique et en transformation d'entreprise à des organisations qui ont besoin d'un architecte principal expérimenté pour des mandats contractuels — que ce soit par l'entremise d'agences de placement ou directement auprès d'entreprises clientes.
 
 ### Clientèle cible
 
-PME québécoises **non familières avec l'IA ou la technologie** : commerçants, cabinets, firmes de services professionnels, entreprises manufacturières légères. Ces clients ont peur d'être pris pour des naïfs, de se faire vendre quelque chose de trop complexe, ou de perdre le contrôle de leurs processus. Le site doit les **rassurer**, pas les impressionner.
+**Agences de placement / recrutement T.I.** évaluant son profil pour des mandats contractuels, et **entreprises clientes** (grandes organisations, comités d'architecture, VP T.I.) cherchant un architecte principal capable de livrer, pas seulement de conseiller. Cette clientèle est technique et exigeante — le site doit démontrer la crédibilité par l'échelle des réalisations concrètes, les certifications et le parcours, pas par un argumentaire de vente.
 
 ### Positionnement
 
-- **Pas un prestataire techno** — un partenaire d'affaires qui parle le langage du client
-- **Automatisation d'abord, IA quand elle mérite sa place** — la complexité s'ajoute seulement si elle apporte une valeur réelle
-- **Pragmatique et mesurable** — chaque solution doit pouvoir se justifier par du temps gagné ou des erreurs évitées
+- **Stratège et praticien** — pas seulement des recommandations, une feuille de route livrée sur le terrain
+- **Échelle prouvée** — zones d'atterrissage AWS multi-région, migrations de plusieurs milliers de serveurs, plateformes internes développeurs à l'échelle de l'entreprise
+- **Bilingue et habitué aux instances de gouvernance** — présentations aux VP et comités d'architecture (ARB) en français comme en anglais
 
 ### Messages clés
 
-1. Vos équipes perdent des heures chaque semaine sur des tâches répétitives qui pourraient être automatisées.
-2. Récupérer ce temps, c'est vous redonner l'avantage concurrentiel que vous avez déjà — mais qui vous échappe.
-3. L'IA n'est pas une baguette magique : bien placée dans un flux fiable, elle fait toute la différence.
-4. On ne commence pas grand. On commence juste, on mesure, on étend.
+1. Plus de 20 ans d'expérience comme stratège et praticien — de la vision architecturale à la livraison concrète.
+2. Échelle prouvée : une des 10 plus grandes migrations AWS en Amérique du Nord, plus de 4 000 serveurs migrés dans les délais.
+3. Expertise couvrant la stratégie multi-nuage, le DevSecOps/GitOps, les plateformes internes développeurs (IDP), la sécurité zéro confiance et l'entreprise autonome/AIOps.
+4. Disponible pour mandats contractuels via agences de placement ou directement auprès d'entreprises clientes.
 
-### Services offerts
+### Expertise offerte
 
-- Automatisation de processus (déterministe + IA hybride)
-- Intégration d'outils (CRM, facturation, courriel, formulaires)
-- Ingénierie des flux de travail
-- Conseil en adoption de l'IA
+- Stratégie multi-nuage (AWS, Azure)
+- Entreprise autonome & AIOps
+- DevSecOps / GitOps
+- Plateforme interne développeurs (IDP)
+- Sécurité zéro confiance
+- Modernisation infonuagique
+- Gouvernance & standards d'architecture
 
-### État actuel du site (juin 2026)
+### État actuel du site (juillet 2026)
 
-La page d'accueil est en ligne avec toutes ses sections. Le **blog est le principal outil de croissance** : les articles sont partagés sur LinkedIn pour attirer des visiteurs qualifiés et établir la crédibilité de l'agence. La page d'accueil évoluera à mesure que l'offre se concrétise.
+La page d'accueil est en ligne avec toutes ses sections (profil, expertise, parcours professionnel, réalisations, certifications, contact). Le contenu provient du CV de Frédéric et doit rester factuellement exact — toute mise à jour de parcours ou de certifications doit d'abord être vérifiée avec lui. Il n'y a pas de blog actuellement.
 
 ---
 
@@ -61,7 +64,6 @@ npm run build        # Build de production
 npm run preview      # Prévisualiser le build
 npm run lint         # Vérification TypeScript (tsc --noEmit)
 npm run favicons     # Régénérer les PNG de favicon depuis public/favicon.svg
-npm run banners      # Régénérer les bannières JPG de blog (1200×630)
 ```
 
 ---
@@ -71,31 +73,26 @@ npm run banners      # Régénérer les bannières JPG de blog (1200×630)
 ```
 /
 ├── public/
-│   ├── images/blog/         # Bannières d'articles (1200×630 JPG)
 │   ├── favicon.svg          # Source favicon (SVG)
 │   └── logo.svg             # Logo lockup complet
 ├── scripts/
-│   ├── generate-favicons.mjs
-│   └── generate-blog-banners.mjs
+│   └── generate-favicons.mjs
 ├── src/
-│   ├── components/          # Composants Astro (Header, Footer, sections, Blog…)
-│   ├── content/blog/
-│   │   ├── fr/              # Articles en français
-│   │   └── en/              # Articles en anglais
+│   ├── components/          # Composants Astro (Header, Footer, sections de la page d'accueil)
 │   ├── i18n/ui.ts           # Dictionnaire de traductions FR/EN
 │   ├── layouts/BaseLayout.astro
-│   ├── pages/               # Routes Astro (index, blog/[slug], en/…)
-│   └── styles/global.css    # CSS global (animations, prose, visuels d'articles)
+│   ├── pages/               # Routes Astro (index, en/)
+│   └── styles/global.css    # CSS global (animations)
 ├── astro.config.mjs         # i18n : FR par défaut, EN sous /en/
 ├── netlify.toml             # Build + redirect langue (Accept-Language: en → /en/)
-└── tailwind.config.mjs      # Palette brand (teal) + warm (neutrals chauds)
+└── tailwind.config.mjs      # Palette navy (structure) + brand/laiton (accent) + warm/sable (neutres chauds)
 ```
 
 ---
 
 ## Logo et favicon
 
-**Logo de l'en-tête** : remplacer `public/logo.svg` par le logo définitif.
+**Logo de l'en-tête** : `public/logo.svg` — la marque DramisInfo est conservée.
 - Format SVG, lockup horizontal, fond transparent, lisible sur fond clair
 - Affiché à 32 px de haut (`src/components/Logo.astro`)
 
@@ -109,134 +106,28 @@ Génère : `favicon-16/32.png`, `apple-touch-icon.png` (180×180), `icon-192/512
 
 ---
 
-## Blog — Guide complet de rédaction
+## Sections de la page d'accueil
 
-### Principes éditoriaux
+Ordre actuel : Hero (avec photo) → Profil (About, avec bandeau photo) → Services (Services.astro, 6 offres de mandat avec photo + livrables) → Comment je m'intègre à un mandat (HowItWorks, fond photo assombri) → Domaines d'expérience (AdoptionFramework, grille statique non chronologique) → Réalisations clés (UseCases) → Certifications & reconnaissances → Contact.
 
-| Règle | Explication |
-|---|---|
-| **Données réelles uniquement** | Chaque statistique doit provenir d'une source citée et vérifiable. Pas de chiffres inventés ou approximatifs sans source. |
-| **Sources de confiance** | Préférer : McKinsey, Gartner, Forrester, Réserve fédérale, SBA, Salesforce, IBM, Anthropic, publications académiques peer-reviewed. Éviter les blogs sans référence ou les communiqués de presse d'une seule entreprise. |
-| **Ton accessible, pas vulgarisateur** | Parler à un propriétaire de PME intelligent mais non-technique. Pas de jargon (« LLM », « tokens », « vector DB ») sans explication. Pas de condescendance non plus. |
-| **Concret avant abstrait** | Toujours illustrer un concept avec un exemple métier réel avant d'expliquer le « pourquoi » théorique. |
-| **Honnêteté sur les limites** | Ne pas survendre. Si l'IA n'est pas nécessaire pour un cas, le dire. La crédibilité vient de la nuance. |
-| **Message central** | Chaque article doit ramener à l'un des messages clés de l'agence : récupérer du temps, fiabiliser les processus, adopter progressivement. |
+Tout le contenu passe par `src/i18n/ui.ts` (voir section i18n ci-dessous). Les noms de fichiers de composants reflètent encore leur rôle d'origine (ex. `UseCases.astro` affiche les réalisations, `AdoptionFramework.astro` affiche le parcours professionnel) — le contenu et les identifiants d'ancrage (`#apropos`, `#services`, `#demarche`, `#parcours`, `#realisations`, `#certifications`, `#contact`) sont à jour.
 
-### Sujets pertinents
+Toute donnée factuelle (dates, titres de poste, employeurs, certifications, réalisations chiffrées) doit rester fidèle au CV de Frédéric — ne pas inventer ou arrondir des chiffres.
 
-Exemples de thèmes alignés avec le positionnement de DramisInfo :
-- Tâches répétitives coûteuses dans un secteur précis (RH, comptabilité, logistique…)
-- Comparaisons automatisation simple vs IA (quand choisir quoi)
-- Intégrations entre outils populaires (CRM, facturation, courriel)
-- Études de cas de gains de temps mesurables
-- Démystification de l'IA pour les non-techniques
-- Ingénierie des processus : comment cartographier un flux avant de l'automatiser
+### Ton du contenu : offre de service, pas biographie
 
-### Structure type d'un article
+Le site présente une offre de service, pas un CV en ligne. Conventions à respecter dans toute nouvelle rédaction :
+- **Éviter le « je »/« mon »** dans les titres et descriptions — préférer des formulations factuelles/nominales (« Livraison de… », « Architecture de… ») plutôt que narratives (« J'aide… », « Je livre… »). Le nom de Frédéric n'apparaît jamais dans le contenu du site (uniquement dans les métadonnées/schéma structuré) — c'est voulu.
+- **Pas de chronologie d'emploi** : la section « Parcours professionnel » (`AdoptionFramework.astro`, ui.framework.domains) présente des **domaines d'expérience non chronologiques**, sans nom d'employeur ni dates — volontairement, pour éviter l'effet CV. Les dates/employeurs précis restent une source interne (le CV), pas un contenu affiché.
+- Les sections Services, Réalisations et Certifications restent factuelles et orientées livrable — c'est le ton à reproduire pour tout nouveau contenu.
 
-```
-1. Accroche — une situation que le lecteur reconnaît immédiatement (douleur réelle)
-2. Les données — 1 à 2 statistiques clés qui valident le problème (avec visuels)
-3. L'analyse — pourquoi ça arrive, quelle est la vraie cause
-4. La solution — approche concrète, étapes, exemple
-5. L'appel à l'action implicite — conclusion qui renvoie à la philosophie DramisInfo
-6. Séparateur --- + mention italique de DramisInfo
-7. Sources — liste avec liens
-```
+### Section Services (offre de mandat)
 
-### Frontmatter obligatoire
+`ui.services.items` structure chaque service en `{ title, description, image, deliverables[] }` — un service = un mandat concret avec livrables, pas une simple compétence. En ajouter/modifier un : garder les 3 livrables courts et vérifiables, choisir une image cohérente avec le sujet (voir ci-dessous).
 
-```yaml
----
-title: "Titre accrocheur — sous-titre si nécessaire"
-description: "Une phrase (150-160 caractères) qui résume l'article et donne envie de cliquer. Utilisée pour le SEO et les aperçus LinkedIn."
-pubDate: YYYY-MM-DD
-lang: fr          # ou 'en' pour la version anglaise
-permalink: nom-du-fichier-sans-extension   # MÊME valeur en FR et EN
-icon: automate    # voir liste des icônes disponibles ci-dessous
-tags: ["Tag1", "Tag2"]   # 2 tags maximum, cohérents avec les autres articles
-coverImage: /images/blog/nom-de-la-banniere.jpg
----
-```
+### Photographie
 
-**Icônes disponibles :** `automate`, `simplify`, `tools`, `idea`, `support`, `clarity`, `compass`, `bolt`, `layers`, `mail`, `crm`, `invoice`, `calendar`, `bell`, `scan`, `check`, `globe`
-
-### Bannière (coverImage)
-
-Chaque article doit avoir une bannière 1200×630 px générée par le script :
-
-1. Ajouter un bloc SVG dans `scripts/generate-blog-banners.mjs` (copier un bloc existant comme modèle)
-2. Choisir une palette et un motif qui reflètent le sujet (voir les 4 exemples existants)
-3. Lancer `npm run banners`
-4. Le fichier apparaît dans `public/images/blog/`
-5. Référencer dans le frontmatter : `coverImage: /images/blog/nom.jpg`
-
-La bannière sert aussi d'`og:image` pour LinkedIn — elle doit avoir un design soigné (fond sombre, formes géométriques de la marque, barre sarcelle en bas).
-
-### Visuels de données dans le contenu
-
-**Règle : chaque article doit contenir au minimum :**
-- ✅ Une grille de cartes de stats (`div.stats`)
-- ✅ Un graphique en barres (`figure.chart`)
-
-Ces éléments s'animent à l'apparition et respectent `prefers-reduced-motion`.
-
-> ⚠️ Contrainte Markdown : un bloc HTML ne doit contenir **aucune ligne vide** à l'intérieur — sinon Astro le scinde et le rendu casse. Échapper `<` en `&lt;` (ex. `&lt;30%`).
-
-**Cartes de stats :**
-```html
-<div class="stats" data-reveal-group>
-<div class="stat" data-reveal><span class="stat-num">40<span class="stat-unit">%+</span></span><span class="stat-label">Libellé court et précis</span></div>
-<div class="stat" data-reveal><span class="stat-num">2,8<span class="stat-unit">×</span></span><span class="stat-label">Autre métrique clé</span></div>
-</div>
-```
-
-**Graphique en barres :**
-```html
-<figure class="chart" data-reveal>
-<figcaption class="chart-title">Titre du graphique — source entre parenthèses si besoin</figcaption>
-<div class="bar-row"><span class="bar-label">Libellé</span><span class="bar-track"><span class="bar-fill" style="--w:55%"></span></span><span class="bar-val">55%</span></div>
-<div class="bar-row"><span class="bar-label">Comparaison</span><span class="bar-track"><span class="bar-fill bar-fill--muted" style="--w:20%"></span></span><span class="bar-val bar-val--muted">20%</span></div>
-<p class="chart-note">Note explicative facultative sous le graphique.</p>
-</figure>
-```
-
-### Longueur cible
-
-- **1200–1800 mots** (hors frontmatter et sources) : les articles doivent être approfondis — nuance, exemples concrets multiples, développement réel de l'analyse — plutôt que rester en survol
-- Temps de lecture affiché automatiquement (200 mots/min)
-
-### Liens internes vers les autres articles
-
-Chaque fois qu'un article fait référence à un autre article du blog (« comme on l'a vu dans notre article sur… »), la référence **doit être un lien cliquable** vers cet article, directement dans le texte — jamais une simple mention sans lien.
-- FR : lien vers `/blog/<permalink>/`
-- EN : lien vers `/en/blog/<permalink>/`
-- Vérifier après `npm run build` que le lien apparaît bien dans le HTML généré (`<a href="/blog/...">`)
-
-### Bilinguisme obligatoire
-
-Chaque article doit exister en **deux fichiers** :
-- `src/content/blog/fr/nom-du-fichier.md` → `lang: fr`
-- `src/content/blog/en/nom-du-fichier.md` → `lang: en`
-- Le champ `permalink` doit être **identique** dans les deux fichiers
-
-La version anglaise n'est pas une traduction mot-à-mot : adapter les tournures, les références culturelles si nécessaire. Les données et la structure restent les mêmes.
-
-### Checklist avant publication
-
-```
-[ ] Frontmatter complet (title, description, pubDate, lang, permalink, icon, tags, coverImage)
-[ ] Même permalink en FR et EN
-[ ] Au moins une grille de stats ET un graphique en barres
-[ ] Toutes les statistiques ont une source citée
-[ ] Toute référence à un autre article du blog est un lien cliquable vers cet article
-[ ] Section Sources en fin d'article avec liens cliquables
-[ ] Mention DramisInfo en italique avant les Sources
-[ ] Bannière générée (npm run banners) et référencée dans coverImage
-[ ] npm run build passe sans erreur
-[ ] npm run lint passe sans erreur
-[ ] Les visuels s'affichent correctement dans le navigateur (npm run preview)
-```
+Le site utilise des photos libres de droit (licence Unsplash — usage commercial libre, aucune attribution requise) dans `public/images/` : `hero-datacenter.jpg`, `about-datacenter.jpg`, `section-network.jpg` (fond de la section « Comment je m'intègre »), et une par offre de service (`service-*.jpg`). Aucune photo personnelle de Frédéric n'est utilisée. Pour changer une image : trouver un remplacement libre de droit de thème et de teinte cohérents (dominante navy/sable de préférence), télécharger dans `public/images/` et mettre à jour la référence dans `ui.ts` ou le composant. Garder le reste du site (Parcours, Réalisations, Certifications, Contact) sans photo supplémentaire pour éviter la surcharge visuelle.
 
 ---
 
@@ -250,12 +141,12 @@ Le formulaire de contact (`src/components/Contact.astro`) est protégé en couch
 
 Le **courriel** n'apparaît jamais en clair dans le HTML : il est stocké en deux
 attributs (`data-eu`, `data-ed`) et reconstruit côté navigateur par un petit script.
-Pour le changer, modifier ces attributs dans `Contact.astro`.
+Adresse actuelle : `fsimard@dramisinfo.com`. Pour la changer, modifier ces attributs dans `Contact.astro`.
 
 **Configuration Netlify requise après déploiement :**
 1. Forms → Enable form detection
 2. Trigger deploy → Clear cache and deploy site
-3. Configuration → Notifications → Form submission notifications → `info@dramisinfo.com`
+3. Configuration → Notifications → Form submission notifications → `fsimard@dramisinfo.com`
 4. Forms → Spam filters → Activer reCAPTCHA 2
 
 > Le reCAPTCHA ne s'affiche qu'une fois déployé sur Netlify (pas en `npm run dev`).
@@ -288,9 +179,9 @@ Pour le changer, modifier ces attributs dans `Contact.astro`.
 
 ## Design & identité visuelle
 
-- **Palette** : sarcelle (`brand`, #0d9488) + neutres chauds (`warm`)
+- **Palette** : navy (`navy`, structure — en-tête, pied de page, sections sombres) + laiton (`brand`, #8a6a14, accent — boutons, liens, icônes) + sable (`warm`, neutres chauds — texte courant, fonds, bordures)
 - **Typographie** : Inter (Google Fonts), weights 400/500/600/700
-- **Ton visuel** : professionnel, moderne, sobre — pas de couleurs criardes, pas d'effets tape-à-l'œil
+- **Ton visuel** : professionnel, sobre, crédible — pas de couleurs criardes, pas d'effets tape-à-l'œil
 - **Animations** : subtiles, fonctionnelles (révèlent du contenu), toujours avec `prefers-reduced-motion`
 - **Icônes** : SVG maison, style trait 1.5 px + accent teal signature (`src/components/Icon.astro`)
 
@@ -300,5 +191,5 @@ Pour le changer, modifier ces attributs dans `Contact.astro`.
 
 - **Accessibilité** : `alt` sur toutes les images, structure HTML sémantique, contraste WCAG AA
 - **Performance** : images optimisées, lazy loading, bundle minimal (pas de dépendances inutiles)
-- **SEO** : balises meta, `og:tags`, `hreflang`, `canonical` sur chaque page
+- **SEO** : balises meta, `og:tags`, `hreflang`, `canonical` sur chaque page, schéma `Person` JSON-LD dans `BaseLayout.astro`
 - **i18n** : toute chaîne visible doit passer par `src/i18n/ui.ts` — aucun texte en dur dans les composants
