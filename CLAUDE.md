@@ -85,7 +85,7 @@ npm run favicons     # Régénérer les PNG de favicon depuis public/favicon.svg
 │   └── styles/global.css    # CSS global (animations)
 ├── astro.config.mjs         # i18n : FR par défaut, EN sous /en/
 ├── netlify.toml             # Build + redirect langue (Accept-Language: en → /en/)
-└── tailwind.config.mjs      # Palette brand (teal) + warm (neutrals chauds)
+└── tailwind.config.mjs      # Palette navy (structure) + brand/laiton (accent) + warm/sable (neutres chauds)
 ```
 
 ---
@@ -120,7 +120,7 @@ Toute donnée factuelle (dates, titres de poste, employeurs, certifications, ré
 
 ### Photographie
 
-Le site utilise des photos libres de droit (licence Unsplash — usage commercial libre, aucune attribution requise) dans `public/images/` : `hero-datacenter.jpg`, `about-datacenter.jpg`, `section-network.jpg` (fond de la section « Comment je m'intègre »), et une par offre de service (`service-*.jpg`). Aucune photo personnelle de Frédéric n'est utilisée. Pour changer une image : trouver un remplacement libre de droit de thème et de teinte cohérents (dominante sarcelle/navy de préférence), télécharger dans `public/images/` et mettre à jour la référence dans `ui.ts` ou le composant. Garder le reste du site (Parcours, Réalisations, Certifications, Contact) sans photo supplémentaire pour éviter la surcharge visuelle.
+Le site utilise des photos libres de droit (licence Unsplash — usage commercial libre, aucune attribution requise) dans `public/images/` : `hero-datacenter.jpg`, `about-datacenter.jpg`, `section-network.jpg` (fond de la section « Comment je m'intègre »), et une par offre de service (`service-*.jpg`). Aucune photo personnelle de Frédéric n'est utilisée. Pour changer une image : trouver un remplacement libre de droit de thème et de teinte cohérents (dominante navy/sable de préférence), télécharger dans `public/images/` et mettre à jour la référence dans `ui.ts` ou le composant. Garder le reste du site (Parcours, Réalisations, Certifications, Contact) sans photo supplémentaire pour éviter la surcharge visuelle.
 
 ---
 
@@ -172,7 +172,7 @@ Adresse actuelle : `fsimard@dramisinfo.com`. Pour la changer, modifier ces attri
 
 ## Design & identité visuelle
 
-- **Palette** : sarcelle (`brand`, #0d9488) + neutres chauds (`warm`) + navy (sections sombres)
+- **Palette** : navy (`navy`, structure — en-tête, pied de page, sections sombres) + laiton (`brand`, #8a6a14, accent — boutons, liens, icônes) + sable (`warm`, neutres chauds — texte courant, fonds, bordures)
 - **Typographie** : Inter (Google Fonts), weights 400/500/600/700
 - **Ton visuel** : professionnel, sobre, crédible — pas de couleurs criardes, pas d'effets tape-à-l'œil
 - **Animations** : subtiles, fonctionnelles (révèlent du contenu), toujours avec `prefers-reduced-motion`
