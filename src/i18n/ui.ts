@@ -15,7 +15,7 @@ export const ui = {
     nav: {
       about: 'Profil',
       services: 'Services',
-      parcours: 'Parcours',
+      parcours: 'Expérience',
       realisations: 'Réalisations',
       certifications: 'Certifications',
       cta: 'Me contacter',
@@ -26,10 +26,10 @@ export const ui = {
       titleLine1: 'Architecture infonuagique,',
       titleHighlight: 'entreprise autonome',
       subtitle:
-        "Plus de 20 ans d'expérience comme stratège et praticien — de la vision architecturale à la livraison concrète. J'aide les entreprises à moderniser leur infrastructure infonuagique, à bâtir des plateformes internes fiables et à réduire les tâches opérationnelles pénibles grâce à l'automatisation et à l'IA.",
+        "Plus de 20 ans d'expertise en stratégie et exécution — de la vision architecturale à la livraison concrète. Modernisation de l'infrastructure infonuagique, plateformes internes fiables et réduction des tâches opérationnelles pénibles grâce à l'automatisation et à l'IA.",
       imageAlt: 'Salle de serveurs — infrastructure infonuagique',
       ctaPrimary: 'Me contacter',
-      ctaSecondary: 'Voir mon parcours',
+      ctaSecondary: "Voir l'expérience",
       reassurance:
         "Bilingue (français/anglais) · Basé à L'Assomption, Québec · Ouvert aux mandats à distance ou hybrides.",
     },
@@ -37,9 +37,9 @@ export const ui = {
       eyebrow: 'Profil',
       heading: 'Stratège et praticien',
       imageAlt: 'Rack de serveurs dans un centre de données',
-      p1: "J'aide les entreprises à définir et à livrer leurs feuilles de route d'infrastructure infonuagique — de la vision architecturale jusqu'à l'exécution sur le terrain. Je ne me contente pas de dessiner l'architecture cible : je l'ai personnellement construite, à plusieurs reprises, à grande échelle.",
-      p2: "J'ai architecturé des plateformes, des zones d'atterrissage et des cadres d'automatisation qui ont propulsé certaines des plus grandes transformations infonuagiques en Amérique du Nord — dont une reconnaissance parmi les 10 plus grandes migrations AWS sur le continent.",
-      p3: "Habitué à présenter des plans d'investissement techniques et des décisions d'architecture aux VP et aux comités d'architecture, je m'intéresse aujourd'hui particulièrement à l'entreprise autonome, à l'AIOps agentique et à l'élimination des tâches opérationnelles pénibles par l'automatisation intelligente.",
+      p1: "Définition et livraison de feuilles de route d'infrastructure infonuagique — de la vision architecturale jusqu'à l'exécution sur le terrain. L'architecture cible n'est pas seulement dessinée : elle est construite, à plusieurs reprises, à grande échelle.",
+      p2: "Plateformes, zones d'atterrissage et cadres d'automatisation ayant propulsé certaines des plus grandes transformations infonuagiques en Amérique du Nord — dont une reconnaissance parmi les 10 plus grandes migrations AWS sur le continent.",
+      p3: "Présentations régulières de plans d'investissement techniques et de décisions d'architecture aux VP et comités d'architecture. Un intérêt marqué pour l'entreprise autonome, l'AIOps agentique et l'élimination des tâches opérationnelles pénibles par l'automatisation intelligente.",
       values: [
         {
           title: 'Échelle prouvée',
@@ -49,7 +49,7 @@ export const ui = {
         {
           title: 'Vision et exécution',
           description:
-            "De la feuille de route pluriannuelle à la mise en œuvre concrète — je livre ce que j'architecture, pas seulement des diagrammes.",
+            "De la feuille de route pluriannuelle à la mise en œuvre concrète — livraison de ce qui est architecturé, pas seulement des diagrammes.",
         },
         {
           title: 'Bilingue, habitué aux VP et ARB',
@@ -60,7 +60,7 @@ export const ui = {
     },
     services: {
       eyebrow: 'Services',
-      heading: 'Ce que je livre',
+      heading: 'Ce qui est livré',
       subheading:
         "Six offres de mandat pour faire avancer vos projets d'architecture infonuagique et de transformation.",
       items: [
@@ -140,79 +140,64 @@ export const ui = {
     },
     how: {
       eyebrow: 'Déroulement',
-      heading: "Comment je m'intègre à un mandat",
+      heading: "Intégration à un mandat",
       subheading:
         "Que ce soit via une agence de placement ou directement avec votre entreprise, voici comment un mandat démarre.",
       steps: [
         {
           title: 'Prise de contact',
           description:
-            'Une agence de placement ou une entreprise cliente me présente un mandat — contexte, enjeux techniques et échéancier.',
+            'Une agence de placement ou une entreprise cliente présente un mandat — contexte, enjeux techniques et échéancier.',
         },
         {
           title: 'Cadrage',
           description:
-            'On valide ensemble la portée du mandat, les compétences requises, la disponibilité et les modalités contractuelles.',
+            'Validation de la portée du mandat, des compétences requises, de la disponibilité et des modalités contractuelles.',
         },
         {
           title: 'Livraison et mentorat',
           description:
-            "J'arrive avec une feuille de route claire, je livre l'architecture et je transfère les connaissances aux équipes en place.",
+            "Feuille de route claire, livraison de l'architecture et transfert des connaissances aux équipes en place.",
         },
       ],
     },
     framework: {
       eyebrow: 'Expérience',
-      heading: 'Parcours professionnel',
+      heading: "Domaines d'expérience",
       subheading:
-        "Plus de 20 ans d'expérience en infrastructure T.I., de développeur à architecte principal.",
-      levelLabel: 'Rôle',
-      prevLabel: 'Rôle précédent',
-      nextLabel: 'Rôle suivant',
-      stages: [
+        "Plus de 20 ans d'expertise en infrastructure T.I., du développement à l'architecture principale.",
+      domains: [
         {
           icon: 'layers',
-          title: 'Architecte de plateforme sénior — CAE Inc.',
+          title: "Architecture d'entreprise à grande échelle",
           description:
-            "Octobre 2020 – présent. Stratégie d'infrastructure de bout en bout (nuage, IDP, observabilité, automatisation). Zone d'atterrissage AWS multi-région parmi les 10 plus grandes migrations en Amérique du Nord (4 000+ serveurs). Standards de gouvernance et présentations aux VP et comités d'architecture (ARB).",
-        },
-        {
-          icon: 'clarity',
-          title: 'Directeur de projets T.I. — Morneau Shepell',
-          description:
-            'Décembre 2019 – octobre 2020. Amélioration des processus de livraison de solutions intégrées et des initiatives de support de niveau 2. Mise en place d’une stratégie DevOps / CI-CD.',
+            "Stratégie d'infrastructure de bout en bout, zones d'atterrissage multi-région et migrations de plusieurs milliers de serveurs, avec gouvernance et présentations aux VP et comités d'architecture (ARB).",
         },
         {
           icon: 'tools',
-          title: 'Conseiller principal en T.I. — Morneau Shepell',
+          title: "Livraison de solutions d'entreprise & DevOps",
           description:
-            "2012 – 2019. Direction de l'équipe de déploiement d'une grande solution intégrée. Automatisation des déploiements avec PowerShell et Octopus Deploy. Conception d'une architecture SSO (SAML 2.0, WS-Fed).",
+            "Direction d'équipes de déploiement, automatisation des livraisons (CI/CD), conception d'architectures SSO et amélioration continue des processus de livraison.",
         },
         {
           icon: 'scan',
-          title: 'Conseiller en T.I. — Mercer',
+          title: 'Conversion & qualité des données',
           description:
-            "2010 – 2012 (Mercer, acquis par Morneau Shepell en 2012). Architecte et développeur d'une solution automatisée de conversion de données. Chef de livraison produit.",
+            "Conception de solutions automatisées de conversion de données et de systèmes de diagnostic de qualité pour des plateformes d'envergure.",
         },
         {
           icon: 'idea',
-          title: 'Spécialiste en T.I. — Towers Perrin / EDS',
+          title: 'Systèmes critiques à prestations déterminées',
           description:
-            "2002 – 2010 (fusion en 2005). Architecte et développeur principal d'un système de calcul de régime de retraite à prestation déterminée et d'un système de diagnostic de qualité des données.",
-        },
-        {
-          icon: 'globe',
-          title: 'Développeur Web — Alligacom',
-          description:
-            "2000 – 2002. Développement d'une application web de gestion de formulaires et participation à une plateforme d'échange de documents selon la norme EDI.",
+            "Conception de systèmes de calcul et d'administration pour des régimes de retraite complexes, à haute fiabilité.",
         },
       ],
-      note: "20+ ans d'expérience continue en infrastructure T.I. — de développeur à architecte principal.",
+      note: "20+ ans d'expérience continue en infrastructure T.I., sur des environnements de tailles et de secteurs variés.",
     },
     useCases: {
       eyebrow: 'Impact',
       heading: 'Réalisations clés',
-      subheading: "Quelques exemples concrets de ce que j'ai livré au cours des dernières années.",
+      subheading: 'Quelques exemples concrets livrés au cours des dernières années.',
       items: [
         {
           icon: 'compass',
@@ -292,7 +277,7 @@ export const ui = {
       eyebrow: 'Contact',
       heading: 'Discutons de votre mandat',
       subtitle:
-        'Agence de placement ou entreprise cliente ? Écrivez-moi et je vous réponds rapidement.',
+        'Agence de placement ou entreprise cliente ? Décrivez le mandat ci-dessous pour une réponse rapide.',
       name: 'Nom complet',
       namePh: 'Votre nom',
       email: 'Courriel',
@@ -326,7 +311,7 @@ export const ui = {
     nav: {
       about: 'Profile',
       services: 'Services',
-      parcours: 'Career',
+      parcours: 'Experience',
       realisations: 'Achievements',
       certifications: 'Certifications',
       cta: 'Get in touch',
@@ -337,10 +322,10 @@ export const ui = {
       titleLine1: 'Cloud architecture,',
       titleHighlight: 'autonomous enterprise',
       subtitle:
-        "20+ years of experience as both strategist and practitioner — from architectural vision to hands-on delivery. I help organizations modernize their cloud infrastructure, build reliable internal platforms, and eliminate operational toil through automation and AI.",
+        "20+ years of expertise in strategy and execution — from architectural vision to hands-on delivery. Cloud infrastructure modernization, reliable internal platforms, and reduced operational toil through automation and AI.",
       imageAlt: 'Server room — cloud infrastructure',
       ctaPrimary: 'Get in touch',
-      ctaSecondary: 'See my career',
+      ctaSecondary: 'See the experience',
       reassurance:
         "Bilingual (French/English) · Based in L'Assomption, Québec · Open to remote or hybrid engagements.",
     },
@@ -348,9 +333,9 @@ export const ui = {
       eyebrow: 'Profile',
       heading: 'Strategist and practitioner',
       imageAlt: 'Server rack in a data center',
-      p1: "I help organizations define and deliver their infrastructure roadmaps — from architectural vision through to hands-on execution. I don't just draw the target architecture: I've personally built it, repeatedly, at scale.",
-      p2: "I've architected platforms, landing zones and automation frameworks that powered some of the largest cloud transformations in North America — including recognition among the 10 largest AWS migrations on the continent.",
-      p3: "Comfortable presenting technical investment plans and architecture decisions to VPs and architecture review boards, I'm now especially focused on the autonomous enterprise, agentic AIOps, and eliminating operational toil through intelligent automation.",
+      p1: "Definition and delivery of infrastructure roadmaps — from architectural vision through to hands-on execution. The target architecture isn't just drawn: it's built, repeatedly, at scale.",
+      p2: "Platforms, landing zones and automation frameworks that have powered some of the largest cloud transformations in North America — including recognition among the 10 largest AWS migrations on the continent.",
+      p3: "Regular presentations of technical investment plans and architecture decisions to VPs and architecture review boards. A strong focus on the autonomous enterprise, agentic AIOps, and eliminating operational toil through intelligent automation.",
       values: [
         {
           title: 'Proven scale',
@@ -360,7 +345,7 @@ export const ui = {
         {
           title: 'Vision and execution',
           description:
-            "From multi-year roadmap to hands-on delivery — I deliver what I architect, not just diagrams.",
+            "From multi-year roadmap to hands-on delivery — what's architected gets delivered, not just diagrammed.",
         },
         {
           title: 'Bilingual, VP and ARB-ready',
@@ -371,7 +356,7 @@ export const ui = {
     },
     services: {
       eyebrow: 'Services',
-      heading: 'What I deliver',
+      heading: 'What gets delivered',
       subheading:
         'Six engagement offerings to move your cloud architecture and transformation projects forward.',
       items: [
@@ -451,7 +436,7 @@ export const ui = {
     },
     how: {
       eyebrow: 'Process',
-      heading: 'How I fit into an engagement',
+      heading: 'Fitting into an engagement',
       subheading:
         "Whether through a staffing agency or directly with your organization, here's how an engagement typically starts.",
       steps: [
@@ -463,66 +448,52 @@ export const ui = {
         {
           title: 'Scoping',
           description:
-            'We align on the scope of the engagement, the skills required, availability and contractual terms.',
+            'Alignment on the scope of the engagement, the skills required, availability and contractual terms.',
         },
         {
           title: 'Delivery and mentoring',
           description:
-            'I arrive with a clear roadmap, deliver the architecture and transfer knowledge to your existing teams.',
+            'A clear roadmap, delivery of the architecture, and knowledge transfer to existing teams.',
         },
       ],
     },
     framework: {
       eyebrow: 'Experience',
-      heading: 'Career',
-      subheading: '20+ years of IT infrastructure experience, from developer to principal architect.',
-      levelLabel: 'Role',
-      prevLabel: 'Previous role',
-      nextLabel: 'Next role',
-      stages: [
+      heading: 'Domains of experience',
+      subheading:
+        '20+ years of IT infrastructure expertise, from hands-on development to principal architecture.',
+      domains: [
         {
           icon: 'layers',
-          title: 'Senior Platform Architect — CAE Inc.',
+          title: 'Enterprise architecture at scale',
           description:
-            'October 2020 – present. End-to-end infrastructure strategy (cloud, IDP, observability, automation). Multi-region AWS landing zone recognized among the 10 largest migrations in North America (4,000+ servers). Governance standards and presentations to VPs and architecture review boards (ARB).',
-        },
-        {
-          icon: 'clarity',
-          title: 'IT Project Director — Morneau Shepell',
-          description:
-            'December 2019 – October 2020. Improved delivery processes for integrated solutions and led level-2 support initiatives. Established a DevOps / CI-CD strategy.',
+            'End-to-end infrastructure strategy, multi-region landing zones and migrations spanning thousands of servers, with governance and presentations to VPs and architecture review boards (ARB).',
         },
         {
           icon: 'tools',
-          title: 'Senior IT Consultant — Morneau Shepell',
+          title: 'Enterprise solution delivery & DevOps',
           description:
-            "2012 – 2019. Led the deployment team for a major integrated solution. Automated deployments with PowerShell and Octopus Deploy. Designed an SSO architecture (SAML 2.0, WS-Fed).",
+            'Leading deployment teams, delivery automation (CI/CD), SSO architecture design, and continuous improvement of delivery processes.',
         },
         {
           icon: 'scan',
-          title: 'IT Consultant — Mercer',
+          title: 'Data conversion & quality',
           description:
-            '2010 – 2012 (Mercer, acquired by Morneau Shepell in 2012). Architected and developed an automated data conversion solution. Product delivery lead.',
+            'Design of automated data conversion solutions and data quality diagnostic systems for large-scale platforms.',
         },
         {
           icon: 'idea',
-          title: 'IT Specialist — Towers Perrin / EDS',
+          title: 'Critical defined-benefit systems',
           description:
-            '2002 – 2010 (merged in 2005). Lead architect and developer of a defined-benefit pension calculation system and a data quality diagnostics system.',
-        },
-        {
-          icon: 'globe',
-          title: 'Web Developer — Alligacom',
-          description:
-            '2000 – 2002. Developed a web-based form management application and contributed to a document exchange platform based on the EDI standard.',
+            'Design of calculation and administration systems for complex, high-reliability pension plans.',
         },
       ],
-      note: '20+ years of continuous IT infrastructure experience — from developer to principal architect.',
+      note: '20+ years of continuous IT infrastructure experience, across environments of varying scale and industry.',
     },
     useCases: {
       eyebrow: 'Impact',
       heading: 'Key achievements',
-      subheading: "A few concrete examples of what I've delivered in recent years.",
+      subheading: 'A few concrete examples delivered in recent years.',
       items: [
         {
           icon: 'compass',
@@ -601,7 +572,7 @@ export const ui = {
     contact: {
       eyebrow: 'Contact',
       heading: "Let's talk about your engagement",
-      subtitle: "Staffing agency or client organization? Reach out and I'll get back to you quickly.",
+      subtitle: 'Staffing agency or client organization? Describe the engagement below for a quick response.',
       name: 'Full name',
       namePh: 'Your name',
       email: 'Email',

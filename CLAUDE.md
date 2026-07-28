@@ -108,11 +108,18 @@ Génère : `favicon-16/32.png`, `apple-touch-icon.png` (180×180), `icon-192/512
 
 ## Sections de la page d'accueil
 
-Ordre actuel : Hero (avec photo) → Profil (About, avec bandeau photo) → Services (Services.astro, 6 offres de mandat avec photo + livrables) → Comment je m'intègre à un mandat (HowItWorks, fond photo assombri) → Parcours professionnel (AdoptionFramework, carrousel) → Réalisations clés (UseCases) → Certifications & reconnaissances → Contact.
+Ordre actuel : Hero (avec photo) → Profil (About, avec bandeau photo) → Services (Services.astro, 6 offres de mandat avec photo + livrables) → Comment je m'intègre à un mandat (HowItWorks, fond photo assombri) → Domaines d'expérience (AdoptionFramework, grille statique non chronologique) → Réalisations clés (UseCases) → Certifications & reconnaissances → Contact.
 
 Tout le contenu passe par `src/i18n/ui.ts` (voir section i18n ci-dessous). Les noms de fichiers de composants reflètent encore leur rôle d'origine (ex. `UseCases.astro` affiche les réalisations, `AdoptionFramework.astro` affiche le parcours professionnel) — le contenu et les identifiants d'ancrage (`#apropos`, `#services`, `#demarche`, `#parcours`, `#realisations`, `#certifications`, `#contact`) sont à jour.
 
 Toute donnée factuelle (dates, titres de poste, employeurs, certifications, réalisations chiffrées) doit rester fidèle au CV de Frédéric — ne pas inventer ou arrondir des chiffres.
+
+### Ton du contenu : offre de service, pas biographie
+
+Le site présente une offre de service, pas un CV en ligne. Conventions à respecter dans toute nouvelle rédaction :
+- **Éviter le « je »/« mon »** dans les titres et descriptions — préférer des formulations factuelles/nominales (« Livraison de… », « Architecture de… ») plutôt que narratives (« J'aide… », « Je livre… »). Le nom de Frédéric n'apparaît jamais dans le contenu du site (uniquement dans les métadonnées/schéma structuré) — c'est voulu.
+- **Pas de chronologie d'emploi** : la section « Parcours professionnel » (`AdoptionFramework.astro`, ui.framework.domains) présente des **domaines d'expérience non chronologiques**, sans nom d'employeur ni dates — volontairement, pour éviter l'effet CV. Les dates/employeurs précis restent une source interne (le CV), pas un contenu affiché.
+- Les sections Services, Réalisations et Certifications restent factuelles et orientées livrable — c'est le ton à reproduire pour tout nouveau contenu.
 
 ### Section Services (offre de mandat)
 
