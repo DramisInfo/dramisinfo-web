@@ -6,6 +6,13 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang].contact;
 const thanks = lang === 'fr' ? '/merci/' : '/en/merci/';
+
+// reCAPTCHA natif de Netlify. Mettre à true pour l'activer : Netlify injecte
+// le widget au déploiement et valide la réponse côté serveur — rien d'autre
+// à faire, aucun compte Google requis. Le widget ne s'affiche pas en local.
+// Laissé à false : à faible volume, le honeypot suffit et chaque friction
+// coûte plus cher qu'un pourriel à supprimer. Voir CLAUDE.md.
+const RECAPTCHA = false;
 ---
 <section id="contact" class="bg-paper-2 py-20 md:py-28">
   <div class="page">
@@ -22,6 +29,7 @@ const thanks = lang === 'fr' ? '/merci/' : '/en/merci/';
           action={thanks}
           data-netlify="true"
           netlify-honeypot="bot-field"
+          data-netlify-recaptcha={RECAPTCHA ? 'true' : undefined}
           class="space-y-5"
         >
           <input type="hidden" name="form-name" value="contact" />
@@ -66,15 +74,19 @@ const thanks = lang === 'fr' ? '/merci/' : '/en/merci/';
             <textarea class="field resize-none" id="message" name="message" rows="5" required placeholder={t.messagePh}></textarea>
           </div>
 
+          {RECAPTCHA && <div data-netlify-recaptcha="true"></div>}
+
           <button type="submit" class="btn-primary w-full sm:w-auto">{t.submit}</button>
         </form>
 
         <aside data-reveal class="border-t border-rule pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
           <h3 class="label">{t.direct}</h3>
           <ul class="mt-4 space-y-3 font-mono text-[13.5px]">
-            <li>
-              <a href={coords.phoneHref} class="text-ink transition-colors hover:text-accent">{coords.phone}</a>
-            </li>
+            {coords.phone && (
+              <li>
+                <a href={coords.phoneHref} class="text-ink transition-colors hover:text-accent">{coords.phone}</a>
+              </li>
+            )}
             <li>
               <a data-eu={coords.emailUser} data-ed={coords.emailDomain} class="text-ink transition-colors hover:text-accent"></a>
             </li>

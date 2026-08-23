@@ -2,3 +2,4 @@ dist/
 node_modules/
 .astro/
 preview.log
+.claude/

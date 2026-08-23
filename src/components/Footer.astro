@@ -12,8 +12,12 @@ const year = new Date().getFullYear();
       <Logo class="text-[19px]" tone="paper" />
       <p class="mt-2 text-[14px] text-white/55">{t.tagline}</p>
       <p class="mt-4 font-mono text-[12.5px] text-white/70">
-        <a href={coords.phoneHref} class="hover:text-accent">{coords.phone}</a>
-        <span class="mx-2 text-white/30">·</span>
+        {coords.phone && (
+          <>
+            <a href={coords.phoneHref} class="hover:text-accent">{coords.phone}</a>
+            <span class="mx-2 text-white/30">·</span>
+          </>
+        )}
         <a data-eu={coords.emailUser} data-ed={coords.emailDomain} class="hover:text-accent"></a>
       </p>
     </div>

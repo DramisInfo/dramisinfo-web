@@ -8,8 +8,10 @@ export const defaultLang: Lang = 'fr';
 
 /** Coordonnées — identiques dans toutes les langues. */
 export const coords = {
-  phone: '514 688-4851',
-  phoneHref: 'tel:+15146884851',
+  // Ligne d'affaires seulement — ne jamais remettre un numéro personnel ici.
+  // Laisser vide masque le téléphone partout sur le site.
+  phone: '',
+  phoneHref: '',
   emailUser: 'fsimard',
   emailDomain: 'dramisinfo.com',
   city: "L'Assomption, Québec",
@@ -48,8 +50,8 @@ export const ui = {
       statLabel: 'Repères',
       stats: [
         { value: '25', unit: 'ans', caption: "en architecture de systèmes d'entreprise" },
-        { value: '4 000', unit: 'serveurs', caption: 'migrés à temps, une des dix plus grandes migrations AWS en Amérique du Nord' },
         { value: '10-100', unit: 'employés', caption: 'la taille des entreprises avec qui je travaille' },
+        { value: '0', unit: '$ / mois', caption: 'aucune licence récurrente : vous payez une fois, le système vous appartient' },
       ],
     },
 
@@ -152,23 +154,23 @@ export const ui = {
       title: "L'économie du logiciel sur mesure a changé",
       lead: "Un outil taillé sur mesure coûtait six chiffres et douze mois. C'est ce qui l'a tenu hors de portée des PME pendant vingt ans. Ce n'est plus vrai, et voici pourquoi.",
       figures: [
-        { value: '16', unit: 'jours', caption: 'pour bâtir une plateforme complète, testée et déployée' },
-        { value: '61', unit: '%', caption: "des PME québécoises nomment la pénurie de main-d'œuvre comme premier frein à leur croissance" },
-        { value: '12,7', unit: '%', caption: "des entreprises du Québec avaient intégré l'IA à leur production en 2025" },
+        { source: 'Mon laboratoire', value: '16', unit: 'jours', caption: "pour bâtir une plateforme complète, conteneurisée, testée et déployée" },
+        { source: 'Donnée de marché', value: '61', unit: '%', caption: "des PME québécoises nomment la main-d'œuvre comme premier frein à leur croissance" },
+        { source: 'Donnée de marché', value: '12,7', unit: '%', caption: "des entreprises du Québec avaient intégré l'IA à leur production en 2025" },
       ],
-      figuresNote: "Le premier chiffre vient d'un banc d'essai mené dans mon propre laboratoire : une plateforme complète, conteneurisée, testée et déployée. Ce n'était pas un mandat client, et chaque projet a sa propre durée — mais l'ordre de grandeur, lui, est réel.",
+      figuresNote: "Le banc d'essai n'était pas un mandat client, et chaque projet a sa propre durée : ce chiffre montre ce qui est devenu possible, pas un délai promis.",
       points: [
         {
-          title: 'Ce sont des agents qui construisent',
-          body: "Je n'écris plus le code ligne par ligne. Je dirige des agents d'intelligence artificielle spécialisés qui rédigent, testent et vérifient le travail les uns des autres. L'essentiel du coût de développement a disparu.",
+          title: "Ce qui ne change pas, c'est la rigueur",
+          body: "Vingt-cinq ans à bâtir des plateformes d'entreprise m'ont appris ce qui casse en production, six mois après la livraison. Livrer vite ne sert à rien si personne ne peut entretenir le résultat.",
         },
         {
-          title: 'La rigueur, elle, ne change pas',
-          body: "Vingt-cinq ans à bâtir des plateformes d'entreprise m'ont appris ce qui casse en production, six mois après la livraison. Un système livré vite mais impossible à entretenir ne vous rend aucun service.",
+          title: "Ce qui change, c'est qui écrit le code",
+          body: "Je ne l'écris plus ligne par ligne : je dirige des agents spécialisés qui rédigent, testent et vérifient le travail les uns des autres. C'est ce qui rend un système sur mesure réalisable pour une entreprise de quarante personnes.",
         },
         {
-          title: "Vous n'êtes prisonnier de personne",
-          body: "Pas de licence mensuelle, pas de fournisseur unique, pas de données captives. Le système vous appartient et il peut vivre sur vos serveurs si votre secteur l'exige.",
+          title: "Et vous n'êtes prisonnier de personne",
+          body: "Le code vous appartient, documenté et lisible. Pas de licence mensuelle, pas de fournisseur unique, pas de données captives. Le système peut vivre sur vos serveurs si votre secteur l'exige.",
         },
       ],
     },
@@ -185,18 +187,19 @@ export const ui = {
       ],
       pathLabel: 'Parcours',
       path: [
-        { role: 'Architecte de plateforme sénior', org: 'Grande entreprise manufacturière', period: 'depuis 2020' },
-        { role: 'Directeur de projets T.I.', org: 'Morneau Shepell', period: '2019 – 2020' },
-        { role: 'Conseiller principal T.I.', org: 'Morneau Shepell', period: '2012 – 2019' },
-        { role: 'Conseiller en T.I.', org: 'Mercer', period: '2010 – 2012' },
-        { role: 'Architecte et développeur principal', org: 'Towers Perrin · EDS', period: '2002 – 2010' },
+        { role: 'Architecte de plateforme sénior', org: 'Grande organisation privée', period: 'depuis 2020' },
+        { role: 'Directeur de projets T.I.', org: 'Firme nationale de services aux régimes de retraite', period: '2019 – 2020' },
+        { role: 'Conseiller principal T.I.', org: 'Firme nationale de services aux régimes de retraite', period: '2012 – 2019' },
+        { role: 'Conseiller en T.I.', org: 'Firme mondiale de conseil en avantages sociaux', period: '2010 – 2012' },
+        { role: 'Architecte et développeur principal', org: "Firme mondiale d'administration de régimes de retraite", period: '2002 – 2010' },
       ],
+      pathNote: 'Le détail nominatif des employeurs est sur LinkedIn.',
       proofLabel: 'Vérifications',
       proof: [
         { title: 'AWS Solution Architect Associate', sub: '2024' },
         { title: 'Azure Administrator Associate', sub: '2022' },
         { title: "Baccalauréat en informatique de génie", sub: 'Université Laval' },
-        { title: "Prix d'architecte de l'année, 2023", sub: "pour la direction de l'architecture du plus grand projet d'acquisition de l'entreprise" },
+        { title: "Prix d'architecte de l'année", sub: '2023' },
       ],
     },
 
@@ -231,6 +234,24 @@ export const ui = {
       thanksTitle: 'Message reçu.',
       thanksBody: 'Je vous reviens en moins de deux jours ouvrables.',
       thanksBack: "Retour à l'accueil",
+    },
+
+    blog: {
+      num: '07',
+      label: 'Écrits',
+      slug: 'blogue',
+      nav: 'Écrits',
+      title: 'Notes de terrain',
+      lead: "Ce que j'apprends en construisant des systèmes pour des entreprises d'ici. Sans jargon, et sans prétendre que tout fonctionne du premier coup.",
+      metaTitle: 'Notes de terrain — DramisInfo',
+      metaDescription: "Articles sur l'automatisation des opérations en PME, l'IA appliquée au développement logiciel et ce que vingt-cinq ans d'architecture d'entreprise apprennent.",
+      empty: "Le premier article s'en vient.",
+      readMore: 'Lire',
+      backToList: 'Tous les articles',
+      published: 'Publié le',
+      updated: 'Mis à jour le',
+      readingTime: 'min de lecture',
+      rss: 'Fil RSS',
     },
 
     footer: {
@@ -271,8 +292,8 @@ export const ui = {
       statLabel: 'At a glance',
       stats: [
         { value: '25', unit: 'years', caption: 'in enterprise systems architecture' },
-        { value: '4,000', unit: 'servers', caption: 'migrated on time — one of the ten largest AWS migrations in North America' },
         { value: '10-100', unit: 'employees', caption: 'the size of the companies I work with' },
+        { value: '0', unit: '$ / month', caption: 'no recurring licence: you pay once, the system is yours' },
       ],
     },
 
@@ -324,15 +345,15 @@ export const ui = {
       title: 'The economics of custom software have changed',
       lead: 'A purpose-built tool used to cost six figures and twelve months. That is what kept it out of reach of small businesses for twenty years. It is no longer true, and here is why.',
       figures: [
-        { value: '16', unit: 'days', caption: 'to build a complete platform, tested and deployed' },
-        { value: '61', unit: '%', caption: 'of Québec small businesses name the labour shortage as their top brake on growth' },
-        { value: '12.7', unit: '%', caption: 'of Québec companies had AI in production in 2025' },
+        { source: 'My own lab', value: '16', unit: 'days', caption: 'to build a complete platform, containerized, tested and deployed' },
+        { source: 'Market data', value: '61', unit: '%', caption: 'of Québec small businesses name labour as their top brake on growth' },
+        { source: 'Market data', value: '12.7', unit: '%', caption: 'of Québec companies had AI in production in 2025' },
       ],
-      figuresNote: 'The first number comes from a test bench I ran in my own lab: a complete platform, containerized, tested and deployed. It was not a client engagement, and every project has its own timeline — but the order of magnitude is real.',
+      figuresNote: 'The test bench was not a client engagement, and every project has its own timeline: this number shows what became possible, not a promised delivery date.',
       points: [
-        { title: 'Agents do the building', body: 'I no longer write code line by line. I direct specialized AI agents that write, test and review each other’s work. Most of the development cost has vanished.' },
-        { title: 'The rigour does not change', body: 'Twenty-five years of enterprise platforms taught me what breaks in production six months after delivery. A system delivered fast but impossible to maintain does you no favours.' },
-        { title: 'You are locked into nothing', body: 'No monthly licence, no single vendor, no captive data. The system is yours and can live on your own servers if your sector demands it.' },
+        { title: 'What does not change is the rigour', body: 'Twenty-five years of enterprise platforms taught me what breaks in production six months after delivery. Delivering fast is worthless if nobody can maintain the result.' },
+        { title: 'What changes is who writes the code', body: 'I no longer write it line by line: I direct specialized agents that write, test and review each other’s work. That is what makes a custom system feasible for a forty-person company.' },
+        { title: 'And you are locked into nothing', body: 'The code is yours, documented and readable. No monthly licence, no single vendor, no captive data. The system can live on your own servers if your sector demands it.' },
       ],
     },
 
@@ -348,18 +369,19 @@ export const ui = {
       ],
       pathLabel: 'Track record',
       path: [
-        { role: 'Senior platform architect', org: 'Large manufacturing company', period: 'since 2020' },
-        { role: 'IT project director', org: 'Morneau Shepell', period: '2019 – 2020' },
-        { role: 'Senior IT consultant', org: 'Morneau Shepell', period: '2012 – 2019' },
-        { role: 'IT consultant', org: 'Mercer', period: '2010 – 2012' },
-        { role: 'Lead architect and developer', org: 'Towers Perrin · EDS', period: '2002 – 2010' },
+        { role: 'Senior platform architect', org: 'Large private organization', period: 'since 2020' },
+        { role: 'IT project director', org: 'National pension services firm', period: '2019 – 2020' },
+        { role: 'Senior IT consultant', org: 'National pension services firm', period: '2012 – 2019' },
+        { role: 'IT consultant', org: 'Global benefits consulting firm', period: '2010 – 2012' },
+        { role: 'Lead architect and developer', org: 'Global pension administration firm', period: '2002 – 2010' },
       ],
+      pathNote: 'Named employers are listed on LinkedIn.',
       proofLabel: 'Credentials',
       proof: [
         { title: 'AWS Solution Architect Associate', sub: '2024' },
         { title: 'Azure Administrator Associate', sub: '2022' },
         { title: 'B.Sc. Computer Engineering', sub: 'Université Laval' },
-        { title: 'Architect of the year, 2023', sub: 'for leading the architecture of the company’s largest acquisition programme' },
+        { title: 'Architect of the year', sub: '2023' },
       ],
     },
 
@@ -394,6 +416,24 @@ export const ui = {
       thanksTitle: 'Message received.',
       thanksBody: 'I will get back to you within two business days.',
       thanksBack: 'Back to home',
+    },
+
+    blog: {
+      num: '07',
+      label: 'Writing',
+      slug: 'blog',
+      nav: 'Writing',
+      title: 'Field notes',
+      lead: 'What I learn building systems for businesses here. No jargon, and no pretending everything works on the first try.',
+      metaTitle: 'Field notes — DramisInfo',
+      metaDescription: 'Articles on automating small-business operations, AI applied to software delivery, and what twenty-five years of enterprise architecture teaches.',
+      empty: 'The first article is coming.',
+      readMore: 'Read',
+      backToList: 'All articles',
+      published: 'Published',
+      updated: 'Updated',
+      readingTime: 'min read',
+      rss: 'RSS feed',
     },
 
     footer: {

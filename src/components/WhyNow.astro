@@ -12,6 +12,7 @@ const t = ui[lang].why;
     <dl data-reveal class="mt-14 grid gap-px border border-rule-dark bg-rule-dark sm:grid-cols-3">
       {t.figures.map((f) => (
         <div class="bg-ink px-6 py-8">
+          <p class="mb-4 font-mono text-[10.5px] uppercase tracking-label text-white/40">{f.source}</p>
           <dt class="font-display text-[46px] font-bold leading-none tracking-tight text-white tnum">
             {f.value}<span class="ml-1 text-[18px] font-medium text-accent">{f.unit}</span>
           </dt>

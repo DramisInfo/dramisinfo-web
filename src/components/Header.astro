@@ -2,11 +2,21 @@
 import Logo from './Logo.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import { ui, type Lang } from '@/i18n/ui';
+import { getPosts } from '@/lib/blog';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang].nav;
+const b = ui[lang].blog;
 const home = lang === 'fr' ? '/' : '/en/';
+
+// Le lien vers le blogue n'apparaît que s'il y a quelque chose à lire :
+// une étagère vide fait plus de tort que pas d'étagère du tout.
+const posts = await getPosts(lang);
+const blogHref = lang === 'fr' ? '/blogue/' : '/en/blog/';
+const navLinks = posts.length
+  ? [...t.items, { label: b.nav, href: blogHref }]
+  : [...t.items];
 ---
 <header data-header class="sticky top-0 z-50 border-b border-rule bg-paper/95 backdrop-blur">
   <div class="page flex h-16 items-center justify-between gap-6">
@@ -15,9 +25,9 @@ const home = lang === 'fr' ? '/' : '/en/';
     </a>
 
     <nav class="hidden items-center gap-7 lg:flex" aria-label={t.menu}>
-      {t.items.map((item) => (
+      {navLinks.map((item) => (
         <a
-          href={`${home}${item.href}`}
+          href={item.href.startsWith('#') ? `${home}${item.href}` : item.href}
           class="font-display text-[14px] font-medium text-ink-3 transition-colors hover:text-ink"
         >
           {item.label}

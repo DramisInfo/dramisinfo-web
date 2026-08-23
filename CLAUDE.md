@@ -36,10 +36,17 @@ formulaire demandant un « type de mandat », pas de section taillée pour un re
   de Frédéric. Le profil vient en 05, comme réassurance.
 - **Le « comment » se mentionne, ne se vend pas.** Les agents d'IA expliquent *pourquoi c'est
   devenu possible*. Ils ne sont jamais l'argument de vente.
-- **Ne pas nommer l'employeur actuel de Frédéric.** Il est encore salarié à temps plein et les codes
-  de conduite interdisent couramment d'utiliser l'affiliation à un employeur pour promouvoir une
-  activité externe. Les employeurs passés (Morneau Shepell, Mercer, Towers Perrin, EDS) peuvent
-  être nommés. Décision à revoir avec lui seulement.
+- **Ne nommer aucun employeur, ni actuel ni passé.** Frédéric est encore salarié à temps plein et
+  les codes de conduite interdisent couramment d'utiliser l'affiliation à un employeur pour
+  promouvoir une activité externe. Le parcours décrit donc le **type** d'organisation
+  (« firme nationale de services aux régimes de retraite ») plutôt que sa raison sociale, et le
+  site renvoie à LinkedIn pour le détail nominatif — discrétion, pas dissimulation.
+- **Aucun détail de projet interne.** Volumes migrés, noms de programmes, acquisitions : rien de
+  tout cela n'appartient à Frédéric, et c'est assez précis pour identifier l'employeur même sans
+  le nommer. Ça vaut aussi pour les descriptions de prix et de distinctions.
+- **Ne pas révéler ses coûts d'intrant.** Un chiffre comme « 40 $ de calcul » devient l'ancrage de
+  prix du lecteur et sabote la soumission qui suivra. On compare au prix de l'alternative que le
+  client connaît, jamais à son propre coût de revient.
 - **Exactitude factuelle obligatoire.** Chiffres, certifications, dates et parcours viennent de son
   CV. Toute modification doit être validée avec lui avant d'être publiée.
 
@@ -132,10 +139,69 @@ Aucune clé d'API, aucun service tiers. Le formulaire redirige vers `/merci/` (o
 Les soumissions arrivent dans le tableau de bord Netlify — **penser à y activer la notification par
 courriel**, sinon elles restent invisibles.
 
-L'adresse courriel n'apparaît jamais en clair dans le HTML : elle est reconstruite côté client
-depuis les attributs `data-eu` / `data-ed`.
+## Coordonnées et moissonnage
+
+Le site est public : tout ce qui y figure en clair sera moissonné.
+
+- **Aucun numéro personnel, nulle part.** `coords.phone` est volontairement vide, ce qui masque le
+  téléphone partout (contact et pied de page, affichage conditionnel). Ne remplir ce champ que le
+  jour où une **ligne d'affaires distincte** existe — jamais le cellulaire personnel.
+- **Rien de sensible dans le JSON-LD.** Les données structurées sont conçues pour être lues par des
+  machines : y mettre un numéro, c'est le servir sur un plateau. La ville et la région restent, elles
+  servent le référencement local.
+- **Le courriel n'apparaît jamais en clair dans le HTML** : il est reconstruit côté client depuis les
+  attributs `data-eu` / `data-ed`. Ça arrête les moissonneurs simples, pas un navigateur sans
+  interface — c'est un ralentisseur, pas un mur.
+- Le formulaire reste le canal principal. Honeypot `bot-field` toujours actif.
+
+### reCAPTCHA
+
+Netlify le supporte **nativement** : ce n'est pas une option du tableau de bord mais deux attributs
+de balisage — `data-netlify-recaptcha="true"` sur le `<form>` et un `<div data-netlify-recaptcha="true">`
+à l'endroit du widget. Netlify injecte le script au déploiement et valide la réponse côté serveur.
+Ses propres clés servent par défaut ; pour en fournir d'autres, définir `SITE_RECAPTCHA_KEY` et
+`SITE_RECAPTCHA_SECRET`.
+
+Une bascule `RECAPTCHA` en haut de `Contact.astro` l'active ou le désactive. **Elle est à `false`.**
+
+Raison : à ce stade, une soumission perdue coûte infiniment plus cher qu'un pourriel à supprimer.
+Chaque formulaire rempli peut valoir un mandat de plusieurs milliers de dollars ; le honeypot
+arrête déjà les robots simples. On active reCAPTCHA le jour où le pourriel devient réellement
+gênant — pas avant. Note : le widget ne s'affiche pas en développement local, seulement une fois
+déployé sur Netlify.
 
 ---
+
+## Blogue
+
+Un fichier Markdown dans `src/content/blog/` = un article. Le nom du fichier devient l'adresse.
+Schéma et règles dans `src/content.config.ts` ; gabarit commenté dans `gabarit.md`.
+
+Les articles **ne sont pas appariés** entre les langues : chacun déclare son `lang` et
+n'apparaît que dans l'index de cette langue. Traduire est un choix, jamais une obligation.
+
+Le lien « Écrits » du menu n'apparaît que s'il existe au moins un article publié — une
+étagère vide fait plus de tort que pas d'étagère du tout.
+
+### Piège : le HTML brut dans le Markdown
+
+**Une ligne vide à l'intérieur d'un bloc HTML referme ce bloc.** Un SVG écrit sur plusieurs
+lignes aérées se retrouve donc tronqué : la balise fermante est insérée à la première ligne
+vide, et tout le reste s'affiche en texte brut sous une boîte vide.
+
+Tout bloc `<figure>`, `<svg>` ou autre HTML brut doit être **contigu, sans aucune ligne
+vide**, du premier au dernier caractère. Après coup, vérifier dans le HTML généré que
+`</svg>` se trouve bien après ses enfants et non avant.
+
+### Illustrations
+
+Pas de photos de banque. Les visuels sont des **SVG dessinés à la main**, avec les couleurs
+des jetons de design : ils portent de l'information plutôt que de meubler, et ils restent
+dans l'identité du registre. Une illustration donne le ton, un schéma explique un
+mécanisme — ce ne sont pas les mêmes outils.
+
+Pour ajouter une vraie image : la déposer dans `public/images/blog/` et l'appeler en
+Markdown. Le style `.prose img` lui donne la pleine largeur et un filet.
 
 ## Commandes
 
@@ -146,6 +212,7 @@ npm run build
 npm run preview
 npm run lint      # tsc --noEmit
 npm run favicons  # régénère les PNG depuis public/favicon.svg
+npm run og        # régénère l'image de partage social (1200×630)
 ```
 
 ---

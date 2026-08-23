@@ -28,7 +28,20 @@ const alternate = lang === 'fr' ? '/en/' : '/';
     <meta property="og:description" content={description} />
     <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'} />
     <meta property="og:url" content={canonical.href} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={new URL('/og.png', canonical).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={description} />
+    <meta property="og:site_name" content="DramisInfo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={new URL('/og.png', canonical).href} />
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={t.blog.metaTitle}
+      href={lang === 'fr' ? '/rss.xml' : '/en/rss.xml'}
+    />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" />
@@ -50,7 +63,6 @@ const alternate = lang === 'fr' ? '/en/' : '/';
       description: description,
       founder: { '@type': 'Person', name: 'Frédéric Morais-Simard' },
       url: 'https://dramisinfo.com',
-      telephone: '+1-514-688-4851',
       areaServed: ['Lanaudière', 'Laurentides', 'Montréal', 'Québec'],
       address: { '@type': 'PostalAddress', addressLocality: "L'Assomption", addressRegion: 'QC', addressCountry: 'CA' },
     })} />

@@ -76,6 +76,38 @@
   .field-label {
     @apply mb-1.5 block font-mono text-[11px] uppercase tracking-label text-ink-3;
   }
+  /* Corps d'article. Écrit à la main plutôt qu'avec le plugin typography :
+     il impose ses propres proportions et se bat avec l'identité du registre. */
+  .prose {
+    @apply max-w-prose text-[17.5px] leading-[1.7] text-ink-2;
+  }
+  .prose > * + * { @apply mt-5; }
+  .prose h2 {
+    @apply mt-14 border-t border-rule pt-8 font-display text-[26px] font-semibold leading-tight text-ink;
+  }
+  .prose h3 { @apply mt-10 font-display text-[19px] font-semibold text-ink; }
+  .prose p  { @apply max-w-prose; }
+  .prose strong { @apply font-semibold text-ink; }
+  .prose a { @apply text-accent underline decoration-1 underline-offset-4 hover:text-accent-deep; }
+  .prose ul, .prose ol { @apply space-y-2 pl-5; }
+  .prose ul { @apply list-disc marker:text-accent; }
+  .prose ol { @apply list-decimal marker:font-mono marker:text-[13px] marker:text-accent; }
+  .prose li > p { @apply mt-0; }
+  .prose blockquote {
+    @apply border-l-2 border-accent pl-5 text-ink-3;
+  }
+  .prose code {
+    @apply bg-paper-3 px-1.5 py-0.5 font-mono text-[14px] text-ink;
+  }
+  .prose pre {
+    @apply overflow-x-auto border border-rule bg-ink p-5 text-[13.5px] leading-relaxed;
+  }
+  .prose pre code { @apply bg-transparent p-0 text-white; }
+  .prose img { @apply w-full border border-rule; }
+  .prose hr { @apply my-12 border-rule; }
+  .prose table { @apply w-full border-collapse text-[15.5px]; }
+  .prose th { @apply border-b border-rule py-2.5 text-left font-display font-semibold text-ink; }
+  .prose td { @apply border-b border-rule-light py-2.5 align-top; }
 }
 
 /* Révélation au défilement — désactivée si l'utilisateur préfère moins d'animation. */
