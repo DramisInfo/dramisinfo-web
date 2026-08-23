@@ -6,600 +6,400 @@ export const languages = {
 export type Lang = keyof typeof languages;
 export const defaultLang: Lang = 'fr';
 
-export const social = {
+/** Coordonnées — identiques dans toutes les langues. */
+export const coords = {
+  phone: '514 688-4851',
+  phoneHref: 'tel:+15146884851',
+  emailUser: 'fsimard',
+  emailDomain: 'dramisinfo.com',
+  city: "L'Assomption, Québec",
   linkedin: 'https://www.linkedin.com/in/frederic-morais-simard-a334796/',
 } as const;
 
 export const ui = {
+  /* ------------------------------------------------------------------ FR */
   fr: {
+    meta: {
+      title: 'DramisInfo — Systèmes sur mesure pour les PME du Québec',
+      description:
+        "Suivi de production, gestion documentaire, planification, soumissions : des systèmes taillés pour votre façon de travailler, livrés en semaines et à prix fixe. L'Assomption, Lanaudière.",
+    },
+
     nav: {
-      about: 'Profil',
-      services: 'Services',
-      parcours: 'Expérience',
-      realisations: 'Réalisations',
-      certifications: 'Certifications',
-      cta: 'Me contacter',
-      ctaShort: 'Contact',
+      items: [
+        { label: 'Vos irritants', href: '#irritants' },
+        { label: 'Ce que je construis', href: '#solutions' },
+        { label: 'La démarche', href: '#demarche' },
+        { label: 'Profil', href: '#profil' },
+      ],
+      cta: 'Parlons-en',
+      menu: 'Menu',
     },
+
     hero: {
-      badge: 'Disponible pour mandats contractuels',
-      titleLine1: 'Architecture infonuagique,',
-      titleHighlight: 'entreprise autonome',
-      subtitle:
-        "Plus de 20 ans d'expertise en stratégie et exécution — de la vision architecturale à la livraison concrète. Modernisation de l'infrastructure infonuagique, plateformes internes fiables et réduction des tâches opérationnelles pénibles grâce à l'automatisation et à l'IA.",
-      imageAlt: 'Salle de serveurs — infrastructure infonuagique',
-      ctaPrimary: 'Me contacter',
-      ctaSecondary: "Voir l'expérience",
-      reassurance:
-        "Bilingue (français/anglais) · Basé à L'Assomption, Québec · Ouvert aux mandats à distance ou hybrides.",
-    },
-    about: {
-      eyebrow: 'Profil',
-      heading: 'Stratège et praticien',
-      imageAlt: 'Rack de serveurs dans un centre de données',
-      p1: "Définition et livraison de feuilles de route d'infrastructure infonuagique — de la vision architecturale jusqu'à l'exécution sur le terrain. L'architecture cible n'est pas seulement dessinée : elle est construite, à plusieurs reprises, à grande échelle.",
-      p2: "Plateformes, zones d'atterrissage et cadres d'automatisation ayant propulsé certaines des plus grandes transformations infonuagiques en Amérique du Nord — dont une reconnaissance parmi les 10 plus grandes migrations AWS sur le continent.",
-      p3: "Présentations régulières de plans d'investissement techniques et de décisions d'architecture aux VP et comités d'architecture. Un intérêt marqué pour l'entreprise autonome, l'AIOps agentique et l'élimination des tâches opérationnelles pénibles par l'automatisation intelligente.",
-      values: [
-        {
-          title: 'Échelle prouvée',
-          description:
-            "Une zone d'atterrissage AWS multi-région parmi les 10 plus grandes migrations en Amérique du Nord — plus de 4 000 serveurs migrés dans les délais.",
-        },
-        {
-          title: 'Vision et exécution',
-          description:
-            "De la feuille de route pluriannuelle à la mise en œuvre concrète — livraison de ce qui est architecturé, pas seulement des diagrammes.",
-        },
-        {
-          title: 'Bilingue, habitué aux VP et ARB',
-          description:
-            "20+ ans d'expérience à présenter des décisions techniques aux comités d'architecture et à la haute direction, en français comme en anglais.",
-        },
+      label: "L'Assomption · Lanaudière et couronne nord",
+      titleA: 'Le logiciel sur mesure',
+      titleAccent: "n'est plus réservé",
+      titleB: 'aux grandes entreprises.',
+      lead: "Vos opérations tiennent dans des tableurs, des classeurs et la mémoire de deux personnes. J'ai passé vingt-cinq ans à bâtir des plateformes pour des organisations de milliers d'employés. Je construis aujourd'hui les mêmes outils pour des entreprises d'ici — en semaines, et pour une fraction du prix d'autrefois.",
+      ctaPrimary: 'Parlons 45 minutes',
+      ctaSecondary: 'Voir la démarche',
+      note: 'Première rencontre gratuite, chez vous, sans engagement.',
+      statLabel: 'Repères',
+      stats: [
+        { value: '25', unit: 'ans', caption: "en architecture de systèmes d'entreprise" },
+        { value: '4 000', unit: 'serveurs', caption: 'migrés à temps, une des dix plus grandes migrations AWS en Amérique du Nord' },
+        { value: '10-100', unit: 'employés', caption: 'la taille des entreprises avec qui je travaille' },
       ],
     },
-    services: {
-      eyebrow: 'Services',
-      heading: 'Ce qui est livré',
-      subheading:
-        "Six offres de mandat pour faire avancer vos projets d'architecture infonuagique et de transformation.",
+
+    problem: {
+      num: '01',
+      label: 'Le quotidien',
+      title: 'Ce qui vous coûte du temps sans jamais paraître urgent',
+      lead: "Aucun de ces irritants n'arrête l'entreprise. Ensemble, ils avalent plusieurs heures par semaine — et l'employé que vous cherchez depuis six mois ne viendra pas les régler.",
       items: [
         {
-          icon: 'globe',
-          title: 'Stratégie & feuille de route infonuagique',
-          description:
-            "Évaluation de l'existant, définition d'une feuille de route pluriannuelle et rationalisation des charges de travail (héberger, replatformer, réusiner, SaaS).",
-          image: '/images/service-strategy.jpg',
-          deliverables: [
-            'Feuille de route pluriannuelle',
-            "Rapport d'évaluation de l'existant",
-            "Présentation aux VP et comités d'architecture",
-          ],
+          title: 'Le tableur qui ne suffit plus',
+          body: "Il a bien servi quand vous étiez quinze. À quarante, il se dédouble, il se corrompt, et deux personnes travaillent sur des versions différentes sans le savoir.",
         },
         {
-          icon: 'compass',
-          title: 'Architecture & migration infonuagique',
-          description:
-            "Conception et livraison de zones d'atterrissage multi-région et de migrations à grande échelle, incluant les sorties complètes de centres de données.",
-          image: '/images/service-architecture.jpg',
-          deliverables: [
-            "Architecture cible et zone d'atterrissage",
-            'Plan de migration détaillé',
-            "Exécution et suivi jusqu'à la mise en service",
-          ],
+          title: "Tout dans la tête d'une seule personne",
+          body: "Si elle part demain matin, plus personne ne sait où en sont les dossiers. C'est le risque dont on ne parle jamais à voix haute.",
         },
         {
-          icon: 'layers',
-          title: 'Plateforme interne développeurs & DevSecOps',
-          description:
-            'Conception de plateformes en libre-service avec chemins dorés, alignées sur les principes DevSecOps et GitOps.',
-          image: '/images/service-platform.jpg',
-          deliverables: [
-            'Plateforme IDP en libre-service',
-            'Pipelines CI/CD et GitOps',
-            'Standards de sécurité et de conformité intégrés',
-          ],
+          title: 'Le papier entre deux étapes',
+          body: "Bons de travail, feuilles de temps, bons de livraison. Ils se perdent, on les ressaisit, et la facturation attend deux semaines de plus.",
         },
         {
-          icon: 'shield',
-          title: 'Sécurité zéro confiance & gouvernance',
-          description:
-            "Mise en place de contrôles de sécurité intégrés dès la conception et de la gouvernance de la chaîne d'approvisionnement logicielle.",
-          image: '/images/service-security.jpg',
-          deliverables: [
-            "Cadre de gouvernance et standards d'architecture",
-            'Contrôles de sécurité zéro confiance',
-            'Gouvernance du cycle de vie des artefacts',
-          ],
+          title: 'Les soumissions refaites trois fois',
+          body: "Chaque devis repart d'une page blanche, alors que quatre-vingts pour cent du contenu existe déjà quelque part dans vos fichiers.",
         },
         {
-          icon: 'bolt',
-          title: 'Entreprise autonome & AIOps',
-          description:
-            'Automatisation intelligente des opérations pour éliminer les tâches pénibles et permettre la remédiation prédictive des incidents.',
-          image: '/images/service-aiops.jpg',
-          deliverables: [
-            "Flux d'IA agentique pour l'automatisation des opérations",
-            'Observabilité intégrée dès la conception',
-            'Remédiation automatisée des incidents',
-          ],
+          title: 'Les logiciels qui s’ignorent',
+          body: "La comptabilité ne parle pas à la production, qui ne parle pas aux ventes. Quelqu'un recopie, chaque semaine, les mêmes chiffres.",
         },
         {
-          icon: 'idea',
-          title: 'Mentorat & transfert de connaissances',
-          description:
-            'Encadrement des architectes séniors et transfert de connaissances aux équipes de plateforme, de sécurité et opérations en place.',
-          image: '/images/service-mentoring.jpg',
-          deliverables: [
-            "Encadrement d'architectes séniors",
-            'Transfert de connaissances structuré',
-            'Alignement des équipes sur des pratiques cohérentes',
-          ],
+          title: 'Le poste que vous ne comblez pas',
+          body: "Six mois d'affichage, aucun candidat sérieux. Le travail, lui, ne s'est pas arrêté d'attendre.",
         },
       ],
     },
-    how: {
-      eyebrow: 'Déroulement',
-      heading: "Intégration à un mandat",
-      subheading:
-        "Que ce soit via une agence de placement ou directement avec votre entreprise, voici comment un mandat démarre.",
+
+    build: {
+      num: '02',
+      label: 'Ce que je construis',
+      title: 'Un outil qui règle un problème précis',
+      lead: "Pas un progiciel à configurer pendant un an. Pas d'abonnement mensuel qui grimpe chaque année. Un système taillé pour votre façon de travailler — et qui vous appartient.",
+      items: [
+        {
+          title: 'Suivi de production et bons de travail',
+          body: "Ce qui est en cours, où c'est rendu, qui s'en occupe. Consultable sur le plancher comme au bureau, sur téléphone comme sur ordinateur.",
+          points: ['Tableau de production à jour', 'Bons de travail numériques', 'Historique complet par commande'],
+        },
+        {
+          title: 'Gestion documentaire et dossiers',
+          body: "Les documents classés, retrouvables en quelques secondes, rattachés au bon dossier — avec les délais de conservation respectés.",
+          points: ['Classement automatique', 'Recherche dans le contenu', 'Rétention et traçabilité'],
+        },
+        {
+          title: 'Planification et répartition',
+          body: "Horaires, routes, rendez-vous, affectations. Construits en quelques minutes plutôt qu'en soirées de fin de semaine.",
+          points: ['Planification assistée', "Vue d'ensemble des ressources", 'Ajustements en cours de journée'],
+        },
+        {
+          title: 'Soumissions et devis',
+          body: "Un devis monté à partir de ce que vous avez déjà vendu, plutôt qu'à partir de rien. Le même prix pour le même travail, à chaque fois.",
+          points: ['Bibliothèque de prix et de contenus', 'Génération du document final', 'Suivi des devis envoyés'],
+        },
+        {
+          title: 'Ponts entre vos logiciels',
+          body: "Votre comptabilité, votre système de vente et vos fichiers cessent de s'ignorer. Plus personne ne recopie quoi que ce soit.",
+          points: ['Connexion des systèmes en place', 'Synchronisation automatique', 'Fin de la double saisie'],
+        },
+        {
+          title: 'Conformité et registres',
+          body: "Les preuves qu'exigent un ordre professionnel, un ministère ou votre assureur — tenues à jour sans que personne n'y pense.",
+          points: ['Registres tenus automatiquement', 'Pistes de vérification', 'Rapports sur demande'],
+        },
+      ],
+    },
+
+    process: {
+      num: '03',
+      label: 'La démarche',
+      title: "Trois étapes, et rien à signer avant la troisième",
+      lead: "Je ne vends pas de licence et je ne facture pas à l'heure. Vous payez un prix convenu d'avance pour un résultat convenu d'avance.",
       steps: [
         {
-          title: 'Prise de contact',
-          description:
-            'Une agence de placement ou une entreprise cliente présente un mandat — contexte, enjeux techniques et échéancier.',
+          title: 'Une conversation de 45 minutes',
+          body: "Je me déplace chez vous. Vous me racontez comment ça fonctionne et où ça coince. Je ne propose rien ce jour-là — je veux d'abord comprendre. C'est gratuit et sans suite obligée.",
         },
         {
-          title: 'Cadrage',
-          description:
-            'Validation de la portée du mandat, des compétences requises, de la disponibilité et des modalités contractuelles.',
+          title: 'Un croquis, en quelques jours',
+          body: "Je reviens avec une maquette qui fonctionne, bâtie à partir de ce que j'ai compris. Vous voyez concrètement de quoi on parle, au lieu d'un devis de douze pages. Toujours sans engagement.",
         },
         {
-          title: 'Livraison et mentorat',
-          description:
-            "Feuille de route claire, livraison de l'architecture et transfert des connaissances aux équipes en place.",
+          title: 'Une livraison à prix fixe',
+          body: "Si on continue, le prix et la date sont fixés avant qu'une ligne soit écrite. À la fin, le système vous appartient et il peut être hébergé où vous voulez, y compris chez vous.",
         },
       ],
     },
-    framework: {
-      eyebrow: 'Expérience',
-      heading: "Domaines d'expérience",
-      subheading:
-        "Plus de 20 ans d'expertise en infrastructure T.I., du développement à l'architecture principale.",
-      domains: [
-        {
-          icon: 'layers',
-          title: "Architecture d'entreprise à grande échelle",
-          description:
-            "Stratégie d'infrastructure de bout en bout, zones d'atterrissage multi-région et migrations de plusieurs milliers de serveurs, avec gouvernance et présentations aux VP et comités d'architecture (ARB).",
-        },
-        {
-          icon: 'tools',
-          title: "Livraison de solutions d'entreprise & DevOps",
-          description:
-            "Direction d'équipes de déploiement, automatisation des livraisons (CI/CD), conception d'architectures SSO et amélioration continue des processus de livraison.",
-        },
-        {
-          icon: 'scan',
-          title: 'Conversion & qualité des données',
-          description:
-            "Conception de solutions automatisées de conversion de données et de systèmes de diagnostic de qualité pour des plateformes d'envergure.",
-        },
-        {
-          icon: 'idea',
-          title: 'Systèmes critiques à prestations déterminées',
-          description:
-            "Conception de systèmes de calcul et d'administration pour des régimes de retraite complexes, à haute fiabilité.",
-        },
+
+    why: {
+      num: '04',
+      label: 'Pourquoi maintenant',
+      title: "L'économie du logiciel sur mesure a changé",
+      lead: "Un outil taillé sur mesure coûtait six chiffres et douze mois. C'est ce qui l'a tenu hors de portée des PME pendant vingt ans. Ce n'est plus vrai, et voici pourquoi.",
+      figures: [
+        { value: '16', unit: 'jours', caption: 'pour bâtir une plateforme complète, testée et déployée' },
+        { value: '40', unit: '$', caption: 'de coût de calcul pour la construire au complet' },
+        { value: '12,7', unit: '%', caption: "des entreprises québécoises avaient intégré l'IA à leur production en 2025" },
       ],
-      note: "20+ ans d'expérience continue en infrastructure T.I., sur des environnements de tailles et de secteurs variés.",
-    },
-    useCases: {
-      eyebrow: 'Impact',
-      heading: 'Réalisations clés',
-      subheading: 'Quelques exemples concrets livrés au cours des dernières années.',
-      items: [
+      figuresNote: "Les deux premiers chiffres viennent d'un banc d'essai que j'ai mené dans mon propre laboratoire. Ce n'était pas un produit vendu à un client — mais l'économie qu'il démontre, elle, est bien réelle.",
+      points: [
         {
-          icon: 'compass',
-          title: 'Zone d\'atterrissage AWS multi-région',
-          description:
-            'Une des 10 plus grandes migrations AWS en Amérique du Nord — plus de 4 000 serveurs migrés, sortie complète de centre de données livrée dans les délais.',
+          title: 'Ce sont des agents qui construisent',
+          body: "Je n'écris plus le code ligne par ligne. Je dirige des agents d'intelligence artificielle spécialisés qui rédigent, testent et vérifient le travail les uns des autres. L'essentiel du coût de développement a disparu.",
         },
         {
-          icon: 'layers',
-          title: 'Plateforme interne développeurs (IDP)',
-          description:
-            "Chemins dorés en libre-service imposant les standards de sécurité et de conformité, réduisant les frictions à l'intégration des équipes produit.",
+          title: 'La rigueur, elle, ne change pas',
+          body: "Vingt-cinq ans à bâtir des plateformes d'entreprise m'ont appris ce qui casse en production, six mois après la livraison. Un système livré vite mais impossible à entretenir ne vous rend aucun service.",
         },
         {
-          icon: 'shield',
-          title: 'Plateforme de conteneurs zero-trust',
-          description:
-            'Architecture alignée sur les principes DevSecOps — Kubernetes, GitOps et maillage de services.',
-        },
-        {
-          icon: 'bolt',
-          title: 'Observabilité & AIOps',
-          description:
-            'Observabilité intégrée dès la conception, permettant la capacité prédictive et la remédiation automatisée des incidents.',
-        },
-        {
-          icon: 'check',
-          title: "Gouvernance de la chaîne d'approvisionnement logicielle",
-          description:
-            'Architecture de gouvernance du cycle de vie des artefacts, imposant les contrôles de sécurité et de conformité.',
-        },
-        {
-          icon: 'tools',
-          title: "Modernisation de l'infrastructure",
-          description:
-            'Modernisation du calcul, du stockage et du réseau axée sur la résilience, l\'automatisation et la sécurité zéro confiance.',
+          title: "Vous n'êtes prisonnier de personne",
+          body: "Pas de licence mensuelle, pas de fournisseur unique, pas de données captives. Le système vous appartient et il peut vivre sur vos serveurs si votre secteur l'exige.",
         },
       ],
     },
-    certifications: {
-      eyebrow: 'Crédibilité',
-      heading: 'Certifications & reconnaissances',
-      subheading: 'Formation continue et reconnaissance par les pairs.',
-      awardsLabel: 'Reconnaissances',
-      items: [
-        { icon: 'check', title: 'AWS Solution Architect Associate', subtitle: '2024' },
-        { icon: 'check', title: 'Azure Administrator Associate', subtitle: '2022' },
-        { icon: 'check', title: 'Azure Fundamentals', subtitle: '2021' },
-        {
-          icon: 'idea',
-          title: 'Baccalauréat en Informatique de génie',
-          subtitle: 'Université Laval, 1997–1999',
-        },
+
+    profile: {
+      num: '05',
+      label: 'Qui je suis',
+      title: 'Frédéric Morais-Simard',
+      role: 'Architecte de systèmes · fondateur de DramisInfo',
+      paragraphs: [
+        "Vingt-cinq ans en architecture de systèmes dans de grandes organisations : plateformes infonuagiques, gouvernance, et accélération de la livraison logicielle. J'ai passé ma carrière à faire livrer plus vite des équipes de plusieurs centaines de personnes.",
+        "Je fais aujourd'hui le même travail à une autre échelle — pour des entreprises de dix à cent employés, qui n'ont jamais eu accès à ce genre d'outillage parce qu'il coûtait trop cher pour elles.",
+        "Je vis à L'Assomption. Je travaille avec des entreprises de Lanaudière et de la couronne nord, en personne, parce qu'on ne comprend pas des opérations par visioconférence.",
       ],
-      awards: [
-        {
-          title: 'CAE – Exceptional Architect Lead',
-          subtitle: '2023',
-          description:
-            "Décerné pour avoir dirigé l'architecture du plus grand projet de fusion-acquisition de CAE, incluant l'une des 10 plus grandes migrations AWS en Amérique du Nord.",
-        },
-        {
-          title: 'MorneauShepell – Innovation',
-          subtitle: '2017',
-          description:
-            "Lauréat de la catégorie « Innovation » pour sa recherche de meilleures pratiques et sa contribution à l'amélioration de l'efficacité.",
-        },
-        {
-          title: 'EDS Awards – Innovation (finaliste)',
-          subtitle: '2006',
-          description:
-            "Parmi les cinq finalistes en innovation technologique pour la conception d'un système d'administration de régimes de retraite.",
-        },
+      pathLabel: 'Parcours',
+      path: [
+        { role: 'Architecte de plateforme sénior', org: 'Grande entreprise manufacturière', period: 'depuis 2020' },
+        { role: 'Directeur de projets T.I.', org: 'Morneau Shepell', period: '2019 – 2020' },
+        { role: 'Conseiller principal T.I.', org: 'Morneau Shepell', period: '2012 – 2019' },
+        { role: 'Conseiller en T.I.', org: 'Mercer', period: '2010 – 2012' },
+        { role: 'Architecte et développeur principal', org: 'Towers Perrin · EDS', period: '2002 – 2010' },
+      ],
+      proofLabel: 'Vérifications',
+      proof: [
+        { title: 'AWS Solution Architect Associate', sub: '2024' },
+        { title: 'Azure Administrator Associate', sub: '2022' },
+        { title: "Baccalauréat en informatique de génie", sub: 'Université Laval' },
+        { title: "Prix d'architecte de l'année, 2023", sub: "pour la direction de l'architecture du plus grand projet d'acquisition de l'entreprise" },
       ],
     },
+
     contact: {
-      eyebrow: 'Contact',
-      heading: 'Discutons de votre mandat',
-      subtitle:
-        'Agence de placement ou entreprise cliente ? Décrivez le mandat ci-dessous pour une réponse rapide.',
-      name: 'Nom complet',
-      namePh: 'Votre nom',
+      num: '06',
+      label: 'Contact',
+      title: 'Parlons 45 minutes',
+      lead: "Je me déplace chez vous, vous me racontez comment ça fonctionne, et je ne vous vends rien ce jour-là. C'est gratuit et ça n'engage à rien.",
+      name: 'Votre nom',
+      namePh: 'Prénom et nom',
       email: 'Courriel',
-      emailPh: 'vous@exemple.com',
-      company: 'Agence ou entreprise',
-      companyPh: 'Ex. : Agence XYZ',
-      mandateType: 'Type de mandat',
-      mandateTypePh: 'Choisir un type',
-      mandateOpts: [
-        'Mandat contractuel (via une agence)',
-        'Mandat contractuel direct',
-        'Conseil ponctuel / mandat court terme',
+      emailPh: 'vous@entreprise.com',
+      phone: 'Téléphone',
+      phonePh: 'Facultatif',
+      company: 'Entreprise',
+      companyPh: "Nom de l'entreprise",
+      sector: 'Votre secteur',
+      sectorPh: 'Choisir',
+      sectorOpts: [
+        'Fabrication',
+        'Construction et métiers spécialisés',
+        'Transport et distribution',
+        'Services professionnels',
+        'Santé et résidences pour aînés',
+        'Agroalimentaire',
         'Autre',
       ],
-      message: 'Message',
-      messagePh: 'Décrivez le mandat, le contexte ou vos questions…',
+      message: 'Ce qui vous fait perdre du temps',
+      messagePh: "Quelques lignes suffisent. Pas besoin d'être précis à ce stade.",
       submit: 'Envoyer',
-      prefer: 'Vous préférez écrire directement ?',
+      direct: 'Ou joignez-moi directement',
+      thanksTitle: 'Message reçu.',
+      thanksBody: 'Je vous reviens en moins de deux jours ouvrables.',
+      thanksBack: "Retour à l'accueil",
     },
+
     footer: {
+      tagline: 'Systèmes sur mesure pour les PME du Québec',
       rights: 'Tous droits réservés.',
-      made: 'Conçu et développé au Québec',
-    },
-    meta: {
-      title: 'DramisInfo — Frédéric Morais-Simard, architecte infonuagique',
-      description:
-        "Architecte principal en infrastructure infonuagique et entreprise autonome — plus de 20 ans d'expérience en stratégie multi-nuage, DevSecOps et modernisation infonuagique. Disponible pour mandats contractuels.",
+      made: "Conçu et développé à L'Assomption",
     },
   },
+
+  /* ------------------------------------------------------------------ EN */
   en: {
+    meta: {
+      title: 'DramisInfo — Custom systems for Québec small businesses',
+      description:
+        'Production tracking, document management, scheduling, quoting: systems built around the way you actually work, delivered in weeks at a fixed price. Based in Lanaudière, Québec.',
+    },
+
     nav: {
-      about: 'Profile',
-      services: 'Services',
-      parcours: 'Experience',
-      realisations: 'Achievements',
-      certifications: 'Certifications',
+      items: [
+        { label: 'The friction', href: '#irritants' },
+        { label: 'What I build', href: '#solutions' },
+        { label: 'How it works', href: '#demarche' },
+        { label: 'Profile', href: '#profil' },
+      ],
       cta: 'Get in touch',
-      ctaShort: 'Contact',
+      menu: 'Menu',
     },
+
     hero: {
-      badge: 'Available for contract engagements',
-      titleLine1: 'Cloud architecture,',
-      titleHighlight: 'autonomous enterprise',
-      subtitle:
-        "20+ years of expertise in strategy and execution — from architectural vision to hands-on delivery. Cloud infrastructure modernization, reliable internal platforms, and reduced operational toil through automation and AI.",
-      imageAlt: 'Server room — cloud infrastructure',
-      ctaPrimary: 'Get in touch',
-      ctaSecondary: 'See the experience',
-      reassurance:
-        "Bilingual (French/English) · Based in L'Assomption, Québec · Open to remote or hybrid engagements.",
-    },
-    about: {
-      eyebrow: 'Profile',
-      heading: 'Strategist and practitioner',
-      imageAlt: 'Server rack in a data center',
-      p1: "Definition and delivery of infrastructure roadmaps — from architectural vision through to hands-on execution. The target architecture isn't just drawn: it's built, repeatedly, at scale.",
-      p2: "Platforms, landing zones and automation frameworks that have powered some of the largest cloud transformations in North America — including recognition among the 10 largest AWS migrations on the continent.",
-      p3: "Regular presentations of technical investment plans and architecture decisions to VPs and architecture review boards. A strong focus on the autonomous enterprise, agentic AIOps, and eliminating operational toil through intelligent automation.",
-      values: [
-        {
-          title: 'Proven scale',
-          description:
-            'A multi-region AWS landing zone recognized among the 10 largest migrations in North America — 4,000+ servers migrated on time.',
-        },
-        {
-          title: 'Vision and execution',
-          description:
-            "From multi-year roadmap to hands-on delivery — what's architected gets delivered, not just diagrammed.",
-        },
-        {
-          title: 'Bilingual, VP and ARB-ready',
-          description:
-            '20+ years presenting technical decisions to architecture review boards and senior leadership, in both French and English.',
-        },
+      label: "L'Assomption · Lanaudière, Québec",
+      titleA: 'Custom software is no',
+      titleAccent: 'longer reserved',
+      titleB: 'for large companies.',
+      lead: "Your operations live in spreadsheets, binders, and the memory of two people. I spent twenty-five years building platforms for organizations of several thousand employees. I now build the same tools for businesses here — in weeks, and for a fraction of what it used to cost.",
+      ctaPrimary: "Let's talk for 45 minutes",
+      ctaSecondary: 'See how it works',
+      note: 'First meeting is free, at your place, no strings attached.',
+      statLabel: 'At a glance',
+      stats: [
+        { value: '25', unit: 'years', caption: 'in enterprise systems architecture' },
+        { value: '4,000', unit: 'servers', caption: 'migrated on time — one of the ten largest AWS migrations in North America' },
+        { value: '10-100', unit: 'employees', caption: 'the size of the companies I work with' },
       ],
     },
-    services: {
-      eyebrow: 'Services',
-      heading: 'What gets delivered',
-      subheading:
-        'Six engagement offerings to move your cloud architecture and transformation projects forward.',
+
+    problem: {
+      num: '01',
+      label: 'Day to day',
+      title: 'What costs you time without ever looking urgent',
+      lead: "None of this stops the business. Together it eats several hours a week — and the employee you have been trying to hire for six months is not coming to fix it.",
       items: [
-        {
-          icon: 'globe',
-          title: 'Cloud strategy & roadmap',
-          description:
-            'Assessment of the current state, definition of a multi-year roadmap, and workload rationalization (rehost, replatform, refactor, SaaS).',
-          image: '/images/service-strategy.jpg',
-          deliverables: [
-            'Multi-year infrastructure roadmap',
-            'Current-state assessment report',
-            'Presentation to VPs and architecture review boards',
-          ],
-        },
-        {
-          icon: 'compass',
-          title: 'Cloud architecture & migration',
-          description:
-            'Design and delivery of multi-region landing zones and large-scale migrations, including full data-center exits.',
-          image: '/images/service-architecture.jpg',
-          deliverables: [
-            'Target architecture and landing zone',
-            'Detailed migration plan',
-            'Execution and tracking through to go-live',
-          ],
-        },
-        {
-          icon: 'layers',
-          title: 'Internal Developer Platform & DevSecOps',
-          description:
-            'Design of self-service platforms with golden paths, aligned with DevSecOps and GitOps principles.',
-          image: '/images/service-platform.jpg',
-          deliverables: [
-            'Self-service IDP platform',
-            'CI/CD and GitOps pipelines',
-            'Built-in security and compliance standards',
-          ],
-        },
-        {
-          icon: 'shield',
-          title: 'Zero-trust security & governance',
-          description:
-            'Security controls built in by design, and governance of the software supply chain.',
-          image: '/images/service-security.jpg',
-          deliverables: [
-            'Governance framework and architecture standards',
-            'Zero-trust security controls',
-            'Artifact lifecycle governance',
-          ],
-        },
-        {
-          icon: 'bolt',
-          title: 'Autonomous enterprise & AIOps',
-          description:
-            'Intelligent automation of operations to eliminate toil and enable predictive incident remediation.',
-          image: '/images/service-aiops.jpg',
-          deliverables: [
-            'Agentic AI workflows for operations automation',
-            'Observability built in by design',
-            'Automated incident remediation',
-          ],
-        },
-        {
-          icon: 'idea',
-          title: 'Mentoring & knowledge transfer',
-          description:
-            'Mentoring senior architects and transferring knowledge to existing platform, security and operations teams.',
-          image: '/images/service-mentoring.jpg',
-          deliverables: [
-            'Senior architect mentoring',
-            'Structured knowledge transfer',
-            'Alignment of teams on consistent practices',
-          ],
-        },
+        { title: 'The spreadsheet that no longer holds', body: 'It served you well at fifteen people. At forty it duplicates, it corrupts, and two people are working on different versions without knowing it.' },
+        { title: 'Everything in one person’s head', body: 'If they leave tomorrow morning, nobody knows where the files stand. That is the risk nobody says out loud.' },
+        { title: 'Paper between two steps', body: 'Work orders, timesheets, delivery slips. They get lost, they get retyped, and invoicing waits another two weeks.' },
+        { title: 'Quotes rebuilt three times over', body: 'Every estimate starts from a blank page, even though eighty percent of the content already exists somewhere in your files.' },
+        { title: 'Software that ignores itself', body: 'Accounting does not talk to production, which does not talk to sales. Someone retypes the same numbers every week.' },
+        { title: 'The role you cannot fill', body: 'Six months of postings, no serious candidate. The work did not stop waiting.' },
       ],
     },
-    how: {
-      eyebrow: 'Process',
-      heading: 'Fitting into an engagement',
-      subheading:
-        "Whether through a staffing agency or directly with your organization, here's how an engagement typically starts.",
+
+    build: {
+      num: '02',
+      label: 'What I build',
+      title: 'A tool that solves one specific problem',
+      lead: 'Not an off-the-shelf suite you configure for a year. No monthly subscription that climbs every renewal. A system shaped around how you work — and one that belongs to you.',
+      items: [
+        { title: 'Production tracking and work orders', body: 'What is running, where it stands, who owns it. Readable on the floor and in the office, on a phone and on a desktop.', points: ['Live production board', 'Digital work orders', 'Full history per order'] },
+        { title: 'Documents and case files', body: 'Documents filed, findable in seconds, attached to the right file — with retention rules respected.', points: ['Automatic filing', 'Full-text search', 'Retention and audit trail'] },
+        { title: 'Scheduling and dispatch', body: 'Shifts, routes, appointments, assignments. Built in minutes instead of weekend evenings.', points: ['Assisted scheduling', 'Resource overview', 'Mid-day adjustments'] },
+        { title: 'Quotes and estimates', body: 'An estimate assembled from what you have already sold, rather than from nothing. The same price for the same work, every time.', points: ['Price and content library', 'Final document generation', 'Follow-up on sent quotes'] },
+        { title: 'Bridges between your systems', body: 'Your accounting, your sales system and your files stop ignoring each other. Nobody retypes anything.', points: ['Connect existing systems', 'Automatic synchronization', 'End of double entry'] },
+        { title: 'Compliance and records', body: 'The evidence a regulator, a ministry or your insurer requires — kept current without anyone thinking about it.', points: ['Records kept automatically', 'Audit trails', 'Reports on demand'] },
+      ],
+    },
+
+    process: {
+      num: '03',
+      label: 'How it works',
+      title: 'Three steps, and nothing to sign before the third',
+      lead: 'I do not sell licences and I do not bill by the hour. You pay an agreed price for an agreed result.',
       steps: [
-        {
-          title: 'Initial contact',
-          description:
-            'A staffing agency or a client organization presents an engagement — context, technical challenges and timeline.',
-        },
-        {
-          title: 'Scoping',
-          description:
-            'Alignment on the scope of the engagement, the skills required, availability and contractual terms.',
-        },
-        {
-          title: 'Delivery and mentoring',
-          description:
-            'A clear roadmap, delivery of the architecture, and knowledge transfer to existing teams.',
-        },
+        { title: 'A 45-minute conversation', body: 'I come to you. You tell me how things run and where they jam. I propose nothing that day — I want to understand first. Free, with no obligation to continue.' },
+        { title: 'A sketch, within days', body: 'I come back with a working mock-up built from what I understood. You see concretely what we are talking about, instead of a twelve-page proposal. Still no commitment.' },
+        { title: 'Fixed-price delivery', body: 'If we go ahead, price and date are set before a line is written. At the end, the system is yours and can be hosted wherever you want, including on your own servers.' },
       ],
     },
-    framework: {
-      eyebrow: 'Experience',
-      heading: 'Domains of experience',
-      subheading:
-        '20+ years of IT infrastructure expertise, from hands-on development to principal architecture.',
-      domains: [
-        {
-          icon: 'layers',
-          title: 'Enterprise architecture at scale',
-          description:
-            'End-to-end infrastructure strategy, multi-region landing zones and migrations spanning thousands of servers, with governance and presentations to VPs and architecture review boards (ARB).',
-        },
-        {
-          icon: 'tools',
-          title: 'Enterprise solution delivery & DevOps',
-          description:
-            'Leading deployment teams, delivery automation (CI/CD), SSO architecture design, and continuous improvement of delivery processes.',
-        },
-        {
-          icon: 'scan',
-          title: 'Data conversion & quality',
-          description:
-            'Design of automated data conversion solutions and data quality diagnostic systems for large-scale platforms.',
-        },
-        {
-          icon: 'idea',
-          title: 'Critical defined-benefit systems',
-          description:
-            'Design of calculation and administration systems for complex, high-reliability pension plans.',
-        },
+
+    why: {
+      num: '04',
+      label: 'Why now',
+      title: 'The economics of custom software have changed',
+      lead: 'A purpose-built tool used to cost six figures and twelve months. That is what kept it out of reach of small businesses for twenty years. It is no longer true, and here is why.',
+      figures: [
+        { value: '16', unit: 'days', caption: 'to build a complete platform, tested and deployed' },
+        { value: '$40', unit: '', caption: 'in compute cost to build the whole thing' },
+        { value: '12.7', unit: '%', caption: 'of Québec companies had AI in production in 2025' },
       ],
-      note: '20+ years of continuous IT infrastructure experience, across environments of varying scale and industry.',
-    },
-    useCases: {
-      eyebrow: 'Impact',
-      heading: 'Key achievements',
-      subheading: 'A few concrete examples delivered in recent years.',
-      items: [
-        {
-          icon: 'compass',
-          title: 'Multi-region AWS landing zone',
-          description:
-            'One of the 10 largest AWS migrations in North America — 4,000+ servers migrated, a full data-center exit delivered on time.',
-        },
-        {
-          icon: 'layers',
-          title: 'Internal Developer Platform (IDP)',
-          description:
-            'Self-service golden paths enforcing security and compliance standards, reducing friction for product teams onboarding.',
-        },
-        {
-          icon: 'shield',
-          title: 'Zero-trust container platform',
-          description:
-            'Architecture aligned with DevSecOps principles — Kubernetes, GitOps and service mesh.',
-        },
-        {
-          icon: 'bolt',
-          title: 'Observability & AIOps',
-          description:
-            'Observability built in by design, enabling predictive capacity planning and automated incident remediation.',
-        },
-        {
-          icon: 'check',
-          title: 'Software supply-chain governance',
-          description:
-            'Governance architecture for artifact lifecycle, enforcing security and compliance controls.',
-        },
-        {
-          icon: 'tools',
-          title: 'Infrastructure modernization',
-          description:
-            'Modernized compute, storage and network focused on resilience, automation and zero-trust security.',
-        },
+      figuresNote: 'The first two numbers come from a test bench I ran in my own lab. It was not a product sold to a client — but the economics it demonstrates are real.',
+      points: [
+        { title: 'Agents do the building', body: 'I no longer write code line by line. I direct specialized AI agents that write, test and review each other’s work. Most of the development cost has vanished.' },
+        { title: 'The rigour does not change', body: 'Twenty-five years of enterprise platforms taught me what breaks in production six months after delivery. A system delivered fast but impossible to maintain does you no favours.' },
+        { title: 'You are locked into nothing', body: 'No monthly licence, no single vendor, no captive data. The system is yours and can live on your own servers if your sector demands it.' },
       ],
     },
-    certifications: {
-      eyebrow: 'Credentials',
-      heading: 'Certifications & recognition',
-      subheading: 'Continuous learning and peer recognition.',
-      awardsLabel: 'Recognition',
-      items: [
-        { icon: 'check', title: 'AWS Solution Architect Associate', subtitle: '2024' },
-        { icon: 'check', title: 'Azure Administrator Associate', subtitle: '2022' },
-        { icon: 'check', title: 'Azure Fundamentals', subtitle: '2021' },
-        {
-          icon: 'idea',
-          title: 'Bachelor of Engineering, Computer Engineering',
-          subtitle: 'Université Laval, 1997–1999',
-        },
+
+    profile: {
+      num: '05',
+      label: 'Who I am',
+      title: 'Frédéric Morais-Simard',
+      role: 'Systems architect · founder of DramisInfo',
+      paragraphs: [
+        'Twenty-five years in systems architecture inside large organizations: cloud platforms, governance, and accelerating software delivery. I spent my career helping teams of several hundred people ship faster.',
+        'I now do the same work at a different scale — for companies of ten to a hundred employees, who never had access to this kind of tooling because it cost too much.',
+        "I live in L'Assomption. I work with businesses across Lanaudière and Montréal's north shore, in person, because you do not understand operations over a video call.",
       ],
-      awards: [
-        {
-          title: 'CAE – Exceptional Architect Lead',
-          subtitle: '2023',
-          description:
-            "Awarded for leading the architecture of CAE's largest merger-and-acquisition project, including one of the 10 largest AWS migrations in North America.",
-        },
-        {
-          title: 'MorneauShepell – Innovation',
-          subtitle: '2017',
-          description:
-            'Winner of the "Innovation" category for research into best practices and contributions to improving efficiency.',
-        },
-        {
-          title: 'EDS Awards – Innovation (finalist)',
-          subtitle: '2006',
-          description:
-            'Among the five finalists for technology innovation for the design of a pension plan administration system.',
-        },
+      pathLabel: 'Track record',
+      path: [
+        { role: 'Senior platform architect', org: 'Large manufacturing company', period: 'since 2020' },
+        { role: 'IT project director', org: 'Morneau Shepell', period: '2019 – 2020' },
+        { role: 'Senior IT consultant', org: 'Morneau Shepell', period: '2012 – 2019' },
+        { role: 'IT consultant', org: 'Mercer', period: '2010 – 2012' },
+        { role: 'Lead architect and developer', org: 'Towers Perrin · EDS', period: '2002 – 2010' },
+      ],
+      proofLabel: 'Credentials',
+      proof: [
+        { title: 'AWS Solution Architect Associate', sub: '2024' },
+        { title: 'Azure Administrator Associate', sub: '2022' },
+        { title: 'B.Sc. Computer Engineering', sub: 'Université Laval' },
+        { title: 'Architect of the year, 2023', sub: 'for leading the architecture of the company’s largest acquisition programme' },
       ],
     },
+
     contact: {
-      eyebrow: 'Contact',
-      heading: "Let's talk about your engagement",
-      subtitle: 'Staffing agency or client organization? Describe the engagement below for a quick response.',
-      name: 'Full name',
-      namePh: 'Your name',
+      num: '06',
+      label: 'Contact',
+      title: "Let's talk for 45 minutes",
+      lead: 'I come to you, you tell me how things run, and I sell you nothing that day. It is free and commits you to nothing.',
+      name: 'Your name',
+      namePh: 'First and last name',
       email: 'Email',
-      emailPh: 'you@example.com',
-      company: 'Agency or company',
-      companyPh: 'e.g. XYZ Agency',
-      mandateType: 'Engagement type',
-      mandateTypePh: 'Choose a type',
-      mandateOpts: [
-        'Contract engagement (through an agency)',
-        'Direct contract engagement',
-        'One-off / short-term advisory',
+      emailPh: 'you@company.com',
+      phone: 'Phone',
+      phonePh: 'Optional',
+      company: 'Company',
+      companyPh: 'Company name',
+      sector: 'Your sector',
+      sectorPh: 'Select',
+      sectorOpts: [
+        'Manufacturing',
+        'Construction and trades',
+        'Transport and distribution',
+        'Professional services',
+        'Health and seniors residences',
+        'Food and agriculture',
         'Other',
       ],
-      message: 'Message',
-      messagePh: 'Describe the engagement, the context, or your questions…',
+      message: 'What is costing you time',
+      messagePh: 'A few lines is enough. No need to be precise at this stage.',
       submit: 'Send',
-      prefer: 'Prefer to write directly?',
+      direct: 'Or reach me directly',
+      thanksTitle: 'Message received.',
+      thanksBody: 'I will get back to you within two business days.',
+      thanksBack: 'Back to home',
     },
+
     footer: {
+      tagline: 'Custom systems for Québec small businesses',
       rights: 'All rights reserved.',
-      made: 'Designed and built in Québec',
-    },
-    meta: {
-      title: 'DramisInfo — Frédéric Morais-Simard, Cloud Architect',
-      description:
-        '20+ years of experience in multi-cloud strategy, DevSecOps and cloud modernization. Available for contract engagements.',
+      made: "Designed and built in L'Assomption, Québec",
     },
   },
 } as const;

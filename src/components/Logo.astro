@@ -1,25 +1,8 @@
 ---
-/**
- * Logo de DramisInfo affiché dans l'en-tête : le symbole « avance rapide »
- * (SVG inline, recolorable) + le mot-symbole en Inter (police du site).
- *
- * Le fichier autonome public/logo.svg reprend le même dessin pour les usages
- * externes (image de partage, signatures, etc.). Si vous modifiez le symbole
- * ici, pensez à le synchroniser dans public/logo.svg et public/favicon.svg.
- */
-interface Props {
-  class?: string;
-}
-const { class: className = 'h-8 w-auto' } = Astro.props;
+interface Props { class?: string; tone?: 'ink' | 'paper' }
+const { class: cls = '', tone = 'ink' } = Astro.props;
+const base = tone === 'paper' ? 'text-paper' : 'text-ink';
 ---
-<span class="inline-flex items-center gap-2.5 select-none">
-  <svg viewBox="0 0 100 100" class={className} fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect width="100" height="100" rx="24" fill="#8a6a14" />
-    <rect x="26" y="30" width="11" height="40" rx="4" fill="#ffffff" />
-    <path d="M45 33 L62 50 L45 67" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M64 38 L76 50 L64 62" fill="none" stroke="#ebcb7c" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-  </svg>
-  <span class="text-xl font-bold tracking-tight leading-none">
-    <span class="text-brand-600">Dramis</span><span class="text-warm-900">Info</span>
-  </span>
+<span class={`font-display font-bold tracking-tight ${base} ${cls}`}>
+  Dramis<span class="text-accent">Info</span>
 </span>
