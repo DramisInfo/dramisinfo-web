@@ -153,10 +153,10 @@ export const ui = {
       lead: "Un outil taillé sur mesure coûtait six chiffres et douze mois. C'est ce qui l'a tenu hors de portée des PME pendant vingt ans. Ce n'est plus vrai, et voici pourquoi.",
       figures: [
         { value: '16', unit: 'jours', caption: 'pour bâtir une plateforme complète, testée et déployée' },
-        { value: '40', unit: '$', caption: 'de coût de calcul pour la construire au complet' },
-        { value: '12,7', unit: '%', caption: "des entreprises québécoises avaient intégré l'IA à leur production en 2025" },
+        { value: '61', unit: '%', caption: "des PME québécoises nomment la pénurie de main-d'œuvre comme premier frein à leur croissance" },
+        { value: '12,7', unit: '%', caption: "des entreprises du Québec avaient intégré l'IA à leur production en 2025" },
       ],
-      figuresNote: "Les deux premiers chiffres viennent d'un banc d'essai que j'ai mené dans mon propre laboratoire. Ce n'était pas un produit vendu à un client — mais l'économie qu'il démontre, elle, est bien réelle.",
+      figuresNote: "Le premier chiffre vient d'un banc d'essai mené dans mon propre laboratoire : une plateforme complète, conteneurisée, testée et déployée. Ce n'était pas un mandat client, et chaque projet a sa propre durée — mais l'ordre de grandeur, lui, est réel.",
       points: [
         {
           title: 'Ce sont des agents qui construisent',
@@ -325,10 +325,10 @@ export const ui = {
       lead: 'A purpose-built tool used to cost six figures and twelve months. That is what kept it out of reach of small businesses for twenty years. It is no longer true, and here is why.',
       figures: [
         { value: '16', unit: 'days', caption: 'to build a complete platform, tested and deployed' },
-        { value: '$40', unit: '', caption: 'in compute cost to build the whole thing' },
+        { value: '61', unit: '%', caption: 'of Québec small businesses name the labour shortage as their top brake on growth' },
         { value: '12.7', unit: '%', caption: 'of Québec companies had AI in production in 2025' },
       ],
-      figuresNote: 'The first two numbers come from a test bench I ran in my own lab. It was not a product sold to a client — but the economics it demonstrates are real.',
+      figuresNote: 'The first number comes from a test bench I ran in my own lab: a complete platform, containerized, tested and deployed. It was not a client engagement, and every project has its own timeline — but the order of magnitude is real.',
       points: [
         { title: 'Agents do the building', body: 'I no longer write code line by line. I direct specialized AI agents that write, test and review each other’s work. Most of the development cost has vanished.' },
         { title: 'The rigour does not change', body: 'Twenty-five years of enterprise platforms taught me what breaks in production six months after delivery. A system delivered fast but impossible to maintain does you no favours.' },
