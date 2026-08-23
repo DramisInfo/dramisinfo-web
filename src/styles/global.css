@@ -1,65 +1,124 @@
-/* Défilement fluide pour les ancres + décalage sous le header fixe (h-16) */
-html {
-  scroll-behavior: smooth;
-}
-section[id] {
-  scroll-margin-top: 5rem;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Apparition au défilement (activée seulement si le mouvement est permis) */
-html.reveal-on [data-reveal] {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-html.reveal-on [data-reveal].is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-/* Entrée du hero au chargement, en cascade via --delay */
-html.reveal-on [data-animate] {
-  opacity: 0;
-  animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: var(--delay, 0ms);
-}
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
+@layer base {
+  :root {
+    color-scheme: light;
   }
-  to {
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight text-ink;
+    text-wrap: balance;
+  }
+
+  /* Chiffres alignés partout où ils comptent. */
+  .tnum { font-variant-numeric: tabular-nums; }
+
+  ::selection {
+    background: theme('colors.accent.DEFAULT');
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.DEFAULT');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Étiquette de section : mono, majuscules, interlettrage large. */
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-label text-ink-3;
+  }
+
+  /* Enveloppe de page — largeur unique sur tout le site. */
+  .page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
+  }
+
+  /* Une rangée du registre : filet en haut, jamais d'ombre. */
+  .row {
+    @apply border-t border-rule-light py-7;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-accent px-6 py-3.5
+           font-display text-[15px] font-semibold text-white transition-colors
+           hover:bg-accent-deep;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border border-rule
+           px-6 py-3.5 font-display text-[15px] font-semibold text-ink
+           transition-colors hover:border-ink hover:bg-paper-2;
+  }
+
+  .field {
+    @apply w-full border border-rule bg-white px-3.5 py-3 text-[15px] text-ink
+           placeholder:text-ink-4 transition-colors
+           focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent;
+  }
+
+  .field-label {
+    @apply mb-1.5 block font-mono text-[11px] uppercase tracking-label text-ink-3;
+  }
+  /* Corps d'article. Écrit à la main plutôt qu'avec le plugin typography :
+     il impose ses propres proportions et se bat avec l'identité du registre. */
+  .prose {
+    @apply max-w-prose text-[17.5px] leading-[1.7] text-ink-2;
+  }
+  .prose > * + * { @apply mt-5; }
+  .prose h2 {
+    @apply mt-14 border-t border-rule pt-8 font-display text-[26px] font-semibold leading-tight text-ink;
+  }
+  .prose h3 { @apply mt-10 font-display text-[19px] font-semibold text-ink; }
+  .prose p  { @apply max-w-prose; }
+  .prose strong { @apply font-semibold text-ink; }
+  .prose a { @apply text-accent underline decoration-1 underline-offset-4 hover:text-accent-deep; }
+  .prose ul, .prose ol { @apply space-y-2 pl-5; }
+  .prose ul { @apply list-disc marker:text-accent; }
+  .prose ol { @apply list-decimal marker:font-mono marker:text-[13px] marker:text-accent; }
+  .prose li > p { @apply mt-0; }
+  .prose blockquote {
+    @apply border-l-2 border-accent pl-5 text-ink-3;
+  }
+  .prose code {
+    @apply bg-paper-3 px-1.5 py-0.5 font-mono text-[14px] text-ink;
+  }
+  .prose pre {
+    @apply overflow-x-auto border border-rule bg-ink p-5 text-[13.5px] leading-relaxed;
+  }
+  .prose pre code { @apply bg-transparent p-0 text-white; }
+  .prose img { @apply w-full border border-rule; }
+  .prose hr { @apply my-12 border-rule; }
+  .prose table { @apply w-full border-collapse text-[15.5px]; }
+  .prose th { @apply border-b border-rule py-2.5 text-left font-display font-semibold text-ink; }
+  .prose td { @apply border-b border-rule-light py-2.5 align-top; }
+}
+
+/* Révélation au défilement — désactivée si l'utilisateur préfère moins d'animation. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  [data-reveal].is-in {
     opacity: 1;
     transform: none;
   }
-}
-
-/* Léger flottement de la forme floue du hero */
-@media (prefers-reduced-motion: no-preference) {
-  .hero-orb {
-    animation: float 9s ease-in-out infinite;
-  }
-}
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-22px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* Motif de points discret pour texturer un fond uni sans surcharger */
-.bg-dot-grid {
-  background-image: radial-gradient(circle, #a0895f 1px, transparent 1px);
-  background-size: 22px 22px;
 }

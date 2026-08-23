@@ -1,134 +1,99 @@
 ---
-import { ui, type Lang } from '@/i18n/ui';
+import SectionHead from './SectionHead.astro';
+import { ui, coords, type Lang } from '@/i18n/ui';
 
-interface Props {
-  lang: Lang;
-}
+interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang].contact;
+const thanks = lang === 'fr' ? '/merci/' : '/en/merci/';
+
+// reCAPTCHA natif de Netlify. Mettre à true pour l'activer : Netlify injecte
+// le widget au déploiement et valide la réponse côté serveur — rien d'autre
+// à faire, aucun compte Google requis. Le widget ne s'affiche pas en local.
+// Laissé à false : à faible volume, le honeypot suffit et chaque friction
+// coûte plus cher qu'un pourriel à supprimer. Voir CLAUDE.md.
+const RECAPTCHA = false;
 ---
-<section id="contact" class="py-24 bg-warm-50">
-  <div data-reveal class="max-w-2xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <span class="block text-xs font-semibold uppercase tracking-[0.2em] text-brand-600 mb-3">{t.eyebrow}</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">{t.heading}</h2>
-      <p class="text-warm-600 text-lg">{t.subtitle}</p>
-    </div>
+<section id="contact" class="bg-paper-2 py-20 md:py-28">
+  <div class="page">
+    <SectionHead num={t.num} label={t.label} title={t.title} lead={t.lead} />
 
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
-      class="space-y-4"
-    >
-      <p class="hidden" aria-hidden="true">
-        <label>Ne remplissez pas ce champ : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-      </p>
-      <input type="hidden" name="form-name" value="contact" />
+    <div class="mt-14 grid gap-x-10 md:grid-cols-[7rem_1fr]">
+      <div></div>
 
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label for="name" class="block text-sm font-medium text-warm-700 mb-1.5">
-            {t.name} <span class="text-brand-600" aria-hidden="true">*</span>
-          </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            required
-            placeholder={t.namePh}
-            class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
-          />
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-warm-700 mb-1.5">
-            {t.email} <span class="text-brand-600" aria-hidden="true">*</span>
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            required
-            placeholder={t.emailPh}
-            class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
-          />
-        </div>
-      </div>
+      <div class="grid gap-12 lg:grid-cols-[1fr_16rem] lg:gap-16">
+        <form
+          data-reveal
+          name="contact"
+          method="POST"
+          action={thanks}
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          data-netlify-recaptcha={RECAPTCHA ? 'true' : undefined}
+          class="space-y-5"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden" aria-hidden="true">
+            <label>{lang === 'fr' ? 'Ne remplissez pas ce champ' : 'Do not fill this in'}
+              <input name="bot-field" tabindex="-1" autocomplete="off" />
+            </label>
+          </p>
 
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label for="company" class="block text-sm font-medium text-warm-700 mb-1.5">{t.company}</label>
-          <input
-            id="company"
-            type="text"
-            name="company"
-            placeholder={t.companyPh}
-            class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
-          />
-        </div>
-        <div>
-          <label for="mandat" class="block text-sm font-medium text-warm-700 mb-1.5">{t.mandateType}</label>
-          <div class="relative">
-            <select
-              id="mandat"
-              name="mandat"
-              class="w-full bg-white border border-warm-200 text-warm-900 rounded-xl px-4 py-3 pr-10 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors appearance-none"
-            >
-              <option value="" disabled selected>{t.mandateTypePh}</option>
-              {t.mandateOpts.map((opt) => <option value={opt}>{opt}</option>)}
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-warm-400">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label class="field-label" for="name">{t.name} <span class="text-accent">*</span></label>
+              <input class="field" id="name" name="name" type="text" required autocomplete="name" placeholder={t.namePh} />
+            </div>
+            <div>
+              <label class="field-label" for="email">{t.email} <span class="text-accent">*</span></label>
+              <input class="field" id="email" name="email" type="email" required autocomplete="email" placeholder={t.emailPh} />
             </div>
           </div>
-        </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label class="field-label" for="company">{t.company}</label>
+              <input class="field" id="company" name="company" type="text" autocomplete="organization" placeholder={t.companyPh} />
+            </div>
+            <div>
+              <label class="field-label" for="phone">{t.phone}</label>
+              <input class="field" id="phone" name="phone" type="tel" autocomplete="tel" placeholder={t.phonePh} />
+            </div>
+          </div>
+
+          <div>
+            <label class="field-label" for="sector">{t.sector}</label>
+            <select class="field appearance-none" id="sector" name="sector">
+              <option value="" selected>{t.sectorPh}</option>
+              {t.sectorOpts.map((o) => <option value={o}>{o}</option>)}
+            </select>
+          </div>
+
+          <div>
+            <label class="field-label" for="message">{t.message} <span class="text-accent">*</span></label>
+            <textarea class="field resize-none" id="message" name="message" rows="5" required placeholder={t.messagePh}></textarea>
+          </div>
+
+          {RECAPTCHA && <div data-netlify-recaptcha="true"></div>}
+
+          <button type="submit" class="btn-primary w-full sm:w-auto">{t.submit}</button>
+        </form>
+
+        <aside data-reveal class="border-t border-rule pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+          <h3 class="label">{t.direct}</h3>
+          <ul class="mt-4 space-y-3 font-mono text-[13.5px]">
+            {coords.phone && (
+              <li>
+                <a href={coords.phoneHref} class="text-ink transition-colors hover:text-accent">{coords.phone}</a>
+              </li>
+            )}
+            <li>
+              <a data-eu={coords.emailUser} data-ed={coords.emailDomain} class="text-ink transition-colors hover:text-accent"></a>
+            </li>
+            <li class="text-ink-3">{coords.city}</li>
+          </ul>
+        </aside>
       </div>
-
-      <div>
-        <label for="message" class="block text-sm font-medium text-warm-700 mb-1.5">
-          {t.message} <span class="text-brand-600" aria-hidden="true">*</span>
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          rows={4}
-          placeholder={t.messagePh}
-          class="w-full bg-white border border-warm-200 text-warm-900 placeholder-warm-600/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors resize-none"
-        ></textarea>
-      </div>
-
-      <!-- reCAPTCHA injecté par Netlify au déploiement -->
-      <div data-netlify-recaptcha class="flex justify-center pt-2"></div>
-
-      <button
-        type="submit"
-        class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-md text-sm shadow-sm"
-      >
-        {t.submit}
-      </button>
-    </form>
-
-    <p class="text-warm-600 text-xs mt-6 text-center">
-      {t.prefer}
-      <!-- Courriel reconstruit côté client pour ne jamais apparaître en clair -->
-      <a data-eu="fsimard" data-ed="dramisinfo.com" class="text-brand-600 hover:text-brand-700 font-medium transition-colors"></a>
-    </p>
+    </div>
   </div>
 </section>
-
-<script>
-  function initEmailLinks() {
-    document.querySelectorAll<HTMLAnchorElement>('a[data-eu][data-ed]').forEach((a) => {
-      const addr = `${a.dataset.eu}@${a.dataset.ed}`;
-      a.href = `mailto:${addr}`;
-      if (!a.textContent?.trim()) a.textContent = addr;
-    });
-  }
-  initEmailLinks();
-  document.addEventListener('astro:page-load', initEmailLinks);
-</script>

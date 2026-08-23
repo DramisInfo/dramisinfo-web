@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fbfaf7"/>
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#d8d5ce" stroke-width="2"/>
+
+  <text x="88" y="122" font-family="Consolas, monospace" font-size="20" letter-spacing="4" fill="#5a6068">DRAMISINFO</text>
+  <text x="1112" y="122" text-anchor="end" font-family="Consolas, monospace" font-size="20" letter-spacing="4" fill="#8b9098">L'ASSOMPTION &#183; LANAUDIÈRE</text>
+  <line x1="88" y1="152" x2="1112" y2="152" stroke="#14161a" stroke-width="2"/>
+
+  <text x="88" y="272" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="66" fill="#14161a">Le logiciel sur mesure</text>
+  <text x="88" y="352" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="66" fill="#b3401c">n'est plus réservé</text>
+  <text x="88" y="432" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="66" fill="#14161a">aux grandes entreprises.</text>
+
+  <line x1="88" y1="492" x2="1112" y2="492" stroke="#d8d5ce" stroke-width="2"/>
+  <text x="88" y="536" font-family="Consolas, monospace" font-size="22" fill="#5a6068">Systèmes sur mesure pour les PME du Québec</text>
+</svg>

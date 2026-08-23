@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { ui, type Lang } from '@/i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const home = lang === 'fr' ? '/' : '/en/';
+---
+<BaseLayout lang={lang} title={`${t.contact.thanksTitle} — DramisInfo`} description={t.contact.thanksBody}>
+  <Header lang={lang} />
+  <main id="main" class="page flex min-h-[62vh] items-center py-24">
+    <div class="max-w-prose">
+      <p class="font-mono text-[11px] uppercase tracking-label text-accent">{t.contact.label}</p>
+      <h1 class="mt-4 text-[38px] leading-tight sm:text-[46px]">{t.contact.thanksTitle}</h1>
+      <p class="mt-5 text-[17px] leading-relaxed text-ink-2">{t.contact.thanksBody}</p>
+      <a href={home} class="btn-ghost mt-9">{t.contact.thanksBack}</a>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>

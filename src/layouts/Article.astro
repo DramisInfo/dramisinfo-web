@@ -1,0 +1,66 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { ui, type Lang } from '@/i18n/ui';
+import { readingTime, formatDate } from '@/lib/blog';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props { lang: Lang; post: CollectionEntry<'blog'> }
+const { lang, post } = Astro.props;
+const t = ui[lang];
+const b = t.blog;
+const base = lang === 'fr' ? '/blogue/' : '/en/blog/';
+const { data } = post;
+---
+<BaseLayout lang={lang} title={`${data.title} — DramisInfo`} description={data.description}>
+  <Header lang={lang} />
+
+  <main id="main">
+    <article class="py-20 md:py-24">
+      <div class="page grid gap-x-10 md:grid-cols-[7rem_1fr]">
+        <!-- Colonne de marge : métadonnées, comme l'en-tête d'une entrée de registre -->
+        <aside class="mb-8 font-mono text-[11.5px] uppercase tracking-label text-ink-3 md:mb-0 md:pt-3">
+          <a href={base} class="text-accent hover:text-accent-deep">&larr; {b.backToList}</a>
+          <p class="mt-5 tnum">
+            <time datetime={data.pubDate.toISOString()}>{formatDate(data.pubDate, lang)}</time>
+          </p>
+          {data.updatedDate && (
+            <p class="mt-1 tnum text-ink-4">
+              {b.updated} {formatDate(data.updatedDate, lang)}
+            </p>
+          )}
+          <p class="mt-1 tnum text-ink-4">{readingTime(post.body)} {b.readingTime}</p>
+          {data.draft && <p class="mt-4 text-accent">Brouillon</p>}
+          {data.tags.length > 0 && (
+            <ul class="mt-5 space-y-1 text-ink-4">
+              {data.tags.map((tag) => <li>{tag}</li>)}
+            </ul>
+          )}
+        </aside>
+
+        <div>
+          <header class="border-b border-rule pb-9">
+            <h1 class="text-[36px] leading-[1.12] sm:text-[46px]">{data.title}</h1>
+            <p class="mt-5 max-w-prose text-[18px] leading-relaxed text-ink-3">{data.description}</p>
+          </header>
+
+          <div class="prose mt-10">
+            <slot />
+          </div>
+
+          <footer class="mt-16 border-t border-rule pt-8">
+            <p class="font-mono text-[12.5px] text-ink-3">
+              Frédéric Morais-Simard · DramisInfo
+            </p>
+            <a href={`${lang === 'fr' ? '/' : '/en/'}#contact`} class="btn-primary mt-6">
+              {t.hero.ctaPrimary}
+            </a>
+          </footer>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>

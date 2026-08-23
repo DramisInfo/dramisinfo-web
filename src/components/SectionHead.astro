@@ -1,0 +1,16 @@
+---
+interface Props { num: string; label: string; title: string; lead?: string; tone?: 'ink' | 'paper' }
+const { num, label, title, lead, tone = 'ink' } = Astro.props;
+const muted = tone === 'paper' ? 'text-white/55' : 'text-ink-3';
+const strong = tone === 'paper' ? 'text-white' : 'text-ink';
+---
+<div data-reveal class="grid gap-x-10 gap-y-4 md:grid-cols-[7rem_1fr]">
+  <div class={`font-mono text-[11px] uppercase tracking-label ${muted} md:pt-2`}>
+    <span class="tnum text-accent">{num}</span>
+    <span class="ml-3 md:ml-0 md:block md:mt-1">{label}</span>
+  </div>
+  <div>
+    <h2 class={`text-[30px] leading-[1.15] sm:text-[38px] ${strong}`}>{title}</h2>
+    {lead && <p class={`mt-4 max-w-prose text-[17px] leading-relaxed ${muted}`}>{lead}</p>}
+  </div>
+</div>

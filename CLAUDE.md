@@ -1,195 +1,226 @@
-# DramisInfo Web — Site vitrine personnel
+# DramisInfo Web — site vitrine
 
-Site vitrine professionnel de **Frédéric Morais-Simard**, architecte principal en infrastructure infonuagique et entreprise autonome, opérant sous la marque **DramisInfo** comme travailleur autonome.
-Hébergé sur **Netlify**, déploiement automatique depuis GitHub sur push vers `main`.
-
----
-
-## Contexte professionnel
-
-### Mission
-
-Frédéric offre son expertise en architecture infonuagique et en transformation d'entreprise à des organisations qui ont besoin d'un architecte principal expérimenté pour des mandats contractuels — que ce soit par l'entremise d'agences de placement ou directement auprès d'entreprises clientes.
-
-### Clientèle cible
-
-**Agences de placement / recrutement T.I.** évaluant son profil pour des mandats contractuels, et **entreprises clientes** (grandes organisations, comités d'architecture, VP T.I.) cherchant un architecte principal capable de livrer, pas seulement de conseiller. Cette clientèle est technique et exigeante — le site doit démontrer la crédibilité par l'échelle des réalisations concrètes, les certifications et le parcours, pas par un argumentaire de vente.
-
-### Positionnement
-
-- **Stratège et praticien** — pas seulement des recommandations, une feuille de route livrée sur le terrain
-- **Échelle prouvée** — zones d'atterrissage AWS multi-région, migrations de plusieurs milliers de serveurs, plateformes internes développeurs à l'échelle de l'entreprise
-- **Bilingue et habitué aux instances de gouvernance** — présentations aux VP et comités d'architecture (ARB) en français comme en anglais
-
-### Messages clés
-
-1. Plus de 20 ans d'expérience comme stratège et praticien — de la vision architecturale à la livraison concrète.
-2. Échelle prouvée : une des 10 plus grandes migrations AWS en Amérique du Nord, plus de 4 000 serveurs migrés dans les délais.
-3. Expertise couvrant la stratégie multi-nuage, le DevSecOps/GitOps, les plateformes internes développeurs (IDP), la sécurité zéro confiance et l'entreprise autonome/AIOps.
-4. Disponible pour mandats contractuels via agences de placement ou directement auprès d'entreprises clientes.
-
-### Expertise offerte
-
-- Stratégie multi-nuage (AWS, Azure)
-- Entreprise autonome & AIOps
-- DevSecOps / GitOps
-- Plateforme interne développeurs (IDP)
-- Sécurité zéro confiance
-- Modernisation infonuagique
-- Gouvernance & standards d'architecture
-
-### État actuel du site (juillet 2026)
-
-La page d'accueil est en ligne avec toutes ses sections (profil, expertise, parcours professionnel, réalisations, certifications, contact). Le contenu provient du CV de Frédéric et doit rester factuellement exact — toute mise à jour de parcours ou de certifications doit d'abord être vérifiée avec lui. Il n'y a pas de blog actuellement.
+Site public de **DramisInfo**, l'entreprise de **Frédéric Morais-Simard** (incorporée en juillet 2026).
+Astro 5 · Tailwind 3 · TypeScript strict · hébergé sur **Netlify**, déploiement automatique sur push vers `main`.
 
 ---
 
-## Stack technique
+## À qui ce site s'adresse
 
-| Couche | Technologie |
-|---|---|
-| Framework | [Astro](https://astro.build) 5 — site statique (SSG) |
-| Styles | [Tailwind CSS](https://tailwindcss.com) 3 |
-| Déploiement | Netlify (CI/CD via GitHub) |
-| Langage | TypeScript strict |
+**Un seul lecteur : le propriétaire-exploitant d'une PME québécoise de 10 à 100 employés.**
+
+Il a entre 45 et 60 ans, il n'est pas technique, il s'est probablement déjà fait décevoir par un
+fournisseur de logiciel, et il arrive ici après avoir rencontré Frédéric ou s'être fait référer.
+Il est sur son téléphone ou sur un poste de travail dans un bureau de plancher.
+
+Le seul travail de la page : lui faire penser *« il comprend mon problème, il est sérieux, et je
+peux l'appeler sans risque »*.
+
+Secteurs visés : fabrication, construction et métiers spécialisés, transport et distribution,
+services professionnels réglementés, résidences privées pour aînés, agroalimentaire.
+Territoire : Lanaudière et couronne nord de Montréal.
+
+### Ce que le site n'est plus
+
+Jusqu'en août 2026, ce site était un CV en ligne destiné aux **agences de placement** et aux
+grandes entreprises cherchant un architecte infonuagique en régie. Ce positionnement est
+**abandonné**. Ne le réintroduis pas : pas de « disponible pour mandats contractuels », pas de
+formulaire demandant un « type de mandat », pas de section taillée pour un recruteur.
+
+### Règles de contenu
+
+- **Aucun jargon technique.** Bannis : zone d'atterrissage, IDP, GitOps, DevSecOps, zéro confiance,
+  AIOps, ARB, multi-région, remédiation, chemins dorés. Chacun de ces mots dit au lecteur
+  « tu n'es pas assez gros pour moi ».
+- **Nommer la douleur avant de parler de soi.** La section 01 décrit son quotidien, pas le parcours
+  de Frédéric. Le profil vient en 05, comme réassurance.
+- **Le « comment » se mentionne, ne se vend pas.** Les agents d'IA expliquent *pourquoi c'est
+  devenu possible*. Ils ne sont jamais l'argument de vente.
+- **Ne nommer aucun employeur, ni actuel ni passé.** Frédéric est encore salarié à temps plein et
+  les codes de conduite interdisent couramment d'utiliser l'affiliation à un employeur pour
+  promouvoir une activité externe. Le parcours décrit donc le **type** d'organisation
+  (« firme nationale de services aux régimes de retraite ») plutôt que sa raison sociale, et le
+  site renvoie à LinkedIn pour le détail nominatif — discrétion, pas dissimulation.
+- **Aucun détail de projet interne.** Volumes migrés, noms de programmes, acquisitions : rien de
+  tout cela n'appartient à Frédéric, et c'est assez précis pour identifier l'employeur même sans
+  le nommer. Ça vaut aussi pour les descriptions de prix et de distinctions.
+- **Ne pas révéler ses coûts d'intrant.** Un chiffre comme « 40 $ de calcul » devient l'ancrage de
+  prix du lecteur et sabote la soumission qui suivra. On compare au prix de l'alternative que le
+  client connaît, jamais à son propre coût de revient.
+- **Exactitude factuelle obligatoire.** Chiffres, certifications, dates et parcours viennent de son
+  CV. Toute modification doit être validée avec lui avant d'être publiée.
 
 ---
 
-## Commandes de développement
+## Identité visuelle — « le registre »
+
+L'univers du sujet est le carnet de commandes, le bon de travail, la feuille de route : ce que le
+produit remplace. La page en emprunte la grammaire.
+
+- **Grille réglée.** Des filets horizontaux séparent les rangées. **Aucune carte flottante, aucune
+  ombre portée, aucun dégradé, aucun coin très arrondi.**
+- **Numérotation en mono.** Chaque section porte un numéro (`01`…`06`) et une étiquette en
+  majuscules espacées, dans la colonne de gauche.
+- **Chiffres en tabulaire.** Classe `.tnum` partout où des nombres s'alignent.
+- **Un seul accent**, le minium `#b3401c` — rouge-orangé des structures d'acier. Il sert au numéro
+  de section, à un mot du titre, aux puces et au bouton principal. Nulle part ailleurs.
+- **Aucune photographie.** Les images de banque d'un centre de données ont été supprimées : elles
+  parlaient à un acheteur d'infonuagique, pas à un propriétaire d'atelier.
+
+### Typographie
+
+| Rôle | Fonte | Usage |
+|---|---|---|
+| Display | **Archivo** 500/600/700 | Titres, chiffres, boutons |
+| Corps | **Public Sans** 400/500/600 | Texte courant |
+| Mono | **IBM Plex Mono** 400/500 | Étiquettes, numéros, coordonnées, notes |
+
+Chargées depuis Google Fonts dans `BaseLayout.astro`.
+
+### Jetons de design
+
+`design-tokens.mjs` à la racine est la **source unique de vérité** pour les couleurs, les fontes et
+les rayons. C'est un préréglage Tailwind autonome, importé par `tailwind.config.mjs`.
+
+Il est volontairement sans dépendance au site : le jour où un portail client existe — probablement
+sur `portail.dramisinfo.com`, dans un dépôt distinct — il importe ce fichier et hérite de la même
+identité, sans duplication. **Modifie les couleurs ici, jamais dans les composants.**
+
+---
+
+## Structure
+
+```
+src/
+├── i18n/ui.ts              ← TOUT le contenu rédactionnel, fr + en
+├── layouts/
+│   ├── BaseLayout.astro    ← <head>, SEO, JSON-LD, révélation au défilement
+│   ├── Page.astro          ← assemblage de la page d'accueil
+│   └── Thanks.astro        ← page de confirmation du formulaire
+├── components/
+│   ├── SectionHead.astro   ← numéro + étiquette + titre + chapeau
+│   ├── Header · Hero · Problem · Build · Process · WhyNow · Profile · Contact · Footer
+│   └── Logo · LanguageSwitcher
+└── pages/
+    ├── index.astro         → /          (fr)
+    ├── merci/              → /merci/    (fr)
+    └── en/                 → /en/, /en/merci/
+```
+
+**Le contenu ne vit jamais dans les composants.** Toute chaîne de caractères visible se trouve dans
+`src/i18n/ui.ts`, sous `fr` puis `en`. Les deux objets doivent garder exactement la même forme —
+ajouter une clé d'un côté sans l'autre casse la compilation TypeScript.
+
+Ordre des sections : Hero → 01 Irritants → 02 Ce que je construis → 03 La démarche →
+04 Pourquoi maintenant (fond sombre) → 05 Profil → 06 Contact.
+
+---
+
+## Multilingue
+
+`astro.config.mjs` déclare `fr` (défaut, sans préfixe) et `en` (`/en/`). `netlify.toml` redirige les
+visiteurs anglophones de `/` vers `/en/` en lisant `Accept-Language` au niveau du CDN — sans
+JavaScript.
+
+Pour ajouter une langue : ajouter la clé dans `languages` et l'objet correspondant dans `ui`,
+ajouter le code dans `astro.config.mjs`, créer `src/pages/<code>/index.astro` et
+`src/pages/<code>/merci/index.astro` qui délèguent aux layouts partagés.
+
+Le français est la langue de référence. L'anglais existe pour ne pas servir de page périmée ; il
+mérite une relecture par un locuteur natif avant toute campagne.
+
+---
+
+## Formulaire de contact
+
+Netlify Forms, entièrement déclaratif : `data-netlify="true"` plus un honeypot `bot-field`.
+Aucune clé d'API, aucun service tiers. Le formulaire redirige vers `/merci/` (ou `/en/merci/`).
+
+Les soumissions arrivent dans le tableau de bord Netlify — **penser à y activer la notification par
+courriel**, sinon elles restent invisibles.
+
+## Coordonnées et moissonnage
+
+Le site est public : tout ce qui y figure en clair sera moissonné.
+
+- **Aucun numéro personnel, nulle part.** `coords.phone` est volontairement vide, ce qui masque le
+  téléphone partout (contact et pied de page, affichage conditionnel). Ne remplir ce champ que le
+  jour où une **ligne d'affaires distincte** existe — jamais le cellulaire personnel.
+- **Rien de sensible dans le JSON-LD.** Les données structurées sont conçues pour être lues par des
+  machines : y mettre un numéro, c'est le servir sur un plateau. La ville et la région restent, elles
+  servent le référencement local.
+- **Le courriel n'apparaît jamais en clair dans le HTML** : il est reconstruit côté client depuis les
+  attributs `data-eu` / `data-ed`. Ça arrête les moissonneurs simples, pas un navigateur sans
+  interface — c'est un ralentisseur, pas un mur.
+- Le formulaire reste le canal principal. Honeypot `bot-field` toujours actif.
+
+### reCAPTCHA
+
+Netlify le supporte **nativement** : ce n'est pas une option du tableau de bord mais deux attributs
+de balisage — `data-netlify-recaptcha="true"` sur le `<form>` et un `<div data-netlify-recaptcha="true">`
+à l'endroit du widget. Netlify injecte le script au déploiement et valide la réponse côté serveur.
+Ses propres clés servent par défaut ; pour en fournir d'autres, définir `SITE_RECAPTCHA_KEY` et
+`SITE_RECAPTCHA_SECRET`.
+
+Une bascule `RECAPTCHA` en haut de `Contact.astro` l'active ou le désactive. **Elle est à `false`.**
+
+Raison : à ce stade, une soumission perdue coûte infiniment plus cher qu'un pourriel à supprimer.
+Chaque formulaire rempli peut valoir un mandat de plusieurs milliers de dollars ; le honeypot
+arrête déjà les robots simples. On active reCAPTCHA le jour où le pourriel devient réellement
+gênant — pas avant. Note : le widget ne s'affiche pas en développement local, seulement une fois
+déployé sur Netlify.
+
+---
+
+## Blogue
+
+Un fichier Markdown dans `src/content/blog/` = un article. Le nom du fichier devient l'adresse.
+Schéma et règles dans `src/content.config.ts` ; gabarit commenté dans `gabarit.md`.
+
+Les articles **ne sont pas appariés** entre les langues : chacun déclare son `lang` et
+n'apparaît que dans l'index de cette langue. Traduire est un choix, jamais une obligation.
+
+Le lien « Écrits » du menu n'apparaît que s'il existe au moins un article publié — une
+étagère vide fait plus de tort que pas d'étagère du tout.
+
+### Piège : le HTML brut dans le Markdown
+
+**Une ligne vide à l'intérieur d'un bloc HTML referme ce bloc.** Un SVG écrit sur plusieurs
+lignes aérées se retrouve donc tronqué : la balise fermante est insérée à la première ligne
+vide, et tout le reste s'affiche en texte brut sous une boîte vide.
+
+Tout bloc `<figure>`, `<svg>` ou autre HTML brut doit être **contigu, sans aucune ligne
+vide**, du premier au dernier caractère. Après coup, vérifier dans le HTML généré que
+`</svg>` se trouve bien après ses enfants et non avant.
+
+### Illustrations
+
+Pas de photos de banque. Les visuels sont des **SVG dessinés à la main**, avec les couleurs
+des jetons de design : ils portent de l'information plutôt que de meubler, et ils restent
+dans l'identité du registre. Une illustration donne le ton, un schéma explique un
+mécanisme — ce ne sont pas les mêmes outils.
+
+Pour ajouter une vraie image : la déposer dans `public/images/blog/` et l'appeler en
+Markdown. Le style `.prose img` lui donne la pleine largeur et un filet.
+
+## Commandes
 
 ```bash
-npm install          # Installer les dépendances
-npm run dev          # Serveur de développement (http://localhost:4321)
-npm run build        # Build de production
-npm run preview      # Prévisualiser le build
-npm run lint         # Vérification TypeScript (tsc --noEmit)
-npm run favicons     # Régénérer les PNG de favicon depuis public/favicon.svg
+npm install
+npm run dev       # http://localhost:4321
+npm run build
+npm run preview
+npm run lint      # tsc --noEmit
+npm run favicons  # régénère les PNG depuis public/favicon.svg
+npm run og        # régénère l'image de partage social (1200×630)
 ```
 
 ---
 
-## Structure du projet
+## Avant de publier
 
-```
-/
-├── public/
-│   ├── favicon.svg          # Source favicon (SVG)
-│   └── logo.svg             # Logo lockup complet
-├── scripts/
-│   └── generate-favicons.mjs
-├── src/
-│   ├── components/          # Composants Astro (Header, Footer, sections de la page d'accueil)
-│   ├── i18n/ui.ts           # Dictionnaire de traductions FR/EN
-│   ├── layouts/BaseLayout.astro
-│   ├── pages/               # Routes Astro (index, en/)
-│   └── styles/global.css    # CSS global (animations)
-├── astro.config.mjs         # i18n : FR par défaut, EN sous /en/
-├── netlify.toml             # Build + redirect langue (Accept-Language: en → /en/)
-└── tailwind.config.mjs      # Palette navy (structure) + brand/laiton (accent) + warm/sable (neutres chauds)
-```
-
----
-
-## Logo et favicon
-
-**Logo de l'en-tête** : `public/logo.svg` — la marque DramisInfo est conservée.
-- Format SVG, lockup horizontal, fond transparent, lisible sur fond clair
-- Affiché à 32 px de haut (`src/components/Logo.astro`)
-
-**Favicon** : remplacer `public/favicon.svg` puis :
-
-```bash
-npm run favicons
-```
-
-Génère : `favicon-16/32.png`, `apple-touch-icon.png` (180×180), `icon-192/512.png`.
-
----
-
-## Sections de la page d'accueil
-
-Ordre actuel : Hero (avec photo) → Profil (About, avec bandeau photo) → Services (Services.astro, 6 offres de mandat avec photo + livrables) → Comment je m'intègre à un mandat (HowItWorks, fond photo assombri) → Domaines d'expérience (AdoptionFramework, grille statique non chronologique) → Réalisations clés (UseCases) → Certifications & reconnaissances → Contact.
-
-Tout le contenu passe par `src/i18n/ui.ts` (voir section i18n ci-dessous). Les noms de fichiers de composants reflètent encore leur rôle d'origine (ex. `UseCases.astro` affiche les réalisations, `AdoptionFramework.astro` affiche le parcours professionnel) — le contenu et les identifiants d'ancrage (`#apropos`, `#services`, `#demarche`, `#parcours`, `#realisations`, `#certifications`, `#contact`) sont à jour.
-
-Toute donnée factuelle (dates, titres de poste, employeurs, certifications, réalisations chiffrées) doit rester fidèle au CV de Frédéric — ne pas inventer ou arrondir des chiffres.
-
-### Ton du contenu : offre de service, pas biographie
-
-Le site présente une offre de service, pas un CV en ligne. Conventions à respecter dans toute nouvelle rédaction :
-- **Éviter le « je »/« mon »** dans les titres et descriptions — préférer des formulations factuelles/nominales (« Livraison de… », « Architecture de… ») plutôt que narratives (« J'aide… », « Je livre… »). Le nom de Frédéric n'apparaît jamais dans le contenu du site (uniquement dans les métadonnées/schéma structuré) — c'est voulu.
-- **Pas de chronologie d'emploi** : la section « Parcours professionnel » (`AdoptionFramework.astro`, ui.framework.domains) présente des **domaines d'expérience non chronologiques**, sans nom d'employeur ni dates — volontairement, pour éviter l'effet CV. Les dates/employeurs précis restent une source interne (le CV), pas un contenu affiché.
-- Les sections Services, Réalisations et Certifications restent factuelles et orientées livrable — c'est le ton à reproduire pour tout nouveau contenu.
-
-### Section Services (offre de mandat)
-
-`ui.services.items` structure chaque service en `{ title, description, image, deliverables[] }` — un service = un mandat concret avec livrables, pas une simple compétence. En ajouter/modifier un : garder les 3 livrables courts et vérifiables, choisir une image cohérente avec le sujet (voir ci-dessous).
-
-### Photographie
-
-Le site utilise des photos libres de droit (licence Unsplash — usage commercial libre, aucune attribution requise) dans `public/images/` : `hero-datacenter.jpg`, `about-datacenter.jpg`, `section-network.jpg` (fond de la section « Comment je m'intègre »), et une par offre de service (`service-*.jpg`). Aucune photo personnelle de Frédéric n'est utilisée. Pour changer une image : trouver un remplacement libre de droit de thème et de teinte cohérents (dominante navy/sable de préférence), télécharger dans `public/images/` et mettre à jour la référence dans `ui.ts` ou le composant. Garder le reste du site (Parcours, Réalisations, Certifications, Contact) sans photo supplémentaire pour éviter la surcharge visuelle.
-
----
-
-## Sécurité du formulaire & courriel
-
-Le formulaire de contact (`src/components/Contact.astro`) est protégé en couches :
-- **Honeypot** (`bot-field`) — champ caché que seuls les robots remplissent
-- **Akismet** — filtrage anti-spam automatique de Netlify (aucune config)
-- **reCAPTCHA** — `data-netlify-recaptcha` + le `<div data-netlify-recaptcha>` ;
-  Netlify injecte le widget au déploiement (clés gérées par Netlify)
-
-Le **courriel** n'apparaît jamais en clair dans le HTML : il est stocké en deux
-attributs (`data-eu`, `data-ed`) et reconstruit côté navigateur par un petit script.
-Adresse actuelle : `fsimard@dramisinfo.com`. Pour la changer, modifier ces attributs dans `Contact.astro`.
-
-**Configuration Netlify requise après déploiement :**
-1. Forms → Enable form detection
-2. Trigger deploy → Clear cache and deploy site
-3. Configuration → Notifications → Form submission notifications → `fsimard@dramisinfo.com`
-4. Forms → Spam filters → Activer reCAPTCHA 2
-
-> Le reCAPTCHA ne s'affiche qu'une fois déployé sur Netlify (pas en `npm run dev`).
-
----
-
-## Netlify
-
-```toml
-[build]
-  command = "npm run build"
-  publish = "dist"
-```
-
-- **Détection de langue** : `netlify.toml` redirige `Accept-Language: en` vers `/en/` (règle avant le catch-all).
-- Variables d'environnement sensibles : dashboard Netlify uniquement, jamais dans le repo.
-
----
-
-## Conventions de code
-
-- **TypeScript strict** — pas de `any` implicite
-- **Composants Astro** pour tout ce qui est UI (`.astro`)
-- **Tailwind utility-first** — éviter le CSS custom sauf pour les animations complexes
-- Pas de commentaires sauf pour les contraintes non évidentes
-- Commits en français, messages clairs et descriptifs
-- Branche de développement active → merge vers `main` déclenche le déploiement Netlify
-
----
-
-## Design & identité visuelle
-
-- **Palette** : navy (`navy`, structure — en-tête, pied de page, sections sombres) + laiton (`brand`, #8a6a14, accent — boutons, liens, icônes) + sable (`warm`, neutres chauds — texte courant, fonds, bordures)
-- **Typographie** : Inter (Google Fonts), weights 400/500/600/700
-- **Ton visuel** : professionnel, sobre, crédible — pas de couleurs criardes, pas d'effets tape-à-l'œil
-- **Animations** : subtiles, fonctionnelles (révèlent du contenu), toujours avec `prefers-reduced-motion`
-- **Icônes** : SVG maison, style trait 1.5 px + accent teal signature (`src/components/Icon.astro`)
-
----
-
-## Qualité
-
-- **Accessibilité** : `alt` sur toutes les images, structure HTML sémantique, contraste WCAG AA
-- **Performance** : images optimisées, lazy loading, bundle minimal (pas de dépendances inutiles)
-- **SEO** : balises meta, `og:tags`, `hreflang`, `canonical` sur chaque page, schéma `Person` JSON-LD dans `BaseLayout.astro`
-- **i18n** : toute chaîne visible doit passer par `src/i18n/ui.ts` — aucun texte en dur dans les composants
+- `npm run lint` et `npm run build` passent.
+- Aucun défilement horizontal à 375 px de large.
+- Les chiffres avancés sont exacts et vérifiables.
+- Aucun mot de la liste de jargon interdite n'est réapparu.
+- L'employeur actuel n'est pas nommé.

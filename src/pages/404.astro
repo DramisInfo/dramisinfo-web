@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+<BaseLayout
+  lang="fr"
+  title="Page introuvable — DramisInfo"
+  description="Cette page n'existe pas. / This page does not exist."
+>
+  <Header lang="fr" />
+  <main id="main" class="page flex min-h-[62vh] items-center py-24">
+    <div class="max-w-prose">
+      <p class="font-mono text-[11px] uppercase tracking-label text-accent tnum">404</p>
+
+      <h1 class="mt-4 text-[36px] leading-tight sm:text-[44px]">Cette page n'existe pas.</h1>
+      <p class="mt-4 text-[17px] leading-relaxed text-ink-2">
+        Le lien est peut-être périmé. Le reste du site se trouve à l'accueil.
+      </p>
+
+      <p class="mt-10 border-t border-rule pt-8 font-display text-[22px] font-semibold">This page does not exist.</p>
+      <p class="mt-3 text-[17px] leading-relaxed text-ink-2">
+        The link may be out of date. Everything else is on the home page.
+      </p>
+
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+        <a href="/" class="btn-ghost">Retour à l'accueil</a>
+        <a href="/en/" class="btn-ghost">Back to home</a>
+      </div>
+    </div>
+  </main>
+  <Footer lang="fr" />
+</BaseLayout>

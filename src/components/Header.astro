@@ -1,59 +1,45 @@
 ---
-import LanguageSwitcher from './LanguageSwitcher.astro';
 import Logo from './Logo.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
 import { ui, type Lang } from '@/i18n/ui';
+import { getPosts } from '@/lib/blog';
 
-interface Props {
-  lang: Lang;
-}
+interface Props { lang: Lang }
 const { lang } = Astro.props;
-const t = ui[lang];
+const t = ui[lang].nav;
+const b = ui[lang].blog;
 const home = lang === 'fr' ? '/' : '/en/';
 
-const navLinks = [
-  { label: t.nav.about, href: `${home}#apropos` },
-  { label: t.nav.services, href: `${home}#services` },
-  { label: t.nav.parcours, href: `${home}#parcours` },
-  { label: t.nav.realisations, href: `${home}#realisations` },
-  { label: t.nav.certifications, href: `${home}#certifications` },
-];
+// Le lien vers le blogue n'apparaît que s'il y a quelque chose à lire :
+// une étagère vide fait plus de tort que pas d'étagère du tout.
+const posts = await getPosts(lang);
+const blogHref = lang === 'fr' ? '/blogue/' : '/en/blog/';
+const navLinks = posts.length
+  ? [...t.items, { label: b.nav, href: blogHref }]
+  : [...t.items];
 ---
-<header data-header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-warm-200 transition-shadow duration-300">
-  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href={home} class="flex items-center transition-transform hover:scale-[1.03]" aria-label="DramisInfo">
-      <Logo class="h-8 w-auto" />
+<header data-header class="sticky top-0 z-50 border-b border-rule bg-paper/95 backdrop-blur">
+  <div class="page flex h-16 items-center justify-between gap-6">
+    <a href={home} class="shrink-0" aria-label="DramisInfo">
+      <Logo class="text-[19px]" />
     </a>
-    <nav class="hidden lg:flex items-center gap-6">
-      {navLinks.map(link => (
+
+    <nav class="hidden items-center gap-7 lg:flex" aria-label={t.menu}>
+      {navLinks.map((item) => (
         <a
-          href={link.href}
-          class="relative text-warm-600 hover:text-warm-900 text-sm font-medium transition-colors after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:rounded-full after:bg-brand-500 after:transition-all hover:after:w-full"
+          href={item.href.startsWith('#') ? `${home}${item.href}` : item.href}
+          class="font-display text-[14px] font-medium text-ink-3 transition-colors hover:text-ink"
         >
-          {link.label}
+          {item.label}
         </a>
       ))}
     </nav>
+
     <div class="flex items-center gap-5">
       <LanguageSwitcher lang={lang} />
-      <a
-        href="#contact"
-        class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-md whitespace-nowrap"
-      >
-        <span class="sm:hidden">{t.nav.ctaShort}</span>
-        <span class="hidden sm:inline">{t.nav.cta}</span>
+      <a href={`${home}#contact`} class="bg-accent px-4 py-2 font-display text-[14px] font-semibold text-white transition-colors hover:bg-accent-deep">
+        {t.cta}
       </a>
     </div>
   </div>
 </header>
-
-<script>
-  function initHeaderShadow() {
-    const header = document.querySelector('[data-header]');
-    if (!header) return;
-    const onScroll = () => header.classList.toggle('shadow-sm', window.scrollY > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
-  initHeaderShadow();
-  document.addEventListener('astro:page-load', initHeaderShadow);
-</script>
