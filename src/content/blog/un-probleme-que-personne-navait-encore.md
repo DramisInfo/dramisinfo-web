@@ -41,7 +41,7 @@ Le vendredi 2 août 2024, entre 20 h et 21 h, j'ai poussé vingt-huit fois le m�
 <text x="30" y="422" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:59</text><text x="118" y="422" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">4</text>
 <text x="30" y="441" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:02</text><text x="118" y="441" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">10</text>
 <line x1="30" y1="462" x2="670" y2="462" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="488" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Dix-huit des vingt-huit essais, et ce que chacun changeait.</text>
+<text x="30" y="488" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Une demi-heure à bâtir le gabarit. Une demi-heure à chercher jusqu'où il tient.</text>
 </svg>
 </div>
 </figure>
