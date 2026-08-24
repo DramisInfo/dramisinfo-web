@@ -13,9 +13,18 @@ export async function getPosts(lang: Lang): Promise<CollectionEntry<'blog'>[]> {
   return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 
-/** Estimation à 200 mots/minute, arrondie vers le haut. */
+/**
+ * Estimation à 200 mots/minute, arrondie vers le haut.
+ *
+ * Le corps brut contient les figures SVG dessinées à la main : sans les retirer,
+ * chaque coordonnée et chaque nom de couleur compte pour un mot et l'estimation
+ * double. On ne mesure que la prose.
+ */
 export function readingTime(body: string | undefined): number {
-  const words = (body ?? '').trim().split(/\s+/).filter(Boolean).length;
+  const prose = (body ?? '')
+    .replace(/<figure[\s\S]*?<\/figure>/g, '')
+    .replace(/<[^>]+>/g, ' ');
+  const words = prose.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(words / 200));
 }
 
