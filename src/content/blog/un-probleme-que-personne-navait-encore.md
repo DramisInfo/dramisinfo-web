@@ -14,9 +14,9 @@ Le vendredi 2 août 2024, entre 20 h et 21 h, j'ai poussé vingt-huit fois le m�
 
 <figure>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-<svg viewBox="0 0 700 466" role="img" aria-labelledby="ttl-log desc-log" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
+<svg viewBox="0 0 700 409" role="img" aria-labelledby="ttl-log desc-log" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
 <title id="ttl-log">Journal des essais du vendredi 2 août 2024, de 20 h 02 à 21 h 02</title>
-<desc id="desc-log">Dix-huit des vingt-huit essais poussés en une heure. Les messages passent de descriptions courtes à des lettres tapées au hasard, puis à de simples nombres : 1, 4, 10, 20, 4, 0, 10.</desc>
+<desc id="desc-log">Quinze des vingt-huit essais poussés en une heure. Les messages passent de courtes descriptions à de simples nombres : 1, 4, 10, 20, 4, 0, 10.</desc>
 <text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#5a6068">JOURNAL DES ESSAIS</text>
 <text x="670" y="30" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#8b9098">VENDREDI 2 AOÛT 2024</text>
 <line x1="30" y1="44" x2="670" y2="44" stroke="#14161a" stroke-width="1.5"/>
@@ -25,21 +25,18 @@ Le vendredi 2 août 2024, entre 20 h et 21 h, j'ai poussé vingt-huit fois le m�
 <text x="30" y="108" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:10</text><text x="118" y="108" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">use module</text>
 <text x="30" y="127" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:17</text><text x="118" y="127" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">fix module</text>
 <text x="30" y="146" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:19</text><text x="118" y="146" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">scale up</text>
-<text x="30" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:20</text><text x="118" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">laskjdlkfj</text>
-<text x="30" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:27</text><text x="118" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">fix vmid conflict</text>
-<text x="30" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:29</text><text x="118" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">destroy</text>
-<text x="30" y="222" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:35</text><text x="118" y="222" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">create 6 vm</text>
-<text x="30" y="241" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:38</text><text x="118" y="241" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">lskjdf</text>
-<text x="30" y="260" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:46</text><text x="118" y="260" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">1</text>
-<text x="30" y="279" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:47</text><text x="118" y="279" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">4</text>
-<text x="30" y="298" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:49</text><text x="118" y="298" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">aslkdjf</text>
-<text x="30" y="317" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:51</text><text x="118" y="317" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">10</text>
-<text x="30" y="336" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:54</text><text x="118" y="336" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">20</text>
-<text x="30" y="355" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:59</text><text x="118" y="355" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">4</text>
-<text x="30" y="374" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:01</text><text x="118" y="374" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">0</text>
-<text x="30" y="393" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:02</text><text x="118" y="393" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">10</text>
-<line x1="30" y1="414" x2="670" y2="414" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="440" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Dix-huit des vingt-huit essais de cette heure-là.</text>
+<text x="30" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:27</text><text x="118" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">fix vmid conflict</text>
+<text x="30" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:29</text><text x="118" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">destroy</text>
+<text x="30" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:35</text><text x="118" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">create 6 vm</text>
+<text x="30" y="222" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:46</text><text x="118" y="222" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">1</text>
+<text x="30" y="241" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:47</text><text x="118" y="241" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">4</text>
+<text x="30" y="260" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:51</text><text x="118" y="260" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">10</text>
+<text x="30" y="279" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:54</text><text x="118" y="279" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">20</text>
+<text x="30" y="298" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:59</text><text x="118" y="298" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">4</text>
+<text x="30" y="317" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:01</text><text x="118" y="317" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">0</text>
+<text x="30" y="336" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:02</text><text x="118" y="336" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">10</text>
+<line x1="30" y1="357" x2="670" y2="357" stroke="#14161a" stroke-width="1.5"/>
+<text x="30" y="383" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Quinze des vingt-huit essais de cette heure-là.</text>
 </svg>
 </div>
 </figure>
@@ -48,8 +45,10 @@ Regardez les derniers messages. Ce sont des nombres.
 
 Je tournais un bouton. Je changeais une valeur, je poussais, j'attendais deux minutes, je
 regardais si ça passait, je changeais encore. Un, quatre, dix, vingt, quatre, zéro, dix.
-Entre les deux, `aslkdjf` — le clavier tapé du plat de la main, parce que le message ne
-servait à rien. Seul le fait de pousser déclenchait l'essai suivant.
+
+Les treize essais que j'ai retirés du tableau ne valent pas mieux : plusieurs n'ont pour
+étiquette que des lettres tapées au hasard. Le texte ne servait à rien — seul le fait de
+pousser déclenchait l'essai suivant.
 
 Personne ne m'avait demandé de faire ça. Je n'avais pas de client. J'avais trois petits
 ordinateurs dans mon sous-sol, de la taille d'un livre, et une idée fixe : je voulais que
@@ -88,7 +87,7 @@ remet en place tout seul si quelqu'un dévie.
 
 À 13 h 42 le même jour, j'ai créé le dépôt qui contient cette description.
 
-Cinq jours et dix-sept heures après `aslkdjf`.
+Cinq jours et dix-sept heures après ce vendredi soir.
 
 C'est la seule partie de cette histoire qui est allée vite. Le reste a pris deux ans.
 
