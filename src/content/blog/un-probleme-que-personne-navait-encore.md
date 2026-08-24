@@ -190,8 +190,9 @@ précis**, et son absence se paie ailleurs. On peut maintenant produire en une f
 semaine plus de logiciel qu'on ne peut en héberger, en sécuriser et en entretenir dans une
 année.
 
-Le goulot d'étranglement n'a pas glissé d'un cran. Il s'est dédoublé. En amont : savoir ce
-qui mérite d'exister. En aval : être capable de le faire vivre.
+J'ai déjà écrit que le goulot d'étranglement avait changé de place. C'était vrai à moitié.
+Il ne s'est pas déplacé — il s'est dédoublé. En amont : savoir ce qui mérite d'exister. En
+aval : être capable de le faire vivre.
 
 Le laboratoire règle l'aval. Les seize jours d'août m'ont enseigné l'amont, à mes dépens.
 

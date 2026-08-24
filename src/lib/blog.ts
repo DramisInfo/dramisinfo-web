@@ -28,10 +28,18 @@ export function readingTime(body: string | undefined): number {
   return Math.max(1, Math.ceil(words / 200));
 }
 
+/**
+ * `pubDate: 2026-08-24` est une date de calendrier, pas un instant : Zod la lit
+ * comme minuit UTC. Sans `timeZone: 'UTC'`, elle se formate dans le fuseau de la
+ * machine qui construit le site — au Québec (UTC-4), tout le blogue reculait
+ * d'une journée. Netlify construit en UTC, alors la production était juste et le
+ * défaut ne se voyait qu'en local.
+ */
 export function formatDate(d: Date, lang: Lang): string {
   return new Intl.DateTimeFormat(lang === 'fr' ? 'fr-CA' : 'en-CA', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   }).format(d);
 }
