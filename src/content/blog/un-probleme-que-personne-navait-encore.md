@@ -14,45 +14,56 @@ Le vendredi 2 août 2024, entre 20 h et 21 h, j'ai poussé vingt-huit fois le m�
 
 <figure>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-<svg viewBox="0 0 700 409" role="img" aria-labelledby="ttl-log desc-log" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
-<title id="ttl-log">Journal des essais du vendredi 2 août 2024, de 20 h 02 à 21 h 02</title>
-<desc id="desc-log">Quinze des vingt-huit essais poussés en une heure. Les messages passent de courtes descriptions à de simples nombres : 1, 4, 10, 20, 4, 0, 10.</desc>
-<text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#5a6068">JOURNAL DES ESSAIS</text>
+<svg viewBox="0 0 700 514" role="img" aria-labelledby="ttl-log desc-log" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
+<title id="ttl-log">Ce que changeait chacun des essais du vendredi 2 août 2024, de 20 h 02 à 21 h 02</title>
+<desc id="desc-log">Première demi-heure : une machine écrite à la main devient un gabarit paramétrable capable de se répéter. Seconde demi-heure : recherche du nombre maximal de machines créées d'un seul coup, de 6 à 20, avec une réduction de la mémoire par machine de 4 Go à 1 Go pour y arriver.</desc>
+<text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#5a6068">CE QUE CHAQUE ESSAI CHANGEAIT</text>
 <text x="670" y="30" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#8b9098">VENDREDI 2 AOÛT 2024</text>
 <line x1="30" y1="44" x2="670" y2="44" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="70" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:02</text><text x="118" y="70" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">add cloud-init</text>
-<text x="30" y="89" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:08</text><text x="118" y="89" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">add provider</text>
-<text x="30" y="108" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:10</text><text x="118" y="108" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">use module</text>
-<text x="30" y="127" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:17</text><text x="118" y="127" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">fix module</text>
-<text x="30" y="146" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:19</text><text x="118" y="146" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">scale up</text>
-<text x="30" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:27</text><text x="118" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">fix vmid conflict</text>
-<text x="30" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:29</text><text x="118" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">destroy</text>
-<text x="30" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:35</text><text x="118" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">create 6 vm</text>
-<text x="30" y="222" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:46</text><text x="118" y="222" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">1</text>
-<text x="30" y="241" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:47</text><text x="118" y="241" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">4</text>
-<text x="30" y="260" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:51</text><text x="118" y="260" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">10</text>
-<text x="30" y="279" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:54</text><text x="118" y="279" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">20</text>
-<text x="30" y="298" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:59</text><text x="118" y="298" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">4</text>
-<text x="30" y="317" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:01</text><text x="118" y="317" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">0</text>
-<text x="30" y="336" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:02</text><text x="118" y="336" font-family="ui-monospace,monospace" font-size="13" fill="#b3401c">10</text>
-<line x1="30" y1="357" x2="670" y2="357" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="383" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Quinze des vingt-huit essais de cette heure-là.</text>
+<text x="30" y="70" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:02</text><text x="118" y="70" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">Un disque écrit à la main dans le fichier</text>
+<text x="30" y="89" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:03</text><text x="118" y="89" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">Ce n'était pas un disque : un lecteur d'amorçage</text>
+<text x="30" y="108" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:06</text><text x="118" y="108" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">La machine sort du fichier et devient un gabarit</text>
+<text x="30" y="127" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:14</text><text x="118" y="127" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">Chaque valeur figée devient un paramètre</text>
+<text x="30" y="146" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:17</text><text x="118" y="146" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">Une faute de frappe dans un nom de paramètre</text>
+<text x="30" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:22</text><text x="118" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">Le gabarit apprend à se répéter</text>
+<text x="30" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:27</text><text x="118" y="184" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">Chaque copie reçoit un identifiant unique</text>
+<text x="30" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:29</text><text x="118" y="203" font-family="ui-monospace,monospace" font-size="13" fill="#5a6068">Tout est détruit</text>
+<line x1="30" y1="220" x2="670" y2="220" stroke="#e7e4dd" stroke-width="1"/>
+<text x="30" y="244" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#b3401c">COMBIEN DE MACHINES D'UN SEUL COUP ?</text>
+<text x="30" y="270" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:35</text><text x="118" y="270" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">6</text>
+<text x="30" y="289" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:38</text><text x="118" y="289" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">0</text>
+<text x="30" y="308" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:39</text><text x="118" y="308" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">3</text>
+<text x="30" y="327" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:46</text><text x="118" y="327" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">1</text>
+<text x="30" y="346" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:47</text><text x="118" y="346" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">4</text>
+<text x="30" y="365" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:49</text><text x="118" y="365" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">mémoire par machine : 4 Go &#8594; 1 Go</text>
+<text x="30" y="384" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:51</text><text x="118" y="384" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">10</text>
+<text x="30" y="403" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:54</text><text x="118" y="403" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="700" font-size="19" fill="#b3401c" style="font-variant-numeric:tabular-nums">20</text>
+<text x="30" y="422" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">20:59</text><text x="118" y="422" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">4</text>
+<text x="30" y="441" font-family="ui-monospace,monospace" font-size="13" fill="#8b9098">21:02</text><text x="118" y="441" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="15" fill="#b3401c" style="font-variant-numeric:tabular-nums">10</text>
+<line x1="30" y1="462" x2="670" y2="462" stroke="#14161a" stroke-width="1.5"/>
+<text x="30" y="488" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Dix-huit des vingt-huit essais, et ce que chacun changeait.</text>
 </svg>
 </div>
 </figure>
 
-Regardez les derniers messages. Ce sont des nombres.
+Cette heure-là contient deux histoires.
 
-Je tournais un bouton. Je changeais une valeur, je poussais, j'attendais deux minutes, je
-regardais si ça passait, je changeais encore. Un, quatre, dix, vingt, quatre, zéro, dix.
+Dans la première demi-heure, une machine que j'avais décrite à la main devient un gabarit.
+Je sors sa description du fichier principal, je remplace chaque valeur figée par un
+paramètre, puis j'apprends au gabarit à se répéter. À 20 h 27, je répare le problème que
+cette répétition venait de créer : deux machines nées avec le même identifiant. À 20 h 29,
+je détruis tout.
 
-Les treize essais que j'ai retirés du tableau ne valent pas mieux : plusieurs n'ont pour
-étiquette que des lettres tapées au hasard. Le texte ne servait à rien — seul le fait de
-pousser déclenchait l'essai suivant.
+Dans la seconde, je cherche le plafond. Six machines d'un coup. Zéro. Trois. Une. Quatre.
+À 20 h 49, je réduis la mémoire de chacune de quatre gigaoctets à un seul — c'est ce qui me
+permet de monter plus haut. Dix. Vingt. Puis je redescends à quatre, et je m'arrête à dix.
 
-Personne ne m'avait demandé de faire ça. Je n'avais pas de client. J'avais trois petits
-ordinateurs dans mon sous-sol, de la taille d'un livre, et une idée fixe : je voulais que
-des serveurs se construisent tout seuls.
+Vingt machines virtuelles sur trois ordinateurs de la taille d'un livre. Je ne cherchais
+pas à en faire vingt : je cherchais à savoir où ça cassait.
+
+Personne ne m'avait demandé ça. Je n'avais pas de client. J'avais trois petits ordinateurs
+dans mon sous-sol et une idée fixe : je voulais que des serveurs se construisent tout
+seuls, sans moi.
 
 À minuit j'y étais encore. Je me suis relevé à quatre heures.
 
