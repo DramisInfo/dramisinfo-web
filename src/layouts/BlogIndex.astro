@@ -12,6 +12,12 @@ const b = t.blog;
 const posts = await getPosts(lang);
 const base = lang === 'fr' ? '/blogue/' : '/en/blog/';
 const rss = lang === 'fr' ? '/rss.xml' : '/en/rss.xml';
+
+// L'index est trié du plus récent au plus ancien — ce que tout lecteur attend.
+// Mais l'ordre de parution n'est pas toujours l'ordre du récit : on peut donc
+// désigner un point d'entrée. Résolu contre les articles réellement publiés,
+// pour qu'un identifiant périmé ne laisse jamais un lien mort.
+const startHere = b.startHereId ? posts.find((p) => p.id === b.startHereId) : undefined;
 ---
 <BaseLayout lang={lang} title={b.metaTitle} description={b.metaDescription}>
   <Header lang={lang} />
@@ -26,7 +32,18 @@ const rss = lang === 'fr' ? '/rss.xml' : '/en/rss.xml';
         <div>
           <h1 class="text-[38px] leading-[1.1] sm:text-[50px]">{b.title}</h1>
           <p class="mt-6 max-w-prose text-[17.5px] leading-relaxed text-ink-2">{b.lead}</p>
-          <a href={rss} class="mt-6 inline-block font-mono text-[12px] uppercase tracking-label text-accent hover:text-accent-deep">
+          {startHere && (
+            <p class="mt-7 max-w-prose border-l-2 border-accent pl-4 text-[15px] leading-relaxed text-ink-3">
+              {b.startHere}{' '}
+              <a
+                href={`${base}${startHere.id}/`}
+                class="text-accent underline decoration-accent/40 underline-offset-4 hover:text-accent-deep hover:decoration-accent"
+              >
+                {startHere.data.title}
+              </a>
+            </p>
+          )}
+          <a href={rss} class="mt-7 inline-block font-mono text-[12px] uppercase tracking-label text-accent hover:text-accent-deep">
             {b.rss}
           </a>
         </div>

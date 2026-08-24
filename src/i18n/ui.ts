@@ -252,6 +252,11 @@ export const ui = {
       updated: 'Mis à jour le',
       readingTime: 'min de lecture',
       rss: 'Fil RSS',
+      // Chemin de lecture : l'ordre de parution n'est pas l'ordre du récit.
+      // Le laboratoire précède Agent Bus dans le temps réel du travail, alors
+      // qu'il paraît après. Vide = aucun encadré affiché.
+      startHereId: 'un-probleme-que-personne-navait-encore',
+      startHere: 'Si vous arrivez ici pour la première fois, commencez par celui-ci :',
     },
 
     footer: {
@@ -434,6 +439,8 @@ export const ui = {
       updated: 'Updated',
       readingTime: 'min read',
       rss: 'RSS feed',
+      startHereId: '',
+      startHere: 'New here? Start with this one:',
     },
 
     footer: {
