@@ -48,18 +48,12 @@ Le vendredi 2 août 2024, entre 20 h et 21 h, j'ai poussé vingt-huit fois le m�
 
 Cette heure-là contient deux histoires.
 
-Dans la première demi-heure, une machine que j'avais décrite à la main devient un gabarit.
-Je sors sa description du fichier principal, je remplace chaque valeur figée par un
-paramètre, puis j'apprends au gabarit à se répéter. À 20 h 27, je répare le problème que
-cette répétition venait de créer : deux machines nées avec le même identifiant. À 20 h 29,
-je détruis tout.
+Dans la première demi-heure, j'apprends à un serveur à se recopier lui-même. Dans la
+seconde, je cherche combien de copies mes trois boîtiers peuvent porter avant de plier.
+Six. Puis dix. Puis vingt.
 
-Dans la seconde, je cherche le plafond. Six machines d'un coup. Zéro. Trois. Une. Quatre.
-À 20 h 49, je réduis la mémoire de chacune de quatre gigaoctets à un seul — c'est ce qui me
-permet de monter plus haut. Dix. Vingt. Puis je redescends à quatre, et je m'arrête à dix.
-
-Vingt machines virtuelles sur trois ordinateurs de la taille d'un livre. Je ne cherchais
-pas à en faire vingt : je cherchais à savoir où ça cassait.
+Vingt serveurs sur trois ordinateurs de la taille d'un livre. Je ne cherchais pas à en
+faire vingt — je cherchais à savoir où ça cassait.
 
 Personne ne m'avait demandé ça. Je n'avais pas de client. J'avais trois petits ordinateurs
 dans mon sous-sol et une idée fixe : je voulais que des serveurs se construisent tout
@@ -67,7 +61,7 @@ seuls, sans moi.
 
 À minuit j'y étais encore. Je me suis relevé à quatre heures.
 
-## Ce que je cherchais, en français
+## Les deux factures
 
 Quand une entreprise fait développer un logiciel, il y a deux factures. Il y a le
 logiciel — et il y a l'endroit où il vit.
@@ -86,17 +80,16 @@ deuxième facture.
 
 ## Cinq jours
 
-Le mardi 6 août à 14 h 58, la chaîne a fonctionné pour la première fois. Trois grappes de
-serveurs se sont construites d'affilée, sans que je touche à rien.
+Le mardi 6 août à 14 h 58, ça a marché pour la première fois. Trois ensembles de serveurs
+se sont construits d'affilée, sans que je touche à rien.
 
-Le mercredi matin, j'étais debout à cinq heures. Entre 5 h 09 et 7 h 44, la machine s'est
-reconstruite une trentaine de fois pendant que je déjeunais.
+Le mercredi matin, j'étais debout à cinq heures. Entre 5 h 09 et 7 h 44, tout s'est
+reconstruit une trentaine de fois pendant que je déjeunais.
 
-Le midi, entre 12 h 27 et 12 h 32 — cinq minutes — j'ai installé le mécanisme qui va
-chercher, dans un dépôt de code, la description de ce qu'un serveur doit devenir, et qui la
-remet en place tout seul si quelqu'un dévie.
+À midi, j'ai ajouté la pièce qui manquait : un surveillant qui compare en permanence ce qui
+tourne à ce qui devrait tourner, et qui corrige l'écart sans me demander la permission.
 
-À 13 h 42 le même jour, j'ai créé le dépôt qui contient cette description.
+À 13 h 42, j'ai écrit noir sur blanc ce que « devrait tourner » voulait dire.
 
 Cinq jours et dix-sept heures après ce vendredi soir.
 
@@ -235,8 +228,8 @@ cents fois en deux ans — et c'est précisément ce qui me donne le droit de me
 **Ce qui tourne dessus.** Une vingtaine de composantes communes que toute application finit
 par exiger : base de données, certificats, surveillance, gestion des mots de passe,
 contrôle des accès. Elles sont montées une fois, pas à chaque projet. Et tous les vendredis
-à 17 h, un agent vérifie si l'une d'elles a vieilli, lit les notes de version publiées en
-amont, et me propose la mise à jour avec un résumé de ce qui risque de casser. Le 21 mars,
+à 17 h, un agent vérifie si l'une d'elles a vieilli, lit ce que ses auteurs ont publié
+depuis, et me propose la mise à jour avec un résumé de ce qui risque de casser. Le 21 mars,
 il en a monté dix-neuf d'un coup.
 
 **De l'idée à l'environnement.** Un fichier de dix lignes : le nom du produit, le
