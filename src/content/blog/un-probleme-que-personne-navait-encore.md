@@ -202,7 +202,7 @@ Le laboratoire règle l'aval. Les seize jours d'août m'ont enseigné l'amont, �
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
 <svg viewBox="0 0 700 358" role="img" aria-labelledby="ttl-lay desc-lay" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
 <title id="ttl-lay">Les trois couches automatisées et la question d'affaires que chacune règle</title>
-<desc id="desc-lay">De l'idée à l'environnement : dix lignes. L'entretien des composantes : tous les vendredis à 17 h. Le droit de se tromper sur la machine elle-même : plus de cent cinquante reconstructions complètes.</desc>
+<desc id="desc-lay">De l'idée à l'environnement : dix lignes. L'entretien des composantes : chaque semaine, sans intervention. Le droit de se tromper sur la machine elle-même : plus de cent cinquante reconstructions complètes.</desc>
 <text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#5a6068">TROIS COUCHES, TROIS QUESTIONS</text>
 <line x1="30" y1="44" x2="670" y2="44" stroke="#14161a" stroke-width="1.5"/>
 <text x="30" y="76" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#b3401c">DE L'IDÉE À L'ENVIRONNEMENT</text>
@@ -211,7 +211,7 @@ Le laboratoire règle l'aval. Les seize jours d'août m'ont enseigné l'amont, �
 <line x1="30" y1="124" x2="670" y2="124" stroke="#e7e4dd" stroke-width="1"/>
 <text x="30" y="164" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#b3401c">CE QUI TOURNE DESSUS</text>
 <text x="30" y="188" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Qu'arrive-t-il quand une composante vieillit ?</text>
-<text x="670" y="182" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="700" font-size="26" fill="#14161a">Vendredi 17 h</text>
+<text x="670" y="182" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="700" font-size="26" fill="#14161a">Chaque semaine</text>
 <line x1="30" y1="212" x2="670" y2="212" stroke="#e7e4dd" stroke-width="1"/>
 <text x="30" y="252" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#b3401c">LA MACHINE ELLE-MÊME</text>
 <text x="30" y="276" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Combien de fois ai-je le droit de me tromper ?</text>
@@ -229,10 +229,9 @@ recommencer n'essaie rien.
 
 **Ce qui tourne dessus.** Une vingtaine de composantes communes que toute application finit
 par exiger : base de données, certificats, surveillance, gestion des mots de passe,
-contrôle des accès. Elles sont montées une fois, pas à chaque projet. Et tous les vendredis
-à 17 h, un agent vérifie si l'une d'elles a vieilli, lit ce que ses auteurs ont publié
-depuis, et me propose la mise à jour avec un résumé de ce qui risque de casser. Le 21 mars,
-il en a monté dix-neuf d'un coup.
+contrôle des accès. Elles sont montées une fois, pas à chaque projet. Et chaque semaine,
+un agent vérifie si l'une d'elles a vieilli, lit ce que ses auteurs ont publié depuis, et me
+propose la mise à jour avec un résumé de ce qui risque de casser.
 
 **De l'idée à l'environnement.** Un fichier de dix lignes : le nom du produit, le
 responsable, le code de facturation. Le reste apparaît tout seul — l'environnement,
