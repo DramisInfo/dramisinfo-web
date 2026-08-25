@@ -202,7 +202,7 @@ Le laboratoire règle l'aval. Les seize jours d'août m'ont enseigné l'amont, �
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
 <svg viewBox="0 0 700 358" role="img" aria-labelledby="ttl-lay desc-lay" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
 <title id="ttl-lay">Les trois couches automatisées et la question d'affaires que chacune règle</title>
-<desc id="desc-lay">De l'idée à l'environnement : dix lignes. L'entretien des composantes : tous les vendredis à 17 h. Le droit de se tromper sur la machine elle-même : plus de six cents reconstructions.</desc>
+<desc id="desc-lay">De l'idée à l'environnement : dix lignes. L'entretien des composantes : tous les vendredis à 17 h. Le droit de se tromper sur la machine elle-même : plus de cent cinquante reconstructions complètes.</desc>
 <text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#5a6068">TROIS COUCHES, TROIS QUESTIONS</text>
 <line x1="30" y1="44" x2="670" y2="44" stroke="#14161a" stroke-width="1.5"/>
 <text x="30" y="76" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#b3401c">DE L'IDÉE À L'ENVIRONNEMENT</text>
@@ -215,16 +215,17 @@ Le laboratoire règle l'aval. Les seize jours d'août m'ont enseigné l'amont, �
 <line x1="30" y1="212" x2="670" y2="212" stroke="#e7e4dd" stroke-width="1"/>
 <text x="30" y="252" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#b3401c">LA MACHINE ELLE-MÊME</text>
 <text x="30" y="276" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Combien de fois ai-je le droit de me tromper ?</text>
-<text x="670" y="270" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="700" font-size="26" fill="#14161a">600 fois</text>
+<text x="670" y="270" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="700" font-size="26" fill="#14161a">150 fois</text>
 <line x1="30" y1="300" x2="670" y2="300" stroke="#14161a" stroke-width="1.5"/>
 <text x="30" y="330" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Aucune des trois questions ne porte sur le code.</text>
 </svg>
 </div>
 </figure>
 
-**La machine elle-même.** Elle se reconstruit d'une commande. Je l'ai refaite plus de six
-cents fois en deux ans — et c'est précisément ce qui me donne le droit de me tromper. Une
-équipe qui ne peut pas tout recommencer n'essaie rien.
+**La machine elle-même.** Elle se reconstruit d'une commande. Je l'ai détruite et rebâtie
+plus de cent cinquante fois en deux ans — une fois tous les cinq jours — et c'est
+précisément ce qui me donne le droit de me tromper. Une équipe qui ne peut pas tout
+recommencer n'essaie rien.
 
 **Ce qui tourne dessus.** Une vingtaine de composantes communes que toute application finit
 par exiger : base de données, certificats, surveillance, gestion des mots de passe,
