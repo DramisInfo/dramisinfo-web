@@ -21,7 +21,7 @@ const { data } = post;
       <div class="page grid gap-x-10 md:grid-cols-[7rem_1fr]">
         <!-- Colonne de marge : métadonnées, comme l'en-tête d'une entrée de registre -->
         <aside class="mb-8 font-mono text-[11.5px] uppercase tracking-label text-ink-3 md:mb-0 md:pt-3">
-          <a href={base} class="text-accent hover:text-accent-deep">&larr; {b.backToList}</a>
+          <a href={base} class="text-accent-deep underline decoration-accent/40 underline-offset-4 hover:decoration-accent-deep">&larr; {b.backToList}</a>
           <p class="mt-5 tnum">
             <time datetime={data.pubDate.toISOString()}>{formatDate(data.pubDate, lang)}</time>
           </p>
@@ -31,7 +31,7 @@ const { data } = post;
             </p>
           )}
           <p class="mt-1 tnum text-ink-4">{readingTime(post.body)} {b.readingTime}</p>
-          {data.draft && <p class="mt-4 text-accent">Brouillon</p>}
+          {data.draft && <p class="mt-4 text-accent-deep">Brouillon</p>}
           {data.tags.length > 0 && (
             <ul class="mt-5 space-y-1 text-ink-4">
               {data.tags.map((tag) => <li>{tag}</li>)}

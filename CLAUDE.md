@@ -54,28 +54,64 @@ formulaire demandant un « type de mandat », pas de section taillée pour un re
 
 ## Identité visuelle — « le registre »
 
+> **Le guide de marque DramisInfo (v1.1, août 2026) fait autorité sur toute décision visuelle.**
+> En cas de contradiction avec cette section, le guide gagne. Ne pas inventer de valeur qui ne
+> s'y trouve pas : par défaut, simplifier plutôt qu'ajouter.
+
 L'univers du sujet est le carnet de commandes, le bon de travail, la feuille de route : ce que le
 produit remplace. La page en emprunte la grammaire.
 
 - **Grille réglée.** Des filets horizontaux séparent les rangées. **Aucune carte flottante, aucune
-  ombre portée, aucun dégradé, aucun coin très arrondi.**
+  ombre portée, aucun dégradé, aucun coin arrondi** — l'échelle `boxShadow` de Tailwind est vidée
+  et tous les rayons valent `0` dans les jetons, exprès : `shadow-*` et `rounded-*` n'ont plus
+  d'effet.
 - **Numérotation en mono.** Chaque section porte un numéro (`01`…`06`) et une étiquette en
-  majuscules espacées, dans la colonne de gauche.
+  majuscules espacées (interlettrage `0.16em`), dans la colonne de gauche.
 - **Chiffres en tabulaire.** Classe `.tnum` partout où des nombres s'alignent.
-- **Un seul accent**, le minium `#b3401c` — rouge-orangé des structures d'acier. Il sert au numéro
-  de section, à un mot du titre, aux puces et au bouton principal. Nulle part ailleurs.
+- **Un seul accent**, le sarcelle `#0f8f86`. Il sert au numéro de section, à un mot du titre, aux
+  puces et aux états actifs. Nulle part ailleurs — jamais un fond de grande surface. Répartition
+  visée : papier 60 %, encre 30 %, sarcelle 10 %.
 - **Aucune photographie.** Les images de banque d'un centre de données ont été supprimées : elles
   parlaient à un acheteur d'infonuagique, pas à un propriétaire d'atelier.
+
+### La règle de contraste du sarcelle
+
+`accent` (`#0f8f86`) ne donne que **3.8:1** sur le papier : il est réservé au texte de **19 px et
+plus** (ou au 700 gras) et aux aplats. Pour tout texte coloré plus petit — étiquettes, numéros,
+liens de corps de texte — utiliser **`accent-deep`** (`#0b6a63`, 5.9:1).
+
+Sur fond encre, c'est l'inverse : `accent-deep` y est illisible. Tout texte ou filet sarcelle posé
+sur l'encre doit utiliser **`accent-inv`** (`#23bdb1`). Ça vaut pour `WhyNow`, le pied de page et
+tout `SectionHead` en `tone="paper"`.
+
+### Le bouton primaire
+
+Encre au repos, sarcelle au survol, sarcelle foncé à l'appui — c'est la spécification du guide.
+Ne pas le repeindre en sarcelle plein : le blanc sur `#0f8f86` ne donne que 3.4:1.
+**Un seul bouton primaire par écran.**
 
 ### Typographie
 
 | Rôle | Fonte | Usage |
 |---|---|---|
-| Display | **Archivo** 500/600/700 | Titres, chiffres, boutons |
-| Corps | **Public Sans** 400/500/600 | Texte courant |
-| Mono | **IBM Plex Mono** 400/500 | Étiquettes, numéros, coordonnées, notes |
+| Display | **Archivo** 500/600/700/800 | Titres, chiffres, boutons |
+| Corps | **Archivo** 400/500 | Texte courant |
+| Mono | **IBM Plex Mono** 400/500/600 | Étiquettes, numéros, coordonnées, notes |
 
-Chargées depuis Google Fonts dans `BaseLayout.astro`.
+Chargées depuis Google Fonts dans `BaseLayout.astro`. Substituts hors navigateur (Word, courriel) :
+Helvetica Neue puis Arial ; Consolas puis Courier New pour le mono.
+
+### Le mark
+
+`src/components/Logo.astro` rend le verrouillage A du guide : une grille 2 × 2 suivie du
+mot-symbole, **DRAMIS gras, INFO léger** — jamais l'inverse, jamais espacé autrement. Le carré
+encre occupe **toujours** le coin supérieur gauche et cette orientation ne tourne jamais : c'est
+ce qui rend le mark reconnaissable une fois réduit. Sous 16 px, employer le mark seul.
+
+Le dessin est dupliqué dans `public/logo.svg`, `public/logo-mono.svg` (gravure, vinyle, broderie)
+et `public/favicon.svg`. Toute modification doit être reportée dans les trois, puis
+`npm run favicons`. La tuile sociale se régénère avec `npm run og` — elle porte la signature de
+marque, pas la promesse d'accueil, qui change plus souvent que la marque.
 
 ### Jetons de design
 

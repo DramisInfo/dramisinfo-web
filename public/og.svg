@@ -1,15 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#fbfaf7"/>
-  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#d8d5ce" stroke-width="2"/>
+  <rect width="1200" height="630" fill="#101010"/>
 
-  <text x="88" y="122" font-family="Consolas, monospace" font-size="20" letter-spacing="4" fill="#5a6068">DRAMISINFO</text>
-  <text x="1112" y="122" text-anchor="end" font-family="Consolas, monospace" font-size="20" letter-spacing="4" fill="#8b9098">L'ASSOMPTION &#183; LANAUDIÈRE</text>
-  <line x1="88" y1="152" x2="1112" y2="152" stroke="#14161a" stroke-width="2"/>
+  <rect x="88" y="80" width="34" height="34" fill="#fbfaf7"/>
+  <rect x="122" y="80" width="34" height="34" fill="#23bdb1"/>
+  <rect x="88" y="114" width="34" height="34" fill="#23bdb1"/>
+  <rect x="122" y="114" width="34" height="34" fill="#fbfaf7"/>
+  <text x="180" y="122" font-family="Arial, Helvetica, sans-serif" font-size="32" letter-spacing="3">
+    <tspan font-weight="bold" fill="#fbfaf7">DRAMIS</tspan><tspan fill="#fbfaf7" fill-opacity="0.7"> INFO</tspan>
+  </text>
 
-  <text x="88" y="272" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="66" fill="#14161a">Le logiciel sur mesure</text>
-  <text x="88" y="352" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="66" fill="#b3401c">n'est plus réservé</text>
-  <text x="88" y="432" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="66" fill="#14161a">aux grandes entreprises.</text>
+  <line x1="88" y1="196" x2="1112" y2="196" stroke="#fbfaf7" stroke-opacity="0.25" stroke-width="2"/>
 
-  <line x1="88" y1="492" x2="1112" y2="492" stroke="#d8d5ce" stroke-width="2"/>
-  <text x="88" y="536" font-family="Consolas, monospace" font-size="22" fill="#5a6068">Systèmes sur mesure pour les PME du Québec</text>
+  <text x="88" y="366" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="78" fill="#fbfaf7">Le système</text>
+  <text x="88" y="456" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="78" fill="#23bdb1">vous appartient.</text>
+
+  <line x1="88" y1="516" x2="1112" y2="516" stroke="#fbfaf7" stroke-opacity="0.25" stroke-width="2"/>
+  <text x="88" y="560" font-family="Consolas, monospace" font-size="22" letter-spacing="3" fill="#fbfaf7" fill-opacity="0.7">L'ASSOMPTION &#183; LANAUDIÈRE</text>
 </svg>

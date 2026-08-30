@@ -14,11 +14,11 @@ const year = new Date().getFullYear();
       <p class="mt-4 font-mono text-[12.5px] text-white/70">
         {coords.phone && (
           <>
-            <a href={coords.phoneHref} class="hover:text-accent">{coords.phone}</a>
+            <a href={coords.phoneHref} class="hover:text-accent-inv">{coords.phone}</a>
             <span class="mx-2 text-white/30">·</span>
           </>
         )}
-        <a data-eu={coords.emailUser} data-ed={coords.emailDomain} class="hover:text-accent"></a>
+        <a data-eu={coords.emailUser} data-ed={coords.emailDomain} class="hover:text-accent-inv"></a>
       </p>
     </div>
     <p class="font-mono text-[11.5px] leading-relaxed text-white/40">

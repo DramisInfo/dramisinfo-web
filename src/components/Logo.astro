@@ -1,8 +1,30 @@
 ---
+/**
+ * Verrouillage A du guide de marque : le mark suivi du mot-symbole.
+ *
+ * Le mark est une grille 2 × 2 sans rayon ni espacement ; le carré encre
+ * occupe toujours le coin supérieur gauche et cette orientation ne tourne
+ * jamais. Le mot-symbole se lit DRAMIS gras, INFO léger — jamais l'inverse.
+ *
+ * Le mark est dimensionné en `em` pour suivre la taille de texte reçue.
+ * Toute modification du dessin doit être reportée dans public/logo.svg,
+ * public/logo-mono.svg et public/favicon.svg, puis `npm run favicons`.
+ */
 interface Props { class?: string; tone?: 'ink' | 'paper' }
 const { class: cls = '', tone = 'ink' } = Astro.props;
-const base = tone === 'paper' ? 'text-paper' : 'text-ink';
+
+const onPaper = tone === 'paper';
+// Sur fond encre, la variante claire de l'accent est obligatoire.
+const squareA = onPaper ? '#fbfaf7' : '#101010';
+const squareB = onPaper ? '#23bdb1' : '#0f8f86';
+const word = onPaper ? 'text-paper' : 'text-ink';
 ---
-<span class={`font-display font-bold tracking-tight ${base} ${cls}`}>
-  Dramis<span class="text-accent">Info</span>
+<span class={`inline-flex items-center gap-[0.55em] font-display leading-none ${word} ${cls}`}>
+  <svg viewBox="0 0 2 2" class="h-[1.15em] w-[1.15em] shrink-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <rect x="0" y="0" width="1" height="1" fill={squareA} />
+    <rect x="1" y="0" width="1" height="1" fill={squareB} />
+    <rect x="0" y="1" width="1" height="1" fill={squareB} />
+    <rect x="1" y="1" width="1" height="1" fill={squareA} />
+  </svg>
+  <span class="tracking-[0.08em]"><span class="font-extrabold">DRAMIS</span><span class="font-normal opacity-70"> INFO</span></span>
 </span>

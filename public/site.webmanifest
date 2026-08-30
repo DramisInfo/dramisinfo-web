@@ -2,10 +2,18 @@
   "name": "DramisInfo",
   "short_name": "DramisInfo",
   "icons": [
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ],
-  "theme_color": "#fbfaf7",
+  "theme_color": "#101010",
   "background_color": "#fbfaf7",
   "display": "standalone"
 }

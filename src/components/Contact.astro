@@ -41,11 +41,11 @@ const RECAPTCHA = false;
 
           <div class="grid gap-5 sm:grid-cols-2">
             <div>
-              <label class="field-label" for="name">{t.name} <span class="text-accent">*</span></label>
+              <label class="field-label" for="name">{t.name} <span class="text-accent-deep">*</span></label>
               <input class="field" id="name" name="name" type="text" required autocomplete="name" placeholder={t.namePh} />
             </div>
             <div>
-              <label class="field-label" for="email">{t.email} <span class="text-accent">*</span></label>
+              <label class="field-label" for="email">{t.email} <span class="text-accent-deep">*</span></label>
               <input class="field" id="email" name="email" type="email" required autocomplete="email" placeholder={t.emailPh} />
             </div>
           </div>
@@ -70,7 +70,7 @@ const RECAPTCHA = false;
           </div>
 
           <div>
-            <label class="field-label" for="message">{t.message} <span class="text-accent">*</span></label>
+            <label class="field-label" for="message">{t.message} <span class="text-accent-deep">*</span></label>
             <textarea class="field resize-none" id="message" name="message" rows="5" required placeholder={t.messagePh}></textarea>
           </div>
 
@@ -84,11 +84,11 @@ const RECAPTCHA = false;
           <ul class="mt-4 space-y-3 font-mono text-[13.5px]">
             {coords.phone && (
               <li>
-                <a href={coords.phoneHref} class="text-ink transition-colors hover:text-accent">{coords.phone}</a>
+                <a href={coords.phoneHref} class="text-ink transition-colors hover:text-accent-deep">{coords.phone}</a>
               </li>
             )}
             <li>
-              <a data-eu={coords.emailUser} data-ed={coords.emailDomain} class="text-ink transition-colors hover:text-accent"></a>
+              <a data-eu={coords.emailUser} data-ed={coords.emailDomain} class="text-ink transition-colors hover:text-accent-deep"></a>
             </li>
             <li class="text-ink-3">{coords.city}</li>
           </ul>
