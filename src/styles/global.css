@@ -34,8 +34,7 @@
 
   :focus-visible {
     outline: 2px solid theme('colors.accent.DEFAULT');
-    outline-offset: 3px;
-    border-radius: 2px;
+    outline-offset: 2px;
   }
 }
 
@@ -56,9 +55,9 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-accent px-6 py-3.5
+    @apply inline-flex items-center justify-center gap-2 bg-ink px-6 py-3.5
            font-display text-[15px] font-semibold text-white transition-colors
-           hover:bg-accent-deep;
+           hover:bg-accent active:bg-accent-deep;
   }
 
   .btn-ghost {
@@ -88,10 +87,10 @@
   .prose h3 { @apply mt-10 font-display text-[19px] font-semibold text-ink; }
   .prose p  { @apply max-w-prose; }
   .prose strong { @apply font-semibold text-ink; }
-  .prose a { @apply text-accent underline decoration-1 underline-offset-4 hover:text-accent-deep; }
+  .prose a { @apply text-accent-deep underline decoration-accent/40 underline-offset-4 hover:decoration-accent-deep; }
   .prose ul, .prose ol { @apply space-y-2 pl-5; }
-  .prose ul { @apply list-disc marker:text-accent; }
-  .prose ol { @apply list-decimal marker:font-mono marker:text-[13px] marker:text-accent; }
+  .prose ul { @apply list-disc marker:text-accent-deep; }
+  .prose ol { @apply list-decimal marker:font-mono marker:text-[13px] marker:text-accent-deep; }
   .prose li > p { @apply mt-0; }
   .prose blockquote {
     @apply border-l-2 border-accent pl-5 text-ink-3;

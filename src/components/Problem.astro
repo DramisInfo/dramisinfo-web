@@ -12,7 +12,7 @@ const t = ui[lang].problem;
     <ol class="mt-14 grid gap-x-12 md:grid-cols-2">
       {t.items.map((item, i) => (
         <li data-reveal class="row grid grid-cols-[2.5rem_1fr] gap-4">
-          <span class="font-mono text-[12px] text-accent tnum">{String(i + 1).padStart(2, '0')}</span>
+          <span class="font-mono text-[12px] text-accent-deep tnum">{String(i + 1).padStart(2, '0')}</span>
           <div>
             <h3 class="text-[18px] font-semibold leading-snug">{item.title}</h3>
             <p class="mt-2 text-[15.5px] leading-relaxed text-ink-3">{item.body}</p>

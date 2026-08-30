@@ -26,7 +26,7 @@ const startHere = b.startHereId ? posts.find((p) => p.id === b.startHereId) : un
     <section class="border-b border-rule py-20 md:py-24">
       <div class="page grid gap-x-10 md:grid-cols-[7rem_1fr]">
         <div class="mb-6 font-mono text-[11px] uppercase tracking-label text-ink-3 md:mb-0 md:pt-3">
-          <span class="tnum text-accent">{b.num}</span>
+          <span class="tnum text-accent-deep">{b.num}</span>
           <span class="ml-3 md:ml-0 md:mt-1 md:block">{b.label}</span>
         </div>
         <div>
@@ -37,13 +37,13 @@ const startHere = b.startHereId ? posts.find((p) => p.id === b.startHereId) : un
               {b.startHere}{' '}
               <a
                 href={`${base}${startHere.id}/`}
-                class="text-accent underline decoration-accent/40 underline-offset-4 hover:text-accent-deep hover:decoration-accent"
+                class="text-accent-deep underline decoration-accent/40 underline-offset-4 hover:decoration-accent-deep"
               >
                 {startHere.data.title}
               </a>
             </p>
           )}
-          <a href={rss} class="mt-7 inline-block font-mono text-[12px] uppercase tracking-label text-accent hover:text-accent-deep">
+          <a href={rss} class="mt-7 inline-block font-mono text-[12px] uppercase tracking-label text-accent-deep hover:text-accent-deep">
             {b.rss}
           </a>
         </div>
@@ -64,11 +64,11 @@ const startHere = b.startHereId ? posts.find((p) => p.id === b.startHereId) : un
                       {formatDate(post.data.pubDate, lang)}
                     </time>
                     {post.data.draft && (
-                      <span class="ml-3 text-accent md:ml-0 md:mt-1 md:block">Brouillon</span>
+                      <span class="ml-3 text-accent-deep md:ml-0 md:mt-1 md:block">Brouillon</span>
                     )}
                   </div>
                   <div>
-                    <h2 class="text-[23px] font-semibold leading-snug transition-colors group-hover:text-accent">
+                    <h2 class="text-[23px] font-semibold leading-snug transition-colors group-hover:text-accent-deep">
                       {post.data.title}
                     </h2>
                     <p class="mt-2 max-w-prose text-[16px] leading-relaxed text-ink-3">

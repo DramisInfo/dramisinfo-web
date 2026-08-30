@@ -35,26 +35,26 @@ lendemain, j'en ai commencé un deuxième.
 
 <figure>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-<svg viewBox="0 0 700 296" role="img" aria-labelledby="ttl-run desc-run" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
+<svg viewBox="0 0 700 296" role="img" aria-labelledby="ttl-run desc-run" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #e6e6e6">
 <title id="ttl-run">Durée de vie des deux moteurs d'agents, août et septembre 2025</title>
 <desc id="desc-run">Le premier moteur, bâti sur Semantic Kernel, vit du 1er au 12 août 2025 : onze jours et 1 203 lignes. Le second, bâti sur Agno et commencé un jour après le premier, vit du 2 août au 14 septembre et atteint 12 964 lignes.</desc>
-<text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#5a6068">CE QUE J'AI BÂTI DEUX FOIS</text>
-<text x="670" y="30" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#8b9098">AOÛT – SEPTEMBRE 2025</text>
-<line x1="30" y1="44" x2="670" y2="44" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="82" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Premier moteur</text>
-<text x="30" y="99" font-family="ui-monospace,monospace" font-size="11" fill="#8b9098">Semantic Kernel</text>
-<rect x="190" y="70" width="125" height="22" fill="#b3401c"/>
-<text x="325" y="86" font-family="ui-monospace,monospace" font-size="12" fill="#b3401c">11 jours &#183; 1 203 lignes</text>
-<text x="30" y="152" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Second moteur</text>
-<text x="30" y="169" font-family="ui-monospace,monospace" font-size="11" fill="#8b9098">Agno</text>
-<rect x="201" y="140" width="449" height="22" fill="#5a6068"/>
+<text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#6e6e6e">CE QUE J'AI BÂTI DEUX FOIS</text>
+<text x="670" y="30" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#9a9a9a">AOÛT – SEPTEMBRE 2025</text>
+<line x1="30" y1="44" x2="670" y2="44" stroke="#101010" stroke-width="1.5"/>
+<text x="30" y="82" font-family="ui-monospace,monospace" font-size="12.5" fill="#6e6e6e">Premier moteur</text>
+<text x="30" y="99" font-family="ui-monospace,monospace" font-size="11" fill="#9a9a9a">Semantic Kernel</text>
+<rect x="190" y="70" width="125" height="22" fill="#0b6a63"/>
+<text x="325" y="86" font-family="ui-monospace,monospace" font-size="12" fill="#0b6a63">11 jours &#183; 1 203 lignes</text>
+<text x="30" y="152" font-family="ui-monospace,monospace" font-size="12.5" fill="#6e6e6e">Second moteur</text>
+<text x="30" y="169" font-family="ui-monospace,monospace" font-size="11" fill="#9a9a9a">Agno</text>
+<rect x="201" y="140" width="449" height="22" fill="#6e6e6e"/>
 <text x="211" y="156" font-family="ui-monospace,monospace" font-size="12" fill="#fbfaf7">44 jours &#183; 12 964 lignes</text>
-<line x1="190" y1="192" x2="670" y2="192" stroke="#d8d5ce" stroke-width="1"/>
-<text x="190" y="210" font-family="ui-monospace,monospace" font-size="11" fill="#8b9098">1er août</text>
-<text x="430" y="210" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#8b9098">24 août</text>
-<text x="650" y="210" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" fill="#8b9098">14 septembre</text>
-<line x1="30" y1="238" x2="670" y2="238" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="264" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Un jour d'intervalle entre les deux. Onze jours pour que le premier meure.</text>
+<line x1="190" y1="192" x2="670" y2="192" stroke="#e6e6e6" stroke-width="1"/>
+<text x="190" y="210" font-family="ui-monospace,monospace" font-size="11" fill="#9a9a9a">1er août</text>
+<text x="430" y="210" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#9a9a9a">24 août</text>
+<text x="650" y="210" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" fill="#9a9a9a">14 septembre</text>
+<line x1="30" y1="238" x2="670" y2="238" stroke="#101010" stroke-width="1.5"/>
+<text x="30" y="264" font-family="ui-monospace,monospace" font-size="12.5" fill="#6e6e6e">Un jour d'intervalle entre les deux. Onze jours pour que le premier meure.</text>
 </svg>
 </div>
 </figure>
@@ -105,28 +105,28 @@ commence à voir un motif.
 
 <figure>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-<svg viewBox="0 0 700 352" role="img" aria-labelledby="ttl-mot desc-mot" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #d8d5ce">
+<svg viewBox="0 0 700 352" role="img" aria-labelledby="ttl-mot desc-mot" style="width:100%;min-width:660px;height:auto;background:#fbfaf7;border:1px solid #e6e6e6">
 <title id="ttl-mot">Trois projets, ce que chacun bâtissait et ce qu'il est devenu</title>
 <desc id="desc-mot">En 2025, une plateforme pour bâtir des agents, arrêtée après trois mois et 38 153 lignes. En 2026, une plateforme pour faire collaborer des agents, arrêtée après seize jours et 28 000 lignes. Depuis 2024, la fondation personnelle du laboratoire, toujours vivante après deux ans.</desc>
-<text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#5a6068">TROIS PROJETS</text>
-<line x1="30" y1="44" x2="670" y2="44" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="78" font-family="ui-monospace,monospace" font-size="12" fill="#8b9098">2025</text>
-<text x="110" y="78" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="16" fill="#14161a">Bâtir des agents</text>
-<text x="110" y="98" font-family="ui-monospace,monospace" font-size="12" fill="#8b9098">juin → septembre &#183; 38 153 lignes</text>
-<text x="670" y="82" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="17" fill="#5a6068">Arrêté</text>
-<line x1="30" y1="120" x2="670" y2="120" stroke="#e7e4dd" stroke-width="1"/>
-<text x="30" y="154" font-family="ui-monospace,monospace" font-size="12" fill="#8b9098">2026</text>
-<text x="110" y="154" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="16" fill="#14161a">Les faire collaborer</text>
-<text x="110" y="174" font-family="ui-monospace,monospace" font-size="12" fill="#8b9098">seize jours &#183; 28 000 lignes</text>
-<text x="670" y="158" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="17" fill="#5a6068">Arrêté</text>
-<line x1="30" y1="196" x2="670" y2="196" stroke="#e7e4dd" stroke-width="1"/>
-<text x="30" y="230" font-family="ui-monospace,monospace" font-size="12" fill="#b3401c">2024</text>
-<text x="110" y="230" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="16" fill="#b3401c">Ma fondation à moi</text>
-<text x="110" y="250" font-family="ui-monospace,monospace" font-size="12" fill="#8b9098">août → aujourd'hui &#183; deux ans</text>
-<text x="670" y="236" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="700" font-size="22" fill="#b3401c">Vivant</text>
-<line x1="30" y1="278" x2="670" y2="278" stroke="#14161a" stroke-width="1.5"/>
-<text x="30" y="306" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">Les deux que j'ai arrêtées, quelqu'un d'autre les bâtissait déjà,</text>
-<text x="30" y="326" font-family="ui-monospace,monospace" font-size="12.5" fill="#5a6068">mieux financé que moi. La troisième, personne ne la bâtira jamais.</text>
+<text x="30" y="30" font-family="ui-monospace,monospace" font-size="11" letter-spacing="1.6" fill="#6e6e6e">TROIS PROJETS</text>
+<line x1="30" y1="44" x2="670" y2="44" stroke="#101010" stroke-width="1.5"/>
+<text x="30" y="78" font-family="ui-monospace,monospace" font-size="12" fill="#9a9a9a">2025</text>
+<text x="110" y="78" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="16" fill="#101010">Bâtir des agents</text>
+<text x="110" y="98" font-family="ui-monospace,monospace" font-size="12" fill="#9a9a9a">juin → septembre &#183; 38 153 lignes</text>
+<text x="670" y="82" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="17" fill="#6e6e6e">Arrêté</text>
+<line x1="30" y1="120" x2="670" y2="120" stroke="#efefef" stroke-width="1"/>
+<text x="30" y="154" font-family="ui-monospace,monospace" font-size="12" fill="#9a9a9a">2026</text>
+<text x="110" y="154" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="16" fill="#101010">Les faire collaborer</text>
+<text x="110" y="174" font-family="ui-monospace,monospace" font-size="12" fill="#9a9a9a">seize jours &#183; 28 000 lignes</text>
+<text x="670" y="158" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="17" fill="#6e6e6e">Arrêté</text>
+<line x1="30" y1="196" x2="670" y2="196" stroke="#efefef" stroke-width="1"/>
+<text x="30" y="230" font-family="ui-monospace,monospace" font-size="12" fill="#0b6a63">2024</text>
+<text x="110" y="230" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="600" font-size="16" fill="#0b6a63">Ma fondation à moi</text>
+<text x="110" y="250" font-family="ui-monospace,monospace" font-size="12" fill="#9a9a9a">août → aujourd'hui &#183; deux ans</text>
+<text x="670" y="236" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-weight="700" font-size="22" fill="#0b6a63">Vivant</text>
+<line x1="30" y1="278" x2="670" y2="278" stroke="#101010" stroke-width="1.5"/>
+<text x="30" y="306" font-family="ui-monospace,monospace" font-size="12.5" fill="#6e6e6e">Les deux que j'ai arrêtées, quelqu'un d'autre les bâtissait déjà,</text>
+<text x="30" y="326" font-family="ui-monospace,monospace" font-size="12.5" fill="#6e6e6e">mieux financé que moi. La troisième, personne ne la bâtira jamais.</text>
 </svg>
 </div>
 </figure>
